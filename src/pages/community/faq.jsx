@@ -174,16 +174,17 @@ const FAQ = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contactus">
-            <button className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <button className="inline-flex items-center justify-center py-4 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-[213px]">
               Contact Support
             </button>
-            </Link>
+            </Link >
+            <Link to="">
             <button
-  className="inline-flex items-center px-8 py-4 border-2 bg-white border-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-  onClick={() => window.open("https://wa.me/917028095292?text=Hello%20RupeeDot!%20I%20need%20assistance.")}
+  className="inline-flex items-center justify-center py-4 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center w-[213px]"
 >
-  Live Chat
+              Live Chat
 </button>
+</Link>
           </div>
         </motion.div>
       </div>

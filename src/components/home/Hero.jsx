@@ -43,8 +43,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#f5f5ec] relative overflow-hidden pt-6 md:pt-10 pb-16 md:pb-24">
-      {/* Content */}
+    <section
+      ref={ref}
+      className="bg-[#f5f5ec] relative overflow-hidden pt-6 md:pt-10 pb-16 md:pb-24"
+    >
       <motion.div
         className="container mx-auto px-4 relative z-20 h-full flex flex-col md:flex-row items-center justify-between gap-12"
         initial="hidden"
@@ -58,8 +60,24 @@ const Hero = () => {
           },
         }}
       >
-        {/* Left Text */}
-        <div className="w-full md:w-1/2">
+        {/* Image Slider - comes first on mobile */}
+        <div className="w-full md:w-1/2 order-1 md:order-2 h-80 md:h-96 rounded-xl overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentImageIndex}
+              src={heroImages[currentImageIndex]}
+              alt="Hero Slide"
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8 }}
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Text Content - comes after image on mobile */}
+        <div className="w-full md:w-1/2 order-2 md:order-1">
           <motion.div className="max-w-2xl">
             <motion.h1
               className="text-5xl md:text-5xl lg:text-6xl font-bold text-[#3870A6] mb-13 leading-tight"
@@ -95,7 +113,12 @@ const Hero = () => {
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </motion.svg>
                 </motion.button>
               </Link>
@@ -112,22 +135,6 @@ const Hero = () => {
               </Link>
             </motion.div>
           </motion.div>
-        </div>
-
-        {/* Right Side Image Slider in a Div */}
-        <div className="w-full md:w-1/2 h-80 md:h-96 rounded-xl overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={currentImageIndex}
-              src={heroImages[currentImageIndex]}
-              alt="Hero Slide"
-              className="w-full h-full object-cover"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.8 }}
-            />
-          </AnimatePresence>
         </div>
       </motion.div>
     </section>
