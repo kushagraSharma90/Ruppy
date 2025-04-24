@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 
 const Partners = () => {
-  // Partner logos would be imported here in a real application
   const partners = [
     { id: 1, name: "Bank Partner 1", logo: "https://via.placeholder.com/150x80?text=Partner+1" },
     { id: 2, name: "Bank Partner 2", logo: "https://via.placeholder.com/150x80?text=Partner+2" },
@@ -21,19 +20,32 @@ const Partners = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {partners.map((partner) => (
-            <div
-              key={partner.id}
-              className="bg-white p-6 rounded-lg shadow-md flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
-            >
-              <img
-                src={partner.logo || "/placeholder.svg"}
-                alt={partner.name}
-                className="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          ))}
+        {/* Inline marquee style */}
+        <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+
+        <div className="overflow-hidden">
+          <div
+            className="flex gap-8 animate-[scroll_10s_linear_infinite]"
+            style={{ minWidth: "200%" }}
+          >
+            {[...partners, ...partners].map((partner, index) => (
+              <div
+                key={index}
+                className="flex-none w-48 bg-white p-4 rounded-lg shadow-md flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-12">
