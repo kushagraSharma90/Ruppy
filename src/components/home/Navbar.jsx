@@ -42,9 +42,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img src={logo || "/placeholder.svg"} alt="RupeeDot Logo" className="h-12 w-auto" />
-        </Link>
+      <Link to="/" className="flex items-center">
+  <img
+    src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
+    alt="RupeeDot Logo"
+    className="h-12 w-auto"
+  />
+</Link>
+
 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-gray-700 focus:outline-none" onClick={toggleMenu}>
@@ -74,21 +79,21 @@ const Navbar = () => {
             <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
               <div className="py-2 px-4">
                 <Link
-                  to="/our-story#about"
+                  to="/our-story/about"
                   className="block py-2 text-sm text-gray-700 hover:text-orange-500"
                   onClick={closeMenu}
                 >
                   About Us
                 </Link>
                 <Link
-                  to="/our-story#team"
+                  to="/our-story/team"
                   className="block py-2 text-sm text-gray-700 hover:text-orange-500"
                   onClick={closeMenu}
                 >
                   Our Team
                 </Link>
                 <Link
-                  to="/our-story#mission"
+                  to="/our-story/mission"
                   className="block py-2 text-sm text-gray-700 hover:text-orange-500"
                   onClick={closeMenu}
                 >
@@ -215,13 +220,13 @@ const Navbar = () => {
                   <ChevronDown className="w-4 h-4" />
                 </div>
                 <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/our-story#about" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
+                  <Link to="/about-us" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
                     About Us
                   </Link>
-                  <Link to="/our-story#team" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
+                  <Link to="/our-story/team" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
                     Our Team
                   </Link>
-                  <Link to="/our-story#mission" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
+                  <Link to="/our-story/mission" className="block py-2 text-sm text-gray-700" onClick={closeMenu}>
                     Mission & Vision
                   </Link>
                 </div>

@@ -41,6 +41,15 @@ const Testimonials = () => {
         "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
       rating: 5,
     },
+    {
+      id: 5,
+      name: "Kushagra Sharma",
+      position: "Software Developer",
+      image: "https://randomuser.me/api/portraits/men/28.jpg",
+      content:
+        "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
+      rating: 5,
+    },
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
