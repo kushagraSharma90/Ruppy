@@ -28,7 +28,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-white to-blue-100">
       {/* Navigation Buttons */}
-      <button
+      {/* <button
         onClick={handlePrev}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:scale-110 hover:bg-gray-200 transition-all duration-300 z-20"
       >
@@ -54,7 +54,7 @@ const Hero = () => {
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:scale-110 hover:bg-gray-200 transition-all duration-300 z-20"
       >
         &#8594;
-      </button>
+      </button> */}
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 md:py-24">

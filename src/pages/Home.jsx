@@ -4,17 +4,27 @@ import AboutSection from "../components/home/AboutSection"
 import Testimonials from "../components/home/Testimonials"
 import CtaSection from "../components/home/CtaSection"
 import Partners from "../components/home/Partners"
+import EmiCalculator  from "../components/home/CalculateEMI"
+import BlogsSection from "../components/home/BlogSection"
+
 
 const Home = () => {
   return (
-    <>
-      <Hero />
-      <LoanCategories />
-      <AboutSection />
-      <Testimonials />
-      <Partners />
-      <CtaSection />
+    <> 
+    <Hero />
+    <LoanCategories />
+    <AboutSection />
+    <EmiCalculator  />
+    <Testimonials />
+    <Partners />
+    <BlogsSection/>
+    <CtaSection /> 
     </>
+       
+   
+    
+     
+    
   )
 }
 

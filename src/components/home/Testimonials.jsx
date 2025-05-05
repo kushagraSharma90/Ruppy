@@ -1,6 +1,4 @@
-
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 
 const Testimonials = () => {
@@ -55,12 +53,27 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1))
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    )
   }
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1))
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    )
   }
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [testimonials.length])
 
   return (
     <section className="py-16 bg-white">
