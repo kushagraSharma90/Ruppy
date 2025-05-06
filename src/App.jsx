@@ -16,10 +16,12 @@ import AboutUs from "./pages/AboutUs"
 import OurMission from "./pages/OurMission"
 import ApplyButton from "./pages/ApplyButton"
 import OurTeam from "./pages/OurTeam"
+import ScrollToTop from "./components/ScrollToTop" // ✅ Add this import
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
@@ -30,23 +32,20 @@ function App() {
             <Route path="/our-story/mission" element={<OurMission />} />
             <Route path="/apply" element={<ApplyButton />} />
             <Route path="/our-story/team" element={<OurTeam />} />
-
             <Route path="/loans" element={<Loans />} />
             <Route path="/loans/personal" element={<PersonalLoan />} />
             <Route path="/loans/used-car" element={<UsedCarLoan />} />
             <Route path="/loans/new-car" element={<NewCarLoan />} />
-            <Route path="/loans/against-car" element={<LoanAgainstCar/>} />
+            <Route path="/loans/against-car" element={<LoanAgainstCar />} />
             <Route path="/calculators" element={<Calculators />} />
             <Route path="/become-partner" element={<BecomePartner />} />
           </Routes>
         </main>
         <Footer />
         <ContactButtons />
+        <ScrollToTop /> {/* ✅ Add this at the bottom so it's on top of everything */}
       </div>
     </Router>
-
-   
-    
   )
 }
 

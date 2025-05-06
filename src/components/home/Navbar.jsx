@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
+import calculatorImg from "../../assets/calculatorImg.png";
+import IconImage from '../../assets/IconImage.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,20 +91,41 @@ const Navbar = () => {
                 isActive("/loans") ? "text-orange-500" : "text-gray-700"
               }`}
             >
+              <img src={IconImage} alt="Loans Icon" className="h-5 w-5 mr-2 inline-block" />
               Loans <ChevronDown className="w-4 h-4 ml-1" />
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="py-2 px-4">
-                <Link to="/loans/personal" className="block py-2 text-sm text-gray-700 hover:text-orange-500" onClick={closeMenu}>
+                <Link
+                  to="/loans/personal"
+                  className="flex items-center py-2 text-sm text-gray-700 hover:text-orange-500"
+                  onClick={closeMenu}
+                >
+                  <img src={IconImage} alt="Personal Loan Icon" className="h-4 w-4 mr-2 inline-block" />
                   Personal Loan
                 </Link>
-                <Link to="/loans/used-car" className="block py-2 text-sm text-gray-700 hover:text-orange-500" onClick={closeMenu}>
+                <Link
+                  to="/loans/used-car"
+                  className="flex items-center py-2 text-sm text-gray-700 hover:text-orange-500"
+                  onClick={closeMenu}
+                >
+                  <img src={IconImage} alt="Used Car Loan Icon" className="h-4 w-4 mr-2 inline-block" />
                   Used Car Loan
                 </Link>
-                <Link to="/loans/new-car" className="block py-2 text-sm text-gray-700 hover:text-orange-500" onClick={closeMenu}>
+                <Link
+                  to="/loans/new-car"
+                  className="flex items-center py-2 text-sm text-gray-700 hover:text-orange-500"
+                  onClick={closeMenu}
+                >
+                  <img src={IconImage} alt="New Car Loan Icon" className="h-4 w-4 mr-2 inline-block" />
                   New Car Loan
                 </Link>
-                <Link to="/loans/against-car" className="block py-2 text-sm text-gray-700 hover:text-orange-500" onClick={closeMenu}>
+                <Link
+                  to="/loans/against-car"
+                  className="flex items-center py-2 text-sm text-gray-700 hover:text-orange-500"
+                  onClick={closeMenu}
+                >
+                  <img src={IconImage} alt="Loan Against Car Icon" className="h-4 w-4 mr-2 inline-block" />
                   Loan Against Car
                 </Link>
               </div>
@@ -111,12 +134,14 @@ const Navbar = () => {
 
           <Link
             to="/calculators"
-            className={`text-base font-medium hover:text-orange-500 ${
+            className={`flex items-center text-base font-medium hover:text-orange-500 ${
               isActive("/calculators") ? "text-orange-500" : "text-gray-700"
             }`}
           >
+            <img src={calculatorImg} alt="Calculator Icon" className="h-5 w-5 mr-2 inline-block" />
             Calculators
           </Link>
+
           <Link
             to="/become-partner"
             className={`text-base font-medium hover:text-orange-500 ${
@@ -165,16 +190,22 @@ const Navbar = () => {
             </button>
           </div>
           <div className="px-4 py-2 space-y-2">
-            <Link to="/" className={`block py-2 ${isActive("/") ? "text-orange-500" : "text-gray-700"}`} onClick={closeMenu}>
+            <Link
+              to="/"
+              className={`block py-2 ${isActive("/") ? "text-orange-500" : "text-gray-700"}`}
+              onClick={closeMenu}
+            >
               Home
             </Link>
             <Link to="/our-story" className="block py-2 text-gray-700" onClick={closeMenu}>
               Our Story
             </Link>
-            <Link to="/loans" className="block py-2 text-gray-700" onClick={closeMenu}>
+            <Link to="/loans" className="flex items-center py-2 text-gray-700" onClick={closeMenu}>
+              <img src={IconImage} alt="Loans Icon" className="h-5 w-5 mr-2 inline-block" />
               Loans
             </Link>
-            <Link to="/calculators" className="block py-2 text-gray-700" onClick={closeMenu}>
+            <Link to="/calculators" className="flex items-center py-2 text-gray-700" onClick={closeMenu}>
+              <img src={calculatorImg} alt="Calculator Icon" className="h-5 w-5 mr-2 inline-block" />
               Calculators
             </Link>
             <Link to="/become-partner" className="block py-2 text-gray-700" onClick={closeMenu}>
