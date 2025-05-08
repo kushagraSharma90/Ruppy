@@ -13,7 +13,7 @@ const ContactButtons = () => {
         <MessageCircle className="h-6 w-6 text-white" />
       </a>
       <a
-        href="tel:+911234567890"
+        href="tel:+917028095292"
         className="bg-blue-600 hover:bg-blue-700 p-3 rounded-l-md transition-colors duration-300 flex items-center justify-center"
         aria-label="Call us"
       >

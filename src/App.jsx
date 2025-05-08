@@ -17,6 +17,8 @@ import OurMission from "./pages/OurMission"
 import ApplyButton from "./pages/ApplyButton"
 import OurTeam from "./pages/OurTeam"
 import ScrollToTop from "./components/ScrollToTop" // ✅ Add this import
+import Blogs from "./components/home/Blogs"
+import BlogDetail from "./components/home/BlogDetail"
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/our-story/about" element={<AboutUs />} />
             <Route path="/our-story/mission" element={<OurMission />} />

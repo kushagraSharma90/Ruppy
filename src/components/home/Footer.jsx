@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-6">
-              <img src={logo || "/placeholder.svg"} alt="RupeeDot Logo" className="h-12" />
+              <img src="https://rupeedot.com/wp-content/uploads/2025/02/11.png" alt="RupeeDot Logo" className="h-12" />
             </Link>
             <p className="text-gray-400 mb-6">
               RupeeDot is a leading financial services provider helping you borrow right today for a better tomorrow.
@@ -111,18 +111,18 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0 mt-1" />
-                <span className="text-gray-400">123 Finance Street, Banking District, Mumbai, India - 400001</span>
+                <span className="text-gray-400">G-1010,Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra 411014</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0" />
                 <a href="tel:+911234567890" className="text-gray-400 hover:text-white transition-colors">
-                  +91 1234 567 890
+                  +91 7028095292
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0" />
                 <a href="mailto:info@rupeedot.com" className="text-gray-400 hover:text-white transition-colors">
-                  info@rupeedot.com
+                  wecare@rupeedot.com
                 </a>
               </li>
             </ul>
