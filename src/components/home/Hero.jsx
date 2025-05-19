@@ -92,13 +92,13 @@ const Hero = () => {
           <AnimatePresence mode="wait">
             <motion.div key={currentIndex} className="max-w-2xl" initial="hidden" animate="visible" exit="exit">
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+                className="text-5xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-13 leading-tight"
                 variants={textVariants}
                 custom={0}
               >
                 {slides[currentIndex].title}
               </motion.h1>
-              <motion.p className="text-lg md:text-xl text-gray-200 mb-8" variants={textVariants} custom={1}>
+              <motion.p className="text-lg md:text-xl text-bold mb-8" variants={textVariants} custom={1}>
                 {slides[currentIndex].text}
               </motion.p>
               <motion.div className="flex flex-wrap gap-4" variants={textVariants} custom={2}>
