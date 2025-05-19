@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { CheckCircle } from "lucide-react"
- import aboutImage from "../../assets/about-image.jpg" 
+ 
 
 const AboutSection = () => {
   const benefits = [

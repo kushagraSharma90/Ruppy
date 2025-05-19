@@ -4,33 +4,34 @@ import { CheckCircle, Info, HelpCircle } from "lucide-react";
 
 const ApplyPage = () => {
   const [form, setForm] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    amount: "",
-    purpose: "",
+    FullName: "",
+    Email: "",
+    PhoneNumber: "",
+    LoanAmount: "",
+    LoanPurpose: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
 
   const validate = () => {
     const newErrors = {};
 
-    if (!form.fullName.trim()) newErrors.fullName = "Full Name is required.";
-    if (!form.email.trim()) {
-      newErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "Enter a valid email.";
+    if (!form.FullName.trim()) newErrors.FullName = "Full Name is required.";
+    if (!form.Email.trim()) {
+      newErrors.Email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(form.Email)) {
+      newErrors.Email = "Enter a valid email.";
     }
 
-    if (!form.phone.trim()) {
-      newErrors.phone = "Phone number is required.";
-    } else if (!/^\d{10}$/.test(form.phone)) {
-      newErrors.phone = "Enter a valid 10-digit phone number.";
+    if (!form.PhoneNumber.trim()) {
+      newErrors.PhoneNumber = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(form.PhoneNumber)) {
+      newErrors.PhoneNumber = "Enter a valid 10-digit phone number.";
     }
 
-    if (!form.amount) newErrors.amount = "Loan amount is required.";
-    if (!form.purpose.trim()) newErrors.purpose = "Purpose is required.";
+    if (!form.LoanAmount) newErrors.LoanAmount = "Loan amount is required.";
+    if (!form.LoanPurpose.trim()) newErrors.LoanPurpose = "Purpose is required.";
 
     return newErrors;
   };
@@ -40,21 +41,38 @@ const ApplyPage = () => {
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-    } else {
-      alert("Application submitted successfully!");
-      setForm({
-        fullName: "",
-        email: "",
-        phone: "",
-        amount: "",
-        purpose: "",
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const res = await fetch("http://localhost:5000/api/loan-purpose", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
-      setErrors({});
+      const data = await res.json();
+      if (res.ok) {
+        alert("Application submitted successfully!");
+        setForm({
+          FullName: "",
+          Email: "",
+          PhoneNumber: "",
+          LoanAmount: "",
+          LoanPurpose: "",
+        });
+        setErrors({});
+      } else {
+        alert(data.error || "Submission failed.");
+      }
+    } catch (err) {
+      alert("Server error: " + err.message);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -83,10 +101,10 @@ const ApplyPage = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Input Fields */}
           {[
-            { name: "fullName", type: "text", label: "Full Name" },
-            { name: "email", type: "email", label: "Email" },
-            { name: "phone", type: "tel", label: "Phone Number" },
-            { name: "amount", type: "number", label: "Loan Amount (₹)" },
+            { name: "FullName", type: "text", label: "Full Name" },
+            { name: "Email", type: "email", label: "Email" },
+            { name: "PhoneNumber", type: "tel", label: "Phone Number" },
+            { name: "LoanAmount", type: "number", label: "Loan Amount (₹)" },
           ].map(({ name, type, label }) => (
             <div key={name}>
               <label className="block font-medium text-gray-700 mb-1">
@@ -111,23 +129,24 @@ const ApplyPage = () => {
               Loan Purpose
             </label>
             <textarea
-              name="purpose"
-              value={form.purpose}
+              name="LoanPurpose"
+              value={form.LoanPurpose}
               onChange={handleChange}
               rows="3"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
-            {errors.purpose && (
-              <p className="text-sm text-red-500 mt-1">{errors.purpose}</p>
+            {errors.LoanPurpose && (
+              <p className="text-sm text-red-500 mt-1">{errors.LoanPurpose}</p>
             )}
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
+            disabled={submitting}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300"
           >
-            Submit Application
+            {submitting ? "Submitting..." : "Submit Application"}
           </button>
         </form>
       </motion.div>

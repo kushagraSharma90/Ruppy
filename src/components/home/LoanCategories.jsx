@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import personalLoanImg from "../../assets/personal-loan.png"
-import usedCarLoanImg from "../../assets/used-car-loan.png"
+import usedCarLoan from "../../assets/usedCarLoan.jpg"
 import newCarLoanImg from "../../assets/new-car-loan.png"
 import loanAgainstCarImg from "../../assets/loan-against-car.png"
 
@@ -16,7 +16,7 @@ const LoanCategories = () => {
     {
       id: 2,
       title: "Used Car Loan",
-      image: usedCarLoanImg,
+      image: usedCarLoan,
       description: "Affordable financing options for pre-owned vehicles",
       link: "/loans/used-car",
     },
