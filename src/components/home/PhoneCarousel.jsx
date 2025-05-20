@@ -1,85 +1,84 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PHOTO5 from "../../assets/PHOTO5.jpg";
 import image2 from "../../assets/PHOTO2.jpg";
 import image3 from "../../assets/PHOTO3.jpg";
 import image4 from "../../assets/PHOTO4.jpg";
-import RotatingWordsCircle from "./RotatingWordsCircle";
+
+const RotatingWordsCircle = () => {
+  const radius = 200;
+
+  return (
+    <div className="absolute top-0 -left-12 sm:-left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] pointer-events-none z-0">
+      <svg
+        className="animate-[spin_20s_linear_infinite]"
+        viewBox="0 0 400 400"
+        width="100%"
+        height="100%"
+      >
+        <defs>
+          <path
+            id="textCircle"
+            d={`
+              M ${200 - radius},200
+              a ${radius},${radius} 0 1,1 ${2 * radius},0
+              a ${radius},${radius} 0 1,1 -${2 * radius},0
+            `}
+            fill="none"
+          />
+        </defs>
+        <text fill="#333" fontSize="18" fontFamily="Arial">
+          <textPath href="#textCircle" startOffset="0%" method="align" spacing="auto">
+            <tspan fill="#3b82f6">Used-Car-Loan</tspan>
+            <tspan fill="#666"> .........</tspan>
+            <tspan fill="#f97316"> New-car-Loan</tspan>
+            <tspan fill="#666">......... </tspan>
+            <tspan fill="#3b82f6"> Personal-Loan</tspan>
+            <tspan fill="#666"> ........</tspan>
+            <tspan fill="#f97316"> Loan-Against-car</tspan>
+            <tspan fill="#666"> .........</tspan>
+            <tspan fill="#3b82f6">Used-Car-Loan</tspan>
+            <tspan fill="#666"> .........</tspan>
+            <tspan fill="#f97316"> New-car-Loan</tspan>
+            <tspan fill="#666">......... </tspan>
+            <tspan fill="#3b82f6"> Personal-Loan</tspan>
+            <tspan fill="#666">.........</tspan>
+            <tspan fill="#f97316"> Loan-Against-car</tspan>
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  );
+};
 
 const screens = [
-  {
-    id: 1,
-    title: "Home",
-    image: PHOTO5,
-    color: "bg-white",
-  },
-  {
-    id: 2,
-    title: "Profile",
-    image: image2,
-    color: "bg-gray-100",
-  },
-  {
-    id: 3,
-    title: "Settings",
-    image: image3,
-    color: "bg-blue-50",
-  },
-  {
-    id: 4,
-    title: "Settings",
-    image: image4,
-    color: "bg-blue-50",
-  },
+  { id: 1, image: PHOTO5, color: "bg-white" },
+  { id: 2, image: image2, color: "bg-gray-100" },
+  { id: 3, image: image3, color: "bg-blue-50" },
+  { id: 4, image: image4, color: "bg-blue-50" },
 ];
 
-const PhoneCarousel = () => {
+const PhoneWithRotatingCircle = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % screens.length);
     }, 3000);
-
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const handleManualNavigation = (index) => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(index);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsAutoPlaying(true), 3000);
-  };
-
-  const goToNext = () => handleManualNavigation((currentIndex + 1) % screens.length);
-  const goToPrevious = () => handleManualNavigation((currentIndex - 1 + screens.length) % screens.length);
+  }, []);
 
   return (
-    <div 
-      className="relative flex flex-col items-center m-6 w-full"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Phone and Rotating Circle Container */}
-      <div className="relative flex justify-center items-center mb-8 w-full max-w-md">
-        {/* Rotating Circle with hover control */}
-        <div className={`absolute -top-6 -left-6 z-0 transition-opacity duration-300 ${
-          isHovered ? "" : "opacity-100"
-        }`}>
-          <RotatingWordsCircle />
-        </div>
+    <div className="relative w-full flex justify-center items-center px-4 sm:px-10 py-8">
+      {/* Rotating Circle */}
+      <RotatingWordsCircle />
 
-        {/* Phone Frame */}
-        <div className="relative w-[260px] h-[560px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[14px] border-black">
+      {/* Phone Frame */}
+      <div className="relative z-10 flex justify-center items-center w-full max-w-xs sm:max-w-sm md:max-w-md">
+        <div className="relative w-[220px] sm:w-[260px] h-[480px] sm:h-[560px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[12px] sm:border-[14px] border-black">
           {/* Notch */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-7 bg-black rounded-b-3xl z-10" />
-
-          {/* Screen Content */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-6 sm:h-7 bg-black rounded-b-3xl z-10" />
+          {/* Screen */}
           <div className="relative w-full h-full bg-white overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
               <motion.div
@@ -92,7 +91,7 @@ const PhoneCarousel = () => {
               >
                 <img
                   src={screens[currentIndex].image}
-                  alt={screens[currentIndex].title}
+                  alt="carousel"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -100,64 +99,8 @@ const PhoneCarousel = () => {
           </div>
         </div>
       </div>
-
-      {/* Navigation Buttons */}
-      <div className="flex space-x-4 mb-4">
-        <button
-          onClick={goToPrevious}
-          className="bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition-colors"
-          aria-label="Previous screen"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <button
-          onClick={goToNext}
-          className="bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition-colors"
-          aria-label="Next screen"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Indicators */}
-      <div className="flex space-x-2 mt-4">
-        {screens.map((screen, index) => (
-          <button
-            key={screen.id}
-            onClick={() => handleManualNavigation(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? "bg-gray-800" : "bg-gray-300"
-            }`}
-            aria-label={`Go to ${screen.title}`}
-          />
-        ))}
-      </div>
-
-      {/* Screen Title */}
-      <div className="mt-4 text-center">
-        <h2 className="text-xl font-medium text-gray-900">
-          {screens[currentIndex].title}
-        </h2>
-      </div>
     </div>
   );
 };
 
-export default PhoneCarousel;
+export default PhoneWithRotatingCircle;

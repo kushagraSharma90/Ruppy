@@ -51,7 +51,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-gradient-to-b from-blue-200 to-white overflow-hidden h-screen flex items-center"
+      className="relative bg-gradient-to-b from-blue-200 to-white overflow-hidden py-16 md:py-24"
     >
       {/* Background Animation */}
       <AnimatePresence mode="wait">
@@ -142,11 +142,12 @@ const Hero = () => {
         </div>
 
         {/* Right Carousel */}
-        <div className="w-full md:w-1/2 flex justify-center items-center">
-          <div className="w-full max-w-xs md:max-w-md lg:max-w-lg">
-            <PhoneCarousel />
-          </div>
-        </div>
+      <div className="w-full md:w-1/2 flex justify-center items-center px-4 sm:px-6 md:px-0">
+  <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg">
+    <PhoneCarousel />
+  </div>
+</div>
+
       </motion.div>
     </section>
   );
