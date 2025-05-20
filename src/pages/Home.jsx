@@ -5,7 +5,6 @@ import Testimonials from "../components/home/Testimonials"
 import CtaSection from "../components/home/CtaSection"
 import Partners from "../components/home/Partners"
 import EmiCalculator  from "../components/home/CalculateEMI"
-import BlogsSection from "../components/home/BlogSection"
 import Blogs from "../components/home/Blogs"
 
 
