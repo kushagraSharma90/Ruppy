@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-2" : "bg-white py-4"
+        scrolled ? "bg-blue-100 shadow-md py-2" : "bg-blue-50 py-4"
       }`}
     >
       {/* Add this CSS for icon color filtering */}

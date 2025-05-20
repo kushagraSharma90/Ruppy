@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Search, ChevronLeft, ChevronRight, Clock, Eye, Calendar, ArrowRight } from "lucide-react"
@@ -8,11 +6,11 @@ import { Search, ChevronLeft, ChevronRight, Clock, Eye, Calendar, ArrowRight } f
 const blogPosts = [
   {
     id: 1,
-    title: "How to transfer a used car loan to another person?",
+    title: "Disrupting Auto Finance & Solving Dealer Challenges",
     excerpt: "Learn the step-by-step process to transfer your car loan to another person legally and efficiently.",
     image: "/placeholder.svg?height=400&width=600",
     category: "Car Loans",
-    views: 645,
+    views: 634,
     date: "Jan 20, 2025",
     readTime: "4 Min",
     author: "Team LOANS24",
@@ -21,7 +19,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "How Gen Z is revolutionising credit and shaping financial trends?",
+    title: "How is Gen Z revolutionising credit and shaping financial trends?",
     excerpt: "Discover how the youngest generation is changing the way we think about credit and financial services.",
     image: "/placeholder.svg?height=400&width=600",
     category: "Financial Trends",

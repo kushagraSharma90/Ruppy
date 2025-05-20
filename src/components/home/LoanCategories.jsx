@@ -12,6 +12,7 @@ const LoanCategories = () => {
       image: personalLoanImg,
       description: "Quick funds for your personal needs with minimal documentation",
       link: "/loans/personal",
+      bgColor: "bg-blue-100",
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ const LoanCategories = () => {
       image: usedCarLoan,
       description: "Affordable financing options for pre-owned vehicles",
       link: "/loans/used-car",
+      bgColor: "bg-blue-100",
     },
     {
       id: 3,
@@ -26,6 +28,7 @@ const LoanCategories = () => {
       image: newCarLoanImg,
       description: "Drive home your dream car with competitive interest rates",
       link: "/loans/new-car",
+      bgColor: "bg-blue-100",
     },
     {
       id: 4,
@@ -33,15 +36,16 @@ const LoanCategories = () => {
       image: loanAgainstCarImg,
       description: "Leverage your car's value for immediate financial needs",
       link: "/loans/against-car",
+      bgColor: "bg-blue-100",
     },
   ]
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-gray-300 to-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Loan Products</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-black max-w-2xl mx-auto">
             Explore our range of loan products designed to meet your financial needs
           </p>
         </div>
@@ -51,7 +55,7 @@ const LoanCategories = () => {
             <Link
               to={loan.link}
               key={loan.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+              className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
               <div className="p-6 flex flex-col items-center text-center">
                 <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-50 group-hover:border-blue-100 transition-colors duration-300">
@@ -60,7 +64,7 @@ const LoanCategories = () => {
                 <h3 className="text-xl font-semibold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">
                   {loan.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{loan.description}</p>
+                <p className="text-gray-700 mb-4">{loan.description}</p>
                 <span className="text-blue-600 font-medium inline-flex items-center group-hover:text-blue-700 transition-colors duration-300">
                   Learn More
                   <svg
