@@ -4,15 +4,18 @@ import PHOTO5 from "../../assets/PHOTO5.jpg";
 import image2 from "../../assets/PHOTO2.jpg";
 import image3 from "../../assets/PHOTO3.jpg";
 import image4 from "../../assets/PHOTO4.jpg";
+import UsedCarLoan from "../../assets/Used-Car-Loan.jpg";
 
 const RotatingWordsCircle = () => {
-  const radius = 200;
+  const radius = 220; // Adjust as needed
+  const center = 300; // Center for the 700x700 viewBox
 
   return (
-    <div className="absolute top-0 -left-12 sm:-left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] pointer-events-none z-0">
+    <div className="absolute top-2-left-10 w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] pointer-events-none">
       <svg
-        className="animate-[spin_20s_linear_infinite]"
-        viewBox="0 0 400 400"
+        overflow="visible"
+        className="animate-[spin_20s_linear_infinite] block"
+        viewBox="0 0 600 600"
         width="100%"
         height="100%"
       >
@@ -20,15 +23,21 @@ const RotatingWordsCircle = () => {
           <path
             id="textCircle"
             d={`
-              M ${200 - radius},200
+              M ${center - radius},${center}
               a ${radius},${radius} 0 1,1 ${2 * radius},0
               a ${radius},${radius} 0 1,1 -${2 * radius},0
             `}
             fill="none"
           />
         </defs>
-        <text fill="#333" fontSize="18" fontFamily="Arial">
-          <textPath href="#textCircle" startOffset="0%" method="align" spacing="auto">
+        <text
+          fill="#333"
+          fontSize="18"
+          fontFamily="Arial"
+          alignmentBaseline="middle"
+          dominantBaseline="middle"
+        >
+          <textPath href="#textCircle" startOffset="0%">
             <tspan fill="#3b82f6">Used-Car-Loan</tspan>
             <tspan fill="#666"> .........</tspan>
             <tspan fill="#f97316"> New-car-Loan</tspan>
@@ -38,12 +47,13 @@ const RotatingWordsCircle = () => {
             <tspan fill="#f97316"> Loan-Against-car</tspan>
             <tspan fill="#666"> .........</tspan>
             <tspan fill="#3b82f6">Used-Car-Loan</tspan>
-            <tspan fill="#666"> .........</tspan>
+            <tspan fill="#666"> ........</tspan>
             <tspan fill="#f97316"> New-car-Loan</tspan>
-            <tspan fill="#666">......... </tspan>
+            <tspan fill="#666">........ </tspan>
             <tspan fill="#3b82f6"> Personal-Loan</tspan>
-            <tspan fill="#666">.........</tspan>
+            <tspan fill="#666">........</tspan>
             <tspan fill="#f97316"> Loan-Against-car</tspan>
+            <tspan fill="#666"> ........</tspan>
           </textPath>
         </text>
       </svg>
@@ -51,8 +61,12 @@ const RotatingWordsCircle = () => {
   );
 };
 
+
+
+      
+
 const screens = [
-  { id: 1, image: PHOTO5, color: "bg-white" },
+  { id: 1, image: UsedCarLoan, color: "bg-white" },
   { id: 2, image: image2, color: "bg-gray-100" },
   { id: 3, image: image3, color: "bg-blue-50" },
   { id: 4, image: image4, color: "bg-blue-50" },
@@ -75,7 +89,7 @@ const PhoneWithRotatingCircle = () => {
 
       {/* Phone Frame */}
       <div className="relative z-10 flex justify-center items-center w-full max-w-xs sm:max-w-sm md:max-w-md">
-        <div className="relative w-[220px] sm:w-[260px] h-[480px] sm:h-[560px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[12px] sm:border-[14px] border-black">
+        <div className="relative w-[260px] sm:w-[300px] h-[500px] sm:h-[580px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[12px] sm:border-[14px] border-black">
           {/* Notch */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-6 sm:h-7 bg-black rounded-b-3xl z-10" />
           {/* Screen */}
@@ -92,7 +106,7 @@ const PhoneWithRotatingCircle = () => {
                 <img
                   src={screens[currentIndex].image}
                   alt="carousel"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain object-cover mt-6"
                 />
               </motion.div>
             </AnimatePresence>

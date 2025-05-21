@@ -56,6 +56,16 @@ const Testimonials = () => {
     content:
       "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
     rating: 5,
+    
+  },
+    {
+    id: 6,
+    name: "Neha Reddy",
+    position: "Financial Analyst",
+    image: customer6,
+    content:
+      "RupeeDot exceeded my expectations! Their support team was always available, and the loan disbursal was surprisingly fast. I’ll definitely recommend them to my peers.",
+    rating: 4,
   },
 ]
 
@@ -155,14 +165,14 @@ const Testimonials = () => {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
+            className="absolute left-1 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-6 w-6 text-blue-600" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
+            className="absolute right-2 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
             aria-label="Next testimonial"
           >
             <ChevronRight className="h-6 w-6 text-blue-600" />
