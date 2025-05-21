@@ -1,61 +1,64 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
+import customer1 from "../../assets/customer1.jpg" // Replace this with your actual image import or public URL
 
 // Replace these with your actual image imports or public URLs
-const customer1 = "/placeholder.svg"
-const customer2 = "/placeholder.svg"
-const customer3 = "/placeholder.svg"
-const customer4 = "/placeholder.svg"
-const customer5 = "/placeholder.svg"
+import customer2 from "../../assets/customer2.jpg"
+import customer3 from "../../assets/customer3.jpg"
+import customer4 from "../../assets/customer4.jpg"
+import customer5 from "../../assets/customer5.jpg"
+import customer6 from "../../assets/customer6.jpg"
+
 
 const Testimonials = () => {
   const testimonials = [
-    {
-      id: 1,
-      name: "Rahul Sharma",
-      position: "Business Owner",
-      image: customer1,
-      content:
-        "RupeeDot made the loan process incredibly simple. I got my business loan approved within 3 days, and their customer service was exceptional throughout the process.",
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: "Priya Patel",
-      position: "Marketing Executive",
-      image: customer2,
-      content:
-        "I was looking for a car loan with flexible repayment options, and RupeeDot delivered exactly what I needed. The interest rates were competitive, and the process was transparent.",
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: "Amit Verma",
-      position: "Teacher",
-      image: customer3,
-      content:
-        "As a first-time loan applicant, I was nervous about the process. The team at RupeeDot guided me through each step and made it stress-free. Highly recommended!",
-      rating: 4,
-    },
-    {
-      id: 4,
-      name: "Sneha Gupta",
-      position: "Healthcare Professional",
-      image: customer4,
-      content:
-        "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
-      rating: 5,
-    },
-    {
-      id: 5,
-      name: "Kushagra Sharma",
-      position: "Software Developer",
-      image: customer5,
-      content:
-        "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
-      rating: 5,
-    },
-  ]
+  {
+    id: 1,
+    name: "Rahul Sharma",
+    position: "Business Owner",
+    image: customer1,
+    content:
+      "RupeeDot made the loan process incredibly simple. I got my business loan approved within 3 days, and their customer service was exceptional throughout the process.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Priya Patel",
+    position: "Marketing Executive",
+    image: customer2,
+    content:
+      "I was looking for a car loan with flexible repayment options, and RupeeDot delivered exactly what I needed. The interest rates were competitive, and the process was transparent.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Amit Verma",
+    position: "Teacher",
+    image: customer3,
+    content:
+      "As a first-time loan applicant, I was nervous about the process. The team at RupeeDot guided me through each step and made it stress-free. Highly recommended!",
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "Sneha Gupta",
+    position: "Healthcare Professional",
+    image: customer4,
+    content:
+      "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Kushagra Sharma",
+    position: "Software Developer",
+    image: customer5,
+    content:
+      "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
+    rating: 5,
+  },
+]
+
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -152,7 +155,7 @@ const Testimonials = () => {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-9 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
+            className="absolute left-2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-6 w-6 text-blue-600" />
