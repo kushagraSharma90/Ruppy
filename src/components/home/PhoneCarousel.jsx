@@ -13,12 +13,14 @@ import image4 from "../../assets/PHOTO4.jpg";
 
 // Circular Rotating Text
 const RotatingWordsCircle = () => {
-  const radius = 200;
+  const radius = 180;
+  const center = 300;
   return (
-    <div className="absolute top-0 -left-12 sm:-left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] pointer-events-none z-0">
+    <div className="absolute top-2-left-10 w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] pointer-events-none">
       <svg
-        className="animate-[spin_20s_linear_infinite]"
-        viewBox="0 0 400 400"
+        overflow="visible"
+        className="animate-[spin_20s_linear_infinite] block"
+        viewBox="0 0 600 600"
         width="100%"
         height="100%"
       >
@@ -26,20 +28,21 @@ const RotatingWordsCircle = () => {
           <path
             id="textCircle"
             d={`
-              M ${200 - radius},200
+              M ${center - radius},${center}
               a ${radius},${radius} 0 1,1 ${2 * radius},0
               a ${radius},${radius} 0 1,1 -${2 * radius},0
             `}
             fill="none"
           />
         </defs>
-        <text fill="#333" fontSize="18" fontFamily="Arial">
-          <textPath
-            href="#textCircle"
-            startOffset="0%"
-            method="align"
-            spacing="auto"
-          >
+        <text
+          fill="#333"
+          fontSize="18"
+          fontFamily="Arial"
+          alignmentBaseline="middle"
+          dominantBaseline="middle"
+        >
+          <textPath href="#textCircle" startOffset="0%">
             <tspan fill="#3b82f6">Used-Car-Loan</tspan>
             <tspan fill="#666"> .........</tspan>
             <tspan fill="#f97316"> New-car-Loan</tspan>
@@ -47,6 +50,15 @@ const RotatingWordsCircle = () => {
             <tspan fill="#3b82f6"> Personal-Loan</tspan>
             <tspan fill="#666"> ........</tspan>
             <tspan fill="#f97316"> Loan-Against-car</tspan>
+            <tspan fill="#666"> .........</tspan>
+            <tspan fill="#3b82f6">Used-Car-Loan</tspan>
+            <tspan fill="#666"> ........</tspan>
+            <tspan fill="#f97316"> New-car-Loan</tspan>
+            <tspan fill="#666">........ </tspan>
+            <tspan fill="#3b82f6"> Personal-Loan</tspan>
+            <tspan fill="#666">........</tspan>
+            <tspan fill="#f97316"> Loan-Against-car</tspan>
+            <tspan fill="#666"> ........</tspan>
           </textPath>
         </text>
       </svg>
@@ -54,7 +66,6 @@ const RotatingWordsCircle = () => {
   );
 };
 
-// Screens With Icons, Text, and Description
 const screens = [
   {
     id: 1,
@@ -113,59 +124,54 @@ const PhoneWithRotatingCircle = () => {
       <RotatingWordsCircle />
 
       <div className="relative z-10 flex justify-center items-center w-full max-w-xs sm:max-w-sm md:max-w-md">
-        <div className="relative w-[220px] sm:w-[260px] h-[480px] sm:h-[454px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[12px] sm:border-[14px] border-black">
-          {/* Notch */}
-          {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-6 sm:h-7 bg-black rounded-b-3xl z-10" /> */}
+        <div className="relative w-[260px] sm:w-[268px] h-[475px] sm:h-[475px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[2px] sm:border-[4px] border-black">
+          <div className="relative w-[220px] sm:w-[260px] h-[480px] sm:h-[454px] bg-black rounded-[45px] shadow-xl overflow-hidden border-[2px] sm:border-[4px] border-black">
+            <div className="relative w-full h-full bg-white overflow-hidden rounded-3xl">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={screens[currentIndex].id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className={`absolute inset-0 ${screens[currentIndex].color}`}
+                >
+                  <img
+                    src={screens[currentIndex].image}
+                    alt="carousel"
+                    className="w-full h-full object-contain object-top"
+                  />
+                </motion.div>
+              </AnimatePresence>
 
-          {/* Phone Screen */}
-          <div className="relative w-full h-full bg-white overflow-hidden rounded-3xl">
-            {/* Image Carousel */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={screens[currentIndex].id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className={`absolute inset-0 ${screens[currentIndex].color}`}
-              >
-                <img
-                  src={screens[currentIndex].image}
-                  alt="carousel"
-                  className="w-full h-full object-contain object-top"
-                />
-              </motion.div>
-            </AnimatePresence>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={screens[currentIndex].loanType}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: "100%", opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="absolute bottom-0 w-full px-4 py-3 bg-white/90 border-t border-blue-200 rounded-b-3xl z-20"
+                >
+                  <div className="flex items-center justify-center text-blue-900 text-sm sm:text-base font-semibold">
+                    {screens[currentIndex].icon}
+                    {screens[currentIndex].loanType}
+                  </div>
+                  <p className="text-center text-xs sm:text-sm text-gray-700 mt-1 px-2">
+                    {screens[currentIndex].description}
+                  </p>
 
-            {/* Bottom Slider */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={screens[currentIndex].loanType}
-                initial={{ y: "100%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: "100%", opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="absolute bottom-0 w-full px-4 py-3 bg-white/90 backdrop-blur-md border-t border-blue-200 shadow-inner rounded-b-3xl z-20"
-              >
-                <div className="flex items-center justify-center text-blue-900 text-sm sm:text-base font-semibold">
-                  {screens[currentIndex].icon}
-                  {screens[currentIndex].loanType}
-                </div>
-                <p className="text-center text-xs sm:text-sm text-gray-700 mt-1 px-2">
-                  {screens[currentIndex].description}
-                </p>
-
-                {/* Apply Now Button */}
-                <div className="mt-3 flex justify-center">
-                  <button
-                    onClick={handleApplyNow}
-                    className="bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs sm:text-sm hover:bg-blue-700 transition duration-200"
-                  >
-                    Apply Now
-                  </button>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                  <div className="mt-3 flex justify-center">
+                    <button
+                      onClick={handleApplyNow}
+                      className="bg-blue-600 text-white px-4 py-1.5 rounded-full text-xs sm:text-sm hover:bg-blue-700 transition duration-200"
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import CtaSection from "../components/home/CtaSection"
 import Partners from "../components/home/Partners"
 import EmiCalculator  from "../components/home/CalculateEMI"
 import Blogs from "../components/home/Blogs"
+import BlogDetail from "../components/home/BlogDetail"
 
 
 const Home = () => {
@@ -17,7 +18,8 @@ const Home = () => {
     <EmiCalculator  />
     <Testimonials />
     {/* <Partners /> */}
-    <Blogs />
+    {/* <Blogs /> */}
+    <BlogDetail/>
     <CtaSection /> 
     </>
        

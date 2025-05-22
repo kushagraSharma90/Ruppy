@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { ChevronDown, Menu, X, BookOpen } from "lucide-react"
@@ -20,50 +18,93 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isOpen) setIsOpen(false)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [isOpen])
+
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
   const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`)
 
-  // Common styles for links
   const getLinkStyles = (path) => {
     const active = isActive(path)
     return {
-      linkClass: `flex items-center transition-colors hover:text-orange-500 ${active ? "text-orange-500" : "text-gray-700"}`,
-      iconClass: `h-5 w-5 mr-2 inline-block transition-all ${active ? "filter-orange" : ""}`,
+      linkClass: `group flex items-center relative px-3 py-2 rounded-xl transition-colors duration-200
+        ${active ? "text-orange-500" : "text-gray-700"}
+        hover:text-orange-500`,
+      iconClass: `h-5 w-5 mr-2 inline-block transition-all duration-200 ${active ? "filter-orange" : ""}`,
     }
   }
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-blue-100 shadow-md py-2" : "bg-blue-50 py-4"
-      }`}
-    >
-      {/* Add this CSS for icon color filtering */}
-      <style jsx="true">{`
+    <header className="sticky top-2 z-50 w-full flex justify-center transition-all duration-300">
+      <style>{`
         .filter-orange {
           filter: invert(56%) sepia(75%) saturate(1582%) hue-rotate(346deg) brightness(101%) contrast(96%);
         }
+        @media (max-width: 350px) {
+          .logo-img { height: 2rem; }
+        }
+        /* Animated underline for nav links */
+        .nav-underline:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #f97316;
+          transition: width .3s;
+          border-radius: 2px;
+          margin-top: 2px;
+        }
+        .group:hover .nav-underline:after, .text-orange-500 .nav-underline:after {
+          width: 100%;
+        }
+        /* Dropdown animation */
+        .dropdown-anim {
+          opacity: 0;
+          transform: translateY(10px) scale(0.98);
+          pointer-events: none;
+          transition: all 0.25s cubic-bezier(.4,0,.2,1);
+        }
+        .group:hover .dropdown-anim {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          pointer-events: auto;
+        }
+        /* Sidebar animation */
+        .sidebar-anim {
+          transition: transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+        }
       `}</style>
-
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div
+        className={`container mx-auto px-2 sm:px-4 flex justify-between items-center
+          bg-blue-50/80 backdrop-blur-md shadow-2xl border border-blue-100
+          rounded-2xl transition-all duration-300
+          ${scrolled ? "py-2" : "py-4"}
+          `}
+        style={{ maxWidth: 1200 }}
+      >
         <Link to="/" className="flex items-center">
           <img
             src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
             alt="RupeeDot Logo"
-            className="h-12 w-auto"
+            className="h-8 sm:h-10 md:h-12 w-auto logo-img rounded-xl shadow"
           />
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-3">
           {/* Home Link */}
           {(() => {
             const { linkClass, iconClass } = getLinkStyles("/")
             return (
-              <Link to="/" className={linkClass}>
+              <Link to="/" className={`${linkClass} text-sm lg:text-base`}>
                 <img src={Home || "/placeholder.svg"} alt="Home" className={iconClass} />
-                Home
+                <span className="nav-underline">Home</span>
               </Link>
             )
           })()}
@@ -73,20 +114,24 @@ const Navbar = () => {
             const { linkClass, iconClass } = getLinkStyles("/our-story")
             return (
               <div className="relative group">
-                <Link to="/our-story" className={linkClass}>
+                <Link to="/our-story" className={`${linkClass} text-sm lg:text-base`}>
                   <img src={achieveGoal || "/placeholder.svg"} alt="Our Story" className={iconClass} />
-                  Our Story <ChevronDown className="w-4 h-4 ml-1" />
+                  <span className="nav-underline">Our Story</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
-                <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="dropdown-anim absolute left-0 mt-2 w-48 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
                       to="/our-story/about"
-                      className="block py-2 text-sm hover:text-orange-500"
+                      className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
                       About Us
                     </Link>
-                    <Link to="/our-story/team" className="block py-2 text-sm hover:text-orange-500" onClick={closeMenu}>
+                    <Link
+                      to="/our-story/team"
+                      className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -100,15 +145,15 @@ const Navbar = () => {
             const { linkClass, iconClass } = getLinkStyles("/loans")
             return (
               <div className="relative group">
-                <Link to="/loans" className={linkClass}>
+                <Link to="/loans" className={`${linkClass} text-sm lg:text-base`}>
                   <img src={IconImage || "/placeholder.svg"} alt="Loans" className={iconClass} />
-                  Loans <ChevronDown className="w-4 h-4 ml-1" />
+                  <span className="nav-underline">Loans</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
-                <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="dropdown-anim absolute left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
                       to="/loans/personal"
-                      className="flex items-center py-2 text-sm hover:text-orange-500"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
                       <img src={IconImage || "/placeholder.svg"} alt="Personal" className="h-4 w-4 mr-2" />
@@ -116,7 +161,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       to="/loans/used-car"
-                      className="flex items-center py-2 text-sm hover:text-orange-500"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
                       <img src={IconImage || "/placeholder.svg"} alt="Used Car" className="h-4 w-4 mr-2" />
@@ -124,7 +169,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       to="/loans/new-car"
-                      className="flex items-center py-2 text-sm hover:text-orange-500"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
                       <img src={IconImage || "/placeholder.svg"} alt="New Car" className="h-4 w-4 mr-2" />
@@ -132,7 +177,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       to="/loans/against-car"
-                      className="flex items-center py-2 text-sm hover:text-orange-500"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
                       <img src={IconImage || "/placeholder.svg"} alt="Loan Against Car" className="h-4 w-4 mr-2" />
@@ -148,9 +193,9 @@ const Navbar = () => {
           {(() => {
             const { linkClass, iconClass } = getLinkStyles("/calculators")
             return (
-              <Link to="/calculators" className={linkClass}>
+              <Link to="/calculators" className={`${linkClass} text-sm lg:text-base`}>
                 <img src={calculatorImg || "/placeholder.svg"} alt="Calculator" className={iconClass} />
-                Calculators
+                <span className="nav-underline">Calculators</span>
               </Link>
             )
           })()}
@@ -159,9 +204,9 @@ const Navbar = () => {
           {(() => {
             const { linkClass } = getLinkStyles("/blogs")
             return (
-              <Link to="/blogs" className={linkClass}>
+              <Link to="/blogs" className={`${linkClass} text-sm lg:text-base`}>
                 <BookOpen className={`h-5 w-5 mr-2 inline-block ${isActive("/blogs") ? "text-orange-500" : ""}`} />
-                Blogs
+                <span className="nav-underline">Blogs</span>
               </Link>
             )
           })()}
@@ -170,9 +215,9 @@ const Navbar = () => {
           {(() => {
             const { linkClass, iconClass } = getLinkStyles("/become-partner")
             return (
-              <Link to="/become-partner" className={linkClass}>
+              <Link to="/become-partner" className={`${linkClass} text-sm lg:text-base`}>
                 <img src={deal || "/placeholder.svg"} alt="Partner" className={iconClass} />
-                Become a Partner
+                <span className="nav-underline">Become a Partner</span>
               </Link>
             )
           })()}
@@ -181,45 +226,50 @@ const Navbar = () => {
         {/* Apply Now Button */}
         <Link
           to="/apply"
-          className="hidden md:flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+          className="hidden md:flex items-center bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl text-sm lg:text-base whitespace-nowrap shadow-lg transition-all duration-200 transform hover:scale-105"
         >
           Apply Now
           <span className="ml-1 bg-white bg-opacity-20 rounded-full p-1">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </span>
         </Link>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-700" onClick={toggleMenu}>
+        <button
+          className="md:hidden text-blue-600 focus:outline-none rounded-lg bg-blue-100 p-2 transition-all duration-200 hover:bg-orange-100 hover:text-orange-500"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar - Overlay */}
       <div
-        className={`fixed inset-0 bg-gray-800 bg-opacity-50 z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-blue-900 bg-opacity-30 z-40 md:hidden transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={closeMenu}
+        aria-hidden="true"
       >
+        {/* Mobile Sidebar - Content */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`sidebar-anim fixed top-2 right-2 h-[96%] w-64 max-w-[90vw] bg-white/95 shadow-2xl rounded-2xl border border-blue-100 transform overflow-y-auto
+            ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
+          `}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-end p-4">
-            <button onClick={closeMenu}>
+            <button onClick={closeMenu} aria-label="Close menu" className="rounded-lg bg-blue-50 p-2 hover:bg-blue-100 transition-all duration-200">
               <X className="h-6 w-6" />
             </button>
           </div>
-          <div className="px-4 py-2 space-y-2">
-            {/* Mobile Menu Links */}
+          <div className="px-4 py-2 space-y-4">
             <Link
               to="/"
-              className={`flex items-center py-2 ${isActive("/") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <img
@@ -229,10 +279,9 @@ const Navbar = () => {
               />
               Home
             </Link>
-
             <Link
               to="/our-story"
-              className={`flex items-center py-2 ${isActive("/our-story") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/our-story") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <img
@@ -242,10 +291,9 @@ const Navbar = () => {
               />
               Our Story
             </Link>
-
             <Link
               to="/loans"
-              className={`flex items-center py-2 ${isActive("/loans") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/loans") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <img
@@ -255,10 +303,9 @@ const Navbar = () => {
               />
               Loans
             </Link>
-
             <Link
               to="/calculators"
-              className={`flex items-center py-2 ${isActive("/calculators") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/calculators") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <img
@@ -268,19 +315,17 @@ const Navbar = () => {
               />
               Calculators
             </Link>
-
             <Link
               to="/blogs"
-              className={`flex items-center py-2 ${isActive("/blogs") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/blogs") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <BookOpen className={`h-5 w-5 mr-2 inline-block ${isActive("/blogs") ? "text-orange-500" : ""}`} />
               Blogs
             </Link>
-
             <Link
               to="/become-partner"
-              className={`flex items-center py-2 ${isActive("/become-partner") ? "text-orange-500" : "text-gray-700"}`}
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/become-partner") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
               <img
@@ -290,10 +335,9 @@ const Navbar = () => {
               />
               Become a Partner
             </Link>
-
             <Link
               to="/apply"
-              className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+              className="flex items-center bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
               onClick={closeMenu}
             >
               Apply Now
