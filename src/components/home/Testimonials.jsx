@@ -14,47 +14,51 @@ const Testimonials = () => {
   const testimonials = [
   {
     id: 1,
-    name: "Rahul Sharma",
-    position: "Business Owner",
+    name: "Siddharth Sharma",
+    position: "Working Professional - Mumbai",
     image: customer1,
     content:
-      "RupeeDot made the loan process incredibly simple. I got my business loan approved within 3 days, and their customer service was exceptional throughout the process.",
+      "I sincerely appreciate RupeeDot prompt assistance in providing me with a top-up car loan for my son's engineering admission as fund was required immediately for 7 lacs. Thanks to your support, my son can now pursue his education without financial hurdles. I am grateful for your exceptional service and look forward to a continued association with you.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Priya Patel",
-    position: "Marketing Executive",
+    name: "Priya Sule",
+    position: "Salaried - Pune",
     image: customer2,
     content:
-      "I was looking for a car loan with flexible repayment options, and RupeeDot delivered exactly what I needed. The interest rates were competitive, and the process was transparent.",
+      "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and  ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated.",
     rating: 5,
+    
   },
   {
     id: 3,
-    name: "Amit Verma",
-    position: "Teacher",
+    name: "Ravin P",
+    position: "Business Owner - Bangalore",
     image: customer3,
     content:
-      "As a first-time loan applicant, I was nervous about the process. The team at RupeeDot guided me through each step and made it stress-free. Highly recommended!",
+      "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated!",
     rating: 4,
   },
   {
     id: 4,
-    name: "Sneha Gupta",
-    position: "Healthcare Professional",
+    name: "Saurabh Patel",
+    position: "Salaried - Delhi",
     image: customer4,
     content:
-      "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
+      "Celebrated our 2nd marriage anniversary with a new car hanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
+
+
     rating: 5,
   },
   {
     id: 5,
-    name: "Kushagra Sharma",
-    position: "Software Developer",
+    name: "Mahak Khanna",
+    position: "Salaried - Gurgaon",
     image: customer5,
     content:
-      "The personal loan I got from RupeeDot helped me during a medical emergency. Their quick approval process and minimal documentation were exactly what I needed in that situation.",
+      "RupeeDot came through for me when I needed it the most. I urgently required 10 lacs for a family vacation abroad, and their personal loan process was incredibly smooth and quick, removing all the stress. Knowing our dream trip was secured without financial roadblocks was a huge relief. I'm genuinely impressed with their service and would highly recommend Rupee Dot to anyone in need of timely financial support.",
+
     rating: 5,
     
   },
@@ -67,6 +71,19 @@ const Testimonials = () => {
       "RupeeDot exceeded my expectations! Their support team was always available, and the loan disbursal was surprisingly fast. I’ll definitely recommend them to my peers.",
     rating: 4,
   },
+   {
+    id: 7,
+    name: "Sunil Rana",
+    position: "Working Professional - Mumbai",
+    image: customer5,
+    content:
+      "I took a personal loan from Rupee Dot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I'd highly recommend RupeeDot for anyone planning a vacation!",
+
+
+    rating: 5,
+    
+  },
+  
 ]
 
 
