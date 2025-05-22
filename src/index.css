@@ -34,6 +34,10 @@
     --radius: 0.5rem;
   }
 
+  li {
+    @apply list-disc;
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
