@@ -6,15 +6,15 @@ import { Search, ChevronLeft, ChevronRight, Clock, Eye, Calendar, ArrowRight } f
 const blogPosts = [
   {
     id: 1,
-    title: "Disrupting Auto Finance & Solving Dealer Challenges",
-    excerpt: "Learn the step-by-step process to transfer your car loan to another person legally and efficiently.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: " Disrupting Auto Finance & Solving Dealer Challenges  ",
+    excerpt: " A Fintech Disruptor in Auto Finance",
+    image: "src/assets/blog1.jpeg?height=40&width=40",
     category: "Car Loans",
     views: 634,
-    date: "Jan 20, 2025",
+    date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "Team LOANS24",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    author: "RUPPEDOT",
+    authorImage: "src/assets/blog1.jpeg?height=40&width=40",
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ const blogPosts = [
     date: "Nov 7, 2024",
     readTime: "5 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: "src/assets/blog3.jpeg",
     featured: true,
   },
   {
@@ -35,13 +35,13 @@ const blogPosts = [
     title: "Pros and Cons of a Credit Card",
     excerpt:
       "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "src/assets/blog3.jpeg",
     category: "Credit Cards",
     views: 77,
     date: "Sept 20, 2024",
     readTime: "4 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: "src/assets/blog3.jpeg",
     featured: false,
   },
   {

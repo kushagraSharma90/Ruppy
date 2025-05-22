@@ -8,6 +8,7 @@ import EmiCalculator  from "../components/home/CalculateEMI"
 import Blogs from "../components/home/Blogs"
 import BlogDetail from "../components/home/BlogDetail"
 
+import BlogsForHome from "../components/home/BlogsForHome"
 
 const Home = () => {
   return (
@@ -19,7 +20,9 @@ const Home = () => {
     <Testimonials />
     {/* <Partners /> */}
     {/* <Blogs /> */}
-    <BlogDetail/>
+    {/* <BlogDetail/> */}
+    <BlogsForHome />
+   
     <CtaSection /> 
     </>
        
