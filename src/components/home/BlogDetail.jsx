@@ -89,7 +89,7 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "src/assets/blog1.jpeg?height=40&width=40",
+    authorImage: "src/assets/blog2.jpeg?height=40&width=40",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },

@@ -15,10 +15,10 @@ import LoanAgainstCar from "./pages/LoanAgainstCar"
 import AboutUs from "./pages/AboutUs"
 import OurMission from "./pages/OurMission"
 import ApplyButton from "./pages/ApplyButton"
-import OurTeam from "./pages/OurTeam"
 import ScrollToTop from "./components/ScrollToTop" // ✅ Add this import
 import Blogs from "./components/home/Blogs"
 import BlogDetail from "./components/home/BlogDetail"
+import ContactUs from "./pages/ContactUs"
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
             <Route path="/our-story/about" element={<AboutUs />} />
             <Route path="/our-story/mission" element={<OurMission />} />
             <Route path="/apply" element={<ApplyButton />} />
-            <Route path="/our-story/team" element={<OurTeam />} />
+            <Route path="/our-story/team" element={<ContactUs />} />
             <Route path="/loans" element={<Loans />} />
             <Route path="/loans/personal" element={<PersonalLoan />} />
             <Route path="/loans/used-car" element={<UsedCarLoan />} />
