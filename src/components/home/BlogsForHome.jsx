@@ -5,6 +5,11 @@ import { AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Eye, User } from "lucide-react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import blog1 from "../../assets/blog1.jpeg";
+import blog2 from "../../assets/blog2.jpeg";
+import blog3 from "../../assets/blog3.jpeg";
+import blog4 from "../../assets/blog4.jpeg";
+import blog5 from "../../assets/blog5.jpeg";
 
 
 const blogData = [
@@ -13,7 +18,7 @@ const blogData = [
     title: "Disrupting Auto Finance & Solving Dealer Challenges?",
     description:
       "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
-    image: "src/assets/blog1.jpeg",
+    image: blog1,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -27,7 +32,7 @@ const blogData = [
  decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,
  stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and
  rural India.`,
-    image: "src/assets/blog2.jpeg",
+    image: blog2,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -40,7 +45,7 @@ const blogData = [
       `It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without
        having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment
       tenure, making it suitable for working professionals."`,
-    image: "src/assets/blog3.jpeg",
+    image: blog3,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -55,7 +60,7 @@ const blogData = [
  approvals, which not only delays the sales process but also dissolves customer confidence. Customers today
  anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business. ,
 `,
-    image: "src/assets/blog4.jpeg",
+    image: blog4,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -69,7 +74,7 @@ const blogData = [
      ` " Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
  over your current debts, and be open about your loan requirements. This makes it easier and quicker for you,
 `,
- image: "src/assets/blog5.jpeg",
+ image: blog5,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -87,7 +92,7 @@ function BlogCard({ blog }) {
     >
       <div className="relative h-48 overflow-hidden">
         <img
-          src={blog.image || "https://source.unsplash.com/random/600x400/?finance"}
+          src={blog.image}
           alt={blog.title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
