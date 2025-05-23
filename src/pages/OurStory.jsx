@@ -20,19 +20,13 @@ const OurStory = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">About RupeeDot</h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2015, RupeeDot started with a simple mission: to make financial services accessible to
-                everyone. We recognized that traditional banking systems often had complex processes that made it
-                difficult for many people to access loans when they needed them most.
+               We Want to help our customers to achieve sustainable financial success by offering fast, fair and flexible finance solutions, powered by our innovative AI lending approach.
               </p>
               <p className="text-gray-600 mb-4">
-                Our founders, with over 30 years of combined experience in the financial sector, set out to create a
-                platform that would simplify the loan application process while ensuring fair and transparent terms for
-                all customers.
+               One of the fastest growing fintech aggregator, specializing in providing both secured and unsecured loans. With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs. We Provide Hassle -Free Process, Quick Disbursal with Lowest EMI which is Paperless & Digital with wide range of products. Apply Online!
               </p>
               <p className="text-gray-600 mb-4">
-                Today, RupeeDot has grown to become one of India's leading financial services providers, serving
-                thousands of customers across the country. We continue to innovate and expand our offerings to meet the
-                evolving needs of our customers.
+                Our diverse team is united in their mission of creating simple, fair and honest financial products that have the customer’s needs at their heart.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
@@ -74,7 +68,7 @@ const OurStory = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our Leadership Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our experienced team is dedicated to providing the best financial solutions for our customers
+             To transform India’s lending ecosystem by delivering seamless, accessible, and affordable credit solutions through innovative financial technologies. Our goal is to empower individuals, businesses, and communities to achieve their financial ambitions.
             </p>
           </div>
 
@@ -90,8 +84,7 @@ const OurStory = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">Rajesh Kumar</h3>
                 <p className="text-blue-600 mb-4">CEO & Co-Founder</p>
                 <p className="text-gray-600">
-                  With over 15 years of experience in banking and finance, Rajesh leads our vision to transform
-                  financial services in India.
+                 At FinTech Lenders for All Loans, our mission is to aggregate a wide range of loan options from diverse financial institutions and leverage advanced technology to provide personalized, transparent, and efficient lending solutions.
                 </p>
               </div>
             </div>
