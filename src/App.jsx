@@ -19,6 +19,12 @@ import ScrollToTop from "./components/ScrollToTop" // ✅ Add this import
 import Blogs from "./components/home/Blogs"
 import BlogDetail from "./components/home/BlogDetail"
 import ContactUs from "./pages/ContactUs"
+import Community from "./pages/Community"
+import Career from "./pages/community/career"
+import OurCoreValues from "./pages/community/our-core-values"
+import WorkCulture from "./pages/community/work-culture"
+import FAQ from "./pages/community/faq"
+
 
 function App() {
   return (
@@ -37,6 +43,12 @@ function App() {
             <Route path="/apply" element={<ApplyButton />} />
             <Route path="/our-story/team" element={<ContactUs />} />
             <Route path="/loans" element={<Loans />} />
+            <Route path="/community" element={<Community />} />
+            
+            <Route path="/community/career" element={<Career />} />
+            <Route path="/community/our-core-values" element={<OurCoreValues />} />
+            <Route path="/community/work-culture" element={<WorkCulture />} />
+            <Route path="/community/faq" element={<FAQ />} />
             <Route path="/loans/personal" element={<PersonalLoan />} />
             <Route path="/loans/used-car" element={<UsedCarLoan />} />
             <Route path="/loans/new-car" element={<NewCarLoan />} />
