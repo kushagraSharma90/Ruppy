@@ -1,24 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import PhoneCarousel from "./PhoneCarousel"; // Adjust path as needed
+import HeroBg from "../../assets/Herobg.png";
+import HeroSideImage from "../../assets/bgpicc.jpeg"; // ✅ Add your image here
 
 const slides = [
   {
     title: "Unlock Your Financial Dreams",
-    text: "We are Rupee Dot. Helping you borrow right today for a better tomorrow.",
+    text: "We are one of the fastest growing fintech aggregator, specializing in providing both Personal and Car loans. With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs. We Provide Hassle-Free Process, Quick Disbursal with Lowest EMI which is paperless & Digital with wide range of products.  Our diverse team is united in their mission of creating simple, fair and honest financial products that have the customer’s needs at their heart. More choice, more power to you. ",
   },
 ];
-
-const backgroundVariants = {
-  enter: { opacity: 0, scale: 1.1 },
-  center: {
-    opacity: 1,
-    scale: 1,
-    transition: { opacity: { duration: 1 }, scale: { duration: 6 } },
-  },
-  exit: { opacity: 0, transition: { duration: 0.5 } },
-};
 
 const textVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -44,27 +35,16 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section
       ref={ref}
-      className="relative bg-gradient-to-b from-blue-200 to-white overflow-hidden py-16 md:py-24"
+      className="relative bg-gradient-to-b from-white to-blue-50 overflow-hidden py-16 md:py-24 bg-cover bg-center"
+      style={{ backgroundImage: `url(${HeroBg})` }}
     >
-      {/* Background Animation */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          className="absolute top-0 left-0 w-full h-full"
-          variants={backgroundVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-        />
-      </AnimatePresence>
-
       {/* Overlay */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"
@@ -90,15 +70,26 @@ const Hero = () => {
         {/* Left Text */}
         <div className="w-full md:w-1/2">
           <AnimatePresence mode="wait">
-            <motion.div key={currentIndex} className="max-w-2xl" initial="hidden" animate="visible" exit="exit">
+            <motion.div
+              key={currentIndex}
+              className="max-w-2xl"
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
               <motion.h1
                 className="text-5xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-13 leading-tight"
                 variants={textVariants}
                 custom={0}
               >
-                {slides[currentIndex].title}
+                Unlock Your Financial{" "}
+                <span className="text-[#D47734]">Dreams</span>
               </motion.h1>
-              <motion.p className="text-lg md:text-xl text-bold mb-8" variants={textVariants} custom={1}>
+              <motion.p
+                className="text-lg md:text-xl text-bold mb-8"
+                variants={textVariants}
+                custom={1}
+              >
                 {slides[currentIndex].text}
               </motion.p>
               <motion.div className="flex flex-wrap gap-4" variants={textVariants} custom={2}>
@@ -141,13 +132,17 @@ const Hero = () => {
           </AnimatePresence>
         </div>
 
-        {/* Right Carousel */}
-      <div className="w-full md:w-1/2 flex justify-center items-center px-4 sm:px-6 md:px-0">
-  <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg">
-    <PhoneCarousel />
-  </div>
-</div>
-
+        {/* Right Image */}
+        <div className="w-full md:w-1/2 flex justify-center items-center px-4 sm:px-6 md:px-0">
+          <motion.img
+            src={HeroSideImage}
+            alt="Illustration"
+            className="max-w-xs md:max-w-md lg:max-w-lg rounded-xl shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          />
+        </div>
       </motion.div>
     </section>
   );
