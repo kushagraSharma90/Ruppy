@@ -118,7 +118,7 @@ const Testimonials = () => {
   }, [totalPages])
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-100 to-blue-100">
+    <section className="py-20 bg-#f5f5ec">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>

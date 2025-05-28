@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-300 to-purple-300 text-black">
+    <section className="py-16 bg-#f5f5ec text-black">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>

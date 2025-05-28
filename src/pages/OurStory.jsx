@@ -4,7 +4,7 @@ const OurStory = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#3870A6] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
           <p className="text-xl max-w-3xl mx-auto text-blue-100">
@@ -30,19 +30,19 @@ const OurStory = () => {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">50,000+</h3>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">500+</h3>
                   <p className="text-gray-700">Happy Customers</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">₹500 Cr+</h3>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">₹5 Cr+</h3>
                   <p className="text-gray-700">Loans Disbursed</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">20+</h3>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">10+</h3>
                   <p className="text-gray-700">Banking Partners</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">100+</h3>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">20+</h3>
                   <p className="text-gray-700">Cities Covered</p>
                 </div>
               </div>
@@ -53,10 +53,7 @@ const OurStory = () => {
                 alt="RupeeDot Office"
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
-                <p className="text-lg font-semibold">Established 2015</p>
-                <p>Mumbai, India</p>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -134,7 +131,7 @@ const OurStory = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-blue-600 mb-4">Mission</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-black mb-4">
                   To empower individuals and businesses with accessible, transparent, and affordable financial solutions
                   that enable them to achieve their goals and improve their quality of life.
                 </p>
@@ -142,7 +139,7 @@ const OurStory = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-blue-600 mb-4">Vision</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-black mb-4">
                   To be India's most trusted financial services provider, known for our customer-centric approach,
                   innovative solutions, and commitment to financial inclusion.
                 </p>
@@ -154,28 +151,28 @@ const OurStory = () => {
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800">Transparency</h4>
+                      <h4 className="font-medium text-black">Transparency</h4>
                       <p className="text-gray-600">We believe in clear communication and no hidden charges.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800">Customer First</h4>
+                      <h4 className="font-medium text-black">Customer First</h4>
                       <p className="text-gray-600">Our customers' needs are at the center of everything we do.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800">Innovation</h4>
-                      <p className="text-gray-600">We continuously improve our services to meet evolving needs.</p>
+                      <h4 className="font-medium text-black">Innovation</h4>
+                      <p className="text-black">We continuously improve our services to meet evolving needs.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800">Integrity</h4>
+                      <h4 className="font-medium text-black">Integrity</h4>
                       <p className="text-gray-600">We conduct our business with the highest ethical standards.</p>
                     </div>
                   </div>

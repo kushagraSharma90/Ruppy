@@ -56,13 +56,13 @@ const WorkCulture = () => {
         >
           <Link
             to="/community"
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-6 transition-colors"
+            className="inline-flex items-center text-[#3870A6] hover:text-[#D47734] mb-6 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Community
           </Link>
 
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#3870A6] to-[#3870A6] bg-clip-text text-transparent mb-4">
             Our Work Culture
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
@@ -113,7 +113,7 @@ const WorkCulture = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-white text-center"
+          className="bg-gradient-to-r from-[#3870A6] to-[#D47734] rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">What Makes Us Special</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

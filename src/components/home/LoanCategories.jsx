@@ -41,7 +41,7 @@ const LoanCategories = () => {
   ]
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-300 to-white overflow-hidden">
+    <section className="py-16 bg-#f5f5ec overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Loan Products</h2>
