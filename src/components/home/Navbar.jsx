@@ -1,6 +1,8 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { ChevronDown, Menu, X, BookOpen } from "lucide-react"
+import { ChevronDown, Menu, X, Users, BookOpen, Heart, Briefcase, HelpCircle } from "lucide-react"
 import calculatorImg from "../../assets/calculatorImg.png"
 import IconImage from "../../assets/IconImage.png"
 import Home from "../../assets/home.png"
@@ -22,8 +24,8 @@ const Navbar = () => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isOpen) setIsOpen(false)
     }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [isOpen])
 
   const toggleMenu = () => setIsOpen(!isOpen)
@@ -49,7 +51,6 @@ const Navbar = () => {
         @media (max-width: 350px) {
           .logo-img { height: 2rem; }
         }
-        /* Animated underline for nav links */
         .nav-underline:after {
           content: "";
           display: block;
@@ -63,7 +64,6 @@ const Navbar = () => {
         .group:hover .nav-underline:after, .text-orange-500 .nav-underline:after {
           width: 100%;
         }
-        /* Dropdown animation */
         .dropdown-anim {
           opacity: 0;
           transform: translateY(10px) scale(0.98);
@@ -75,7 +75,6 @@ const Navbar = () => {
           transform: translateY(0) scale(1);
           pointer-events: auto;
         }
-        /* Sidebar animation */
         .sidebar-anim {
           transition: transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.2s;
         }
@@ -200,14 +199,60 @@ const Navbar = () => {
             )
           })()}
 
-          {/* Blogs Link */}
+          {/* Community Dropdown - Updated from simple link */}
           {(() => {
-            const { linkClass } = getLinkStyles("/blogs")
+            const { linkClass } = getLinkStyles("/community")
             return (
-              <Link to="/blogs" className={`${linkClass} text-sm lg:text-base`}>
-                <BookOpen className={`h-5 w-5 mr-2 inline-block ${isActive("/blogs") ? "text-orange-500" : ""}`} />
-                <span className="nav-underline">Blogs</span>
-              </Link>
+              <div className="relative group">
+                <Link to="/community" className={`${linkClass} text-sm lg:text-base`}>
+                  <Users className={`h-5 w-5 mr-2 inline-block ${isActive("/community") ? "text-orange-500" : ""}`} />
+                  <span className="nav-underline">Community</span> <ChevronDown className="w-4 h-4 ml-1" />
+                </Link>
+                <div className="dropdown-anim absolute left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+                  <div className="py-2 px-4">
+                    <Link
+                      to="/community/blog"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      <BookOpen className="h-4 w-4 mr-2" />
+                      Blog
+                    </Link>
+                    <Link
+                      to="/community/our-core-values"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      <Heart className="h-4 w-4 mr-2" />
+                      Our Core Values
+                    </Link>
+                    <Link
+                      to="/community/career"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      <Briefcase className="h-4 w-4 mr-2" />
+                      Career
+                    </Link>
+                    <Link
+                      to="/community/work-culture"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      <Users className="h-4 w-4 mr-2" />
+                      Work Culture
+                    </Link>
+                    <Link
+                      to="/community/faq"
+                      className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      <HelpCircle className="h-4 w-4 mr-2" />
+                      FAQ
+                    </Link>
+                  </div>
+                </div>
+              </div>
             )
           })()}
 
@@ -262,7 +307,11 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-end p-4">
-            <button onClick={closeMenu} aria-label="Close menu" className="rounded-lg bg-blue-50 p-2 hover:bg-blue-100 transition-all duration-200">
+            <button
+              onClick={closeMenu}
+              aria-label="Close menu"
+              className="rounded-lg bg-blue-50 p-2 hover:bg-blue-100 transition-all duration-200"
+            >
               <X className="h-6 w-6" />
             </button>
           </div>
@@ -316,13 +365,60 @@ const Navbar = () => {
               Calculators
             </Link>
             <Link
-              to="/blogs"
-              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/blogs") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
+              to="/community"
+              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/community") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
               onClick={closeMenu}
             >
-              <BookOpen className={`h-5 w-5 mr-2 inline-block ${isActive("/blogs") ? "text-orange-500" : ""}`} />
-              Blogs
+              <Users className={`h-5 w-5 mr-2 inline-block ${isActive("/community") ? "text-orange-500" : ""}`} />
+              Community
+              <ChevronDown className="w-4 h-4 ml-auto" />
             </Link>
+
+            {/* Community Submenu for Mobile */}
+            {isActive("/community") && (
+              <div className="ml-6 space-y-2 mt-2">
+                <Link
+                  to="/community/blog"
+                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  Blog
+                </Link>
+                <Link
+                  to="/community/our-core-values"
+                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  <Heart className="h-4 w-4 mr-2" />
+                  Our Core Values
+                </Link>
+                <Link
+                  to="/community/career"
+                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  <Briefcase className="h-4 w-4 mr-2" />
+                  Career
+                </Link>
+                <Link
+                  to="/community/work-culture"
+                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  <Users className="h-4 w-4 mr-2" />
+                  Work Culture
+                </Link>
+                <Link
+                  to="/community/faq"
+                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  <HelpCircle className="h-4 w-4 mr-2" />
+                  FAQ
+                </Link>
+              </div>
+            )}
             <Link
               to="/become-partner"
               className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/become-partner") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
