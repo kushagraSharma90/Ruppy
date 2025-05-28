@@ -92,16 +92,8 @@ const Footer = () => {
                   Loan Against Car
                 </Link>
               </li>
-              <li>
-                <Link to="/loans/business" className="text-gray-400 hover:text-white transition-colors">
-                  Business Loan
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/home" className="text-gray-400 hover:text-white transition-colors">
-                  Home Loan
-                </Link>
-              </li>
+              
+             
             </ul>
           </div>
 

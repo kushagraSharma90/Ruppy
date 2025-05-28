@@ -42,8 +42,9 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-gradient-to-b from-white to-blue-50 overflow-hidden py-16 md:py-24 bg-cover bg-center"
-      style={{ backgroundImage: `url(${HeroBg})` }}
+      className="relative bg-gradient-to-b from-white to-blue-500 overflow-hidden py-16 md:py-24"
+      style={{ backgroundImage: `url(${HeroBg})`, 
+    backgroundSize: "contain", backgroundPosition: "right", backgroundRepeat: "no-repeat"}}  
     >
       {/* Overlay */}
       <motion.div
@@ -78,7 +79,7 @@ const Hero = () => {
               exit="exit"
             >
               <motion.h1
-                className="text-5xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-13 leading-tight"
+                className="text-5xl md:text-5xl lg:text-6xl font-bold text-[#3870A6] mb-13 leading-tight"
                 variants={textVariants}
                 custom={0}
               >

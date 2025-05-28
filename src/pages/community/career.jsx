@@ -7,12 +7,12 @@ import { ArrowLeft, MapPin, Clock, Users, ArrowRight, Briefcase, GraduationCap, 
 const Career = () => {
   const jobOpenings = [
     {
-      title: "Senior Software Engineer",
-      department: "Engineering",
+      title: "Manager – Finance & Strategic Partnerships",
+      department: "Finance",
       location: "Mumbai, India",
       type: "Full-time",
-      experience: "3-5 years",
-      description: "Join our engineering team to build scalable fintech solutions.",
+      experience: "1-3 years",
+      description: "Strategic individual to lead both financial operations and corporate lender partnerships. ",
     },
     {
       title: "Product Manager",

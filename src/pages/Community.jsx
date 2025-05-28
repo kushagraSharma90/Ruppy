@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {
@@ -21,7 +19,7 @@ const Community = () => {
       title: "Blog",
       description: "Stay updated with the latest insights, tips, and trends in the fintech world.",
       icon: BookOpen,
-      route: "/community/blog",
+      route: "/community/blogs",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-50 to-cyan-50",
     },
