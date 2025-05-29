@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, Shield } from "lucide-react"
 
+
 const Loans = () => {
   const loanTypes = [
     {
@@ -218,7 +219,7 @@ const Loans = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -266,10 +267,10 @@ const Loans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#D47734] rounded-3xl text-white">
+      <section className="py-16   rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
             Get started with your loan application today and receive funds as quickly as tomorrow
           </p>
           <Link

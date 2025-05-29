@@ -62,23 +62,23 @@ const ContactUs = () => {
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Phone</p>
                     <p className="text-lg text-blue-600 font-medium">+91 7028095292</p>
-                    <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-5pm EST</p>
+                   
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
+                  <div className="flex-shrink-0 mt-1 p-3 bg-white rounded-full group-hover:bg-blue-100 transition-colors duration-300">
                     <Mail className="h-5 w-5 text-blue-600" />
                   </div>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Email</p>
                     <p className="text-lg text-blue-600 font-medium">info@rupeedot.com</p>
-                    <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
+                   
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
+                  <div className="flex-shrink-0 mt-1 p-3 bg-white rounded-full group-hover:bg-blue-100 transition-colors duration-300">
                     <MapPin className="h-5 w-5 text-blue-600" />
                   </div>
                   <div className="ml-4">

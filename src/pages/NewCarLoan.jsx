@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import NewCarPage from "../assets/NewCarPage.png"; // Assuming you have a NewCarPage component
 
 const NewCarLoan = () => {
   const loan = {
@@ -8,7 +9,7 @@ const NewCarLoan = () => {
     title: "New Car Loan",
     description: "Drive your dream car with our affordable financing options.",
     image:
-      "https://images.unsplash.com/photo-1604014231950-4f3a2b5c8e1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      NewCarPage,
     benefits: [
       "Loans up to ₹50 lakhs",
       "Interest rates starting from 9.75%",
@@ -76,7 +77,7 @@ const NewCarLoan = () => {
       </section>
 
       {/* Eligibility & Application Process */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">

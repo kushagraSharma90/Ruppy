@@ -1,8 +1,14 @@
-"use client"
+
 
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ArrowLeft, Coffee, Gamepad2, Music, Palette, Users, Zap } from "lucide-react"
+import CollaborativeEnvironment from "../../assets/CollaborativeEnvironment.png"
+import FunAtWork from "../../assets/FunAtWork.png"
+import DiversityInlusion from "../../assets/DiversityInclusion.png"
+import InovationFirst from "../../assets/InnovationFirst.png"
+import WorkLifeBalance from "../../assets/WorkLifeBalance.png"
+import CreativeSpaces from "../../assets/CreativeSpaces.png"
 
 const WorkCulture = () => {
   const cultureHighlights = [
@@ -10,37 +16,37 @@ const WorkCulture = () => {
       icon: Users,
       title: "Collaborative Environment",
       description: "We believe in the power of teamwork and open communication across all levels.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: CollaborativeEnvironment,
     },
     {
       icon: Zap,
       title: "Innovation First",
       description: "We encourage creative thinking and provide resources to turn ideas into reality.",
-      image: "/placeholder.svg?height=200&width=300",
+      image:InovationFirst ,
     },
     {
       icon: Coffee,
       title: "Work-Life Balance",
       description: "Flexible hours, remote work options, and wellness programs for our team.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: WorkLifeBalance,
     },
     {
       icon: Gamepad2,
       title: "Fun at Work",
       description: "Regular team events, game nights, and celebrations to keep spirits high.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: FunAtWork,
     },
     {
       icon: Music,
       title: "Creative Spaces",
       description: "Modern offices designed to inspire creativity and productivity.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: CreativeSpaces,
     },
     {
       icon: Palette,
       title: "Diversity & Inclusion",
       description: "We celebrate diversity and create an inclusive environment for everyone.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: DiversityInlusion,
     },
   ]
 

@@ -1,13 +1,14 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; // Assuming you have a PersonalCarLoanPage component
 
 const PersonalLoan = () => {
   const loan = {
     id: "personal",
     title: "Personal Loan",
     description: "Quick funds for your personal needs with minimal documentation",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: PersonalCarLoanPage,
     benefits: [
       "Loans up to ₹25 lakhs",
       "Interest rates starting from 10.99%",
@@ -75,7 +76,7 @@ const PersonalLoan = () => {
       </section>
 
       {/* Eligibility & Application Process */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">

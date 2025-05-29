@@ -127,7 +127,7 @@ const BecomePartner = () => {
       </section>
 
       {/* Partnership Types */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Partnership Opportunities</h2>
@@ -223,7 +223,7 @@ const BecomePartner = () => {
            
 
       {/* Application Form */}
-      <section id="apply-form" className="py-16 bg-gray-50">
+      <section id="apply-form" className="py-16 ">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">

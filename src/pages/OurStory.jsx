@@ -60,67 +60,7 @@ const OurStory = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our Leadership Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-             To transform India’s lending ecosystem by delivering seamless, accessible, and affordable credit solutions through innovative financial technologies. Our goal is to empower individuals, businesses, and communities to achieve their financial ambitions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="Rajesh Kumar"
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">Rajesh Kumar</h3>
-                <p className="text-blue-600 mb-4">CEO & Co-Founder</p>
-                <p className="text-gray-600">
-                 At FinTech Lenders for All Loans, our mission is to aggregate a wide range of loan options from diverse financial institutions and leverage advanced technology to provide personalized, transparent, and efficient lending solutions.
-                </p>
-              </div>
-            </div>
-
-            {/* Team Member 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Sunita Sharma"
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">Sunita Sharma</h3>
-                <p className="text-blue-600 mb-4">COO & Co-Founder</p>
-                <p className="text-gray-600">
-                  Sunita oversees our operations and ensures that we deliver exceptional service to all our customers.
-                </p>
-              </div>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://randomuser.me/api/portraits/men/62.jpg"
-                alt="Vikram Patel"
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">Vikram Patel</h3>
-                <p className="text-blue-600 mb-4">Chief Technology Officer</p>
-                <p className="text-gray-600">
-                  Vikram leads our technology initiatives, ensuring that our platform is secure, efficient, and
-                  user-friendly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Mission & Vision Section */}
       <section id="mission" className="py-16">

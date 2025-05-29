@@ -398,7 +398,7 @@ const Calculators = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
@@ -457,10 +457,10 @@ const Calculators = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#3870A6] rounded-3xl text-white">
+      <section className="py-16  rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
             Now that you've calculated your EMI, take the next step towards securing your loan
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -472,7 +472,7 @@ const Calculators = () => {
             </a>
             <a
               href="/contact"
-              className="bg-transparent border border-white text-white hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
+              className="bg-white border border-white text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Talk to an Expert
             </a>

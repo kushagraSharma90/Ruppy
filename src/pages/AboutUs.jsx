@@ -33,7 +33,7 @@ export default function AboutUs() {
      
     
       {/* Mission, Vision, Goal Section */}
-      <section className="w-full py-16 bg-blue-600 text-white">
+      <section className="w-full py-16 bg-[#3870A6] text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -49,7 +49,7 @@ export default function AboutUs() {
             </div>
 
             {/* Vision */}
-            <div className="bg-blue-700 rounded-lg p-6 hover:bg-blue-800 transition-all duration-300">
+            <div className="bg-[#3870A6] rounded-lg p-6 hover:bg-blue-800 transition-all duration-300">
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <Lightbulb className="text-blue-600 w-8 h-8" />
               </div>
@@ -60,7 +60,7 @@ export default function AboutUs() {
             </div>
 
             {/* Goal */}
-            <div className="bg-blue-200 bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300">
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <Target className="text-blue-600 w-8 h-8" />
               </div>

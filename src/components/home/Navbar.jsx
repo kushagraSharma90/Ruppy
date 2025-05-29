@@ -117,7 +117,7 @@ const Navbar = () => {
                   <img src={achieveGoal || "/placeholder.svg"} alt="Our Story" className={iconClass} />
                   <span className="nav-underline">Our Story</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
-                <div className="dropdown-anim absolute left-0 mt-2 w-48 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+                <div className="dropdown-anim absolute left-0 w-48 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
                       to="/our-story/about"
@@ -433,7 +433,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/apply"
-              className="flex items-center bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
+              className="flex items-center bg-[#3870A6] hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
               onClick={closeMenu}
             >
               Apply Now

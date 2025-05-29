@@ -324,12 +324,12 @@ const Community = () => {
 
       {/* Call to Action Section */}
       <motion.section
-        className="py-20 px-4 bg-gradient-to-r from-[#3870A6]  to-[#D47734]"
+        className="py-20 px-4 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center text-black">
           <motion.h2
             className="text-3xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
