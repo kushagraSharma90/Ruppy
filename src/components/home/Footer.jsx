@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r rounded-3xl from-[#02427e] to-[#ac4a04] text-black pt-16 pb-8">
+    <footer className="bg-[#10264b] rounded-tr-3xl rounded-tl-3xl text-black pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -16,7 +16,7 @@ const Footer = () => {
               RupeeDot is a leading financial services provider helping you borrow right today for a better tomorrow.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-white hover:text-black transition-colors">
+              <a href="https://facebook.com" className="text-white hover:text-white transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="https://twitter.com" className="text-white hover:text-white transition-colors">

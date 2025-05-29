@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-#f5f5ec overflow-hidden py-16 md:py-24"
+      className="relative bg-[#9b9a93] overflow-hidden py-16 md:py-24"
       style={{ backgroundImage: `url(${HeroBg})`, 
     backgroundSize: "contain", backgroundPosition: "right", backgroundRepeat: "no-repeat"}}  
     >

@@ -27,7 +27,7 @@ const NewCarLoan = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#3870A6] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{loan.title}</h1>
           <p className="text-xl max-w-3xl mx-auto text-blue-100">
@@ -66,7 +66,7 @@ const NewCarLoan = () => {
 
             <Link
               to={loan.link}
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-[#3870A6] hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -7,8 +7,8 @@ const LiveChatButton = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleChatClick = () => {
-    // In a real implementation, this would open your chat widget
-    alert("Live chat functionality would open here")
+    // Open WhatsApp chat in a new tab
+    window.open("https://wa.me/917028095292", "_blank")
   }
 
   const Button = ({ children, className, onClick, onMouseEnter, onMouseLeave }) => (

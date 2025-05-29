@@ -90,7 +90,7 @@ const BecomePartner = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#3870A6] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Become a Partner</h1>
           <p className="text-xl max-w-3xl mx-auto text-blue-100">
@@ -159,13 +159,7 @@ const BecomePartner = () => {
                   <span className="text-gray-700">Dedicated relationship manager</span>
                 </li>
               </ul>
-              <a
-                href="#apply-form"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-600">
@@ -191,13 +185,7 @@ const BecomePartner = () => {
                   <span className="text-gray-700">Regular performance updates</span>
                 </li>
               </ul>
-              <a
-                href="#apply-form"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-600">
@@ -223,85 +211,16 @@ const BecomePartner = () => {
                   <span className="text-gray-700">Technical support and documentation</span>
                 </li>
               </ul>
-              <a
-                href="#apply-form"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+             
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partner Testimonials */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Partners Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from our existing partners about their experience working with RupeeDot
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="Partner"
-                  className="w-14 h-14 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">Rajesh Kumar</h3>
-                  <p className="text-blue-600">ABC Bank Ltd.</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "Partnering with RupeeDot has significantly expanded our loan portfolio. Their platform brings us
-                qualified leads that match our lending criteria, making the process efficient and profitable."
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
-                  alt="Partner"
-                  className="w-14 h-14 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">Priya Sharma</h3>
-                  <p className="text-blue-600">XYZ Finance</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "The referral partnership with RupeeDot has been a game-changer for our business. The commission
-                structure is transparent, and the support team is always available to help with any questions."
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://randomuser.me/api/portraits/men/62.jpg"
-                  alt="Partner"
-                  className="w-14 h-14 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">Vikram Patel</h3>
-                  <p className="text-blue-600">Tech Solutions Inc.</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "As a technology partner, we've found RupeeDot to be innovative and forward-thinking. The API
-                integration was smooth, and our joint solution has been well-received by customers."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+    
+         
+           
 
       {/* Application Form */}
       <section id="apply-form" className="py-16 bg-gray-50">
@@ -459,7 +378,7 @@ const BecomePartner = () => {
               <button
               onClick={handleSubmit}
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition-colors duration-300"
+                className="w-full bg-[#3870A6] hover:bg-blue-700 text-white py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Submit Application
               </button>

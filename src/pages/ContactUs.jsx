@@ -9,7 +9,7 @@ const ContactUs = () => {
   return (
      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section with Background Pattern */}
-      <div className="relative overflow-hidden bg-blue-600 text-white">
+      <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"

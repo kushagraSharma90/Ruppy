@@ -96,7 +96,7 @@ const Loans = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#3870A6] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Loan Products</h1>
           <p className="text-xl max-w-3xl mx-auto text-blue-100">
@@ -266,7 +266,7 @@ const Loans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#D47734] rounded-3xl text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
