@@ -14,7 +14,7 @@ export default function AboutUs() {
            
 
             <div className="max-w-3xl text-center">
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <p className="text-black mb-4  text-xl">
                We Want to help our customers to achieve sustainable financial success by offering fast, fair and flexible finance solutions, powered by our innovative AI lending approach.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
