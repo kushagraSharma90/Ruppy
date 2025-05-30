@@ -220,7 +220,7 @@ const Community = () => {
           >
             {[
               { icon: TrendingUp, label: "Growth Rate", value: "300%" },
-              { icon: Users, label: "Happy Customers", value: "50K+" },
+              { icon: Users, label: "Happy Customers", value: "50+" },
               { icon: Shield, label: "Secure Process", value: "100%" },
               { icon: Clock, label: "Quick Approval", value: "24hrs" },
             ].map((stat, index) => (

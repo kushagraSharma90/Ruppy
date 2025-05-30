@@ -148,7 +148,7 @@ const Navbar = () => {
                   <img src={IconImage || "/placeholder.svg"} alt="Loans" className={iconClass} />
                   <span className="nav-underline">Loans</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
-                <div className="dropdown-anim absolute left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+                <div className="dropdown-anim absolute left-0 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
                       to="/loans/personal"
@@ -208,7 +208,7 @@ const Navbar = () => {
                   <Users className={`h-5 w-5 mr-2 inline-block ${isActive("/community") ? "text-orange-500" : ""}`} />
                   <span className="nav-underline">Community</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
-                <div className="dropdown-anim absolute left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+                <div className="dropdown-anim absolute left-0 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
                       to="/community/blog"
