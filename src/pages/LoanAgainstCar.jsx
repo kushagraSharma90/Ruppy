@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
 
 const LoanAgainstCar = () => {
   const loan = {
@@ -9,7 +10,7 @@ const LoanAgainstCar = () => {
     description:
       "Unlock the value of your car with our flexible financing options.",
     image:
-      "https://images.unsplash.com/photo-1604014231950-4f3a2b5c8e1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      LoanAgainstCarPage,
     benefits: [
       "Loans up to ₹50 lakhs",
       "Interest rates starting from 9.75%",
@@ -26,16 +27,31 @@ const LoanAgainstCar = () => {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{loan.title}</h1>
-          <p className="text-xl max-w-3xl mx-auto text-blue-100">
-            {loan.description}
-          </p>
+  
+       <div>
+       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
         </div>
-      </section>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">{loan.title} </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              <h1> {loan.description}</h1>
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      {/* Hero Section */}
+     
 
       {/* Loan Details */}
       <section className="py-16">
@@ -69,7 +85,7 @@ const LoanAgainstCar = () => {
 
             <Link
               to={loan.link}
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-[#3870A6] hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -79,7 +95,7 @@ const LoanAgainstCar = () => {
       </section>
 
       {/* Eligibility & Application Process */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">

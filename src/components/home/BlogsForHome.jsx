@@ -11,7 +11,6 @@ import blog3 from "../../assets/blog3.jpeg";
 import blog4 from "../../assets/blog4.jpeg";
 import blog5 from "../../assets/blog5.jpeg";
 
-
 const blogData = [
   {
     id: 1,
@@ -88,7 +87,7 @@ function BlogCard({ blog }) {
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm h-full"
+      className="bg-#f5f5ec rounded-lg overflow-hidden border border-gray-100 shadow-sm h-full"
     >
       <div className="relative h-48 overflow-hidden">
         <img
@@ -154,10 +153,10 @@ export default function BlogsForHome() {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentSlideIndex, nextSlide]);
+  }, [currentSlideIndex]);
 
   return (
-    <section className="w-full py-12 bg-white">
+    <section className="w-full pt-2 pb-12 bg-#f5f5ec"> {/* Reduced top padding here */}
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col space-y-4 mb-8">
           <h2 className="text-3xl font-bold tracking-tight text-blue-700">Blogs</h2>

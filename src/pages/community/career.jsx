@@ -7,12 +7,12 @@ import { ArrowLeft, MapPin, Clock, Users, ArrowRight, Briefcase, GraduationCap, 
 const Career = () => {
   const jobOpenings = [
     {
-      title: "Senior Software Engineer",
-      department: "Engineering",
+      title: "Manager – Finance & Strategic Partnerships",
+      department: "Finance",
       location: "Mumbai, India",
       type: "Full-time",
-      experience: "3-5 years",
-      description: "Join our engineering team to build scalable fintech solutions.",
+      experience: "1-3 years",
+      description: "Strategic individual to lead both financial operations and corporate lender partnerships. ",
     },
     {
       title: "Product Manager",
@@ -67,13 +67,13 @@ const Career = () => {
         >
           <Link
             to="/community"
-            className="inline-flex items-center text-green-600 hover:text-green-700 mb-6 transition-colors"
+            className="inline-flex items-center text-[#D47734] hover:text-[#3870A6] mb-6 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Community
           </Link>
 
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-[#3870A6] bg-clip-text text-transparent mb-4">
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
@@ -99,7 +99,7 @@ const Career = () => {
                 transition={{ delay: 0.1 * index, duration: 0.6 }}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center"
               >
-                <benefit.icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <benefit.icon className="w-12 h-12 text-[#D47734] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
@@ -146,7 +146,7 @@ const Career = () => {
                   </div>
 
                   <div className="mt-4 md:mt-0 md:ml-6">
-                    <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                    <button className="inline-flex items-center px-6 py-3 bg-[#3870A6] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
                       Apply Now
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </button>
@@ -162,7 +162,7 @@ const Career = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white text-center"
+          className="mt-16 bg-gradient-to-r from-[#3870A6] to-[#D47734] rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Don't See Your Role?</h2>
           <p className="text-xl mb-8 opacity-90">

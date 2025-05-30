@@ -107,7 +107,7 @@ const OurCoreValues = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-20 bg-gradient-to-r from-blue-600 to-orange-600 rounded-3xl p-12 text-white text-center"
+          className="mt-20 bg-gradient-to-r from-[#3870A6] to-[#D47734] rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl leading-relaxed max-w-4xl mx-auto">

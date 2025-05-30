@@ -1,155 +1,128 @@
-import { Link } from "react-router-dom"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
-
+import { Link } from "react-router-dom";
+import { X, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-[#10264b] text-white pt-12 pb-6 text-base rounded-t-3xl">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <Link to="/" className="inline-block mb-6">
-              <img src="https://rupeedot.com/wp-content/uploads/2025/02/11.png" alt="RupeeDot Logo" className="h-12" />
+          <div className="lg:col-span-2">
+            <Link to="/" className="inline-block mb-4">
+              <img
+                src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
+                alt="RupeeDot Logo"
+                className="h-10"
+              />
             </Link>
-            <p className="text-gray-400 mb-6">
-              RupeeDot is a leading financial services provider helping you borrow right today for a better tomorrow.
+            <p className="text-gray-300 text-xl  mb-4 max-w-md leading-relaxed">
+              RupeeDot is a financial services provider helping you borrow right today for a better tomorrow.
+              Our diverse team is united in their mission of creating simple, fair and honest financial products that have the customer’s needs at their heart.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
+            <div className="flex  gap-3">
+              <a href="https://www.youtube.com/@rupeedot" target="_blank" rel="noopener noreferrer">
+                <Youtube size={30} className="text-gray-300  hover:text-red-500 transition-colors" />
               </a>
-              <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
+              <a href="https://x.com/RupeeDot" target="_blank" rel="noopener noreferrer">
+                <X size={30} className="text-gray-300 hover:text-black transition-colors" />
               </a>
-              <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
+              <a href="https://www.instagram.com/rupee_dot/" target="_blank" rel="noopener noreferrer">
+                <Instagram size={30} className="text-gray-300 hover:text-pink-500 transition-colors" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
+              <a href="https://www.instagram.com/rupeedotindia/" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={30} className="text-gray-300 hover:text-blue-500 transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/our-story" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans" className="text-gray-400 hover:text-white transition-colors">
-                  Loans
-                </Link>
-              </li>
-              <li>
-                <Link to="/calculators" className="text-gray-400 hover:text-white transition-colors">
-                  Calculators
-                </Link>
-              </li>
-              <li>
-                <Link to="/become-partner" className="text-gray-400 hover:text-white transition-colors">
-                  Become a Partner
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
-                </Link>
-              </li>
+            <h4 className="font-semibold text-xl text-white mb-4 border-b border-orange-600 inline-block pb-1">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/our-story" },
+                { name: "Calculators", path: "/calculators" },
+                { name: "Become a Partner", path: "/become-partner" },
+                { name: "Contact Us", path: "/contact" },
+              ].map(({ name, path }) => (
+                <li key={path}>
+                  <Link to={path} className="text-gray-300 text-xl hover:text-orange-400 transition">
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Loan Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Loan Products</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/loans/personal" className="text-gray-400 hover:text-white transition-colors">
-                  Personal Loan
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/used-car" className="text-gray-400 hover:text-white transition-colors">
-                  Used Car Loan
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/new-car" className="text-gray-400 hover:text-white transition-colors">
-                  New Car Loan
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/against-car" className="text-gray-400 hover:text-white transition-colors">
-                  Loan Against Car
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/business" className="text-gray-400 hover:text-white transition-colors">
-                  Business Loan
-                </Link>
-              </li>
-              <li>
-                <Link to="/loans/home" className="text-gray-400 hover:text-white transition-colors">
-                  Home Loan
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0 mt-1" />
-                <span className="text-gray-400">G-1010,Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra 411014</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0" />
-                <a href="tel:+911234567890" className="text-gray-400 hover:text-white transition-colors">
-                  +91 7028095292
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail className="mr-3 h-5 w-5 text-blue-500 flex-shrink-0" />
-                <a href="mailto:info@rupeedot.com" className="text-gray-400 hover:text-white transition-colors">
-                  wecare@rupeedot.com
-                </a>
-              </li>
+            <h4 className="font-semibold text-xl text-white mb-4 border-b border-orange-600 inline-block pb-1">
+              Loan Products
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { name: "Personal Loan", path: "/loans/personal" },
+                { name: "Used Car Loan", path: "/loans/used-car" },
+                { name: "New Car Loan", path: "/loans/new-car" },
+                { name: "Loan Against Car", path: "/loans/against-car" },
+              ].map(({ name, path }) => (
+                <li key={path}>
+                  <Link to={path} className="text-gray-300 text-xl hover:text-orange-400 transition">
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <hr className="border-gray-800 my-8" />
+        {/* Contact Info */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 pt-6 border-t border-gray-700">
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
+              Contact Information
+            </h4>
+            <div className="space-y-3 text-xl text-gray-300">
+              <div className="flex items-start gap-2">
+                <MapPin className="text-orange-600" size={18} />
+                <span>
+                  G-1010, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra 411014
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="text-orange-600" size={18} />
+                <a href="tel:+917028095292" className="hover:text-orange-400 ">
+                  +91 7028095292
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="text-orange-600" size={18} />
+                <a href="mailto:wecare@rupeedot.com" className="hover:text-orange-400">
+                  wecare@rupeedot.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} RupeeDot. All rights reserved.
+        {/* Footer Bottom */}
+        <hr className="border-gray-700 my-6" />
+        <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
+          <p className="mb-2 md:mb-0 text-xl" >
+            &copy; {new Date().getFullYear()} RupeeDot. All rights reserved by Indicorn Financial Services Pvt Ltd
           </p>
-          <div className="flex space-x-6">
-            <Link to="/privacy-policy" className="text-gray-500 hover:text-white text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-conditions" className="text-gray-500 hover:text-white text-sm transition-colors">
-              Terms & Conditions
-            </Link>
-            <Link to="/sitemap" className="text-gray-500 hover:text-white text-sm transition-colors">
-              Sitemap
-            </Link>
+          <div className="flex gap-4">
+            <Link to="/privacy-policy" className="hover:text-orange-400 text-xl">Privacy Policy</Link>
+            <Link to="/terms-conditions" className="hover:text-orange-400 text-xl">Terms & Conditions</Link>
+            <Link to="/sitemap" className="hover:text-orange-400 text-xl">Sitemap</Link>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

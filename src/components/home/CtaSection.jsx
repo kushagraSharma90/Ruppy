@@ -3,38 +3,40 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-300 to-purple-500 text-white">
+    <section className="py-16 bg-#f5f5ec text-black">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started with Your Loan Application?</h2>
-            <p className="text-blue-100 mb-8 text-lg">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Get Started with Your Loan Application?
+            </h2>
+            <p className="text-black mb-8 text-lg">
               Apply now and get a decision within 24 hours. Our simple online process makes it easy to get the funds you
               need quickly.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mr-3 mt-0.5" />
-                <p className="text-blue-50">Quick online application process</p>
+                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <p className="text-black">Quick online application process</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mr-3 mt-0.5" />
-                <p className="text-blue-50">Minimal documentation required</p>
+                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <p className="text-black">Minimal documentation required</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mr-3 mt-0.5" />
-                <p className="text-blue-50">Fast approval and disbursement</p>
+                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <p className="text-black">Fast approval and disbursement</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mr-3 mt-0.5" />
-                <p className="text-blue-50">Competitive interest rates</p>
+                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <p className="text-black">Competitive interest rates</p>
               </div>
             </div>
 
             <Link
               to="/apply"
-              className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -83,7 +85,6 @@ const CtaSection = () => {
                   <option value="">Select Employment Type</option>
                   <option value="salaried">Salaried</option>
                   <option value="self-employed">Self Employed</option>
-                  <option value="business-owner">Business Owner</option>
                 </select>
               </div>
 

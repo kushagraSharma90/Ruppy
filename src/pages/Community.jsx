@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {
@@ -21,7 +19,7 @@ const Community = () => {
       title: "Blog",
       description: "Stay updated with the latest insights, tips, and trends in the fintech world.",
       icon: BookOpen,
-      route: "/community/blog",
+      route: "/community/blogs",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-50 to-cyan-50",
     },
@@ -160,12 +158,13 @@ const Community = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600 bg-clip-text text-transparent leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-[#3870A6] bg-clip-text text-transparent leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Empowering Your
+            Powering India’s Car & Personal Loans – Fast, Easy, Trusted.
+
             <br />
             <span className="relative">
               Financial Journey
@@ -185,30 +184,29 @@ const Community = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <p className="font-medium">
-              We are one of the <span className="text-blue-600 font-bold">fastest growing fintech aggregators</span>,
-              specializing in providing both <span className="text-orange-600 font-bold">Personal and Car loans</span>.
-            </p>
+              We are one of the fastest growing fintech aggregators
+              specializing in providing both Personal and Car loans.
+            
 
-            <p>
+            
               With our extensive network of partnerships with banks and NBFCs, we bring you the
-              <span className="text-green-600 font-semibold"> best loan offers tailored to your needs</span>.
-            </p>
+               best loan offers tailored to your needs.
+            
 
-            <p>
+            
               We provide{" "}
-              <span className="text-purple-600 font-semibold">
+              
                 hassle-free process, quick disbursal with lowest EMI
-              </span>{" "}
+              {" "}
               which is paperless & digital with wide range of products.
-            </p>
+            
 
-            <p>
               Our diverse team is united in their mission of creating
-              <span className="text-blue-600 font-semibold"> simple, fair and honest financial products</span> that have
+               simple, fair and honest financial products that have
               the customer's needs at their heart.
-            </p>
+           
 
-            <p className="text-xl font-bold text-gradient bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+           
               More choice, more power to you.
             </p>
           </motion.div>
@@ -222,7 +220,7 @@ const Community = () => {
           >
             {[
               { icon: TrendingUp, label: "Growth Rate", value: "300%" },
-              { icon: Users, label: "Happy Customers", value: "50K+" },
+              { icon: Users, label: "Happy Customers", value: "50+" },
               { icon: Shield, label: "Secure Process", value: "100%" },
               { icon: Clock, label: "Quick Approval", value: "24hrs" },
             ].map((stat, index) => (
@@ -250,7 +248,7 @@ const Community = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#3870A6] to-black bg-clip-text text-transparent">
               Explore Our Community
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -326,12 +324,12 @@ const Community = () => {
 
       {/* Call to Action Section */}
       <motion.section
-        className="py-20 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600"
+        className="py-20 px-4 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center text-black">
           <motion.h2
             className="text-3xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}

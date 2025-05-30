@@ -1,13 +1,14 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; // Assuming you have a PersonalCarLoanPage component
 
 const PersonalLoan = () => {
   const loan = {
     id: "personal",
     title: "Personal Loan",
     description: "Quick funds for your personal needs with minimal documentation",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: PersonalCarLoanPage,
     benefits: [
       "Loans up to ₹25 lakhs",
       "Interest rates starting from 10.99%",
@@ -28,7 +29,7 @@ const PersonalLoan = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#3870A6] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{loan.title}</h1>
           <p className="text-xl max-w-3xl mx-auto text-blue-100">
@@ -65,7 +66,7 @@ const PersonalLoan = () => {
 
             <Link
               to={loan.link}
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-[#3870A6] hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -75,7 +76,7 @@ const PersonalLoan = () => {
       </section>
 
       {/* Eligibility & Application Process */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">

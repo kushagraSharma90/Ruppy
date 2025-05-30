@@ -7,8 +7,8 @@ const LiveChatButton = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleChatClick = () => {
-    // In a real implementation, this would open your chat widget
-    alert("Live chat functionality would open here")
+    // Open WhatsApp chat in a new tab
+    window.open("https://wa.me/917028095292", "_blank")
   }
 
   const Button = ({ children, className, onClick, onMouseEnter, onMouseLeave }) => (
@@ -23,7 +23,7 @@ const LiveChatButton = () => {
   )
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 border border-blue-100 transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100 transition-all duration-300 hover:shadow-xl">
       <div className="flex flex-col items-center text-center">
         <div
           className={`mb-6 p-4 rounded-full transition-all duration-300 ${

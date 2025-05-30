@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, Shield } from "lucide-react"
 
+
 const Loans = () => {
   const loanTypes = [
     {
       id: "personal",
       title: "Personal Loan",
       description: "Quick funds for your personal needs with minimal documentation",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "src/assets/PersonalCarLoanPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to ₹25 lakhs",
         "Interest rates starting from 10.99%",
@@ -28,7 +29,7 @@ const Loans = () => {
       id: "used-car",
       title: "Used Car Loan",
       description: "Affordable financing options for pre-owned vehicles",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "src/assets/UsedCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 11.99%",
@@ -51,7 +52,7 @@ const Loans = () => {
       title: "New Car Loan",
       description: "Drive home your dream car with competitive interest rates",
       image:
-        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "src/assets/NewCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 9.99%",
@@ -73,7 +74,7 @@ const Loans = () => {
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
       image:
-        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "src/assets/LoanAgainstCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 80% of vehicle value",
         "Interest rates starting from 12.99%",
@@ -94,16 +95,31 @@ const Loans = () => {
   ]
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Loan Products</h1>
-          <p className="text-xl max-w-3xl mx-auto text-blue-100">
-            Explore our range of loan products designed to meet your financial needs
-          </p>
+    
+      <div>
+       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
         </div>
-      </section>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Our Loan Products </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              <h1>Explore our range of loan products designed to meet your financial needs</h1>
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      {/* Hero Section */}
+     
 
       {/* Loan Products */}
       <section className="py-16">
@@ -218,7 +234,7 @@ const Loans = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -266,15 +282,15 @@ const Loans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16   rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
             Get started with your loan application today and receive funds as quickly as tomorrow
           </p>
           <Link
             to="/apply"
-            className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-md font-medium text-lg transition-colors duration-300"
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-medium text-lg transition-colors duration-300"
           >
             Apply Now
             <ArrowRight className="ml-2 h-5 w-5" />

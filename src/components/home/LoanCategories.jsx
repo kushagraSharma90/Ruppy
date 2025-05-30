@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom"
-import personalLoanImg from "../../assets/personal-loan.png"
-import usedCarLoan from "../../assets/usedCarLoan.jpg"
-import newCarLoanImg from "../../assets/new-car-loan.png"
-import loanAgainstCarImg from "../../assets/loan-against-car.png"
+import NewCar from "../../assets/NewCar.png"
+import UsedCar from "../../assets/UsedCar.png"
+import AgainstCar from "../../assets/AgainstCar.png"
+import PersonalCar from "../../assets/PersonalCar.png"
 
 const LoanCategories = () => {
   const loanTypes = [
     {
       id: 1,
       title: "Personal Loan",
-      image: personalLoanImg,
+      image: NewCar,
       description: "Quick funds for your personal needs with minimal documentation",
       link: "/loans/personal",
       bgColor: "bg-blue-100",
@@ -17,7 +17,7 @@ const LoanCategories = () => {
     {
       id: 2,
       title: "Used Car Loan",
-      image: usedCarLoan,
+      image: UsedCar,
       description: "Affordable financing options for pre-owned vehicles",
       link: "/loans/used-car",
       bgColor: "bg-blue-100",
@@ -25,7 +25,7 @@ const LoanCategories = () => {
     {
       id: 3,
       title: "New Car Loan",
-      image: newCarLoanImg,
+      image: PersonalCar,
       description: "Drive home your dream car with competitive interest rates",
       link: "/loans/new-car",
       bgColor: "bg-blue-100",
@@ -33,7 +33,7 @@ const LoanCategories = () => {
     {
       id: 4,
       title: "Loan Against Car",
-      image: loanAgainstCarImg,
+      image: AgainstCar,
       description: "Leverage your car's value for immediate financial needs",
       link: "/loans/against-car",
       bgColor: "bg-blue-100",
@@ -41,7 +41,7 @@ const LoanCategories = () => {
   ]
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-300 to-white overflow-hidden">
+    <section className="pt-0 pb-10 bg-[#f5f5ec] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Loan Products</h2>
@@ -57,15 +57,15 @@ const LoanCategories = () => {
               key={loan.id}
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
-              <div className="p-6 flex flex-col items-center text-center">
-                <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-50 group-hover:border-blue-100 transition-colors duration-300">
+              <div className="p-6 flex flex-col items-center bg-white text-center">
+                <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-50 group-hover:border-blue-200 transition-colors">
                   <img src={loan.image || "/placeholder.svg"} alt={loan.title} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-semibold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-black mb-3 transition-colors duration-300">
                   {loan.title}
                 </h3>
-                <p className="text-gray-700 mb-4">{loan.description}</p>
-                <span className="text-blue-600 font-medium inline-flex items-center group-hover:text-blue-700 transition-colors duration-300">
+                <p className="text-black mb-4">{loan.description}</p>
+                <span className="text-black font-medium inline-flex items-center transition-colors duration-300">
                   Learn More
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"

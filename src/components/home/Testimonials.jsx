@@ -1,91 +1,78 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
-import customer1 from "../../assets/customer1.jpg" // Replace this with your actual image import or public URL
-
-// Replace these with your actual image imports or public URLs
+import customer1 from "../../assets/customer1.jpg"
 import customer2 from "../../assets/customer2.jpg"
 import customer3 from "../../assets/customer3.jpg"
 import customer4 from "../../assets/customer4.jpg"
 import customer5 from "../../assets/customer5.jpg"
 import customer6 from "../../assets/customer6.jpg"
 
-
 const Testimonials = () => {
   const testimonials = [
-  {
-    id: 1,
-    name: "Siddharth Sharma",
-    position: "Working Professional - Mumbai",
-    image: customer1,
-    content:
-      "I sincerely appreciate RupeeDot prompt assistance in providing me with a top-up car loan for my son's engineering admission as fund was required immediately for 7 lacs. Thanks to your support, my son can now pursue his education without financial hurdles. I am grateful for your exceptional service and look forward to a continued association with you.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Priya Sule",
-    position: "Salaried - Pune",
-    image: customer2,
-    content:
-      "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and  ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated.",
-    rating: 5,
-    
-  },
-  {
-    id: 3,
-    name: "Ravin P",
-    position: "Business Owner - Bangalore",
-    image: customer3,
-    content:
-      "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated!",
-    rating: 4,
-  },
-  {
-    id: 4,
-    name: "Saurabh Patel",
-    position: "Salaried - Delhi",
-    image: customer4,
-    content:
-      "Celebrated our 2nd marriage anniversary with a new car hanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
-
-
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: "Mahak Khanna",
-    position: "Salaried - Gurgaon",
-    image: customer5,
-    content:
-      "RupeeDot came through for me when I needed it the most. I urgently required 10 lacs for a family vacation abroad, and their personal loan process was incredibly smooth and quick, removing all the stress. Knowing our dream trip was secured without financial roadblocks was a huge relief. I'm genuinely impressed with their service and would highly recommend Rupee Dot to anyone in need of timely financial support.",
-
-    rating: 5,
-    
-  },
     {
-    id: 6,
-    name: "Neha Reddy",
-    position: "Financial Analyst",
-    image: customer6,
-    content:
-      "RupeeDot exceeded my expectations! Their support team was always available, and the loan disbursal was surprisingly fast. I’ll definitely recommend them to my peers.",
-    rating: 4,
-  },
-   {
-    id: 7,
-    name: "Sunil Rana",
-    position: "Working Professional - Mumbai",
-    image: customer5,
-    content:
-      "I took a personal loan from Rupee Dot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I'd highly recommend RupeeDot for anyone planning a vacation!",
-
-
-    rating: 5,
-    
-  },
-  
-]
-
+      id: 1,
+      name: "Siddharth Sharma",
+      position: "Working Professional - Mumbai",
+      image: customer1,
+      content:
+        "I sincerely appreciate RupeeDot prompt assistance in providing me with a top-up car loan for my son's engineering admission as fund was required immediately for 7 lacs. Thanks to your support, my son can now pursue his education without financial hurdles. I am grateful for your exceptional service and look forward to a continued association with you.",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Priya Sule",
+      position: "Salaried - Pune",
+      image: customer2,
+      content:
+        "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and  ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated.",
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "Ravin P",
+      position: "Business Owner - Bangalore",
+      image: customer3,
+      content:
+        "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated!",
+      rating: 4,
+    },
+    {
+      id: 4,
+      name: "Saurabh Patel",
+      position: "Salaried - Delhi",
+      image: customer4,
+      content:
+        "Celebrated our 2nd marriage anniversary with a new car thanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Mahak Khanna",
+      position: "Salaried - Gurgaon",
+      image: customer5,
+      content:
+        "RupeeDot came through for me when I needed it the most. I urgently required 10 lacs for a family vacation abroad, and their personal loan process was incredibly smooth and quick, removing all the stress. Knowing our dream trip was secured without financial roadblocks was a huge relief. I'm genuinely impressed with their service and would highly recommend Rupee Dot to anyone in need of timely financial support.",
+      rating: 5,
+    },
+    {
+      id: 6,
+      name: "Neha Reddy",
+      position: "Financial Analyst",
+      image: customer6,
+      content:
+        "RupeeDot exceeded my expectations! Their support team was always available, and the loan disbursal was surprisingly fast. I’ll definitely recommend them to my peers.",
+      rating: 4,
+    },
+    {
+      id: 7,
+      name: "Sunil Rana",
+      position: "Working Professional - Mumbai",
+      image: customer5,
+      content:
+        "I took a personal loan from Rupee Dot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I'd highly recommend RupeeDot for anyone planning a vacation!",
+      rating: 5,
+    },
+  ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -118,7 +105,7 @@ const Testimonials = () => {
   }, [totalPages])
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-100 to-blue-100">
+    <section className="pt-8 pb-20 bg-[#f5f5ec]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
@@ -182,14 +169,14 @@ const Testimonials = () => {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-1 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
+            className="absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-6 w-6 text-blue-600" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-2 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
+            className="absolute -right-10 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
             aria-label="Next testimonial"
           >
             <ChevronRight className="h-6 w-6 text-blue-600" />

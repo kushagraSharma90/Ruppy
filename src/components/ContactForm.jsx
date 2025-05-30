@@ -100,7 +100,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {formState === "success" && (
-        <Alert className="bg-green-50 border-green-200 text-green-800 animate-fadeIn">
+        <Alert className="bg-white border-green-200 text-green-800 animate-fadeIn">
           <CheckCircle2 className="h-4 w-4 text-green-600" />
           <AlertDescription>Thank you for your message! We'll get back to you shortly.</AlertDescription>
         </Alert>
