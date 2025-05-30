@@ -7,7 +7,9 @@ const CtaSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started with Your Loan Application?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Get Started with Your Loan Application?
+            </h2>
             <p className="text-black mb-8 text-lg">
               Apply now and get a decision within 24 hours. Our simple online process makes it easy to get the funds you
               need quickly.
@@ -34,7 +36,7 @@ const CtaSection = () => {
 
             <Link
               to="/apply"
-              className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -83,7 +85,6 @@ const CtaSection = () => {
                   <option value="">Select Employment Type</option>
                   <option value="salaried">Salaried</option>
                   <option value="self-employed">Self Employed</option>
-                  <option value="business-owner">Business Owner</option>
                 </select>
               </div>
 

@@ -43,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#f5f5ec] relative overflow-hidden py-16 md:py-24">
+    <section ref={ref} className="bg-[#f5f5ec] relative overflow-hidden pt-6 md:pt-10 pb-16 md:pb-24">
       {/* Content */}
       <motion.div
         className="container mx-auto px-4 relative z-20 h-full flex flex-col md:flex-row items-center justify-between gap-12"
@@ -115,7 +115,7 @@ const Hero = () => {
         </div>
 
         {/* Right Side Image Slider in a Div */}
-        <div className="w-full md:w-1/2 h-80 md:h-96 rounded-xl overflow-hidden ">
+        <div className="w-full md:w-1/2 h-80 md:h-96 rounded-xl overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img
               key={currentImageIndex}

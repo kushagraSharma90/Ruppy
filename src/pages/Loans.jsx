@@ -8,7 +8,7 @@ const Loans = () => {
       id: "personal",
       title: "Personal Loan",
       description: "Quick funds for your personal needs with minimal documentation",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "src/assets/PersonalCarLoanPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to ₹25 lakhs",
         "Interest rates starting from 10.99%",
@@ -29,7 +29,7 @@ const Loans = () => {
       id: "used-car",
       title: "Used Car Loan",
       description: "Affordable financing options for pre-owned vehicles",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: "src/assets/UsedCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 11.99%",
@@ -52,7 +52,7 @@ const Loans = () => {
       title: "New Car Loan",
       description: "Drive home your dream car with competitive interest rates",
       image:
-        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "src/assets/NewCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 9.99%",
@@ -74,7 +74,7 @@ const Loans = () => {
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
       image:
-        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "src/assets/LoanAgainstCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       benefits: [
         "Loans up to 80% of vehicle value",
         "Interest rates starting from 12.99%",
@@ -275,7 +275,7 @@ const Loans = () => {
           </p>
           <Link
             to="/apply"
-            className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-md font-medium text-lg transition-colors duration-300"
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-medium text-lg transition-colors duration-300"
           >
             Apply Now
             <ArrowRight className="ml-2 h-5 w-5" />

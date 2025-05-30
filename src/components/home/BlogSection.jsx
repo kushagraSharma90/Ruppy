@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom"; // If you're using react-router
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -118,7 +118,7 @@ const BlogsSection = () => {
   };
 
   return (
-    <section className="w-full py-12 bg-white">
+    <section className="w-full pt-6 pb-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
@@ -151,15 +151,9 @@ const BlogsSection = () => {
                 </Link>
                 <div className="p-5">
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
-                    <span className="flex items-center">
-                      👁️ {post.views} Views
-                    </span>
-                    <span className="flex items-center">
-                      📅 {post.date}
-                    </span>
-                    <span className="flex items-center">
-                      ⏱️ {post.readTime}
-                    </span>
+                    <span className="flex items-center">👁️ {post.views} Views</span>
+                    <span className="flex items-center">📅 {post.date}</span>
+                    <span className="flex items-center">⏱️ {post.readTime}</span>
                   </div>
                   <Link to={`/blogs/${post.id}`} className="block group">
                     <h3 className="font-semibold text-gray-800 mb-3 text-lg line-clamp-2 group-hover:text-blue-600 transition-colors">
