@@ -1,5 +1,52 @@
 import React, { useState, useEffect } from "react";
 
+const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
+  const radius = 90;
+  const strokeWidth = 20;
+  const normalizedRadius = radius - strokeWidth / 2;
+  const circumference = Math.PI * normalizedRadius;
+
+  const interestRatio = interestAmount / totalAmount;
+  const principalRatio = 1 - interestRatio;
+
+  const interestStroke = circumference * interestRatio;
+  const principalStroke = circumference * principalRatio;
+
+  return (
+    <svg width={radius * 2} height={radius + strokeWidth} className="mx-auto">
+      <g transform={`rotate(-90 ${radius} ${radius})`}>
+        <circle
+          cx={radius}
+          cy={radius}
+          r={normalizedRadius}
+          fill="transparent"
+          stroke="#0057ff"
+          strokeWidth={strokeWidth}
+          strokeDasharray={`${principalStroke} ${circumference}`}
+          strokeLinecap="round"
+        />
+        <circle
+          cx={radius}
+          cy={radius}
+          r={normalizedRadius}
+          fill="transparent"
+          stroke="#00d1d1"
+          strokeWidth={strokeWidth}
+          strokeDasharray={`${interestStroke} ${circumference}`}
+          strokeDashoffset={-principalStroke}
+          strokeLinecap="round"
+        />
+      </g>
+      <text x="50%" y="60%" textAnchor="middle" className="text-sm fill-gray-500">
+        Per Month EMI
+      </text>
+      <text x="50%" y="80%" textAnchor="middle" className="text-lg font-bold fill-black">
+        ₹{emi.toLocaleString("en-IN")}
+      </text>
+    </svg>
+  );
+};
+
 const EmiCalculator = () => {
   const [loanType, setLoanType] = useState("used-car-loan");
   const [loanAmount, setLoanAmount] = useState(1000000);
@@ -33,7 +80,7 @@ const EmiCalculator = () => {
     }).format(amount);
 
   return (
-    <section className="w-full py-12 bg-#f5f5ec">
+    <section className="w-full py-12 bg-[#f5f5ec]">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-6">
           Calculate your EMIs instantly
@@ -142,21 +189,16 @@ const EmiCalculator = () => {
 
             {/* Right Column */}
             <div className="flex flex-col justify-between">
+              {/* SVG Half-Donut Chart */}
               <div className="flex justify-center mb-6">
-                <div className="relative w-48 h-24">
-                  <div
-                    className="absolute inset-0 bg-blue-600 rounded-t-full overflow-hidden"
-                    style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }}
-                  >
-                    <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400"></div>
-                  </div>
-                  <div className="absolute inset-2 bg-white rounded-t-full flex flex-col items-center justify-center pt-2">
-                    <span className="text-xs text-gray-600">Per Month EMI</span>
-                    <span className="text-2xl font-bold">₹{emi.toLocaleString("en-IN")}</span>
-                  </div>
-                </div>
+                <SemiDonutChart
+                  totalAmount={totalAmount}
+                  interestAmount={totalInterest}
+                  emi={emi}
+                />
               </div>
 
+              {/* Summary Details */}
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
