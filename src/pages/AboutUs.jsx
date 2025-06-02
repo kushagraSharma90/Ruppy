@@ -61,21 +61,12 @@ export default function AboutUs() {
             </div>
 
             {/* Vision */}
-<<<<<<< HEAD
-            <div className="bg-white rounded-lg p-6 transition-all duration-300">
-              <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <Lightbulb className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl text-black font-bold text-center mb-4">Vision</h3>
-              <p className="text-sm text-center text-black">
-=======
             <div className="bg-white text-black rounded-lg p-6 transition-all duration-300">
               <div className="bg-white text-black rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <Lightbulb className="text-blue-600 w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Vision</h3>
               <p className="text-sm text-center text-black leading-relaxed">
->>>>>>> 9ba00dc (changes)
                 We envision a world where financing is not a barrier but a bridge to dreams—accessible to everyone, powered by technology, and enhanced by human care and transparency.
               </p>
             </div>

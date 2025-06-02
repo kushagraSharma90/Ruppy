@@ -1,12 +1,8 @@
 
 
 import { useState, useEffect } from "react"
-<<<<<<< HEAD
-import { Calculator, DollarSign, Percent, Calendar, IndianRupee } from "lucide-react"
-=======
 import { Calculator, DollarSign, Percent, Calendar } from "lucide-react"
 import { Link } from "react-router-dom"
->>>>>>> 9ba00dc (changes)
 
 const Calculators = () => {
   const [activeTab, setActiveTab] = useState("emi")
@@ -130,7 +126,7 @@ const Calculators = () => {
                         <span className="text-blue-600 font-medium">{formatCurrency(loanAmount)}</span>
                       </div>
                       <div className="flex items-center">
-                        <IndianRupee className="h-5 w-5 text-gray-500 mr-2" />
+                        <DollarSign className="h-5 w-5 text-gray-500 mr-2" />
                         <input
                           type="range"
                           id="loan-amount"
@@ -170,8 +166,8 @@ const Calculators = () => {
                         />
                       </div>
                       <div className="flex justify-between mt-1 text-xs text-gray-500">
-                        <span>1%</span>
-                        <span>35%</span>
+                        <span>5%</span>
+                        <span>25%</span>
                       </div>
                     </div>
 
