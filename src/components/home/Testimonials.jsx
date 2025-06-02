@@ -11,11 +11,11 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Siddharth Sharma",
-      position: "Working Professional - Mumbai",
+      name: "Saurabh Patel",
+      position: "Salaried - Delhi",
       image: customer1,
       content:
-        "I sincerely appreciate RupeeDot prompt assistance in providing me with a top-up car loan for my son's engineering admission as fund was required immediately for 7 lacs. Thanks to your support, my son can now pursue his education without financial hurdles. I am grateful for your exceptional service and look forward to a continued association with you.",
+        "Celebrated our 2nd marriage anniversary with a new car thanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
       rating: 5,
     },
     {
@@ -24,7 +24,7 @@ const Testimonials = () => {
       position: "Salaried - Pune",
       image: customer2,
       content:
-        "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and  ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated.",
+        "Cheers to RupeeDot for the great and efficient service and process, I was able to do my home renovation dreams at faster time Yourseamless loan process support &amp prompt assistance and trust in me made the entireourney smooth. Thanks to your help, I was able to renovate my home just the way I envisioned I’m grateful for your",
       rating: 5,
     },
     {
@@ -34,15 +34,15 @@ const Testimonials = () => {
       image: customer3,
       content:
         "Got a used car loan considering my daughter's 18th Birthday-fast service, immediate loan process! Even the relationship manager was here with cakes and ribbons during car delivery I thought this happens only for new car What a service and personal touch! Thanks to Rupee Dot, highly appreciated!",
-      rating: 4,
+      rating: 5,
     },
     {
       id: 4,
-      name: "Saurabh Patel",
-      position: "Salaried - Delhi",
+      name: "Sunil Rana",
+      position: "Working Professional - Mumbai",
       image: customer4,
       content:
-        "Celebrated our 2nd marriage anniversary with a new car thanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
+         "I financed my new car through RupeeDot, and the experience was amazing! The process was smooth, quick, and hassle-free, with complete transparency and no hidden charges. I’m truly happy with their support and highly recommend RupeeDot for a seamless car loan journey",
       rating: 5,
     },
     {
@@ -51,25 +51,35 @@ const Testimonials = () => {
       position: "Salaried - Gurgaon",
       image: customer5,
       content:
-        "RupeeDot came through for me when I needed it the most. I urgently required 10 lacs for a family vacation abroad, and their personal loan process was incredibly smooth and quick, removing all the stress. Knowing our dream trip was secured without financial roadblocks was a huge relief. I'm genuinely impressed with their service and would highly recommend Rupee Dot to anyone in need of timely financial support.",
+        "I financed my new car through RupeeDot, and the experience was amazing! The process was smooth, quick, and hassle-free, with complete transparency and no hidden charges. I’m truly happy with their support and highly recommend RupeeDot for a seamless car loan journey",
       rating: 5,
     },
     {
       id: 6,
-      name: "Neha Reddy",
-      position: "Financial Analyst",
+      name: "Rishabh Jain",
+      position: "Bussiness Owner - Jabalpur",
       image: customer6,
       content:
-        "RupeeDot exceeded my expectations! Their support team was always available, and the loan disbursal was surprisingly fast. I’ll definitely recommend them to my peers.",
-      rating: 4,
+        "I took a personal loan from RupeeDot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I’d highly recommend RupeeDot for anyone planning a vacation!",
+      rating: 5,
     },
     {
       id: 7,
-      name: "Sunil Rana",
+      name: "Siddharth Sharma",
       position: "Working Professional - Mumbai",
       image: customer5,
       content:
-        "I took a personal loan from Rupee Dot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I'd highly recommend RupeeDot for anyone planning a vacation!",
+        "I sincerely appreciate RupeeDot prompt assistance in providing me with a top-up car loan for my son's engineering admission as fund was required immediately for 7 lacs. Thanks to your support, my son can now pursue his education without financial hurdles. I am grateful for your exceptional service and look forward to a continued association with you.",
+      rating: 5,
+    },
+
+    {
+      id: 8,
+      name: "Kanhaiya Tiwari",
+      position: "Bussiness Owner - Pune", 
+      image: customer5,
+      content:
+        "I recently financed a car for my son through RupeeDot, and I can’t express how grateful I am for their support. As a father, seeing my son’s happiness when he got the keys to his first car was priceless. The loan process was smooth, quick, and completely stress-free, allowing me to make this special moment happen without financial worries. RupeeDot made what felt like a distant dream a beautiful reality, and for that, I’ll always be thankful.",
       rating: 5,
     },
   ]

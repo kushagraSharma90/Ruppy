@@ -112,7 +112,7 @@ const ContactUs = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "15k+", label: "Happy Clients" },
-              { number: "$250M+", label: "Loans Processed" },
+              { number: "₹250B+", label: "Loans Processed" },
               { number: "99.8%", label: "Customer Satisfaction" },
               { number: "24/7", label: "Customer Support" },
             ].map((stat, index) => (
