@@ -79,6 +79,19 @@ const blogData = [
     readTime: "4 Min",
     author: "RUPPEDOT",
   },
+  {
+    id: 6,
+    title: "Understanding Home Loan Interest Rates",
+    description:
+     ` " A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.,
+`,
+ image: blog5,
+    views: 666,
+    date: "MAY 21, 2025",
+    readTime: "4 Min",
+    author: "RUPPEDOT",
+  },
+
 ];
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");

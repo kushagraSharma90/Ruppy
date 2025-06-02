@@ -127,7 +127,7 @@ const Navbar = () => {
                       About Us
                     </Link>
                     <Link
-                      to="/our-story/team"
+                      to="/ContactUs"
                       className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >

@@ -1,7 +1,12 @@
 
 
 import { useState, useEffect } from "react"
+<<<<<<< HEAD
 import { Calculator, DollarSign, Percent, Calendar, IndianRupee } from "lucide-react"
+=======
+import { Calculator, DollarSign, Percent, Calendar } from "lucide-react"
+import { Link } from "react-router-dom"
+>>>>>>> 9ba00dc (changes)
 
 const Calculators = () => {
   const [activeTab, setActiveTab] = useState("emi")
@@ -42,16 +47,30 @@ const Calculators = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-[#3870A6] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Loan Calculators</h1>
-          <p className="text-xl max-w-3xl mx-auto text-blue-100">
-            Use our calculators to plan your finances and make informed decisions
-          </p>
+       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
         </div>
-      </section>
-
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Loan Calculators </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              <h1> Use our calculators to plan your finances and make informed decisions</h1>
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+    <div>
+      {/* Hero Section */}
+      
       {/* Calculators Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -290,7 +309,7 @@ const Calculators = () => {
                   <div className="bg-gray-50 p-6 rounded-lg flex flex-col items-center justify-center">
                     <div className="text-center">
                       <p className="text-gray-600 mb-2">Your Estimated Loan Eligibility</p>
-                      <h3 className="text-3xl font-bold text-blue-600 mb-4">₹0</h3>
+                      <h3 className="text-3xl font-bold text-blue-600 mb-4"></h3>
                       <p className="text-sm text-gray-500">
                         Fill in your details and click "Calculate Eligibility" to see your estimated loan amount.
                       </p>
@@ -470,15 +489,19 @@ const Calculators = () => {
             >
               Apply Now
             </a>
-            <a
-              href="/contact"
+             <Link to ="/ContactUs"
+            
+              
               className="bg-white border border-white text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
-            >
+          >
               Talk to an Expert
-            </a>
+              </Link>
+     
+            
           </div>
         </div>
       </section>
+      </div>
     </div>
   )
 }

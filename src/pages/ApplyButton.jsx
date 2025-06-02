@@ -77,16 +77,30 @@ const ApplyPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50 px-4 py-10 space-y-20">
-      {/* Hero Section */}
-      <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-700 mb-4">
-          Fast, Easy Loan Application
-        </h1>
-        <p className="text-lg text-gray-700">
-          Fill in the form below to apply for a loan. Our team will get in touch within 24 hours.
-        </p>
+    <div>
+       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
+        </div>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"> Fast, Easy Loan Application </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              <h1>Fill in the form below to apply for a loan. Our team will get in touch within 24 hours.</h1>
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
+      {/* Hero Section */}
+     
 
       {/* Application Form */}
       <motion.div
@@ -153,7 +167,7 @@ const ApplyPage = () => {
 
       {/* Why Choose Us Section */}
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mt-6 mb-6">Why Choose Us?</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
@@ -188,7 +202,7 @@ const ApplyPage = () => {
 
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-gray-800 text-center mt-6 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-5">
           {[
             {
