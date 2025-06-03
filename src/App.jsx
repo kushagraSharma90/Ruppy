@@ -24,7 +24,7 @@ import OurCoreValues from "./pages/community/our-core-values"
 import WorkCulture from "./pages/community/work-culture"
 import FAQ from "./pages/community/faq"
 import Blogs from "./components/home/Blogs"
-
+import PrivacyPolicy from "./components/PrivacyPolicy"  
 
 function App() {
   return (
@@ -35,13 +35,15 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/our-story/about" element={<AboutUs />} />
             <Route path="/our-story/mission" element={<OurMission />} />
             <Route path="/apply" element={<ApplyButton />} />
-            <Route path="/our-story/team" element={<ContactUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+
+
             <Route path="/loans" element={<Loans />} />
             <Route path="/community" element={<Community />} />
             

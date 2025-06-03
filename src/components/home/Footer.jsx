@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { X, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, MapPin, Youtube, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,6 +33,7 @@ const Footer = () => {
                 { name: "Calculators", path: "/calculators" },
                 { name: "Become a Partner", path: "/become-partner" },
                 { name: "Contact Us", path: "/contact" },
+
               ].map(({ name, path }) => (
                 <li key={path}>
                   <Link to={path} className="text-gray-300 hover:text-orange-400 transition">
@@ -99,9 +100,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} RupeeDot. All rights reserved by Indicorn Financial Services Pvt Ltd
           </p>
           <div className="flex flex-wrap gap-3 text-xl justify-center">
-            <Link to="/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link>
+            <Link to="/PrivacyPolicy" className="hover:text-orange-400">Privacy Policy</Link>
             <Link to="/terms-conditions" className="hover:text-orange-400">Terms & Conditions</Link>
-           
           </div>
         </div>
 
@@ -110,8 +110,11 @@ const Footer = () => {
           <a href="https://www.youtube.com/@rupeedot" target="_blank" rel="noopener noreferrer">
             <Youtube size={35} className="text-gray-300 hover:text-red-500 transition-colors" />
           </a>
-          <a href="https://x.com/RupeeDot" target="_blank" rel="noopener noreferrer">
-            <X size={35} className="text-gray-300 hover:text-black transition-colors" />
+          <a href="https://twitter.com/RupeeDot" target="_blank" rel="noopener noreferrer">
+            <Twitter size={35} className="text-gray-300 hover:text-blue-400 transition-colors" />
+          </a>
+          <a href="https://www.facebook.com/rupeedot" target="_blank" rel="noopener noreferrer">
+            <Facebook size={35} className="text-gray-300 hover:text-blue-600 transition-colors" />
           </a>
           <a href="https://www.instagram.com/rupee_dot/" target="_blank" rel="noopener noreferrer">
             <Instagram size={35} className="text-gray-300 hover:text-pink-500 transition-colors" />
