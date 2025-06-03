@@ -24,6 +24,7 @@ import OurCoreValues from "./pages/community/our-core-values"
 import WorkCulture from "./pages/community/work-culture"
 import FAQ from "./pages/community/faq"
 import Blogs from "./components/home/Blogs"
+import PrivacyPolicy from "./components/PrivacyPolicy"
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             <Route path="/our-story/mission" element={<OurMission />} />
             <Route path="/apply" element={<ApplyButton />} />
             <Route path="ContactUs" element={<ContactUs />} />
+            <Route path="PrivacyPolicy" element={<PrivacyPolicy/>} />
             <Route path="/loans" element={<Loans />} />
             <Route path="/community" element={<Community />} />
             
