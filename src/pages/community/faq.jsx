@@ -177,7 +177,7 @@ const FAQ = () => {
               Contact Support
             </button>
             <button
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300"
+  className="inline-flex items-center px-8 py-4 border-2 bg-white border-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
   onClick={() => window.open("https://wa.me/917028095292?text=Hello%20RupeeDot!%20I%20need%20assistance.")}
 >
   Live Chat

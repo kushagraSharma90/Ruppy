@@ -481,7 +481,7 @@ const Calculators = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/apply"
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-md font-medium transition-colors duration-300"
+              className="bg-[#3870A6] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
             </a>
@@ -490,6 +490,10 @@ const Calculators = () => {
               
               className="bg-white border border-white text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
           >
+            <a
+              href="/contact"
+              className="bg-[#3870A6] border border-white text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+            >
               Talk to an Expert
               </Link>
      
