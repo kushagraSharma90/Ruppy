@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, Shield } from "lucide-react"
+import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; 
+import UsedCarPage from "../assets/UsedCarPage.png"; 
+import NewCarPage from "../assets/NewCarPage.png";
+import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
+
 
 
 const Loans = () => {
@@ -8,7 +13,7 @@ const Loans = () => {
       id: "personal",
       title: "Personal Loan",
       description: "Quick funds for your personal needs with minimal documentation",
-      image: "src/assets/PersonalCarLoanPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: PersonalCarLoanPage,
       benefits: [
         "Loans up to ₹25 lakhs",
         "Interest rates starting from 10.99%",
@@ -29,7 +34,7 @@ const Loans = () => {
       id: "used-car",
       title: "Used Car Loan",
       description: "Affordable financing options for pre-owned vehicles",
-      image: "src/assets/UsedCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image: UsedCarPage,
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 11.99%",
@@ -51,8 +56,7 @@ const Loans = () => {
       id: "new-car",
       title: "New Car Loan",
       description: "Drive home your dream car with competitive interest rates",
-      image:
-        "src/assets/NewCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image:NewCarPage,
       benefits: [
         "Loans up to 90% of vehicle value",
         "Interest rates starting from 9.99%",
@@ -73,8 +77,7 @@ const Loans = () => {
       id: "against-car",
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
-      image:
-        "src/assets/LoanAgainstCarPage.png?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      image:LoanAgainstCarPage,
       benefits: [
         "Loans up to 80% of vehicle value",
         "Interest rates starting from 12.99%",

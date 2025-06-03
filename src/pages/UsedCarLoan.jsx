@@ -8,8 +8,7 @@ const UsedCarLoan = () => {
     id: "used-car",
     title: "Used Car Loan",
     description: "Affordable financing for your pre-owned vehicle.",
-    image:
-     UsedCarPage,
+    image:UsedCarPage,
     benefits: [
       "Loans up to ₹20 lakhs",
       "Interest rates starting from 10.75%",
