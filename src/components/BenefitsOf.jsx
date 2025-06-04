@@ -36,14 +36,14 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#3870A6] via-[#3870A6] to-[#3870A6] py-16 px-4">
+    <div className="w-full bg-[#f5f5ec] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-lg text-gray-200 mb-2 font-medium">
+          <h2 className="text-lg text-black mb-2 font-medium">
             Revolutionizing Leading With Innovative AI Technology
           </h2>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">
             BENEFITS OF{" "}
             <span className="text-[#3870A6] bg-white px-2 rounded">RUPEE</span>{" "}
             <span className="text-[#D47734] bg-white px-2 rounded">DOT</span>
