@@ -211,7 +211,7 @@ const Navbar = () => {
                 <div className="dropdown-anim absolute left-0 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
                   <div className="py-2 px-4">
                     <Link
-                      to="/community/blog"
+                      to="/community/blogs"
                       className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                       onClick={closeMenu}
                     >
