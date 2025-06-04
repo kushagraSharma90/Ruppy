@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, Shield } from "lucide-react"
+import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, IndianRupee, Shield } from "lucide-react"
 import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; 
 import UsedCarPage from "../assets/UsedCarPage.png"; 
 import NewCarPage from "../assets/NewCarPage.png";
@@ -267,7 +267,7 @@ const Loans = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <DollarSign className="h-7 w-7 text-blue-600" />
+                <IndianRupee className="h-7 w-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Competitive Rates</h3>
               <p className="text-gray-600">Enjoy some of the most competitive interest rates in the market</p>

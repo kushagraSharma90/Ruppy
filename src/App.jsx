@@ -23,8 +23,10 @@ import Career from "./pages/community/career";
 import OurCoreValues from "./pages/community/our-core-values";
 import WorkCulture from "./pages/community/work-culture";
 import FAQ from "./pages/community/faq";
-import Blogs from "./components/home/Blogs";
+import Blogs from "./pages/community/Blogs";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import BlogsForHome from "./components/home/BlogsForHome";
+import TermsAndConditions from "./components/TermsAndCondition";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
             <Route path="/ContactUS" element={<ContactUs />} />
             <Route path="/loans" element={<Loans />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/community/blog" element={Blogs} />
+            <Route path="/TermsAndCondition" element={<TermsAndConditions/>}/>
 
             <Route path="/community/career" element={<Career />} />
             <Route

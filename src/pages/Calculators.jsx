@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Calculator, DollarSign, Percent, Calendar } from "lucide-react";
+import { Calculator, DollarSign, Percent, Calendar, IndianRupeeIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Calculators = () => {
@@ -89,7 +89,7 @@ const Calculators = () => {
                 >
                   EMI Calculator
                 </button>
-                <button
+                {/* <button
                   className={`py-3 px-6 font-medium text-lg ${
                     activeTab === "eligibility"
                       ? "text-blue-600 border-b-2 border-blue-600"
@@ -107,8 +107,8 @@ const Calculators = () => {
                   }`}
                   onClick={() => setActiveTab("prepayment")}
                 >
-                  Prepayment Calculator
-                </button>
+                  Prepayment Calculator */}
+                {/* </button> */}
               </div>
 
               {/* EMI Calculator */}
@@ -139,7 +139,7 @@ const Calculators = () => {
                           </span>
                         </div>
                         <div className="flex items-center">
-                          <DollarSign className="h-5 w-5 text-gray-500 mr-2" />
+                          <IndianRupeeIcon className="h-5 w-5 text-gray-500 mr-2" />
                           <input
                             type="range"
                             id="loan-amount"
@@ -188,8 +188,8 @@ const Calculators = () => {
                           />
                         </div>
                         <div className="flex justify-between mt-1 text-xs text-gray-500">
-                          <span>5%</span>
-                          <span>25%</span>
+                          <span>1%</span>
+                          <span>35%</span>
                         </div>
                       </div>
 
@@ -587,11 +587,11 @@ const Calculators = () => {
               </a>
               <Link
                 to="/ContactUs"
-                className="bg-white border border-white text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                className=" text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 <a
                   href="/contact"
-                  className="bg-[#3870A6] border border-white text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                  className="bg-[#3870A6]  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
                 >
                   Talk to an Expert
                 </a>

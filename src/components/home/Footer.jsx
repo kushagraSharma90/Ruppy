@@ -6,9 +6,9 @@ import {
   Phone,
   MapPin,
   Youtube,
-  Twitter,
   Facebook,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6"; // Importing the official Twitter (X) icon
 
 const Footer = () => {
   return (
@@ -126,13 +126,13 @@ const Footer = () => {
             <Link to="/PrivacyPolicy" className="hover:text-orange-400">
               Privacy Policy
             </Link>
-            <Link to="/terms-conditions" className="hover:text-orange-400">
+            <Link to="/TermsAndCondition" className="hover:text-orange-400">
               Terms & Conditions
             </Link>
           </div>
         </div>
 
-        {/* Social Icons Bottom Center (Reordered) */}
+        {/* Social Icons Bottom Center */}
         <div className="flex justify-center mt-6 gap-5">
           <a
             href="https://www.facebook.com/rupeedot"
@@ -155,17 +155,17 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://twitter.com/RupeeDot"
+            href="https://twitter.com/rupeedot"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter
+            <FaXTwitter
               size={35}
-              className="text-gray-300 hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             />
           </a>
           <a
-            href="https://www.instagram.com/rupeedotindia/"
+            href="https://www.linkedin.com/company/rupeedot/"
             target="_blank"
             rel="noopener noreferrer"
           >

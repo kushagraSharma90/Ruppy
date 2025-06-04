@@ -93,7 +93,7 @@ const FAQ = () => {
             Back to Community
           </Link>
 
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-[#D47734] bg-clip-text text-transparent mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
@@ -117,7 +117,7 @@ const FAQ = () => {
               transition={{ delay: 0.1 * categoryIndex, duration: 0.6 }}
               className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
             >
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4">
+              <div className="bg-[#D47734] px-6 py-4">
                 <h2 className="text-xl font-bold text-white">{category.category}</h2>
               </div>
 
@@ -135,9 +135,9 @@ const FAQ = () => {
                         <span className="font-semibold text-gray-800 pr-4">{item.question}</span>
                         <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
                           {isOpen ? (
-                            <Minus className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                            <Minus className="w-5 h-5 text-[#D47734] flex-shrink-0" />
                           ) : (
-                            <Plus className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                            <Plus className="w-5 h-5 text-[#D47734] flex-shrink-0" />
                           )}
                         </motion.div>
                       </button>
@@ -166,7 +166,7 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-12 text-white text-center"
+          className="mt-16 bg-[#D47734] rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
           <p className="text-xl mb-8 opacity-90">

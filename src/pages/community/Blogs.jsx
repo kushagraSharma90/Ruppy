@@ -1,73 +1,77 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Search, ChevronLeft, ChevronRight, Clock, Eye, Calendar, ArrowRight } from "lucide-react"
+import blog1 from "../../assets/blog1.jpeg"
+import blog2 from "../../assets/blog2.jpeg"
+import blog3 from "../../assets/blog3.jpeg"
+import blog4 from "../../assets/blog4.jpeg"
+import blog5 from "../../assets/blog5.jpeg"
 
 // Sample blog data
 const blogPosts = [
   {
     id: 1,
-    title: " Disrupting Auto Finance & Solving Dealer Challenges  ",
-    excerpt: " A Fintech Disruptor in Auto Finance",
-    image: "src/assets/blog1.jpeg?height=40&width=40",
+    title: "Disrupting Auto Finance & Solving Dealer Challenges",
+    excerpt: "A Fintech Disruptor in Auto Finance",
+    image: blog1,
     category: "Car Loans",
     views: 634,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    authorImage: "src/assets/blog1.jpeg?height=40&width=40",
+    authorImage: blog1,
     featured: true,
   },
   {
     id: 2,
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "Discover how the youngest generation is changing the way we think about credit and financial services.",
-    image: "src/assets/blog2.jpeg?height=40&width=40",
+    image: blog2,
     category: "Financial Trends",
     views: 404,
     date: "MAY 21, 2025",
     readTime: "5 Min",
     author: "RUPPEDOT",
-    authorImage: "src/assets/blog2.jpeg",
+    authorImage: blog2,
     featured: true,
   },
   {
     id: 3,
     title: "What is a Personal Loan?",
-    excerpt:
-      "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
-    image: "src/assets/blog3.jpeg?height=40&width=40",
+    excerpt: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
+    image: blog3,
     category: "Credit Cards",
     views: 77,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    authorImage: "src/assets/blog3.jpeg",
+    authorImage: blog3,
     featured: false,
   },
   {
     id: 4,
     title: "Understanding Home Loan Interest Rates",
     excerpt: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: blog4,
     category: "Home Loans",
     views: 325,
     date: "MAY21, 2025",
     readTime: "6 Min",
     author:  "RUPPEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog4,
     featured: false,
   },
   {
     id: 5,
     title: "5 Ways to Improve Your Credit Score Fast",
     excerpt: "Practical tips to boost your credit score quickly and improve your financial standing.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: blog5,
     category: "Credit Score",
     views: 892,
     date: "MAY 21, 2025",
     readTime: "7 Min",
     author:  "RUPPEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog5,
     featured: false,
   },
 ]
@@ -81,7 +85,7 @@ const categories = [
   "Credit Cards",
 ]
 
-const blog = () => {
+const Blogs = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [currentPage, setCurrentPage] = useState(1)
@@ -114,32 +118,35 @@ const blog = () => {
   }, [searchTerm, selectedCategory])
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Financial Insights & Resources</h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Explore our collection of articles, guides, and tips to help you make informed financial decisions.
+    <div>
+       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
+        </div>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Financial Insights & Resources </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              <h1>Explore our collection of articles, guides, and tips to help you make informed financial decisions.</h1>
             </p>
-            <div className="relative max-w-2xl mx-auto">
-              <input
-                type="text"
-                placeholder="Search for articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full py-3 px-5 pr-12 rounded-full bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            </div>
           </div>
         </div>
-      </section>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+
+    
+    
 
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#f5f5ec]">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Featured Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -202,7 +209,7 @@ const blog = () => {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-[#f5f5ec]">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -221,7 +228,7 @@ const blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-[#f5f5ec]">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
             {selectedCategory === "All" ? "All Articles" : selectedCategory}
@@ -362,11 +369,11 @@ const blog = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#f5f5ec] text-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Financial Insights</h2>
-            <p className="text-blue-100 mb-8">
+            <p className="text-black mb-8">
               Subscribe to our newsletter and receive the latest articles, tips, and financial advice directly in your
               inbox.
             </p>
@@ -374,9 +381,9 @@ const blog = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-grow py-3 px-4 rounded-md bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-grow py-3 px-4 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-              <button className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition-colors">
+              <button className="bg-white text-black font-medium py-3 px-6 rounded-md transition-colors">
                 Subscribe
               </button>
             </div>
@@ -387,4 +394,4 @@ const blog = () => {
   )
 }
 
-export default blog
+export default Blogs

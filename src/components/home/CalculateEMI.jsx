@@ -181,7 +181,7 @@ const EmiCalculator = () => {
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>5%</span>
+                  <span>%</span>
                   <span>35%</span>
                 </div>
               </div>
