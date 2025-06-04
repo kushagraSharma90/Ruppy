@@ -1,8 +1,8 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { ChevronDown, Menu, X, Users, BookOpen, Heart, Briefcase, HelpCircle } from "lucide-react"
+import {
+  ChevronDown, Menu, X, Users, BookOpen, Heart, Briefcase, HelpCircle
+} from "lucide-react"
 import calculatorImg from "../../assets/calculatorImg.png"
 import IconImage from "../../assets/IconImage.png"
 import Home from "../../assets/home.png"
@@ -12,6 +12,7 @@ import achieveGoal from "../../assets/achieveGoal.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mobileDropdown, setMobileDropdown] = useState(null)
   const location = useLocation()
 
   useEffect(() => {
@@ -29,7 +30,10 @@ const Navbar = () => {
   }, [isOpen])
 
   const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => setIsOpen(false)
+  const closeMenu = () => {
+    setIsOpen(false)
+    setMobileDropdown(null)
+  }
   const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`)
 
   const getLinkStyles = (path) => {
@@ -40,6 +44,11 @@ const Navbar = () => {
         hover:text-orange-500`,
       iconClass: `h-5 w-5 mr-2 inline-block transition-all duration-200 ${active ? "filter-orange" : ""}`,
     }
+  }
+
+  // Dropdown toggle for mobile
+  const handleMobileDropdown = (dropdown) => {
+    setMobileDropdown(mobileDropdown === dropdown ? null : dropdown)
   }
 
   return (
@@ -199,7 +208,7 @@ const Navbar = () => {
             )
           })()}
 
-          {/* Community Dropdown - Updated from simple link */}
+          {/* Community Dropdown */}
           {(() => {
             const { linkClass } = getLinkStyles("/community")
             return (
@@ -315,7 +324,8 @@ const Navbar = () => {
               <X className="h-6 w-6" />
             </button>
           </div>
-          <div className="px-4 py-2 space-y-4">
+          <div className="px-4 py-2 space-y-2">
+            {/* Home */}
             <Link
               to="/"
               className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
@@ -328,10 +338,11 @@ const Navbar = () => {
               />
               Home
             </Link>
-            <Link
-              to="/our-story"
-              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/our-story") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
-              onClick={closeMenu}
+
+            {/* Our Story Dropdown */}
+            <button
+              className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/our-story") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
+              onClick={() => handleMobileDropdown("our-story")}
             >
               <img
                 src={achieveGoal || "/placeholder.svg"}
@@ -339,11 +350,31 @@ const Navbar = () => {
                 className={`h-5 w-5 mr-2 inline-block ${isActive("/our-story") ? "filter-orange" : ""}`}
               />
               Our Story
-            </Link>
-            <Link
-              to="/loans"
-              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/loans") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
-              onClick={closeMenu}
+              <ChevronDown className={`ml-auto transition-transform ${mobileDropdown === "our-story" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileDropdown === "our-story" && (
+              <div className="pl-8 pb-2">
+                <Link
+                  to="/our-story/about"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/ContactUs"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            )}
+
+            {/* Loans Dropdown */}
+            <button
+              className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/loans") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
+              onClick={() => handleMobileDropdown("loans")}
             >
               <img
                 src={IconImage || "/placeholder.svg"}
@@ -351,7 +382,42 @@ const Navbar = () => {
                 className={`h-5 w-5 mr-2 inline-block ${isActive("/loans") ? "filter-orange" : ""}`}
               />
               Loans
-            </Link>
+              <ChevronDown className={`ml-auto transition-transform ${mobileDropdown === "loans" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileDropdown === "loans" && (
+              <div className="pl-8 pb-2">
+                <Link
+                  to="/loans/personal"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  Personal Loan
+                </Link>
+                <Link
+                  to="/loans/used-car"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  Used Car Loan
+                </Link>
+                <Link
+                  to="/loans/new-car"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  New Car Loan
+                </Link>
+                <Link
+                  to="/loans/against-car"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  onClick={closeMenu}
+                >
+                  Loan Against Car
+                </Link>
+              </div>
+            )}
+
+            {/* Calculators */}
             <Link
               to="/calculators"
               className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/calculators") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
@@ -364,61 +430,57 @@ const Navbar = () => {
               />
               Calculators
             </Link>
-            <Link
-              to="/community"
-              className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/community") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
-              onClick={closeMenu}
+
+            {/* Community Dropdown */}
+            <button
+              className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/community") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
+              onClick={() => handleMobileDropdown("community")}
             >
               <Users className={`h-5 w-5 mr-2 inline-block ${isActive("/community") ? "text-orange-500" : ""}`} />
               Community
-              <ChevronDown className="w-4 h-4 ml-auto" />
-            </Link>
-
-            {/* Community Submenu for Mobile */}
-            {isActive("/community") && (
-              <div className="ml-6 space-y-2 mt-2">
+              <ChevronDown className={`ml-auto transition-transform ${mobileDropdown === "community" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileDropdown === "community" && (
+              <div className="pl-8 pb-2">
                 <Link
-                  to="/community/blog"
-                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  to="/community/blogs"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                   onClick={closeMenu}
                 >
-                  <BookOpen className="h-4 w-4 mr-2" />
                   Blog
                 </Link>
                 <Link
                   to="/community/our-core-values"
-                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                   onClick={closeMenu}
                 >
-                  <Heart className="h-4 w-4 mr-2" />
                   Our Core Values
                 </Link>
                 <Link
                   to="/community/career"
-                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                   onClick={closeMenu}
                 >
-                  <Briefcase className="h-4 w-4 mr-2" />
                   Career
                 </Link>
                 <Link
                   to="/community/work-culture"
-                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                   onClick={closeMenu}
                 >
-                  <Users className="h-4 w-4 mr-2" />
                   Work Culture
                 </Link>
                 <Link
                   to="/community/faq"
-                  className="flex items-center py-2 px-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-orange-500 transition-colors"
+                  className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-orange-500 transition-colors"
                   onClick={closeMenu}
                 >
-                  <HelpCircle className="h-4 w-4 mr-2" />
                   FAQ
                 </Link>
               </div>
             )}
+
+            {/* Become a Partner */}
             <Link
               to="/become-partner"
               className={`flex items-center py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/become-partner") ? "text-orange-500 bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-orange-500`}
@@ -431,9 +493,11 @@ const Navbar = () => {
               />
               Become a Partner
             </Link>
+
+            {/* Apply Now Button (Mobile) */}
             <Link
               to="/apply"
-              className="flex items-center bg-[#3870A6] hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
+              className="flex items-center mt-4 bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white px-4 py-2 rounded-xl text-base whitespace-nowrap shadow-lg transition-all duration-200 transform hover:scale-105"
               onClick={closeMenu}
             >
               Apply Now
