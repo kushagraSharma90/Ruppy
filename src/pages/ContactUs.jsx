@@ -73,7 +73,7 @@ const ContactUs = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Email</p>
-                    <p className="text-lg text-blue-600 font-medium">info@rupeedot.com</p>
+                    <p className="text-lg text-blue-600 font-medium">wecare@rupeedot.com</p>
                    
                   </div>
                 </div>
