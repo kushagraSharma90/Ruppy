@@ -26,8 +26,7 @@ const blogData = [
   {
     id: 2,
     title: "Market Overview: New vs. Used Car Sales",
-    description:
-      `India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next
+    description: `India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next
  decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,
  stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and
  rural India.`,
@@ -40,8 +39,7 @@ const blogData = [
   {
     id: 3,
     title: "What is a Personal Loan??",
-    description:
-      `It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without
+    description: `It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without
        having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment
       tenure, making it suitable for working professionals."`,
     image: blog3,
@@ -52,9 +50,9 @@ const blogData = [
   },
   {
     id: 4,
-    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
-    description:
-      `" Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often
+    title:
+      "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
+    description: `" Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often
  hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan
  approvals, which not only delays the sales process but also dissolves customer confidence. Customers today
  anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business. ,
@@ -69,11 +67,10 @@ const blogData = [
   {
     id: 5,
     title: "What Determines Your Loan Eligibility in India?",
-    description:
-     ` " Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
+    description: ` " Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
  over your current debts, and be open about your loan requirements. This makes it easier and quicker for you,
 `,
- image: blog5,
+    image: blog5,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
@@ -82,16 +79,14 @@ const blogData = [
   {
     id: 6,
     title: "Understanding Home Loan Interest Rates",
-    description:
-     ` " A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.,
+    description: ` " A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.,
 `,
- image: blog5,
+    image: blog5,
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
   },
-
 ];
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
@@ -131,9 +126,9 @@ function BlogCard({ blog }) {
             <span>{blog.author}</span>
           </div>
           <a href={`/blogs/${blog.id}`} className="ml-auto">
-          <button className="ml-auto text-blue-600 font-medium hover:underline">
-            Read More
-          </button>
+            <button className="ml-auto text-blue-600 font-medium hover:underline">
+              Read More
+            </button>
           </a>
         </div>
       </div>
@@ -169,10 +164,14 @@ export default function BlogsForHome() {
   }, [currentSlideIndex]);
 
   return (
-    <section className="w-full pt-2 pb-12 bg-#f5f5ec"> {/* Reduced top padding here */}
+    <section className="w-full pt-2 pb-12 bg-#f5f5ec">
+      {" "}
+      {/* Reduced top padding here */}
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col space-y-4 mb-8">
-          <h2 className="text-3xl font-bold tracking-tight text-blue-700">Blogs</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-blue-700">
+            Blogs
+          </h2>
           <p className="text-gray-500">
             Insights and tips to help you navigate the world of finance
           </p>
@@ -218,9 +217,7 @@ export default function BlogsForHome() {
                 key={index}
                 className={cn(
                   "w-2 h-2 rounded-full transition-colors",
-                  currentSlideIndex === index
-                    ? "bg-blue-600"
-                    : "bg-gray-300"
+                  currentSlideIndex === index ? "bg-blue-600" : "bg-gray-300"
                 )}
                 onClick={() => setCurrentSlideIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
@@ -228,21 +225,25 @@ export default function BlogsForHome() {
             ))}
           </div>
 
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-2 shadow-md z-10"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="h-6 w-6 text-blue-600" />
-          </button>
+          {!isMobile && (
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-2 shadow-md z-10"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="h-6 w-6 text-blue-600" />
+            </button>
+          )}
 
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-2 shadow-md z-10"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="h-6 w-6 text-blue-600" />
-          </button>
+          {!isMobile && (
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-2 shadow-md z-10"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="h-6 w-6 text-blue-600" />
+            </button>
+          )}
         </div>
       </div>
     </section>
