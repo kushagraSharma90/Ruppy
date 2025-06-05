@@ -135,7 +135,7 @@ const Footer = () => {
         {/* Social Icons Bottom Center */}
         <div className="flex justify-center mt-6 gap-5">
           <a
-            href="https://www.facebook.com/rupeedot"
+            href="https://www.facebook.com/profile.php?id=61576376017035&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >

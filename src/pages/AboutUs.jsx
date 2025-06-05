@@ -19,7 +19,7 @@ export default function AboutUs() {
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            About Rupee Dot
+            About RupeeDot
           </h1>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
