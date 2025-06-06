@@ -10,6 +10,7 @@ import blog2 from "../../assets/blog2.jpeg";
 import blog3 from "../../assets/blog3.jpeg";
 import blog4 from "../../assets/blog4.jpeg";
 import blog5 from "../../assets/blog5.jpeg";
+import {Link} from "react-router-dom";
 
 const blogData = [
   {
@@ -213,6 +214,7 @@ export default function BlogsForHome() {
 
           <div className="flex justify-center mt-6 space-x-2">
             {Array.from({ length: totalSlides }).map((_, index) => (
+              <Link to="/blogs" className="cursor-pointer" key={index}>
               <button
                 key={index}
                 className={cn(
@@ -222,6 +224,7 @@ export default function BlogsForHome() {
                 onClick={() => setCurrentSlideIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
+              </Link>
             ))}
           </div>
 
