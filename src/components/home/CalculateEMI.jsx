@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
   const radius = 90;
@@ -222,10 +223,13 @@ const EmiCalculator = () => {
                 </div>
 
                 <div className="flex justify-center mt-6">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">
-                    Know more
-                  </button>
-                </div>
+                    <Link 
+                      to="/calculators" 
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
+                    >
+                      Know more
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
