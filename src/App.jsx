@@ -48,7 +48,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/community/blog" element={<Blogs/>} />
             <Route path="/TermsAndCondition" element={<TermsAndConditions/>}/>
-
+            <Route path="/BlogsForHome" element={<BlogsForHome/>}/>
             <Route path="/community/career" element={<Career />} />
             <Route
               path="/community/our-core-values"

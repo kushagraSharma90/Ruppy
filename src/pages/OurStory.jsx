@@ -30,7 +30,17 @@ const OurStory = () => {
       <section id="about" className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            {/* Image first on mobile, second on desktop */}
+            <div className="order-1 md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="RupeeDot Office"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+
+            {/* Content second on mobile, first on desktop */}
+            <div className="order-2 md:order-1">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">About RupeeDot</h2>
               <p className="text-black mb-4 text-xl">
                 We want to help our customers achieve sustainable financial success by offering fast, fair, and flexible finance solutions, powered by our innovative AI lending approach.
@@ -60,13 +70,6 @@ const OurStory = () => {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="RupeeDot Office"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -75,8 +78,8 @@ const OurStory = () => {
       <section id="mission" className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image on Left */}
-            <div className="order-1">
+            {/* Image first on mobile, second on desktop */}
+            <div className="order-1 md:order-2">
               <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Our Mission"
@@ -84,8 +87,8 @@ const OurStory = () => {
               />
             </div>
 
-            {/* Content on Right */}
-            <div className="order-2">
+            {/* Content second on mobile, first on desktop */}
+            <div className="order-2 md:order-1">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
 
               <div className="mb-8">

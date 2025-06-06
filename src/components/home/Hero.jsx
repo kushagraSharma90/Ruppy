@@ -124,7 +124,7 @@ const Hero = () => {
               </Link>
               <Link to="/calculators">
                 <motion.button
-                  className="bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 px-6 py-3 rounded-md font-medium shadow-md"
+                  className="bg-blue-600  text-white border border-blue-600 px-6 py-3 rounded-md font-medium shadow-md"
                   variants={buttonVariants}
                   initial="initial"
                   whileHover="hover"
