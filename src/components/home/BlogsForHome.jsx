@@ -126,11 +126,14 @@ function BlogCard({ blog }) {
             <User className="h-4 w-4 mr-1" />
             <span>{blog.author}</span>
           </div>
-          <Link href={`/blogs/${blog.id}`} className="ml-auto">
-            <button className="ml-auto text-blue-600 font-medium hover:underline">
-              Read More
-            </button>
-          </Link>
+          import { Link } from "react-router-dom";
+
+<Link to={`/blogs/${blog.id}`} className="ml-auto">
+  <button className="text-blue-600 font-medium hover:underline">
+    Read More
+  </button>
+</Link>
+
         </div>
       </div>
     </motion.div>
