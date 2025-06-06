@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, IndianRupee, Shield } from "lucide-react"
-import PersonalCarLoanPage from "../assets/PersonalCar.png"; 
+import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; 
 import UsedCarPage from "../assets/UsedCarPage.png"; 
 import NewCarPage from "../assets/NewCarPage.png";
 import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
