@@ -33,11 +33,11 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
+          <div className="sm:ml-4">
+            <h4 className="font-semibold text-white  text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Quick Links
             </h4>
-            <ul className="space-y-1 text-lg sm:text-xl">
+            <ul className="space-y-1 text-lg ml-4  sm:text-xl">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/our-story" },
@@ -62,7 +62,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Loan Products
             </h4>
-            <ul className="space-y-1 text-lg sm:text-xl">
+            <ul className="space-y-1 ml-5 text-lg sm:text-xl">
               {[
                 { name: "Personal Loan", path: "/loans/personal" },
                 { name: "Used Car Loan", path: "/loans/used-car" },
