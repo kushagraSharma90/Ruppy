@@ -3,6 +3,11 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { ArrowLeft, Calendar, Clock, Eye, Bookmark, Facebook, Twitter, Linkedin, Copy, ArrowRight } from "lucide-react"
+import blog1 from "../../assets/blog1.jpeg";
+import blog2 from "../../assets/blog2.jpeg";
+import blog3 from "../../assets/blog3.jpeg";
+import blog4 from "../../assets/blog4.jpeg";
+import blog5 from "../../assets/blog5.jpeg";
 
 // Sample blog data (same as in Blogs.jsx)
 const blogPosts = [
@@ -83,13 +88,13 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more
  equitable, more comprehensive assessment process.</p>
     `,
-    image: "src/assets/blog1.jpeg?height=400&width=800",
+    image: blog1,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "src/assets/blog2.jpeg?height=40&width=40",
+    authorImage: blog1,
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -211,13 +216,13 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and
  rural India. </p>   
     `,
-    image: "/placeholder.svg?height=400&width=800",
+    image: blog2,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog2,
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -327,13 +332,13 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
       </ul>
 
     `,
-    image: "/placeholder.svg?height=400&width=800",
+    image: blog3,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog3,
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -424,13 +429,13 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  maximize loan approvals for all customer segments.</p>
   
     `,
-    image: "/placeholder.svg?height=400&width=800",
+    image: blog4,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog4,
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -505,13 +510,13 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
 
       
     `,
-    image: "/placeholder.svg?height=400&width=800",
+    image: blog5,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    authorImage: blog5,
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },

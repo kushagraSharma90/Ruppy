@@ -1,62 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import blog1 from "../../assets/blog1.jpeg";
+import blog2 from "../../assets/blog2.jpeg";
+import blog3 from "../../assets/blog3.jpeg";
+import blog4 from "../../assets/blog4.jpeg";
+import blog5 from "../../assets/blog5.jpeg";
+
 
 const blogPosts = [
   {
     id: 1,
     title: "How to transfer a used car loan to another person?",
-    image: "/placeholder.svg",
+    image: blog1,
     description: "Learn the step-by-step process to transfer your car loan to another person legally and efficiently.",
     views: 645,
     date: "Jan 20, 2025",
     readTime: "4 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg",
+    authorImage: blog1,
   },
   {
     id: 2,
     title: "How Gen Z is revolutionising credit and shaping financial trends?",
-    image: "/placeholder.svg",
+    image: blog2,
     description: "Discover how the youngest generation is changing the way we think about credit and financial services.",
     views: 404,
     date: "Nov 7, 2024",
     readTime: "5 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg",
+    authorImage: blog2,
   },
   {
     id: 3,
     title: "Pros and Cons of a Credit Card",
-    image: "/placeholder.svg",
+    image: blog3,
     description: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
     views: 77,
     date: "Sept 20, 2024",
     readTime: "4 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg",
+    authorImage: blog3,
   },
   {
     id: 4,
     title: "Understanding Home Loan Interest Rates",
-    image: "/placeholder.svg",
+    image: blog4,
     description: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
     views: 325,
     date: "Aug 15, 2024",
     readTime: "6 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg",
+    authorImage: blog4,
   },
   {
     id: 5,
     title: "5 Ways to Improve Your Credit Score Fast",
-    image: "/placeholder.svg",
+    image: blog5,
     description: "Practical tips to boost your credit score quickly and improve your financial standing.",
     views: 892,
     date: "July 3, 2024",
     readTime: "7 Min",
     author: "Team LOANS24",
-    authorImage: "/placeholder.svg",
+    authorImage: blog5,
   },
   {
     id: 6,
