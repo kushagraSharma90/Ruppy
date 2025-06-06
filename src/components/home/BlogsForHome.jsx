@@ -126,11 +126,11 @@ function BlogCard({ blog }) {
             <User className="h-4 w-4 mr-1" />
             <span>{blog.author}</span>
           </div>
-          <a href={`/blogs/${blog.id}`} className="ml-auto">
+          <Link href={`/blogs/${blog.id}`} className="ml-auto">
             <button className="ml-auto text-blue-600 font-medium hover:underline">
               Read More
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>
