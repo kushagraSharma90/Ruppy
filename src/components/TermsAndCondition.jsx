@@ -232,7 +232,7 @@ const TermsAndConditions = () => {
               </ul>
 
               <p>
-               
+                (Additional content continues in the same format...)
               </p>
             </div>
           </section>
@@ -256,6 +256,9 @@ const TermsAndConditions = () => {
                 <li>Make no modifications to any such information, and</li>
                 <li>Not make any additional representations or warranties relating to such documents.</li>
               </ul>
+              <p>
+                You shall be responsible for any notes, messages, e-mails, billboard postings, photos, drawings, profiles, opinions, ideas, images, videos, audio files or other materials or information posted or transmitted to the Sites (collectively, "Content"). Such Content will become the property of RupeeDot.Com and you grant RupeeDot.Com the worldwide, perpetual and transferable rights in such Content. RupeeDot.Com shall be entitled to, consistent with our Privacy Policy, use the Content or any of its elements for any type of use forever, including but not limited to promotional and advertising purposes and in any media whether now known or hereafter devised, including the creation of derivative works that may include Content you provide. You agree that any Content you post may be used by RupeeDot.Com, consistent with our Privacy Policy and Rules of Conduct on Site as mentioned herein, and you are not entitled to any payment or other compensation for such use.
+              </p>
             </div>
           </section>
         </div>
