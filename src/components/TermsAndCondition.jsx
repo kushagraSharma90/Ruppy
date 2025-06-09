@@ -173,9 +173,60 @@ const TermsAndConditions = () => {
                 <li>provides material that exploits people in a sexual, violent or otherwise inappropriate manner or solicits personal information from anyone;</li>
                 <li>provides instructional information about illegal activities such as making or buying illegal weapons, violating someone's privacy, or providing or creating computer viruses;</li>
                 <li>contains video, photographs, or images of another person age 18 or older without his or her express written consent and permission or those of any minor (regardless of whether you have consent from the minor or his or her legal guardian).</li>
+                <li>tries to gain unauthorized access or exceeds the scope of authorized access (as defined herein and in other applicable Codes of Conduct or End User Access and License Agreements) to the Sites or to profiles, blogs, communities, account information, bulletins, friend request, or other areas of the Sites or solicits passwords or personal identifying information for commercial or unlawful purposes from other users;</li>
+                <li>Engages in commercial activities and/or sales without RupeeDot.Com's prior written consent such as contests, sweepstakes, barter, advertising and pyramid schemes, or the buying or selling of "virtual" items related to the Sites. Throughout this Terms of Use, RupeeDot.Com "prior written consent" means a communication coming from RupeeDot.Com Legal department, specifically in response to your request, and specifically addressing the activity or conduct for which you seek authorization;</li>
+                <li>solicits gambling or engages in any gambling activity which RupeeDot.Com, in its sole discretion, believes is or could be construed as being illegal;</li>
+                <li>interferes with another user's use and enjoyment of the RupeeDot.Com Website or any other individual's user and enjoyment of similar services;</li>
+                <li>Refers to any website or URL that, in the sole discretion of RupeeDot.Com, contains material that is inappropriate for the RupeeDot.Com Website or any other Website, contains content that would be prohibited or violates the letter or spirit of these Terms of Use.</li>
+                <li>harm minors in any way;</li>
+                <li>infringes any patent, trademark, copyright or other proprietary rights or third party's trade secrets or rights of publicity or privacy or shall not be fraudulent or involve the sale of counterfeit or stolen items;</li>
+                <li>violates any law for the time being in force;</li>
+                <li>deceives or misleads the addressee/ users about the origin of such messages or communicates any information which is grossly offensive or menacing in nature;</li>
+                <li>impersonate another person;</li>
+                <li>contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer resource; or contains any Trojan horses, worms, time bombs, cancelbots, easter eggs or other computer programming routines that may damage, detrimentally interfere with, diminish value of, surreptitiously intercept or expropriate any system, data or personal information;</li>
+                <li>Threatens the unity, integrity, defence, security or sovereignty of India, friendly relations with foreign states, or public order or causes incitement to the commission of any cognizable offence or prevents investigation of any offence or is insulting any other nation.</li>
+                <li>shall not be false, inaccurate or misleading;</li>
+                <li>shall not, directly or indirectly, offer, attempt to offer, trade or attempt to trade in any item, the dealing of which is prohibited or restricted in any manner under the provisions of any applicable law, rule, regulation or guideline for the time being in force.</li>
+                <li>shall not create liability for us or cause us to lose (in whole or in part) the services of our ISPs or other suppliers;</li>
               </ul>
               <p>
-                (Additional content continues in the same format...)
+                B. You shall not use any "deep-link", "page-scrape", "robot", "spider" or other automatic device, program, algorithm or methodology, or any similar or equivalent manual process, to access, acquire, copy or monitor any portion of the Website or any Content, or in any way reproduce or circumvent the navigational structure or presentation of the Website or any Content, to obtain or attempt to obtain any materials, documents or information through any means not purposely made available through the Website. RupeeDot.Com reserves the right to bar any such activity.
+              </p>
+              <p>
+                C. You shall not attempt to gain unauthorized access to any portion or feature of RupeeDot.Com website, or any other systems or networks connected to RupeeDot.Com Website or to any RupeeDot.Com's server, computer, network, or to any of the services offered on or through RupeeDot.Com Website, by hacking, password "mining" or any other illegitimate means.
+              </p>
+              <p>
+                D. You shall not probe, scan or test the vulnerability of RupeeDot.Com website or any network connected to RupeeDot.Com website nor breach the security or authentication measures on RupeeDot.Com website or any network connected to RupeeDot.Com Website. You may not reverse look-up, reverse engineer, trace or seek to trace any information on any other user of or visitor to RupeeDot.Com Website, or any other customer of RupeeDot.Com, including any RupeeDot.Com account not owned by you, to its source, or exploit RupeeDot.Com Website or any service or information made available or offered by or through RupeeDot.Com Website, in any way where the purpose is to reveal any information, including but not limited to personal identification or information, other than your own information, as provided for by RupeeDot.Com Website.
+              </p>
+              <p>
+                E. You agree that you will not take any action that imposes an unreasonable or disproportionately large load on the infrastructure of RupeeDot.Com Website or RupeeDot.Com's systems or networks, or any systems or networks connected to the RupeeDot.Com.
+              </p>
+              <p>
+                F. You agree not to use any device, software or routine to interfere or attempt to interfere with the proper working of the Website or any transaction being conducted on the Website, or with any other person's use of the Website.
+              </p>
+              <p>
+                G. You may not forge headers or otherwise manipulate identifiers in order to disguise the origin of any message or transmittal you send to RupeeDot.Com on or through the Website or any service offered on or through the Website. You may not pretend that you are, or that you represent, someone else, or impersonate any other individual or entity
+              </p>
+              <p>
+                H. You may not use the Website or any Content for any purpose that is unlawful or prohibited by these Terms of Use, or to solicit the performance of any illegal activity or other activity which infringes the rights of RupeeDot.Com or others.
+              </p>
+              <p>
+                I. Solely to enable RupeeDot.Com to use the information you supply us with, so that we are not violating any rights you might have in Your Information, you agree to grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to exercise the copyright, publicity, database rights or any other rights you have in Your Information, in any media now known or not currently known, with respect to Your Information. RupeeDot.Com will only use Your Information in accordance with the terms of use and RupeeDot.Com's Privacy Policy.
+              </p>
+              <p>
+                J. You shall not engage in advertising to, or solicitation of, other users of RupeeDot.Com to buy or sell any products or services, including, but not limited to, products or services related being displayed on RupeeDot.Com or related to RupeeDot.Com. You may not transmit any chain letters or unsolicited commercial or junk email to other users via RupeeDot.Com. It shall be a violation of these Terms of Use to use any information obtained from RupeeDot.Com in order to harass, abuse, or harm another person, or in order to contact, advertise to, solicit, or sell to another person outside of the RupeeDot.Com without RupeeDot.Com's prior explicit consent. In order to protect our users from such advertising or solicitation, RupeeDot.Com reserves the right to restrict the number of messages or emails which a user may send to other users in any 24-hour period which RupeeDot.Com deems appropriate in its sole discretion.12. You understand that RupeeDot.Com has the right at all times to disclose any information (including the identity of the persons providing information or materials on the RupeeDot.Com Website) as necessary to satisfy any law, regulation or valid governmental request. This may include, without limitation, disclosure of the information in connection with investigation of alleged illegal activity or solicitation of illegal activity or in response to a lawful court order or subpoena. In addition, we can (and you hereby expressly authorize us to) disclose any information about you to law enforcement or other government officials, as we, in our sole discretion, believe necessary or appropriate in connection with the investigation and/or resolution of possible crimes, especially those that may involve personal injury.
+              </p>
+              <p>
+                K. RupeeDot.Com reserves the right, but has no obligation, to monitor the materials posted on RupeeDot.Com website. RupeeDot.Com shall have the right to remove or edit any Content that in its sole discretion violates, or is alleged to violate, any applicable law or either the spirit or letter of these Terms of Use. Notwithstanding this right of RupeeDot.Com, YOU REMAIN SOLELY RESPONSIBLE FOR THE CONTENT OF THE MATERIALS YOU POST ON THE RupeeDot.Com WEBSITE AND IN YOUR PRIVATE MESSAGES. Please be advised that such Content posted does not necessarily reflect the views of RupeeDot.Com. In no event shall RupeeDot.Com assume or have any responsibility or liability for any Content posted or for any claims, damages or losses resulting from use of Content and/or appearance of Content on RupeeDot.Com. You hereby represent and warrant that you have all necessary rights in and to all Content you provide and all information it contains and that such Content shall not infringe any proprietary or other rights of third parties or contain any libelous, tortuous, or otherwise unlawful information.
+              </p>
+              <p>
+                L. Your correspondence or business dealings with, or participation in promotions of, advertisers found on or through RupeeDot.Com, including payment and delivery of related goods or services, and any other terms, conditions, warranties or representations associated with such dealings, are solely between you and such advertiser. RupeeDot.Com shall not be responsible or liable for any loss or damage of any sort incurred as the result of any such dealings or as the result of the presence of such advertisers on RupeeDot.Com.
+              </p>
+              <p>
+                M. It is possible that other users (including unauthorized users or "hackers") may post or transmit offensive or obscene materials on RupeeDot.Com and that you may be involuntarily exposed to such offensive and obscene materials. It also is possible for others to obtain personal information about you due to your use of RupeeDot.Com, and that the recipient may use such information to harass or injure you. RupeeDot.Com does not approve of such unauthorized uses but by using the RupeeDot.Com Website you acknowledge and agree that RupeeDot.Com is not responsible for the use of any personal information that you publicly disclose or share with others on RupeeDot.Com. Please carefully select the type of information that you publicly disclose or share with others on RupeeDot.Com.
+              </p>
+              <p>
+                N. RupeeDot.Com shall have all the rights to take necessary action and claim damages that may occur due to your involvement/participation in any way on your own or through group/s of People, intentionally or unintentionally in DoS/DDoS (Distributed Denial of Services).
               </p>
             </div>
           </section>
@@ -199,6 +250,9 @@ const TermsAndConditions = () => {
                 <li>Make no modifications to any such information, and</li>
                 <li>Not make any additional representations or warranties relating to such documents.</li>
               </ul>
+              <p>
+                You shall be responsible for any notes, messages, e-mails, billboard postings, photos, drawings, profiles, opinions, ideas, images, videos, audio files or other materials or information posted or transmitted to the Sites (collectively, "Content"). Such Content will become the property of RupeeDot.Com and you grant RupeeDot.Com the worldwide, perpetual and transferable rights in such Content. RupeeDot.Com shall be entitled to, consistent with our Privacy Policy, use the Content or any of its elements for any type of use forever, including but not limited to promotional and advertising purposes and in any media whether now known or hereafter devised, including the creation of derivative works that may include Content you provide. You agree that any Content you post may be used by RupeeDot.Com, consistent with our Privacy Policy and Rules of Conduct on Site as mentioned herein, and you are not entitled to any payment or other compensation for such use.
+              </p>
             </div>
           </section>
         </div>
