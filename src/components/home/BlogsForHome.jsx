@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Eye, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import blog1 from "../../assets/blog1 .jpg";
