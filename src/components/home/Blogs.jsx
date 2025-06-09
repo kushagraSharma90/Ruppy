@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Search, ChevronLeft, ChevronRight, Clock, Eye, Calendar, ArrowRight } from "lucide-react"
-import blog1 from "../../assets/blog1.jpeg";
-import blog2 from "../../assets/blog2.jpeg";
-import blog3 from "../../assets/blog3.jpeg";
-import blog4 from "../../assets/blog4.jpeg";
-import blog5 from "../../assets/blog5.jpeg";
+import blog1 from "../../assets/blog1 .jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import blog4 from "../../assets/blog4.jpg";
+import blog5 from "../../assets/blog5.jpg";
 
 
 // Sample blog data
@@ -368,11 +368,11 @@ const Blogs = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-[#3870A6] text-white">
+      <section className="py-16 bg-blue-600 text-black ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-            <p className="text-blue-100 mb-8">
+            <p className="text-black mb-8">
               Subscribe to our newsletter and receive the latest articles, tips, and financial advice directly in your
               inbox.
             </p>
@@ -380,9 +380,9 @@ const Blogs = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow py-3 px-4 rounded-md bg-white text-[#3870A6] focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-grow py-3 px-4 rounded-md bg-blue-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-              <button className="bg-white  font-medium py-3 px-6 rounded-md">
+              <button className="bg-blue-600  font-medium py-3 px-6 rounded-md">
                 Subscribe
               </button>
             </div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import blog1 from "../../assets/blog1.jpeg";
-import blog2 from "../../assets/blog2.jpeg";
-import blog3 from "../../assets/blog3.jpeg";
-import blog4 from "../../assets/blog4.jpeg";
-import blog5 from "../../assets/blog5.jpeg";
+import blog1 from "../../assets/blog1.jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import blog4 from "../../assets/blog4.jpg";
+import blog5 from "../../assets/blog5.jpg";
 
 
 const blogPosts = [

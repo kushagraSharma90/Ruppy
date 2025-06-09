@@ -5,11 +5,11 @@ import { AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Eye, User } from "lucide-react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import blog1 from "../../assets/blog1.jpeg";
-import blog2 from "../../assets/blog2.jpeg";
-import blog3 from "../../assets/blog3.jpeg";
-import blog4 from "../../assets/blog4.jpeg";
-import blog5 from "../../assets/blog5.jpeg";
+import blog1 from "../../assets/blog1 .jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import blog4 from "../../assets/blog4.jpg";
+import blog5 from "../../assets/blog5.jpg";
 
 const blogData = [
   {
@@ -76,17 +76,17 @@ const blogData = [
     readTime: "4 Min",
     author: "RUPPEDOT",
   },
-  {
-    id: 6,
-    title: "Understanding Home Loan Interest Rates",
-    description: ` " A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.,
-`,
-    image: blog5,
-    views: 666,
-    date: "MAY 21, 2025",
-    readTime: "4 Min",
-    author: "RUPPEDOT",
-  },
+//   {
+//     id: 6,
+//     title: "Understanding Home Loan Interest Rates",
+//     description: ` " A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.,
+// `,
+//     image: blog5,
+//     views: 666,
+//     date: "MAY 21, 2025",
+//     readTime: "4 Min",
+//     author: "RUPPEDOT",
+//   },
 ];
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
