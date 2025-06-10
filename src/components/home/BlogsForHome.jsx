@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Eye, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import blog1 from "../../assets/blog1 .jpg";
@@ -125,11 +126,14 @@ function BlogCard({ blog }) {
             <User className="h-4 w-4 mr-1" />
             <span>{blog.author}</span>
           </div>
-          <a href={`/blogs/${blog.id}`} className="ml-auto">
-            <button className="ml-auto text-blue-600 font-medium hover:underline">
-              Read More
-            </button>
-          </a>
+          
+
+<Link to={`/blogs/${blog.id}`} className="ml-auto">
+  <button className="text-blue-600 font-medium hover:underline">
+    Read More
+  </button>
+</Link>
+
         </div>
       </div>
     </motion.div>
@@ -213,6 +217,7 @@ export default function BlogsForHome() {
 
           <div className="flex justify-center mt-6 space-x-2">
             {Array.from({ length: totalSlides }).map((_, index) => (
+              <Link to="/blogs" className="cursor-pointer" key={index}>
               <button
                 key={index}
                 className={cn(
@@ -222,6 +227,7 @@ export default function BlogsForHome() {
                 onClick={() => setCurrentSlideIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
+              </Link>
             ))}
           </div>
 
