@@ -8,7 +8,7 @@ import blog2 from "../../assets/blog2.jpg";
 import blog3 from "../../assets/blog3.jpg";
 import blog4 from "../../assets/blog4.jpg";
 import blog5 from "../../assets/blog5.jpg";
-
+import image from "../../assets/image.png";
 // Sample blog data (same as in Blogs.jsx)
 const blogPosts = [
   {
@@ -39,7 +39,7 @@ The system operates fast and with efficiency, saving time and minimizing the dru
  also introduces stress into an otherwise vital purchase. Fortunately, new solutions are on the horizon that seek to make auto loans
  easier. Sites like Rupeedot are revolutionizing the process by streamlining applications and making them more accessible. Their
  contemporary approach is assisting Indians in breaking down traditional barriers and moving one step closer to driving a car.</p>
- h2
+ 
       <h2>Speed and Simplicity</h2>
       
       <p>Whereas banks can take days to approve applications, Rupeedot's digital platform approves loans in a matter of hours. Their
@@ -570,177 +570,151 @@ const BlogDetail = () => {
   }
 
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[500px]">
-        <div className="absolute inset-0 bg-black/50">
+   return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-sans">
+      {/* Blog Header */}
+      <div className="mb-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+          RupeeDot Blog: Disrupting Auto Finance & Solving Dealer Challenges
+        </h1>
+        <div className="flex justify-center items-center space-x-4 text-gray-600">
+          <span>MAY 21, 2025</span>
+          <span>•</span>
+          <span>4 min read</span>
+          <span>•</span>
+          <span>RUPPEDOT</span>
+        </div>
+      </div>
+
+      {/* Featured Image */}
+      <div className="mb-12 rounded-xl overflow-hidden shadow-lg">
+        <img
+          src="/path-to-featured-image.jpg" // Replace with your image path
+          alt="RupeeDot Auto Finance"
+          className="w-full h-auto object-cover"
+        />
+      </div>
+
+      {/* Blog Content */}
+      <div className="prose prose-lg max-w-none">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          RupeeDot: A Fintech Disruptor in Auto Finance
+        </h2>
+        
+        <p className="mb-6 leading-relaxed">
+          RupeeDot is not only another fintech company; it's a disruptor in India's auto finance space. 
+          It's a Pune-based company operating under Indicorn Financial Services Private Ltd and works as a 
+          facilitator between lenders and borrowers.
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 italic">
+          <p>
+            Imagine it as a dating website for car loans. By tying up with banks, NBFCs and alternative 
+            lenders, RupeeDot collects numerous loan options so customers don't need to apply separately 
+            to each financier.
+          </p>
+        </div>
+
+        <p className="mb-6 leading-relaxed">
+          The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork 
+          most borrowers experience. It also provides transparent navigation through each process, helping to 
+          establish trust and making auto financing more accessible.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-12">
+          Differentiating RupeeDot from Conventional Auto Financing
+        </h2>
+
+        <p className="mb-6 leading-relaxed">
+          Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with 
+          copious paperwork, credit score restrictions and lengthy waiting times. The process seems designed 
+          to test your patience at every turn.
+        </p>
+
+        <p className="mb-6 leading-relaxed">
+          Many applicants find that the time and effort needed to fill out forms and meet strict requirements 
+          is overwhelming. One small mistake can cause extra delays as you're asked for additional documents 
+          or clarifications. As a result, what should be a straightforward procedure turns into a stressful 
+          experience that discourages many potential buyers.
+        </p>
+
+        {/* Image with caption */}
+        <div className="my-8">
           <img
-            src={post.image || "/placeholder.svg"}
-            alt={post.title}
-            className="w-full h-full object-cover mix-blend-overlay"
+            src="/path-to-image.jpg" // Replace with your image path
+            alt="Auto finance comparison"
+            className="w-full h-auto rounded-lg shadow-md"
           />
+          <p className="text-center text-sm text-gray-500 mt-2">
+            RupeeDot's streamlined process vs traditional auto financing
+          </p>
         </div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center text-white">
-              <Link to="/blogs" className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-6">
-                <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
-              </Link>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{post.title}</h1>
-              <div className="flex flex-wrap items-center justify-center text-sm text-gray-200 gap-4 mb-6">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full">{post.category}</span>
-                <span className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  {post.date}
-                </span>
-                <span className="flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  {post.readTime}
-                </span>
-                <span className="flex items-center">
-                  <Eye className="h-4 w-4 mr-1" />
-                  {post.views} views
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-2 overflow-hidden">
-                  <span className="text-xs font-semibold text-gray-800">TL</span>
-                </div>
-                <span className="text-gray-200">{post.author}</span>
-              </div>
-            </div>
-          </div>
+
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          Speed and Simplicity
+        </h3>
+
+        <p className="mb-6 leading-relaxed">
+          Whereas banks can take days to approve applications, RupeeDot's digital platform approves loans in 
+          a matter of hours. Their platform relies on intelligent digital tools that auto-fill forms, verify 
+          documents and recommend the optimal loan for you.
+        </p>
+
+        <div className="bg-gray-50 p-6 rounded-lg mb-6 border-l-8 border-blue-500">
+          <p className="font-medium mb-2">Key Advantages:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Approvals in hours instead of days</li>
+            <li>Minimized human error through automation</li>
+            <li>Real-time updates on application status</li>
+            <li>Simple, user-friendly interface</li>
+          </ul>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm p-6 md:p-10">
-            {/* Social Share */}
-            <div className="flex justify-between items-center mb-8 pb-4 border-b">
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Share:</span>
-                <button className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Facebook className="h-4 w-4" />
-                </button>
-                <button className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Twitter className="h-4 w-4" />
-                </button>
-                <button className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Linkedin className="h-4 w-4" />
-                </button>
-                <button
-                  className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition-colors relative"
-                  onClick={copyToClipboard}
-                >
-                  <Copy className="h-4 w-4" />
-                  {copied && (
-                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded">
-                      Copied!
-                    </span>
-                  )}
-                </button>
-              </div>
-              <button className="flex items-center text-sm text-gray-600 hover:text-blue-600">
-                <Bookmark className="h-4 w-4 mr-1" /> Save
-              </button>
-            </div>
+        <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-8">
+          More Than Credit Scores
+        </h3>
 
-            {/* Blog Content */}
-            <div className="prose prose-blue max-w-none" dangerouslySetInnerHTML={{ __html: post.content }}/>
+        <p className="mb-6 leading-relaxed">
+          RupeeDot is not merely about quick approvals, but also redefines who is considered creditworthy. 
+          Instead of rejecting you for merely having a low credit score, they consider your overall financial 
+          history.
+        </p>
 
-            {/* Tags */}
-            <div className="mt-10 pt-6 border-t">
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag, index) => (
-                  <Link
-                    key={index}
-                    to={`/blogs?tag=${tag}`}
-                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full transition-colors"
-                  >
-                    #{tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+        <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-8">
+          One Application, Multiple Lenders
+        </h3>
+
+        <p className="mb-6 leading-relaxed">
+          Making multiple applications to various banks can be quite exhausting. RupeeDot's aggregator platform 
+          allows you to apply once and then lets the lenders most likely to accept you have access to your details.
+        </p>
+
+        {/* Technologies Section */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-12">
+          Technologies and Data-Driven Strategies of RupeeDot
+        </h2>
+
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          Data-Driven Underwriting
+        </h3>
+
+        <p className="mb-6 leading-relaxed">
+          RupeeDot's competitive advantage lies in its strong data analysis. The platform applies machine learning 
+          models to examine 1,000+ data points like social media usage and utility bill payments.
+        </p>
+
+        {/* Back button */}
+        <div className="mt-12 text-center">
+          <Link 
+            to="/blogs" 
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            ← Back to All Blogs
+          </Link>
         </div>
-      </section>
-
-      {/* Related Posts */}
-      {relatedPosts.length > 0 && (
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {relatedPosts.map((post) => (
-                <div
-                  key={post.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-                >
-                  <Link to={`/blogs/${post.id}`} className="block">
-                    <div className="relative h-48">
-                      <img
-                        src={post.image || "/placeholder.svg"}
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </Link>
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-2">
-                      <span className="flex items-center mr-4">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        {post.date}
-                      </span>
-                      <span className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {post.readTime}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-2 hover:text-blue-600 transition-colors">
-                      <Link to={`/blogs/${post.id}`}>{post.title}</Link>
-                    </h3>
-                    <p className="text-gray-600 text-sm line-clamp-2">{post.excerpt}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/blogs" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                View all articles <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Newsletter Section */}
-      <section className="py-16 bg-[#f5f5ec]  text-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated with Financial Insights</h2>
-            <p className="text-black mb-8">
-              Subscribe to our newsletter and receive the latest articles, tips, and financial advice directly in your
-              inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-grow py-3 px-4 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-              <button className="bg-white text-black font-medium py-3 px-6 rounded-md transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BlogDetail
+export default BlogDetail;
