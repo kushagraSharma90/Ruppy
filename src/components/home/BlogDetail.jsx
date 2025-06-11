@@ -535,15 +535,12 @@ const BlogDetail = () => {
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    // Find the post with the matching id
     const postId = Number.parseInt(id)
     const foundPost = blogPosts.find((post) => post.id === postId)
 
     if (foundPost) {
       setPost(foundPost)
       setRelatedPosts(getRelatedPosts(postId, foundPost.category))
-
-      // Scroll to top when post changes
       window.scrollTo(0, 0)
     }
   }, [id])
@@ -569,35 +566,34 @@ const BlogDetail = () => {
     )
   }
 
-
-   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-sans">
+ return (
+    <div className="max-w-3xl mx-auto px-5 py-12 font-sans">
       {/* Blog Header */}
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+      <div className="mb-10 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
           RupeeDot Blog: Disrupting Auto Finance & Solving Dealer Challenges
         </h1>
-        <div className="flex justify-center items-center space-x-4 text-gray-600">
+        <div className="flex flex-wrap justify-center items-center gap-2 text-gray-500 text-sm md:text-base">
           <span>MAY 21, 2025</span>
           <span>•</span>
           <span>4 min read</span>
           <span>•</span>
-          <span>RUPPEDOT</span>
+          <span className="font-medium text-blue-600">RUPPEDOT</span>
         </div>
       </div>
 
       {/* Featured Image */}
-      <div className="mb-12 rounded-xl overflow-hidden shadow-lg">
+      <div className="mb-10 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
         <img
-          src="/path-to-featured-image.jpg" // Replace with your image path
+          src="/path-to-featured-image.jpg"
           alt="RupeeDot Auto Finance"
           className="w-full h-auto object-cover"
         />
       </div>
 
       {/* Blog Content */}
-      <div className="prose prose-lg max-w-none">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+      <div className="prose prose-lg max-w-none text-gray-700">
+        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-8">
           RupeeDot: A Fintech Disruptor in Auto Finance
         </h2>
         
@@ -607,7 +603,7 @@ const BlogDetail = () => {
           facilitator between lenders and borrowers.
         </p>
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 italic">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 italic text-gray-700 rounded-r">
           <p>
             Imagine it as a dating website for car loans. By tying up with banks, NBFCs and alternative 
             lenders, RupeeDot collects numerous loan options so customers don't need to apply separately 
@@ -621,7 +617,7 @@ const BlogDetail = () => {
           establish trust and making auto financing more accessible.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-10">
           Differentiating RupeeDot from Conventional Auto Financing
         </h2>
 
@@ -641,16 +637,16 @@ const BlogDetail = () => {
         {/* Image with caption */}
         <div className="my-8">
           <img
-            src="/path-to-image.jpg" // Replace with your image path
+            src="/path-to-image.jpg"
             alt="Auto finance comparison"
             className="w-full h-auto rounded-lg shadow-md"
           />
-          <p className="text-center text-sm text-gray-500 mt-2">
+          <p className="text-center text-sm text-gray-500 mt-2 italic">
             RupeeDot's streamlined process vs traditional auto financing
           </p>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
           Speed and Simplicity
         </h3>
 
@@ -660,9 +656,9 @@ const BlogDetail = () => {
           documents and recommend the optimal loan for you.
         </p>
 
-        <div className="bg-gray-50 p-6 rounded-lg mb-6 border-l-8 border-blue-500">
-          <p className="font-medium mb-2">Key Advantages:</p>
-          <ul className="list-disc pl-5 space-y-2">
+        <div className="bg-gray-50 p-5 rounded-lg mb-6 border-l-4 border-blue-500 shadow-sm">
+          <p className="font-medium mb-3 text-gray-800">Key Advantages:</p>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
             <li>Approvals in hours instead of days</li>
             <li>Minimized human error through automation</li>
             <li>Real-time updates on application status</li>
@@ -670,7 +666,7 @@ const BlogDetail = () => {
           </ul>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-8">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-8">
           More Than Credit Scores
         </h3>
 
@@ -680,7 +676,7 @@ const BlogDetail = () => {
           history.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-8">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-8">
           One Application, Multiple Lenders
         </h3>
 
@@ -690,11 +686,11 @@ const BlogDetail = () => {
         </p>
 
         {/* Technologies Section */}
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-10">
           Technologies and Data-Driven Strategies of RupeeDot
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">
           Data-Driven Underwriting
         </h3>
 
@@ -707,14 +703,14 @@ const BlogDetail = () => {
         <div className="mt-12 text-center">
           <Link 
             to="/blogs" 
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
             ← Back to All Blogs
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default BlogDetail;
+      </div>
+    );
+  }
+  
+  export default BlogDetail;
