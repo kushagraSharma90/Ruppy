@@ -2,14 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { ArrowLeft, Calendar, Clock, Eye, Bookmark, Facebook, Twitter, Linkedin, Copy, ArrowRight } from "lucide-react"
-import blog1 from "../../assets/blog1 .jpg";
-import blog2 from "../../assets/blog2.jpg";
-import blog3 from "../../assets/blog3.jpg";
-import blog4 from "../../assets/blog4.jpg";
-import blog5 from "../../assets/blog5.jpg";
-import image from "../../assets/image.png";
-// Sample blog data (same as in Blogs.jsx)
+import { ArrowLeft, Calendar, Clock, Eye, Copy, Share2, Bookmark, ChevronRight } from "lucide-react"
+
+// Sample blog data with additional images for all posts
 const blogPosts = [
   {
     id: 1,
@@ -34,7 +29,7 @@ The system operates fast and with efficiency, saving time and minimizing the dru
       <p> Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with copious paperwork, credit
  score restrictions and lengthy waiting times. The process seems designed to test your patience at every turn. Many applicants find
  that the time and effort needed to fill out forms and meet strict requirements is overwhelming. One small mistake can cause extra
- delays as you’re asked for additional documents or clarifications. As a result, what should be a straightforward procedure turns
+ delays as you're asked for additional documents or clarifications. As a result, what should be a straightforward procedure turns
  into a stressful experience that discourages many potential buyers. This old-fashioned approach not only wastes your time but
  also introduces stress into an otherwise vital purchase. Fortunately, new solutions are on the horizon that seek to make auto loans
  easier. Sites like Rupeedot are revolutionizing the process by streamlining applications and making them more accessible. Their
@@ -88,13 +83,34 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more
  equitable, more comprehensive assessment process.</p>
     `,
-    image: blog1,
+    // Main hero image
+    heroImage: "https://via.placeholder.com/1200x600",
+    // Right sidebar images
+    sidebarImages: [
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Digital loan processing dashboard",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Customer application interface",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Lender network visualization",
+      },
+    ],
+    // Bottom image
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "RupeeDot's comprehensive auto finance ecosystem",
+    },
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: blog1,
+    authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -216,13 +232,31 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and
  rural India. </p>   
     `,
-    image: blog2,
+    heroImage: "https://via.placeholder.com/1200x600",
+    sidebarImages: [
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Used car market growth chart",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "New vs used car sales comparison",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Market penetration statistics",
+      },
+    ],
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "India's automotive market landscape overview",
+    },
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: blog2,
+    authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -296,8 +330,8 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
 
       <p> 3. Income Proof:</p>
       <ul>
-      <li> Last 3 to 6 months’ Salary Slips</li>
-       <li> Last 3 to 6 months’ Bank Statements (Salary credited account)</li>
+      <li> Last 3 to 6 months' Salary Slips</li>
+       <li> Last 3 to 6 months' Bank Statements (Salary credited account)</li>
       </ul>
       
 
@@ -307,8 +341,6 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
        <li> Offer Letter / Appointment Letter (if recently joined)</li>
        <li>  Form 16 / Latest ITR (may be required for high loan amounts)</li>
       </ul>
-
-
 
       <p> 5. Photograph:</p>
       <ul>
@@ -332,13 +364,27 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
       </ul>
 
     `,
-    image: blog3,
+    heroImage: "https://via.placeholder.com/1200x600",
+    sidebarImages: [
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Personal loan application process",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Documentation requirements",
+      },
+    ],
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "Personal loan eligibility and approval process",
+    },
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: blog3,
+    authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -429,19 +475,37 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
  maximize loan approvals for all customer segments.</p>
   
     `,
-    image: blog4,
+    heroImage: "https://via.placeholder.com/1200x600",
+    sidebarImages: [
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Dealer challenges infographic",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "RupeeDot solution dashboard",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Streamlined process flow",
+      },
+    ],
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "Complete dealer ecosystem transformation",
+    },
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: blog4,
+    authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
-   {
+  {
     id: 5,
-    title: "What Determines Your Loan Eligibility in India??",
+    title: "What Determines Your Loan Eligibility in India?",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
      <h2>  A Borrower's Easy Guide </h2>
@@ -510,17 +574,30 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
 
       
     `,
-    image: blog5,
+    heroImage: "https://via.placeholder.com/1200x600",
+    sidebarImages: [
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Credit score factors",
+      },
+      {
+        url: "https://via.placeholder.com/400x300",
+        caption: "Income verification process",
+      },
+    ],
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "Comprehensive loan eligibility framework",
+    },
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: blog5,
+    authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
- // Add more detailed blog posts as needed
 ]
 
 // Related posts function
@@ -528,7 +605,7 @@ const getRelatedPosts = (currentPostId, category) => {
   return blogPosts.filter((post) => post.id !== currentPostId && post.category === category).slice(0, 3)
 }
 
-const BlogDetail = () => {
+export default function BlogDetail() {
   const { id } = useParams()
   const [post, setPost] = useState(null)
   const [relatedPosts, setRelatedPosts] = useState([])
@@ -555,10 +632,14 @@ const BlogDetail = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center p-8 bg-white rounded-xl shadow-lg max-w-md">
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Clock className="h-8 w-8 text-blue-600" />
+          </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Blog post not found</h2>
-          <Link to="/Home" className="text-blue-600 hover:underline flex items-center justify-center">
+          <p className="text-gray-600 mb-6">The blog post you're looking for might have been moved or doesn't exist.</p>
+          <Link to="/" className="text-blue-600 hover:underline flex items-center justify-center">
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
           </Link>
         </div>
@@ -566,151 +647,159 @@ const BlogDetail = () => {
     )
   }
 
- return (
-    <div className="max-w-3xl mx-auto px-5 py-12 font-sans">
-      {/* Blog Header */}
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
-          RupeeDot Blog: Disrupting Auto Finance & Solving Dealer Challenges
-        </h1>
-        <div className="flex flex-wrap justify-center items-center gap-2 text-gray-500 text-sm md:text-base">
-          <span>MAY 21, 2025</span>
-          <span>•</span>
-          <span>4 min read</span>
-          <span>•</span>
-          <span className="font-medium text-blue-600">RUPPEDOT</span>
+  return (
+    
+
+
+    <div className="bg-gray-50 min-h-screen pb-16">
+      {/* Hero section */}
+     
+         <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "24px 24px",
+            }}
+          ></div>
         </div>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"></h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              Learn about RupeeDot's journey to becoming India's trusted financial services provider
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
-
-      {/* Featured Image */}
-      <div className="mb-10 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-        <img
-          src="/path-to-featured-image.jpg"
-          alt="RupeeDot Auto Finance"
-          className="w-full h-auto object-cover"
-        />
-      </div>
-
-      {/* Blog Content */}
-      <div className="prose prose-lg max-w-none text-gray-700">
-        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-8">
-          RupeeDot: A Fintech Disruptor in Auto Finance
-        </h2>
         
-        <p className="mb-6 leading-relaxed">
-          RupeeDot is not only another fintech company; it's a disruptor in India's auto finance space. 
-          It's a Pune-based company operating under Indicorn Financial Services Private Ltd and works as a 
-          facilitator between lenders and borrowers.
-        </p>
+      
+      
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 italic text-gray-700 rounded-r">
-          <p>
-            Imagine it as a dating website for car loans. By tying up with banks, NBFCs and alternative 
-            lenders, RupeeDot collects numerous loan options so customers don't need to apply separately 
-            to each financier.
-          </p>
+      <div className="container mx-auto px-4 max-w-6xl -mt-10">
+        {/* TOP IMAGE - Hero/Featured Image */}
+        <div className="mb-10">
+          <div className="rounded-xl overflow-hidden shadow-xl">
+            <img
+              src={post.heroImage || "/placeholder.svg"}
+              alt={post.title}
+              className="w-full h-64 md:h-96 object-cover"
+            />
+          </div>
         </div>
 
-        <p className="mb-6 leading-relaxed">
-          The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork 
-          most borrowers experience. It also provides transparent navigation through each process, helping to 
-          establish trust and making auto financing more accessible.
-        </p>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main content */}
+          <div className="flex-1">
+            <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
+              <div
+                className="prose prose-lg max-w-none blog-content"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
 
-        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-10">
-          Differentiating RupeeDot from Conventional Auto Financing
-        </h2>
+            {/* BOTTOM IMAGE */}
+            {post.bottomImage && (
+              <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
+                <div className="rounded-lg overflow-hidden">
+                  <img
+                    src={post.bottomImage.url || "/placeholder.svg"}
+                    alt={post.bottomImage.caption}
+                    className="w-full h-64 md:h-80 object-cover"
+                  />
+                  {post.bottomImage.caption && (
+                    <p className="text-center text-sm text-gray-500 mt-4 italic">{post.bottomImage.caption}</p>
+                  )}
+                </div>
+              </div>
+            )}
 
-        <p className="mb-6 leading-relaxed">
-          Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with 
-          copious paperwork, credit score restrictions and lengthy waiting times. The process seems designed 
-          to test your patience at every turn.
-        </p>
+            {/* Tags */}
+            <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
+              <h3 className="text-lg font-semibold mb-4">Related Topics</h3>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm transition-colors cursor-pointer"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-        <p className="mb-6 leading-relaxed">
-          Many applicants find that the time and effort needed to fill out forms and meet strict requirements 
-          is overwhelming. One small mistake can cause extra delays as you're asked for additional documents 
-          or clarifications. As a result, what should be a straightforward procedure turns into a stressful 
-          experience that discourages many potential buyers.
-        </p>
+            {/* Author box */}
+            <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-2xl">
+                  {post.author.charAt(0)}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-1">{post.author}</h3>
+                  <p className="text-gray-600 mb-3">Financial Expert at RupeeDot</p>
+                  <p className="text-gray-600">
+                    Specializing in auto finance and personal loans with over 10 years of experience in the financial
+                    sector.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        {/* Image with caption */}
-        <div className="my-8">
-          <img
-            src="/path-to-image.jpg"
-            alt="Auto finance comparison"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
-          <p className="text-center text-sm text-gray-500 mt-2 italic">
-            RupeeDot's streamlined process vs traditional auto financing
-          </p>
+          {/* RIGHT SIDEBAR - 2-3 Images */}
+          <div className="lg:w-80 flex-shrink-0">
+            <div className="bg-[#] rounded-xl shadow-sm p-6 mb-6 sticky top-8">
+              <h3 className="text-lg font-bold mb-6 text-gray-900">Visual Insights</h3>
+              <div className="space-y-6">
+                {post.sidebarImages?.map((image, index) => (
+                  <div key={index} className="group">
+                    <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                      <img
+                        src={image.url || "/placeholder.svg"}
+                        alt={image.caption}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    {image.caption && <p className="text-sm text-gray-600 mt-2 px-1">{image.caption}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Additional sidebar content */}
+            <div className="bg-white rounded-xl shadow-sm p-6">
+              <h3 className="text-lg font-bold mb-4 text-gray-900">Quick Facts</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Reading Time</span>
+                  <span className="font-medium">{post.readTime}</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Views</span>
+                  <span className="font-medium">{post.views}</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Category</span>
+                  <span className="font-medium">{post.category}</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Published</span>
+                  <span className="font-medium">{post.date}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
-          Speed and Simplicity
-        </h3>
-
-        <p className="mb-6 leading-relaxed">
-          Whereas banks can take days to approve applications, RupeeDot's digital platform approves loans in 
-          a matter of hours. Their platform relies on intelligent digital tools that auto-fill forms, verify 
-          documents and recommend the optimal loan for you.
-        </p>
-
-        <div className="bg-gray-50 p-5 rounded-lg mb-6 border-l-4 border-blue-500 shadow-sm">
-          <p className="font-medium mb-3 text-gray-800">Key Advantages:</p>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700">
-            <li>Approvals in hours instead of days</li>
-            <li>Minimized human error through automation</li>
-            <li>Real-time updates on application status</li>
-            <li>Simple, user-friendly interface</li>
-          </ul>
-        </div>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-8">
-          More Than Credit Scores
-        </h3>
-
-        <p className="mb-6 leading-relaxed">
-          RupeeDot is not merely about quick approvals, but also redefines who is considered creditworthy. 
-          Instead of rejecting you for merely having a low credit score, they consider your overall financial 
-          history.
-        </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-8">
-          One Application, Multiple Lenders
-        </h3>
-
-        <p className="mb-6 leading-relaxed">
-          Making multiple applications to various banks can be quite exhausting. RupeeDot's aggregator platform 
-          allows you to apply once and then lets the lenders most likely to accept you have access to your details.
-        </p>
-
-        {/* Technologies Section */}
-        <h2 className="text-2xl font-bold text-gray-800 mb-5 mt-10">
-          Technologies and Data-Driven Strategies of RupeeDot
-        </h2>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">
-          Data-Driven Underwriting
-        </h3>
-
-        <p className="mb-6 leading-relaxed">
-          RupeeDot's competitive advantage lies in its strong data analysis. The platform applies machine learning 
-          models to examine 1,000+ data points like social media usage and utility bill payments.
-        </p>
-
-        {/* Back button */}
-        <div className="mt-12 text-center">
-          <Link 
-            to="/blogs" 
-            className="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            ← Back to All Blogs
-          </Link>
-        </div>
+        {/* Related posts */}
+       
+          
+        
       </div>
-      </div>
-    );
-  }
-  
-  export default BlogDetail;
+    </div>
+  )
+}
