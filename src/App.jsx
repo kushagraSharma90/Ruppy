@@ -28,6 +28,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import BlogsForHome from "./components/home/BlogsForHome";
 import TermsAndConditions from "./components/TermsAndCondition";
 
+
 function App() {
   return (
     <Router>
