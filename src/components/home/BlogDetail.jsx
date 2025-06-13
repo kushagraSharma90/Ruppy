@@ -294,7 +294,6 @@ const blogData = [
     image: blog4,
   },
   {
-  {
     id: 5,
     title: "What Determines Your Loan Eligibility in India?",
     content: [
