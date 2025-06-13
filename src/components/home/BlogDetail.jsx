@@ -667,7 +667,7 @@ export default function BlogDetail() {
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"></h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Blogs</h1>
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
               Learn about RupeeDot's journey to becoming India's trusted financial services provider
             </p>
