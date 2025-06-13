@@ -31,77 +31,37 @@ const blogPosts = [
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
-     <h2>Speed and Simplicity</h2>
-      <p>RupeeDot is not only another fintech company;
- it's a disruptor in India's auto finance space. It's
- a Pune-based company operating under Indicorn
- Financial Services Private Ltd and works as a
- facilitator between lenders and borrowers.
- Imagine it as a dating website for car loans. By
- tying up with banks, NBFCs and alternative
- lenders, RupeeDot collects numerous loan
- options so customers don't need to apply
- separately to each financier. 
-The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork most borrowers
- experience. It also provides transparent navigation through each process, helping to establish trust and making auto
- financing more accessible.</p>
-      <h2>Differentiating RupeeDot from Conventional Auto Financing</h2>
-      <p> Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with copious paperwork, credit
- score restrictions and lengthy waiting times. The process seems designed to test your patience at every turn. Many applicants find
- that the time and effort needed to fill out forms and meet strict requirements is overwhelming. One small mistake can cause extra
- delays as you're asked for additional documents or clarifications. As a result, what should be a straightforward procedure turns
- into a stressful experience that discourages many potential buyers. This old-fashioned approach not only wastes your time but
- also introduces stress into an otherwise vital purchase. Fortunately, new solutions are on the horizon that seek to make auto loans
- easier. Sites like Rupeedot are revolutionizing the process by streamlining applications and making them more accessible. Their
- contemporary approach is assisting Indians in breaking down traditional barriers and moving one step closer to driving a car.</p>
- 
-      <h2>Speed and Simplicity</h2>
-      
-      <p>Whereas banks can take days to approve applications, Rupeedot's digital platform approves loans in a matter of hours. Their
- platform relies on intelligent digital tools that auto-fill forms, verify documents and recommend the optimal loan for you. Through
- advanced algorithms and automation, they significantly minimize the possibility of human error and accelerate the entire process. 
-Rather than waiting and constantly calling bank officials to follow up, you get instant updates that keep you posted at every stage. This efficient
- process saves time and eliminates frustrations that usually accompany conventional practices.With a simple interface and real-time
- communication, Rupeedot ensures that each
- application is </p>
-  <h2>More Than Credit Scores</h2>
+      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px;">
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">RupeeDot: A Fintech Disruptor in Auto Finance</h2>
+        <p style="margin-bottom: 20px;">RupeeDot is not only another fintech company; it's a disruptor in India's auto finance space. It's a Pune-based company operating under Indicorn Financial Services Private Ltd and works as a facilitator between lenders and borrowers. Imagine it as a dating website for car loans. By tying up with banks, NBFCs and alternative lenders, RupeeDot collects numerous loan options so customers don't need to apply separately to each financier.</p>
+        <p style="margin-bottom: 30px;">The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork most borrowers experience. It also provides transparent navigation through each process, helping to establish trust and making auto financing more accessible.</p>
 
-      <p>Rupeedot is not merely about quick approvals, but also redefines who is considered creditworthy. Instead of rejecting you for merely
- having a low credit score, they consider your overall financial history. They take into account non-traditional data such as mobile
- payment history and online purchases to determine if you're a good borrower. This broad approach allows even if you're a young
- professional with a thin credit file but stable income, you can still get approved. Rupeedot's platform provides banks with a richer
- understanding of your money management habits. It highlights your money management skills beyond the conventional measures.
- By taking into account the factors that traditional systems ignore, Rupeedot opens the door for many who have been unjustly
- excluded in the past. Not only does this new method boost your prospects of loan approval, but it also promotes more prudent
- financial behavior by acknowledging varied forms of creditworthiness.</p>
-      
- <p>The new borrower will need to meet the lender's credit requirements. They'll undergo a similar approval process as they would for a new loan, including credit checks and income verification.</p>
-       <h2>One Application, Multiple Lenders.</h2>
-      <p>Making multiple applications to various banks can be quite
- exhausting. Rupeedot's aggregator platform allows you to apply
- once and then lets the lenders most likely to accept you have
- access to your details. That one application process saves you
- time and trouble by eliminating unnecessary paperwork and
- time-consuming follow-ups. Their intelligent algorithms evaluate
- your profile and find the right financiers for you, so you receive
- the best available choices. It means less of your time wasted on
- mundane tasks and more time on what's important.
- NBFC
- NBFC
- You don't have to keep checking multiple statuses anymore or repeat the same information for every bank. Rupeedot takes
- the dirty work out of your hands and makes the entire process easy and convenient. Their methodology is transparent and
- easy, making sure you have an easy time from beginning to end. Using Rupeedot, you never have to deal with multiple lender
- applications again.</p>
-      <h2>Data-Driven Underwriting</h2>     
-      <p>Rupeedot's competitive advantage lies in its strong data analysis. The platform applies machine learning models to examine
- 1,000+ data points like social media usage and utility bill payments. These models create comprehensive profiles of
- borrowers by collecting numerous details regarding their daily financial activity. This method assists in presenting a
- comprehensive picture of a borrower's financial behavior and stability. The system functions particularly well for individuals
- who may not have an official credit record. For instance, if you're a courier driver without an official credit track record, you
- may still be able to receive regular income using digital wallets. Rupeedot's system detects that regular income and
- recommends lenders who are best suited. It also examines other indicators such as spending patterns and payment behavior
- in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more
- equitable, more comprehensive assessment process.</p>
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Differentiating RupeeDot from Conventional Auto Financing</h2>
+        <p style="margin-bottom: 20px;">Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with copious paperwork, credit score restrictions and lengthy waiting times. The process seems designed to test your patience at every turn.</p>
+        <p style="margin-bottom: 20px;">Many applicants find that the time and effort needed to fill out forms and meet strict requirements is overwhelming. One small mistake can cause extra delays as you're asked for additional documents or clarifications. As a result, what should be a straightforward procedure turns into a stressful experience that discourages many potential buyers.</p>
+        <p style="margin-bottom: 30px;">This old-fashioned approach not only wastes your time but also introduces stress into an otherwise vital purchase. Fortunately, new solutions are on the horizon that seek to make auto loans easier. Sites like Rupeedot are revolutionizing the process by streamlining applications and making them more accessible. Their contemporary approach is assisting Indians in breaking down traditional barriers and moving one step closer to driving a car.</p>
+
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Speed and Simplicity</h2>
+        <p style="margin-bottom: 20px;">Whereas banks can take days to approve applications, Rupeedot's digital platform approves loans in a matter of hours. Their platform relies on intelligent digital tools that auto-fill forms, verify documents and recommend the optimal loan for you.</p>
+        <p style="margin-bottom: 20px;">Through advanced algorithms and automation, they significantly minimize the possibility of human error and accelerate the entire process. Rather than waiting and constantly calling bank officials to follow up, you get instant updates that keep you posted at every stage.</p>
+        <p style="margin-bottom: 30px;">This efficient process saves time and eliminates frustrations that usually accompany conventional practices. With a simple interface and real-time communication, Rupeedot ensures that each application is processed smoothly.</p>
+
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">More Than Credit Scores</h2>
+        <p style="margin-bottom: 20px;">Rupeedot is not merely about quick approvals, but also redefines who is considered creditworthy. Instead of rejecting you for merely having a low credit score, they consider your overall financial history. They take into account non-traditional data such as mobile payment history and online purchases to determine if you're a good borrower.</p>
+        <p style="margin-bottom: 20px;">This broad approach allows even if you're a young professional with a thin credit file but stable income, you can still get approved. Rupeedot's platform provides banks with a richer understanding of your money management habits. It highlights your money management skills beyond the conventional measures.</p>
+        <p style="margin-bottom: 30px;">By taking into account the factors that traditional systems ignore, Rupeedot opens the door for many who have been unjustly excluded in the past. Not only does this new method boost your prospects of loan approval, but it also promotes more prudent financial behavior by acknowledging varied forms of creditworthiness.</p>
+
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">One Application, Multiple Lenders</h2>
+        <p style="margin-bottom: 20px;">Making multiple applications to various banks can be quite exhausting. Rupeedot's aggregator platform allows you to apply once and then lets the lenders most likely to accept you have access to your details. That one application process saves you time and trouble by eliminating unnecessary paperwork and time-consuming follow-ups.</p>
+        <p style="margin-bottom: 20px;">Their intelligent algorithms evaluate your profile and find the right financiers for you, so you receive the best available choices. It means less of your time wasted on mundane tasks and more time on what's important.</p>
+        <p style="margin-bottom: 30px;">You don't have to keep checking multiple statuses anymore or repeat the same information for every bank. Rupeedot takes the dirty work out of your hands and makes the entire process easy and convenient. Their methodology is transparent and easy, making sure you have an easy time from beginning to end. Using Rupeedot, you never have to deal with multiple lender applications again.</p>
+
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Technologies and Data-Driven Strategies of Rupeedot</h2>
+        <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Data-Driven Underwriting</h3>
+        <p style="margin-bottom: 20px;">Rupeedot's competitive advantage lies in its strong data analysis. The platform applies machine learning models to examine 1,000+ data points like social media usage and utility bill payments. These models create comprehensive profiles of borrowers by collecting numerous details regarding their daily financial activity.</p>
+        <p style="margin-bottom: 20px;">This method assists in presenting a comprehensive picture of a borrower's financial behavior and stability. The system functions particularly well for individuals who may not have an official credit record. For instance, if you're a courier driver without an official credit track record, you may still be able to receive regular income using digital wallets.</p>
+        <p style="margin-bottom: 30px;">Rupeedot's system detects that regular income and recommends lenders who are best suited. It also examines other indicators such as spending patterns and payment behavior in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more equitable, more comprehensive assessment process.</p>
+      </div>
     `,
     // Main hero image
     heroImage: "https://via.placeholder.com/1200x600",
@@ -558,73 +518,121 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
   {
     id: 5,
     title: "What Determines Your Loan Eligibility in India?",
-    excerpt: "A Fintech Disruptor in Auto Finance",
+    excerpt: "Key factors that determine your loan approval in India",
     content: `
-     <h2>  A Borrower's Easy Guide </h2>
-     <h2>   Introduction </h2>
-    <p> Before you go and apply for a loan, it makes sense to learn what lenders require to decide whether or not
- you qualify. Knowing these factors will enable you to prepare more effectively and maximize the chances of
- having your loan sanctioned promptly.</p>
+    <style>
+      .loan-content {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      .loan-content h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        border-bottom: 2px solid #f1f1f1;
+        padding-bottom: 8px;
+      }
+      .loan-content h3 {
+        font-size: 22px;
+        color: #3498db;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+      .loan-content p {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+      .loan-content ul {
+        font-size: 17px;
+        margin-bottom: 20px;
+        padding-left: 25px;
+      }
+      .loan-content li {
+        margin-bottom: 8px;
+      }
+      .loan-content strong {
+        color: #e74c3c;
+      }
+      .intro-para {
+        font-size: 19px;
+        line-height: 1.7;
+      }
+    </style>
 
-     <h2> 1.Credit Score and Credit History </h2>
-      <ol>
-      <li>Your credit history (such as your CIBIL record) reflects how well you've handled credit or loans in the past.</li>
-       <li>  A good score (generally above 750) indicates you're a low-risk borrower</li>
-       <li>Late payments, defaults, or excessive applications for loans may decrease your score.</li>
-       <li> Advice: Pay bills and EMIs regularly to maintain a healthy score</li>
-      </ol>
+    <div class="loan-content">
+     <h2>A Borrower's Easy Guide</h2>
+     
+     <h2>Introduction</h2>
+     <p class="intro-para">Before you go and apply for a loan, it makes sense to learn what lenders require to decide whether or not you qualify. Knowing these factors will enable you to prepare more effectively and maximize the chances of having your loan sanctioned promptly.</p>
 
-      <h2> 2.Income and Employment Stability </h2>
-      <ol>
-      <li>Banks need to be confident that you have sufficient income to repay the loan.</li>
-       <li>  Salaried individuals must show salary slips and bank statements.</li>
-       <li>Self-employed individuals must give tax returns and business documents.</li>
-       <li>  A consistent job or business record assists with establishing trust with lenders.</li>
-      </ol>
+     <h2>1. Credit Score and Credit History</h2>
+     <p>Your credit history (such as your CIBIL record) reflects how well you've handled credit or loans in the past.</p>
+     <h3>Key Points:</h3>
+     <ul>
+       <li>A good score (generally above 750) indicates you're a low-risk borrower</li>
+       <li>Late payments, defaults, or excessive applications for loans may decrease your score</li>
+     </ul>
+     <p><strong>Advice:</strong> Pay bills and EMIs regularly to maintain a healthy score</p>
 
-      <h2> 3. Outstanding Loans and Debt </h2>
-      <ol>
-      <li> If you have existing loans or credit card debt, banks will verify that you can manage additional debt.</li>
-       <li> They compute a ratio of your monthly debts to your income.</li>
-       <li> The lower this ratio, the better your chance to get a new loan.</li>
-       <li> Tip: Try to clear or reduce existing loans before applying.</li>
-      </ol>
-      <h2> 4. Your Age and Loan Duration </h2>
-      <ol>
-      <li>  Your age affects how long you can repay the loan.</li>
-       <li>  Most banks lend to people aged 21 to 60.</li>
-       <li>  Younger borrowers usually get longer repayment periods and lower monthly payments.</li>
-       <li> Older applicants might get shorter loan terms.</li>
-      </ol>
+     <h2>2. Income and Employment Stability</h2>
+     <p>Banks need to be confident that you have sufficient income to repay the loan.</p>
+     <h3>Documentation Requirements:</h3>
+     <ul>
+       <li>Salaried individuals must show salary slips and bank statements</li>
+       <li>Self-employed individuals must give tax returns and business documents</li>
+     </ul>
+     <p>A consistent job or business record assists with establishing trust with lenders.</p>
 
-      <h2> 5. Loan Amount and Purpose </h2>
-      <ol>
-      <li>   Banks think about why you require the loan and how much you are requesting.</li>
-       <li>  Home loans need collateral (property), so you can borrow more money.</li>
-       <li> Personal loans do not need collateral but have lower limits.</li>
-       <li> Be sincere and specific about why you need the loan.</li>
-      </ol>
+     <h2>3. Outstanding Loans and Debt</h2>
+     <p>If you have existing loans or credit card debt, banks will verify that you can manage additional debt.</p>
+     <h3>Debt-to-Income Ratio:</h3>
+     <ul>
+       <li>They compute a ratio of your monthly debts to your income</li>
+       <li>The lower this ratio, the better your chance to get a new loan</li>
+     </ul>
+     <p><strong>Tip:</strong> Try to clear or reduce existing loans before applying.</p>
 
-      <h2> 6. Collateral (Security for the Loan) </h2>
-      <ol>
-      <li>  . For secured loans such as home or automobile loans, the bank will verify the property or asset you're providing.</li>
-       <li> · The worth of your collateral determines the highest loan amount.</li>
-       <li> · Banks typically lend between 75-90% of the value of the asset.</li>
-       <li> · This makes the loan more secure for the bank and frequently results in improved interest rates for you.</li>
-      </ol>
+     <h2>4. Your Age and Loan Duration</h2>
+     <p>Your age affects how long you can repay the loan.</p>
+     <h3>Age Considerations:</h3>
+     <ul>
+       <li>Most banks lend to people aged 21 to 60</li>
+       <li>Younger borrowers usually get longer repayment periods and lower monthly payments</li>
+       <li>Older applicants might get shorter loan terms</li>
+     </ul>
 
-      <h2> 7. Other Key Points </h2>
-      <ol>
-      <li>   Address and identity proof are required to confirm your identity.</li>
-       <li> A positive record with your bank (such as savings on a regular basis) may assist your application.</li>
-       <li> Occasionally, a co-applicant or guarantor can enhance your eligibility for a loan.</li>
-      </ol>
-      
-      <h2> Conclusion </h2>
-      <p>  Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
- over your current debts, and be open about your loan requirements. This makes it easier and quicker for you</p>
+     <h2>5. Loan Amount and Purpose</h2>
+     <p>Banks think about why you require the loan and how much you are requesting.</p>
+     <h3>Loan Types:</h3>
+     <ul>
+       <li>Home loans need collateral (property), so you can borrow more money</li>
+       <li>Personal loans do not need collateral but have lower limits</li>
+     </ul>
+     <p><strong>Important:</strong> Be sincere and specific about why you need the loan.</p>
 
-      
+     <h2>6. Collateral (Security for the Loan)</h2>
+     <p>For secured loans such as home or automobile loans, the bank will verify the property or asset you're providing.</p>
+     <h3>Collateral Details:</h3>
+     <ul>
+       <li>The worth of your collateral determines the highest loan amount</li>
+       <li>Banks typically lend between 75-90% of the value of the asset</li>
+       <li>This makes the loan more secure for the bank and frequently results in improved interest rates for you</li>
+     </ul>
+
+     <h2>7. Other Key Points</h2>
+     <ul>
+       <li>Address and identity proof are required to confirm your identity</li>
+       <li>A positive record with your bank (such as savings on a regular basis) may assist your application</li>
+       <li>Occasionally, a co-applicant or guarantor can enhance your eligibility for a loan</li>
+     </ul>
+     
+     <h2>Conclusion</h2>
+     <p class="intro-para">Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.</p>
+    </div>
     `,
     heroImage: "https://via.placeholder.com/1200x600",
     sidebarImages: [
@@ -649,7 +657,7 @@ Rather than waiting and constantly calling bank officials to follow up, you get 
     authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
-  },
+}
 ]
 
 // Related posts function
