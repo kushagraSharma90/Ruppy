@@ -585,7 +585,7 @@ const Calculators = () => {
               >
               <a
                 href="/apply"
-                className="bg-[#3870A6] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                className="bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Apply Now
               </a>
@@ -596,7 +596,7 @@ const Calculators = () => {
               >
                 <a
                   href="/contact"
-                  className="bg-[#3870A6]  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                  className="bg-blue-600  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
                 >
                   Talk to an Expert
                 </a>

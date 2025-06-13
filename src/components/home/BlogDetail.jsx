@@ -58,52 +58,55 @@ const blogData = [
   },
   {
     id: 2,
-    title: "Disrupting Auto Finance & Solving Dealer Challenges",
     content: [
       {
-        heading: "RupeeDot: A Fintech Disruptor in Auto Finance",
+        heading: "Market Overview: New vs. Used Car Sales",
         text: [
-          `RupeeDot is not just another fintech company; it's a disruptor in India's auto finance space. Based in Pune and operating under Indicorn Financial Services Pvt. Ltd., it acts as a facilitator between lenders and borrowers—like a dating site for car loans. By partnering with banks, NBFCs, and alternative lenders, RupeeDot presents customers with multiple loan options through a single application.`,
-          `The system is fast, efficient, and transparent—saving time and minimizing paperwork, while making auto financing more accessible and trustworthy.`,
+          "The used car market has overtaken new car sales in volume and is growing nearly twice as fast, signaling a shift in consumer behavior.",
+          "In 2024, used car sales are expected to be around 5.4 million units and reach approximately 10.8 million by 2030, with a CAGR of 13%. The market is valued at USD 36 billion in 2024 and projected to grow to USD 101 billion by 2033.",
+          "In contrast, new car sales in 2024 are around 4.16 million units with a market size of USD 121.5 billion, projected to reach USD 247.4 billion by 2033 (CAGR of 7.13%).",
         ],
       },
       {
-        heading: "Conventional Auto Loans vs. RupeeDot",
+        heading: "Finance Penetration & Challenges",
         text: [
-          `Traditional auto loans in India are often complicated, requiring excessive paperwork, credit checks, and long wait times. The process is frustrating and discouraging, especially when small errors delay approvals.`,
-          `RupeeDot revolutionizes this by offering a user-friendly digital platform that streamlines applications and removes many of the conventional hurdles.`,
+          "New car financing is well established, with a 75% penetration rate in 2024, showing a heavy reliance on credit.",
+          "Used car financing remains underpenetrated due to challenges like 71% of purchases through unorganized sellers, lack of standard documentation, and limited credit evaluation.",
+          "Financing penetration in used cars has grown from 15% in 2022 to 23% in 2024, and is projected to reach 30% by 2025.",
+          "Interest rates for used car loans range from 10–18%, which is higher compared to around 8.5% for new cars.",
         ],
       },
       {
-        heading: "Speed and Simplicity",
+        heading: "Urban vs. Rural Market Dynamics",
         text: [
-          `Unlike banks that may take days to respond, RupeeDot approves loans within hours using automation and AI. Forms are auto-filled, documents verified quickly, and recommendations made using intelligent digital tools.`,
-          `With real-time updates and a simple interface, applicants are kept informed at every stage—cutting down stress and wait time.`,
+          "Rural areas are dominated by cash-based transactions and local dealerships, limiting access to formal financing options.",
+          "Urban markets are adopting organized dealerships and digital platforms more rapidly, with rising interest in SUVs, luxury used vehicles, and certified pre-owned options.",
         ],
       },
       {
-        heading: "More Than Credit Scores",
+        heading: "Growth Opportunity in Rural India",
         text: [
-          `RupeeDot goes beyond credit scores to assess creditworthiness. It includes non-traditional data like mobile payment history and online purchases to form a holistic view of financial behavior.`,
-          `This allows individuals with thin or no credit history—like young professionals—to qualify for loans by showcasing responsible money management.`,
+          "Rural India represents an untapped market where organized players and NBFCs can significantly expand.",
+          "Tailored loan products such as flexible EMIs, small-ticket loans, and simplified onboarding processes can better serve rural and first-time buyers.",
         ],
       },
       {
-        heading: "One Application, Multiple Lenders",
+        heading: "Strategic Imperatives for Market Expansion",
         text: [
-          `With RupeeDot, you don’t need to apply to multiple banks. Their aggregator platform lets you fill out one application, which is then shared with lenders who are most likely to approve it.`,
-          `This removes redundant paperwork and ensures you get matched with the right lender quickly and easily.`,
+          "**1. Enlarging Organized Dealership Networks**: Establish certified pre-owned dealerships in Tier 2/3/4 cities and rural regions to boost consumer trust.",
+          "**2. Financing Solution Innovations**: Collaborate with NBFCs and fintechs to create rural-friendly financial products including low-ticket loans and flexible EMI options.",
+          "**3. Leveraging Digital Platforms**: Implement end-to-end online services—virtual inspections, AI-based pricing, digital KYC, and loan approvals.",
+          "**4. Driving Consumer Awareness**: Educate buyers on the benefits of certified vehicles, formal financing options, and responsible ownership practices.",
         ],
       },
       {
-        heading: "Data-Driven Underwriting",
+        heading: "Conclusion",
         text: [
-          `RupeeDot uses machine learning to analyze over 1,000 data points—including social media activity and utility bill payments—to assess borrower profiles.`,
-          `This helps lenders evaluate risk more accurately and gives borrowers with non-traditional financial backgrounds a fair shot at financing.`,
+          "India’s used vehicle market is poised to exceed ₹100 billion by the end of the decade. Addressing financing gaps, expanding organized channels, and using digital solutions will be key to driving financial inclusion and market growth across urban and rural segments.",
         ],
       },
     ],
-    image: blog1,
+    image: blog2,
   },
   {
     id: 3,
