@@ -557,17 +557,17 @@ const BlogDetail = () => {
   }
 
   if (!post) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Blog post not found</h2>
-          <Link to="/Home" className="text-blue-600 hover:underline flex items-center justify-center">
-            <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
-          </Link>
-        </div>
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Blog post not found</h2>
+        <Link to="/community/blogs" className="text-blue-600 hover:underline flex items-center justify-center">
+          <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
+        </Link>
       </div>
-    )
-  }
+    </div>
+  );
+}
 
 
    return (
