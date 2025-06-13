@@ -22,7 +22,7 @@ const Footer = () => {
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-auto w-40"
+                className="h-23 w-40"
               />
             </Link>
             <p className="text-gray-300 text-lg mb-4 max-w-md leading-relaxed">

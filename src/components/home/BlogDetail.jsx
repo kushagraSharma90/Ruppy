@@ -1,8 +1,17 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
-import { ArrowLeft, Calendar, Clock, Eye, Copy, Share2, Bookmark, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  Eye,
+  Copy,
+  Share2,
+  Bookmark,
+  ChevronRight,
+} from "lucide-react";
 import img1 from "../../assets/1.png";
 import img2 from "../../assets/2.png";
 import img3 from "../../assets/3.png";
@@ -18,11 +27,6 @@ import img12 from "../../assets/12.png";
 import img13 from "../../assets/13.png";
 import img14 from "../../assets/14.png";
 import img15 from "../../assets/15.png";
-
-
-
-
-
 
 // Sample blog data with additional images for all posts
 const blogPosts = [
@@ -81,10 +85,7 @@ const blogPosts = [
       },
     ],
     // Bottom image
-    bottomImage: {
-      url: "https://via.placeholder.com/800x400",
-      caption: "RupeeDot's comprehensive auto finance ecosystem",
-    },
+   
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
@@ -94,12 +95,11 @@ const blogPosts = [
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
- {
-  id: 2,
-  title: "Market Overview: New vs. Used Car Sales",
-  excerpt: "A Fintech Disruptor in Auto Finance",
-  content: 
-  `<div style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333;">
+  {
+    id: 2,
+    title: "Market Overview: New vs. Used Car Sales",
+    excerpt: "A Fintech Disruptor in Auto Finance",
+    content: `<div style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333;">
     <h1 style="font-size: 2.5rem; color: #2c3e50; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; margin-bottom: 25px;">Market Overview: New vs. Used Car Sales</h1>
     
     <h2 style="font-size: 1.8rem; color: #3498db; margin-top: 30px;">Key Insight</h2>
@@ -226,35 +226,35 @@ const blogPosts = [
       </p>
     </div>
   </div>`,
-  heroImage: "https://via.placeholder.com/1200x600",
-  sidebarImages: [
-    {
-      url: img4,
-      caption: "Used car market growth chart",
+    heroImage: "https://via.placeholder.com/1200x600",
+    sidebarImages: [
+      {
+        url: img4,
+        caption: "Used car market growth chart",
+      },
+      {
+        url: img5,
+        caption: "New vs used car sales comparison",
+      },
+      {
+        url: img6,
+        caption: "Market penetration statistics",
+      },
+    ],
+    bottomImage: {
+      url: "https://via.placeholder.com/800x400",
+      caption: "India's automotive market landscape overview",
     },
-    {
-      url: img5,
-      caption: "New vs used car sales comparison",
-    },
-    {
-      url: img6,
-      caption: "Market penetration statistics",
-    },
-  ],
-  bottomImage: {
-    url: "https://via.placeholder.com/800x400",
-    caption: "India's automotive market landscape overview",
+    category: "Car Loans",
+    views: 645,
+    date: "MAY 21, 2025",
+    readTime: "4 Min",
+    author: "RUPEEDOT",
+    authorImage: "https://via.placeholder.com/80x80",
+    featured: true,
+    tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
-  category: "Car Loans",
-  views: 645,
-  date: "MAY 21, 2025",
-  readTime: "4 Min",
-  author: "RUPEEDOT",
-  authorImage: "https://via.placeholder.com/80x80",
-  featured: true,
-  tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
-},
- {
+  {
     id: 3,
     title: "What is a Personal Loan?",
     excerpt: "An unsecured loan for various personal financial needs",
@@ -418,7 +418,8 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them",
+    title:
+      "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
       <div style="font-size: 1.1rem; line-height: 1.7;">
@@ -500,7 +501,7 @@ const blogPosts = [
       {
         url: img13,
         caption: "Dealer success stories",
-      }
+      },
     ],
     bottomImage: {
       url: "https://example.com/dealer-ecosystem-transformation.jpg",
@@ -645,10 +646,7 @@ const blogPosts = [
         caption: "Income verification process",
       },
     ],
-    bottomImage: {
-      url: "https://via.placeholder.com/800x400",
-      caption: "Comprehensive loan eligibility framework",
-    },
+   
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
@@ -657,38 +655,40 @@ const blogPosts = [
     authorImage: "https://via.placeholder.com/80x80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
-}
-]
+  },
+];
 
 // Related posts function
 const getRelatedPosts = (currentPostId, category) => {
-  return blogPosts.filter((post) => post.id !== currentPostId && post.category === category).slice(0, 3)
-}
+  return blogPosts
+    .filter((post) => post.id !== currentPostId && post.category === category)
+    .slice(0, 3);
+};
 
 export default function BlogDetail() {
-  const { id } = useParams()
-  const [post, setPost] = useState(null)
-  const [relatedPosts, setRelatedPosts] = useState([])
-  const [copied, setCopied] = useState(false)
+  const { id } = useParams();
+  const [post, setPost] = useState(null);
+  const [relatedPosts, setRelatedPosts] = useState([]);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const postId = Number.parseInt(id)
-    const foundPost = blogPosts.find((post) => post.id === postId)
+    const postId = Number.parseInt(id);
+    const foundPost = blogPosts.find((post) => post.id === postId);
 
     if (foundPost) {
-      setPost(foundPost)
-      setRelatedPosts(getRelatedPosts(postId, foundPost.category))
-      window.scrollTo(0, 0)
+      setPost(foundPost);
+      setRelatedPosts(getRelatedPosts(postId, foundPost.category));
+      window.scrollTo(0, 0);
     }
-  }, [id])
+  }, [id]);
 
   const copyToClipboard = () => {
-    const url = window.location.href
+    const url = window.location.href;
     navigator.clipboard.writeText(url).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   if (!post) {
     return (
@@ -697,169 +697,76 @@ export default function BlogDetail() {
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Clock className="h-8 w-8 text-blue-600" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Blog post not found</h2>
-          <p className="text-gray-600 mb-6">The blog post you're looking for might have been moved or doesn't exist.</p>
-          <Link to="/" className="text-blue-600 hover:underline flex items-center justify-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Blog post not found
+          </h2>
+          <p className="text-gray-600 mb-6">
+            The blog post you're looking for might have been moved or doesn't
+            exist.
+          </p>
+          <Link
+            to="/"
+            className="text-blue-600 hover:underline flex items-center justify-center"
+          >
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    
-
-
-    <div className="bg-gray-50 min-h-screen pb-16">
-      {/* Hero section */}
-     
-         <div className="relative overflow-hidden bg-[#3870A6] text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-              backgroundSize: "24px 24px",
-            }}
-          ></div>
-        </div>
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Blogs</h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              Learn about RupeeDot's journey to becoming India's trusted financial services provider
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-      </div>
-        
-      
-      
-
-      <div className="container mx-auto px-4 max-w-6xl -mt-10">
-        {/* TOP IMAGE - Hero/Featured Image */}
-        <div className="mb-10">
-          <div className="rounded-xl overflow-hidden shadow-xl">
-            <img
-              src={post.heroImage || "/placeholder.svg"}
-              alt={post.title}
-              className="w-full h-64 md:h-96 object-cover"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main content */}
-          <div className="flex-1">
-            <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
-              <div
-                className="prose prose-lg max-w-none blog-content"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
-            </div>
-
-            {/* BOTTOM IMAGE */}
-            {post.bottomImage && (
-              <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-                <div className="rounded-lg overflow-hidden">
-                  <img
-                    src={post.bottomImage.url || "/placeholder.svg"}
-                    alt={post.bottomImage.caption}
-                    className="w-full h-64 md:h-80 object-cover"
-                  />
-                  {post.bottomImage.caption && (
-                    <p className="text-center text-sm text-gray-500 mt-4 italic">{post.bottomImage.caption}</p>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Tags */}
-            <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-              <h3 className="text-lg font-semibold mb-4">Related Topics</h3>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm transition-colors cursor-pointer"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Author box */}
-            <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-2xl">
-                  {post.author.charAt(0)}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-1">{post.author}</h3>
-                  <p className="text-gray-600 mb-3">Financial Expert at RupeeDot</p>
-                  <p className="text-gray-600">
-                    Specializing in auto finance and personal loans with over 10 years of experience in the financial
-                    sector.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT SIDEBAR - 2-3 Images */}
-          <div className="lg:w-80 flex-shrink-0">
-            <div className="bg-[#] rounded-xl shadow-sm p-6 mb-6 sticky top-8">
-              <h3 className="text-lg font-bold mb-6 text-gray-900">Visual Insights</h3>
-              <div className="space-y-6">
-                {post.sidebarImages?.map((image, index) => (
-                  <div key={index} className="group">
-                    <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                      <img
-                        src={image.url || "/placeholder.svg"}
-                        alt={image.caption}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    {image.caption && <p className="text-sm text-gray-600 mt-2 px-1">{image.caption}</p>}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Additional sidebar content */}
-            {/* <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-bold mb-4 text-gray-900">Quick Facts</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="text-gray-600">Reading Time</span>
-                  <span className="font-medium">{post.readTime}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="text-gray-600">Views</span>
-                  <span className="font-medium">{post.views}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="text-gray-600">Category</span>
-                  <span className="font-medium">{post.category}</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600">Published</span>
-                  <span className="font-medium">{post.date}</span>
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </div>
-
-        {/* Related posts */}
-       
-          
-        
+  <div className="bg-gray-50 min-h-screen pb-16">
+  {/* Hero Section */}
+  <div className="relative overflow-hidden bg-[#3870A6] text-white">
+    <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0"></div>
+    </div>
+    <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          {post.title}
+        </h1>
+        <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+          {post.excerpt}
+        </p>
       </div>
     </div>
-  )
+    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </div>
+
+  {/* Main Content Section */}
+  <div className="container mx-auto px-4 max-w-6xl -mt-10">
+    <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
+      <div className="flex flex-col lg:flex-row gap-10">
+        {/* Main Text Content */}
+        <div className="flex-1 prose prose-lg max-w-none blog-content">
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
+
+        {/* Visual Insights on Right (Inside Content Box) */}
+        <div className="w-full lg:w-80 flex-shrink-0">
+       
+          <div className="space-y-120">
+            {post.sidebarImages?.map((image, index) => (
+              <div key={index} className="group">
+                <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <img
+                    src={image.url || "/placeholder.svg"}
+                    alt={image.caption}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                {image.caption && (
+                  <p className="text-sm text-gray-600 mt-2 px-1">{image.caption}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  );
 }

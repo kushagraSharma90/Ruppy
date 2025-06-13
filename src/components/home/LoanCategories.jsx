@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom"
-import NewCar from "../../assets/NewCar.png"
-import UsedCar from "../../assets/UsedCar.png"
-import AgainstCar from "../../assets/AgainstCar.png"
-import PersonalCar from "../../assets/PersonalCar.png"
+import { Link } from "react-router-dom";
+import NewCar from "../../assets/NewCar.png";
+import UsedCar from "../../assets/UsedCar.png";
+import AgainstCar from "../../assets/AgainstCar.png";
+import PersonalCar from "../../assets/PersonalCar.png";
 
 const LoanCategories = () => {
   const loanTypes = [
     {
       id: 1,
       title: "Personal Loan",
-      image: NewCar,
+      image: PersonalCar,
       description: "Quick funds for your personal needs with minimal documentation",
       link: "/loans/personal",
       bgColor: "bg-blue-100",
@@ -17,7 +17,7 @@ const LoanCategories = () => {
     {
       id: 2,
       title: "Used Car Loan",
-      image:  AgainstCar,
+      image: UsedCar,
       description: "Affordable financing options for pre-owned vehicles",
       link: "/loans/used-car",
       bgColor: "bg-blue-100",
@@ -25,7 +25,7 @@ const LoanCategories = () => {
     {
       id: 3,
       title: "New Car Loan",
-      image: UsedCar,
+      image: NewCar,
       description: "Drive home your dream car with competitive interest rates",
       link: "/loans/new-car",
       bgColor: "bg-blue-100",
@@ -33,33 +33,39 @@ const LoanCategories = () => {
     {
       id: 4,
       title: "Loan Against Car",
-      image: PersonalCar,
+      image: AgainstCar,
       description: "Leverage your car's value for immediate financial needs",
       link: "/loans/against-car",
       bgColor: "bg-blue-100",
     },
-  ]
+  ];
 
   return (
     <section className="pt-0 pb-10 bg-[#f5f5ec] overflow-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Loan Products</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our Loan Products
+          </h2>
           <p className="text-black max-w-2xl mx-auto">
             Explore our range of loan products designed to meet your financial needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 xl:gap-12">
           {loanTypes.map((loan) => (
             <Link
               to={loan.link}
               key={loan.id}
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
-              <div className="p-6 flex flex-col items-center bg-white text-center">
+              <div className="p-6 flex flex-col items-center bg-white text-center h-full">
                 <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-50 group-hover:border-blue-200 transition-colors">
-                  <img src={loan.image || "/placeholder.svg"} alt={loan.title} className="w-full h-full object-cover" />
+                  <img
+                    src={loan.image || "/placeholder.svg"}
+                    alt={loan.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-black mb-3 transition-colors duration-300">
                   {loan.title}
@@ -83,7 +89,7 @@ const LoanCategories = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LoanCategories
+export default LoanCategories;
