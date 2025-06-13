@@ -831,7 +831,7 @@ export default function BlogDetail() {
             </div>
 
             {/* Additional sidebar content */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
+            {/* <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-lg font-bold mb-4 text-gray-900">Quick Facts</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -851,7 +851,7 @@ export default function BlogDetail() {
                   <span className="font-medium">{post.date}</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
