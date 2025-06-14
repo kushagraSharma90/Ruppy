@@ -39,8 +39,12 @@ const blogPosts = [
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px;">
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">RupeeDot: A Fintech Disruptor in Auto Finance</h2>
         <p style="margin-bottom: 20px;">RupeeDot is not only another fintech company; it's a disruptor in India's auto finance space. It's a Pune-based company operating under Indicorn Financial Services Private Ltd and works as a facilitator between lenders and borrowers. Imagine it as a dating website for car loans. By tying up with banks, NBFCs and alternative lenders, RupeeDot collects numerous loan options so customers don't need to apply separately to each financier.</p>
-        <p style="margin-bottom: 30px;">The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork most borrowers experience. It also provides transparent navigation through each process, helping to establish trust and making auto financing more accessible.</p>
-
+         <img 
+  src="${img1}" 
+  alt="RupeeDot Logo" 
+  style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;">
+        <p style="margin-bottom: 10px;">The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork most borrowers experience. It also provides transparent navigation through each process, helping to establish trust and making auto financing more accessible.</p>
+         
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Differentiating RupeeDot from Conventional Auto Financing</h2>
         <p style="margin-bottom: 20px;">Conventional auto loans in India tend to be a cumbersome obstacle course. You are presented with copious paperwork, credit score restrictions and lengthy waiting times. The process seems designed to test your patience at every turn.</p>
         <p style="margin-bottom: 20px;">Many applicants find that the time and effort needed to fill out forms and meet strict requirements is overwhelming. One small mistake can cause extra delays as you're asked for additional documents or clarifications. As a result, what should be a straightforward procedure turns into a stressful experience that discourages many potential buyers.</p>
@@ -49,6 +53,10 @@ const blogPosts = [
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Speed and Simplicity</h2>
         <p style="margin-bottom: 20px;">Whereas banks can take days to approve applications, Rupeedot's digital platform approves loans in a matter of hours. Their platform relies on intelligent digital tools that auto-fill forms, verify documents and recommend the optimal loan for you.</p>
         <p style="margin-bottom: 20px;">Through advanced algorithms and automation, they significantly minimize the possibility of human error and accelerate the entire process. Rather than waiting and constantly calling bank officials to follow up, you get instant updates that keep you posted at every stage.</p>
+        <img 
+  src="${img2}" 
+  alt="RupeeDot Logo" 
+  style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;">
         <p style="margin-bottom: 30px;">This efficient process saves time and eliminates frustrations that usually accompany conventional practices. With a simple interface and real-time communication, Rupeedot ensures that each application is processed smoothly.</p>
 
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">More Than Credit Scores</h2>
@@ -59,6 +67,10 @@ const blogPosts = [
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">One Application, Multiple Lenders</h2>
         <p style="margin-bottom: 20px;">Making multiple applications to various banks can be quite exhausting. Rupeedot's aggregator platform allows you to apply once and then lets the lenders most likely to accept you have access to your details. That one application process saves you time and trouble by eliminating unnecessary paperwork and time-consuming follow-ups.</p>
         <p style="margin-bottom: 20px;">Their intelligent algorithms evaluate your profile and find the right financiers for you, so you receive the best available choices. It means less of your time wasted on mundane tasks and more time on what's important.</p>
+        <img 
+  src="${img3}" 
+  alt="RupeeDot Logo" 
+  style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;">
         <p style="margin-bottom: 30px;">You don't have to keep checking multiple statuses anymore or repeat the same information for every bank. Rupeedot takes the dirty work out of your hands and makes the entire process easy and convenient. Their methodology is transparent and easy, making sure you have an easy time from beginning to end. Using Rupeedot, you never have to deal with multiple lender applications again.</p>
 
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Technologies and Data-Driven Strategies of Rupeedot</h2>
@@ -71,20 +83,20 @@ const blogPosts = [
     // Main hero image
     heroImage: "https://via.placeholder.com/1200x600",
     // Right sidebar images
-    sidebarImages: [
-      {
-        url: img1,
-        caption: "Digital loan processing dashboard",
-      },
-      {
-        url: img2,
-        caption: "Customer application interface",
-      },
-      {
-        url: img3,
-        caption: "Lender network visualization",
-      },
-    ],
+    // sidebarImages: [
+    //   {
+    //     url: img1,
+    //     caption: "Digital loan processing dashboard",
+    //   },
+    //   {
+    //     url: img2,
+    //     caption: "Customer application interface",
+    //   },
+    //   {
+    //     url: img3,
+    //     caption: "Lender network visualization",
+    //   },
+    // ],
     // Bottom image
    
     category: "Car Loans",
@@ -117,7 +129,12 @@ const blogPosts = [
       <li style="margin-bottom: 8px;">2024 Market Size: USD 121.5 billion</li>
       <li>Projected 2033 Market Size: USD 247.4 billion (CAGR: 7.13%)</li>
     </ul>
-    
+    <img
+      src="${img4}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
+
     <p style="font-size: 1.15rem; background: #f8f9fa; padding: 15px; border-left: 4px solid #3498db;">
       <strong>Key Trend:</strong> Used car market has surpassed new car sales in volume and is increasing almost twice as quickly, reflecting the dramatic change in consumer behavior.
     </p>
@@ -129,6 +146,11 @@ const blogPosts = [
       <li style="margin-bottom: 8px;">2024 Penetration: <span style="color: #e74c3c; font-weight: bold;">75%</span></li>
       <li>Reflects high reliance on financing for buying new cars.</li>
     </ul>
+    <img
+      src="${img5}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
     
     <h3 style="font-size: 1.4rem; color: #2c3e50; margin-top: 20px;">Used Car Financing</h3>
     <ul style="font-size: 1.1rem;">
@@ -166,7 +188,8 @@ const blogPosts = [
           <li>Limited exposure to organized players and finance.</li>
         </ul>
       </div>
-      
+     
+
       <div style="flex: 1; background: #e8f4fc; padding: 15px; border-radius: 5px;">
         <h3 style="font-size: 1.4rem; color: #2c3e50; margin-top: 0;">Urban Markets</h3>
         <ul style="font-size: 1.1rem;">
@@ -176,6 +199,11 @@ const blogPosts = [
         </ul>
       </div>
     </div>
+     <img
+      src="${img6}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
     
     <h2 style="font-size: 1.8rem; color: #3498db; margin-top: 30px;">Growth Opportunity</h2>
     <p style="font-size: 1.2rem; font-weight: 500;">
@@ -228,20 +256,20 @@ const blogPosts = [
     </div>
   </div>`,
     heroImage: "https://via.placeholder.com/1200x600",
-    sidebarImages: [
-      {
-        url: img4,
-        caption: "Used car market growth chart",
-      },
-      {
-        url: img5,
-        caption: "New vs used car sales comparison",
-      },
-      {
-        url: img6,
-        caption: "Market penetration statistics",
-      },
-    ],
+    // sidebarImages: [
+    //   {
+    //     url: img4,
+    //     caption: "Used car market growth chart",
+    //   },
+    //   {
+    //     url: img5,
+    //     caption: "New vs used car sales comparison",
+    //   },
+    //   {
+    //     url: img6,
+    //     caption: "Market penetration statistics",
+    //   },
+    // ],
     bottomImage: {
       url: "https://via.placeholder.com/800x400",
       caption: "India's automotive market landscape overview",
@@ -281,7 +309,11 @@ const blogPosts = [
         <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Electronics/gadgets:</strong> Purchase the latest devices</li>
         <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Education/skill enhancement:</strong> Invest in your professional development</li>
       </ul>
-      
+      <img
+      src="${img8}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
       <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Eligibility Criteria</h2>
       <p style="font-size: 1.15rem;">To qualify for a personal loan, applicants typically need to meet these requirements:</p>
       <ul style="font-size: 1.1rem;">
@@ -325,6 +357,11 @@ const blogPosts = [
           <p style="font-size: 1.05rem;">To combine multiple debts</p>
         </div>
       </div>
+      <img
+      src="${img9}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
       
       <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Key Features & Benefits</h2>
       <ul style="font-size: 1.1rem;">
@@ -377,7 +414,11 @@ const blogPosts = [
       <ul style="font-size: 1.1rem;">
         <li style="margin-bottom: 0.5rem;">Completed and signed application</li>
       </ul>
-      
+      <img
+      src="${img10}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
       <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Tips to Improve Approval Chances</h2>
       <ul style="font-size: 1.1rem;">
         <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Maintain good credit:</strong> Keep score above 700</li>
@@ -390,20 +431,20 @@ const blogPosts = [
     </div>
     `,
     heroImage: "https://via.placeholder.com/1200x600",
-    sidebarImages: [
-      {
-        url: img8,
-        caption: "Personal loan application process",
-      },
-      {
-        url: img9,
-        caption: "Documentation requirements",
-      },
-      {
-        url: img10,
-        caption: "Loan approval timeline",
-      },
-    ],
+    // sidebarImages: [
+    //   {
+    //     url: img8,
+    //     caption: "Personal loan application process",
+    //   },
+    //   {
+    //     url: img9,
+    //     caption: "Documentation requirements",
+    //   },
+    //   {
+    //     url: img10,
+    //     caption: "Loan approval timeline",
+    //   },
+    // ],
     bottomImage: {
       url: "https://via.placeholder.com/800x400",
       caption: "Understanding personal loan terms and conditions",
@@ -443,6 +484,10 @@ const blogPosts = [
           <li><strong style="font-size: 1.12rem;">Dealer-Lender Matching:</strong> Access to multiple financiers reduces sole-lender dependence</li>
           <li><strong style="font-size: 1.12rem;">Pre-Approval System:</strong> Instant loan eligibility checks help close sales faster</li>
         </ul>
+       <img src="${img11}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
 
         <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50;">Challenge 2: High Rejection Rates for Non-Traditional Borrowers</h2>
         <ul style="font-size: 1.1rem;">
@@ -484,26 +529,36 @@ const blogPosts = [
           <li><strong style="font-size: 1.12rem;">End-to-End Support:</strong> Real-time updates on loan status and document approvals</li>
           <li><strong style="font-size: 1.12rem;">AI-Powered Lender Matching:</strong> Automatically recommends optimal financiers based on eligibility</li>
         </ul>
+       <img src="${img12}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
 
-        <h2 style="font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1.2rem; color: #2c3e50; text-align: center;">RupeeDot's Dealership Mission</h2>
-        <p style="font-size: 1.2rem; text-align: center; font-style: italic;">To empower auto dealers with fast, reliable, and seamless financing solutions that drive sales, improve cash flow, and maximize loan approvals for all customer segments.</p>
+        <h2 style="font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1.2rem; color: #2c3e50; ;">RupeeDot's Dealership Mission</h2>
+        <p style="font-size: 1.2rem; font-style: italic;">To empower auto dealers with fast, reliable, and seamless financing solutions that drive sales, improve cash flow, and maximize loan approvals for all customer segments.</p>
       </div>
+<img src="${img13}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
+
+
     `,
     heroImage: "https://example.com/used-car-dealers-challenges.jpg",
-    sidebarImages: [
-      {
-        url: img11,
-        caption: "RupeeDot solution dashboard",
-      },
-      {
-        url: img12,
-        caption: "Streamlined process flow",
-      },
-      {
-        url: img13,
-        caption: "Dealer success stories",
-      },
-    ],
+    // sidebarImages: [
+    //   {
+    //     url: img11,
+    //     caption: "RupeeDot solution dashboard",
+    //   },
+    //   {
+    //     url: img12,
+    //     caption: "Streamlined process flow",
+    //   },
+    //   {
+    //     url: img13,
+    //     caption: "Dealer success stories",
+    //   },
+    // ],
     bottomImage: {
       url: "https://example.com/dealer-ecosystem-transformation.jpg",
       caption: "Complete dealer ecosystem transformation",
@@ -579,6 +634,10 @@ const blogPosts = [
        <li>Late payments, defaults, or excessive applications for loans may decrease your score</li>
      </ul>
      <p><strong>Advice:</strong> Pay bills and EMIs regularly to maintain a healthy score</p>
+     <img src="${img14}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
 
      <h2>2. Income and Employment Stability</h2>
      <p>Banks need to be confident that you have sufficient income to repay the loan.</p>
@@ -606,6 +665,10 @@ const blogPosts = [
        <li>Younger borrowers usually get longer repayment periods and lower monthly payments</li>
        <li>Older applicants might get shorter loan terms</li>
      </ul>
+     <img src="${img15}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+    />
 
      <h2>5. Loan Amount and Purpose</h2>
      <p>Banks think about why you require the loan and how much you are requesting.</p>
@@ -637,16 +700,16 @@ const blogPosts = [
     </div>
     `,
     heroImage: "https://via.placeholder.com/1200x600",
-    sidebarImages: [
-      {
-        url: img14,
-        caption: "Credit score factors",
-      },
-      {
-        url: img15,
-        caption: "Income verification process",
-      },
-    ],
+    // sidebarImages: [
+    //   {
+    //     url: img14,
+    //     caption: "Credit score factors",
+    //   },
+    //   {
+    //     url: img15,
+    //     caption: "Income verification process",
+    //   },
+    // ],
    
     category: "Car Loans",
     views: 645,
@@ -728,57 +791,61 @@ export default function BlogDetail() {
     );
   }
 
-  return (
-    <div className="bg-gray-50 min-h-screen pb-16">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-[#3870A6] text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0"></div>
-        </div>
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              {post.title}
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              {post.excerpt}
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+return (
+  <div className="bg-gray-50 min-h-screen pb-16">
+    {/* Hero Section */}
+    <div className="relative overflow-hidden bg-[#3870A6] text-white">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0"></div>
       </div>
+      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            {post.title}
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+            {post.excerpt}
+          </p>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </div>
 
-      {/* Main Content Section */}
-      <div className="container mx-auto px-4 max-w-6xl -mt-10">
-        <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main Text Content */}
-            <div className="flex-1 prose prose-lg max-w-none blog-content">
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </div>
+    {/* Main Content Section */}
+    <div className="container mx-auto px-4 max-w-6xl -mt-10">
+      <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
+        <div className="flex flex-col lg:flex-row gap-10">
+          
+          {/* Main Text Content */}
+          <div className="w-full lg:w-[75%] prose prose-lg max-w-none blog-content">
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          </div>
 
-            {/* Visual Insights on Right (Inside Content Box) */}
-            <div className="w-full lg:w-80 flex-shrink-0">
-              <div className="space-y-120">
-                {post.sidebarImages?.map((image, index) => (
-                  <div key={index} className="group">
-                    <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                      <img
-                        src={image.url || "/placeholder.svg"}
-                        alt={image.caption}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    {image.caption && (
-                      <p className="text-sm text-gray-600 mt-2 px-1">{image.caption}</p>
-                    )}
+          {/* Sidebar Images */}
+          <div className="w-full lg:w-[25%] flex-shrink-0">
+            <div className="flex flex-col space-y-8">
+              {post.sidebarImages && post.sidebarImages.length > 0 && post.sidebarImages.map((image, index) => (
+                <div key={index} className="group">
+                  <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img
+                      src={image.url || "/placeholder.svg"}
+                      alt={image.caption}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                ))}
-              </div>
+                  {image.caption && (
+                    <p className="text-sm text-gray-600 mt-2 px-1">
+                      {image.caption}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
