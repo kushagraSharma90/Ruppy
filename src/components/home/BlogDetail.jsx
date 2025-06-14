@@ -812,8 +812,8 @@ export default function BlogDetail() {
       </div>
 
       {/* ────────── Main Content Section ────────── */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
-        <div className="bg-[#f5f5ec] rounded-xl  p-6 md:p-10 mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 md:mt-10"> {/* Changed from -mt-10 to positive mt values */}
+        <div className="bg-[#f5f5ec] rounded-xl p-6 md:p-10 mb-8">
           {/* Stack on mobile, side‑by‑side on lg+  */}
           <div className="flex flex-col items-center lg:items-start lg:flex-row gap-10 lg:gap-14">
             {/* Article */}
@@ -851,4 +851,3 @@ export default function BlogDetail() {
     </div>
   );
 }
-
