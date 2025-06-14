@@ -791,58 +791,61 @@ export default function BlogDetail() {
     );
   }
 
-  return (
+return (
   <div className="bg-gray-50 min-h-screen pb-16">
-  {/* Hero Section */}
-  <div className="relative overflow-hidden bg-[#3870A6] text-white">
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute inset-0"></div>
-    </div>
-    <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-          {post.title}
-        </h1>
-        <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-          {post.excerpt}
-        </p>
+    {/* Hero Section */}
+    <div className="relative overflow-hidden bg-[#3870A6] text-white">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0"></div>
       </div>
-    </div>
-    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-  </div>
-
-  {/* Main Content Section */}
-  <div className="container mx-auto px-4 max-w-6xl -mt-10">
-    <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
-      <div className="flex flex-col lg:flex-row gap-10">
-        {/* Main Text Content */}
-        <div className="flex-1 prose prose-lg max-w-none blog-content">
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            {post.title}
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+            {post.excerpt}
+          </p>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </div>
 
-        {/* Visual Insights on Right (Inside Content Box) */}
-        <div className="w-full lg:w-80 flex-shrink-0">
-       
-          <div className="space-y-120">
-            {post.sidebarImages?.map((image, index) => (
-              <div key={index} className="group">
-                <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <img
-                    src={image.url || "/placeholder.svg"}
-                    alt={image.caption}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                {image.caption && (
-                  <p className="text-sm text-gray-600 mt-2 px-1">{image.caption}</p>
-                )}
-              </div>
-            ))}
+    {/* Main Content Section */}
+    <div className="container mx-auto px-4 max-w-6xl -mt-10">
+      <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
+        <div className="flex flex-col lg:flex-row gap-10">
+          
+          {/* Main Text Content */}
+          <div className="w-full lg:w-[75%] prose prose-lg max-w-none blog-content">
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
+
+          {/* Sidebar Images */}
+          <div className="w-full lg:w-[25%] flex-shrink-0">
+            <div className="flex flex-col space-y-8">
+              {post.sidebarImages && post.sidebarImages.length > 0 && post.sidebarImages.map((image, index) => (
+                <div key={index} className="group">
+                  <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img
+                      src={image.url || "/placeholder.svg"}
+                      alt={image.caption}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  {image.caption && (
+                    <p className="text-sm text-gray-600 mt-2 px-1">
+                      {image.caption}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-</div>
-  );
+);
 }
