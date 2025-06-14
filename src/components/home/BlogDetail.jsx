@@ -42,6 +42,7 @@ const blogPosts = [
          <img 
   src="${img1}" 
   alt="RupeeDot Logo" 
+ 
   style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;">
         <p style="margin-bottom: 10px;">The system operates fast and with efficiency, saving time and minimizing the drudgery of paperwork most borrowers experience. It also provides transparent navigation through each process, helping to establish trust and making auto financing more accessible.</p>
          
@@ -668,6 +669,7 @@ const blogPosts = [
      <img src="${img15}"
       alt="RupeeDot Logo"
       style="width: 100%; max-width: 400px; margin-bottom: 20px; border-radius: 8px; display: block; margin-left: auto;"
+      classname="bg-[#f5f5ec]"
     />
 
      <h2>5. Loan Amount and Purpose</h2>
@@ -791,61 +793,62 @@ export default function BlogDetail() {
     );
   }
 
-return (
-  <div className="bg-gray-50 min-h-screen pb-16">
-    {/* Hero Section */}
-    <div className="relative overflow-hidden bg-[#3870A6] text-white">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0"></div>
-      </div>
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            {post.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-            {post.excerpt}
-          </p>
-        </div>
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-    </div>
-
-    {/* Main Content Section */}
-    <div className="container mx-auto px-4 max-w-6xl -mt-10">
-      <div className="bg-white rounded-xl shadow-sm p-6 md:p-10 mb-8">
-        <div className="flex flex-col lg:flex-row gap-10">
-          
-          {/* Main Text Content */}
-          <div className="w-full lg:w-[75%] prose prose-lg max-w-none blog-content">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+ return (
+    <div className="bg-[#f5f5ec] min-h-screen pb-16">
+      {/* ────────── Hero Section ────────── */}
+      <div className="relative overflow-hidden bg-[#3870A6] text-white">
+        <div className="absolute inset-0 opacity-10" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">
+              {post.title}
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+              {post.excerpt}
+            </p>
           </div>
+        </div>
+        <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white to-transparent" />
+      </div>
 
-          {/* Sidebar Images */}
-          <div className="w-full lg:w-[25%] flex-shrink-0">
-            <div className="flex flex-col space-y-8">
-              {post.sidebarImages && post.sidebarImages.length > 0 && post.sidebarImages.map((image, index) => (
-                <div key={index} className="group">
-                  <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img
-                      src={image.url || "/placeholder.svg"}
-                      alt={image.caption}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  {image.caption && (
-                    <p className="text-sm text-gray-600 mt-2 px-1">
-                      {image.caption}
-                    </p>
-                  )}
+      {/* ────────── Main Content Section ────────── */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
+        <div className="bg-[#f5f5ec] rounded-xl  p-6 md:p-10 mb-8">
+          {/* Stack on mobile, side‑by‑side on lg+  */}
+          <div className="flex flex-col items-center lg:items-start lg:flex-row gap-10 lg:gap-14">
+            {/* Article */}
+            <article className="w-full lg:w-[75%] max-w-3xl mx-auto prose prose-lg sm:prose-xl">
+              {/* Your HTML content from CMS */}
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            </article>
+
+            {/* Sidebar images */}
+            {post.sidebarImages?.length > 0 && (
+              <aside className="w-full lg:w-[25%] flex-shrink-0">
+                <div className="flex flex-col space-y-8">
+                  {post.sidebarImages.map((image, index) => (
+                    <div key={index} className="group">
+                      <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img
+                          src={image.url || '/placeholder.svg'}
+                          alt={image.caption}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      {image.caption && (
+                        <p className="text-sm text-gray-600 mt-2 px-1">
+                          {image.caption}
+                        </p>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </aside>
+            )}
           </div>
-
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
+
