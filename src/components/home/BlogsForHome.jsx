@@ -90,9 +90,7 @@ function BlogCard({ blog }) {
     >
       <div className="relative h-56 overflow-hidden">
         <div className="absolute top-4 left-4 z-10">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full text-blue-600">
-            {blog.category}
-          </span>
+          
         </div>
         <img
           src={blog.image || "/placeholder.svg"}

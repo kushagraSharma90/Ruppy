@@ -161,11 +161,7 @@ const Blogs = () => {
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
+                   
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -237,11 +233,7 @@ const Blogs = () => {
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
+                     
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex items-center text-sm text-gray-500 mb-3">

@@ -18,14 +18,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-block mb-3">
+            <Link to="/" className="inline-block">
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-23 w-40"
+                className="h-21  w-40"
               />
             </Link>
-            <p className="text-gray-300 text-lg mb-4 max-w-md leading-relaxed">
+            <p className="text-gray-300 text-lg  max-w-md leading-relaxed">
               RupeeDot helps you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
