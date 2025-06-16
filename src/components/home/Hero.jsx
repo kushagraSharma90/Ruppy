@@ -103,14 +103,14 @@ export default function Hero() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                className="bg-teal-700 rounded-2xl p-6 text-white shadow-lg"
+                className="bg-[#3870A6] rounded-2xl p-6 text-white shadow-lg"
                 initial={{ y: 40, opacity: 0, scale: 0.95 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 exit={{ y: -40, opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <h3 className="text-xl md:text-2xl font-bold">{loanProducts[index].title}</h3>
-                <p className="text-sm mt-1">{loanProducts[index].subtitle}</p>
+                <p className="text-md mt-1">{loanProducts[index].subtitle}</p>
                 <div className="text-3xl mt-2">{loanProducts[index].icon}</div>
               </motion.div>
             </AnimatePresence>
