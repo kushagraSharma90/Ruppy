@@ -61,11 +61,11 @@ export default function Hero() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, threshold: 0.3 })
 
-  // loop every 3 seconds
+  // loop every 4.5 seconds to allow 3s display + transition duration
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % heroImages.length)
-    }, 3000)
+    }, 4500)
     return () => clearInterval(id)
   }, [])
 
@@ -90,10 +90,10 @@ export default function Hero() {
                 src={heroImages[index]}
                 alt="Hero"
                 className="w-full h-full object-cover"
-                initial={{ opacity: 0, x: 150 }}
+                initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -150 }}
-                transition={{ duration: 0.45, ease: "easeInOut" }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
               />
             </AnimatePresence>
           </div>
