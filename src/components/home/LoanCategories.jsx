@@ -9,7 +9,7 @@ const LoanCategories = () => {
     {
       id: 1,
       title: "Personal Loan",
-      image: PersonalCar,
+      image: NewCar,
       description: "Quick funds for your personal needs with minimal documentation",
       link: "/loans/personal",
       bgColor: "bg-blue-100",
@@ -25,7 +25,7 @@ const LoanCategories = () => {
     {
       id: 3,
       title: "New Car Loan",
-      image: NewCar,
+      image: PersonalCar,
       description: "Drive home your dream car with competitive interest rates",
       link: "/loans/new-car",
       bgColor: "bg-blue-100",
@@ -60,7 +60,7 @@ const LoanCategories = () => {
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
               <div className="p-6 flex flex-col items-center bg-white text-center h-full">
-                <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-50 group-hover:border-blue-200 transition-colors">
+                <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-200 group-hover:border-blue-400 transition-colors">
                   <img
                     src={loan.image || "/placeholder.svg"}
                     alt={loan.title}
