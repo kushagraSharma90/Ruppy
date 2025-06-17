@@ -282,145 +282,145 @@ const blogPosts = [
     title: "What is a Personal Loan?",
     excerpt: "An unsecured loan for various personal financial needs",
     content: `
-    <div style="font-size: 1.1rem; line-height: 1.6; overflow: hidden;">
-      <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Understanding Personal Loans</h2>
-      <p style="font-size: 1.15rem;">A personal loan is an unsecured loan (not backed by any collateral) designed to fulfill various individual financial requirements. It provides:</p>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">Easy access to funds</li>
-        <li style="margin-bottom: 0.5rem;">Fixed monthly payments</li>
-        <li style="margin-bottom: 0.5rem;">Flexible repayment tenure</li>
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px; overflow: hidden;">
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Understanding Personal Loans</h2>
+      <p style="margin-bottom: 20px;">A personal loan is an unsecured loan (not backed by any collateral) designed to fulfill various individual financial requirements. It provides:</p>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">Easy access to funds</li>
+        <li style="margin-bottom: 8px;">Fixed monthly payments</li>
+        <li style="margin-bottom: 8px;">Flexible repayment tenure</li>
       </ul>
-      <p style="font-size: 1.15rem;">This makes it particularly suitable for working professionals who need quick financing without pledging assets.</p>
+      <p style="margin-bottom: 20px;">This makes it particularly suitable for working professionals who need quick financing without pledging assets.</p>
       
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">When to Use a Personal Loan</h2>
-      <p style="font-size: 1.15rem;">Personal loans can be employed for various legitimate personal purposes including:</p>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Medical emergencies:</strong> Cover unexpected healthcare expenses</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Wedding costs:</strong> Finance your dream wedding</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Travel and holidays:</strong> Fund your vacation plans</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Home renovation:</strong> Upgrade or repair your living space</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Debt consolidation:</strong> Combine multiple debts into one manageable payment</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Electronics/gadgets:</strong> Purchase the latest devices</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #e74c3c;">Education/skill enhancement:</strong> Invest in your professional development</li>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">When to Use a Personal Loan</h2>
+      <p style="margin-bottom: 20px;">Personal loans can be employed for various legitimate personal purposes including:</p>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Medical emergencies:</strong> Cover unexpected healthcare expenses</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Wedding costs:</strong> Finance your dream wedding</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Travel and holidays:</strong> Fund your vacation plans</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Home renovation:</strong> Upgrade or repair your living space</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Debt consolidation:</strong> Combine multiple debts into one manageable payment</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Electronics/gadgets:</strong> Purchase the latest devices</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #e74c3c;">Education/skill enhancement:</strong> Invest in your professional development</li>
       </ul>
       <img
       src="${img8}"
       alt="RupeeDot Logo"
       style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Eligibility Criteria</h2>
-      <p style="font-size: 1.15rem;">To qualify for a personal loan, applicants typically need to meet these requirements:</p>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Age:</strong> 21 to 60 years</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Income:</strong> Minimum ₹15,000 monthly salary (varies by city and lender)</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Employment:</strong> At least 6-12 months with current employer</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Credit Score:</strong> 700 or above (ideal range)</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Employment Type:</strong> Full-time salaried with registered company</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #3498db;">Residency:</strong> Must be an Indian resident</li>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Eligibility Criteria</h2>
+      <p style="margin-bottom: 20px;">To qualify for a personal loan, applicants typically need to meet these requirements:</p>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Age:</strong> 21 to 60 years</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Income:</strong> Minimum ₹15,000 monthly salary (varies by city and lender)</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Employment:</strong> At least 6-12 months with current employer</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Credit Score:</strong> 700 or above (ideal range)</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Employment Type:</strong> Full-time salaried with registered company</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #3498db;">Residency:</strong> Must be an Indian resident</li>
       </ul>
       
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Types of Personal Loans</h2>
-      <p style="font-size: 1.15rem;">Personal loans are often categorized by their intended use:</p>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Types of Personal Loans</h2>
+      <p style="margin-bottom: 20px;">Personal loans are often categorized by their intended use:</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Medical Loan</h3>
-          <p style="font-size: 1.05rem;">For healthcare expenses and emergency treatments</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Medical Loan</h3>
+          <p style="font-size: 18px;">For healthcare expenses and emergency treatments</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Wedding Loan</h3>
-          <p style="font-size: 1.05rem;">To cover marriage ceremony costs</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Wedding Loan</h3>
+          <p style="font-size: 18px;">To cover marriage ceremony costs</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Travel Loan</h3>
-          <p style="font-size: 1.05rem;">For vacation funding</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Travel Loan</h3>
+          <p style="font-size: 18px;">For vacation funding</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Home Improvement Loan</h3>
-          <p style="font-size: 1.05rem;">For renovations and repairs</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Home Improvement Loan</h3>
+          <p style="font-size: 18px;">For renovations and repairs</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Education Loan (Short-term)</h3>
-          <p style="font-size: 1.05rem;">For skill development courses</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Education Loan (Short-term)</h3>
+          <p style="font-size: 18px;">For skill development courses</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Gadget/Appliance Loan</h3>
-          <p style="font-size: 1.05rem;">For purchasing electronics</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Gadget/Appliance Loan</h3>
+          <p style="font-size: 18px;">For purchasing electronics</p>
         </div>
         <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 0.5rem;">Debt Consolidation Loan</h3>
-          <p style="font-size: 1.05rem;">To combine multiple debts</p>
+          <h3 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Debt Consolidation Loan</h3>
+          <p style="font-size: 18px;">To combine multiple debts</p>
         </div>
       </div>
       <img
       src="${img9}"
       alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block, float: right; clear: right;"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
       
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Key Features & Benefits</h2>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">No collateral:</strong> No need for guarantors or asset pledging</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Quick disbursal:</strong> Funds typically available within 24-48 hours</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Loan amount:</strong> ₹10,000 to ₹25 lakh range</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Repayment period:</strong> Flexible 12 to 60 month terms</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Interest rates:</strong> Fixed rates starting from ~10.5% p.a.</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Transparent:</strong> Minimal paperwork with clear charges</li>
-        <li style="margin-bottom: 0.5rem;"><strong style="color: #27ae60;">Pre-approved offers:</strong> Available for qualified applicants</li>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Key Features & Benefits</h2>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">No collateral:</strong> No need for guarantors or asset pledging</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Quick disbursal:</strong> Funds typically available within 24-48 hours</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Loan amount:</strong> ₹10,000 to ₹25 lakh range</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Repayment period:</strong> Flexible 12 to 60 month terms</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Interest rates:</strong> Fixed rates starting from ~10.5% p.a.</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Transparent:</strong> Minimal paperwork with clear charges</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #27ae60;">Pre-approved offers:</strong> Available for qualified applicants</li>
       </ul>
       
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Required Documentation</h2>
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">1. Identity Proof (mandatory)</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">PAN Card (compulsory)</li>
-        <li style="margin-bottom: 0.5rem;">Aadhaar Card (compulsory)</li>
-        <li style="margin-bottom: 0.5rem;">Passport</li>
-        <li style="margin-bottom: 0.5rem;">Voter ID</li>
-        <li style="margin-bottom: 0.5rem;">Driving License</li>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Required Documentation</h2>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">1. Identity Proof (mandatory)</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">PAN Card (compulsory)</li>
+        <li style="margin-bottom: 8px;">Aadhaar Card (compulsory)</li>
+        <li style="margin-bottom: 8px;">Passport</li>
+        <li style="margin-bottom: 8px;">Voter ID</li>
+        <li style="margin-bottom: 8px;">Driving License</li>
       </ul>
       
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">2. Address Proof</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">Aadhaar Card</li>
-        <li style="margin-bottom: 0.5rem;">Passport</li>
-        <li style="margin-bottom: 0.5rem;">Recent utility bills (within 2 months)</li>
-        <li style="margin-bottom: 0.5rem;">Rent agreement (if applicable)</li>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">2. Address Proof</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">Aadhaar Card</li>
+        <li style="margin-bottom: 8px;">Passport</li>
+        <li style="margin-bottom: 8px;">Recent utility bills (within 2 months)</li>
+        <li style="margin-bottom: 8px;">Rent agreement (if applicable)</li>
       </ul>
       
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">3. Income Proof</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">Last 3-6 months salary slips</li>
-        <li style="margin-bottom: 0.5rem;">Last 3-6 months bank statements (salary account)</li>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">3. Income Proof</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">Last 3-6 months salary slips</li>
+        <li style="margin-bottom: 8px;">Last 3-6 months bank statements (salary account)</li>
       </ul>
       
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">4. Employment Proof</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">Employee ID card</li>
-        <li style="margin-bottom: 0.5rem;">Appointment letter (for recent hires)</li>
-        <li style="margin-bottom: 0.5rem;">Form 16/ITR (for larger loan amounts)</li>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">4. Employment Proof</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">Employee ID card</li>
+        <li style="margin-bottom: 8px;">Appointment letter (for recent hires)</li>
+        <li style="margin-bottom: 8px;">Form 16/ITR (for larger loan amounts)</li>
       </ul>
       
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">5. Photographs</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">1-2 recent passport-size photos</li>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">5. Photographs</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">1-2 recent passport-size photos</li>
       </ul>
       
-      <h3 style="font-size: 1.5rem; color: #34495e; margin: 1.5rem 0 0.8rem 0;">6. Application Form</h3>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.5rem;">Completed and signed application</li>
+      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">6. Application Form</h3>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;">Completed and signed application</li>
       </ul>
       <img
       src="${img10}"
       alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block, float: right; clear: right;"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
-      <h2 style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #f1c40f; padding-bottom: 0.5rem;">Tips to Improve Approval Chances</h2>
-      <ul style="font-size: 1.1rem;">
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Maintain good credit:</strong> Keep score above 700</li>
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Avoid multiple applications:</strong> Don't apply with several lenders at once</li>
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Manage debt ratio:</strong> Keep EMIs under 40-50% of net salary</li>
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Provide accurate information:</strong> Submit truthful income and KYC documents</li>
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Check employer benefits:</strong> Utilize company tie-ups if available</li>
-        <li style="margin-bottom: 0.8rem;"><strong style="color: #9b59b6;">Borrow responsibly:</strong> Request amounts aligned with your income</li>
+      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Tips to Improve Approval Chances</h2>
+      <ul style="font-size: 18px;">
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Maintain good credit:</strong> Keep score above 700</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Avoid multiple applications:</strong> Don't apply with several lenders at once</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Manage debt ratio:</strong> Keep EMIs under 40-50% of net salary</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Provide accurate information:</strong> Submit truthful income and KYC documents</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Check employer benefits:</strong> Utilize company tie-ups if available</li>
+        <li style="margin-bottom: 8px;"><strong style="color: #9b59b6;">Borrow responsibly:</strong> Request amounts aligned with your income</li>
       </ul>
     </div>
     `,
@@ -464,6 +464,10 @@ const blogPosts = [
         <p style="margin-bottom: 20px;">RupeeDot fills this vital gap by providing a real-time, tech-savvy loan approval environment. With smart automation, pre-approved eligibility checks, and soft bureau integrations, dealers can now offer instant credit decisions directly from their showroom floor. RupeeDot converts what was previously a time-consuming bottleneck into a hassle-free, swift, and customer-centric process—enabling dealers to close more deals quicker.</p>
 
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Challenge 1: Slow Loan Sanctions Causing Sales Loss</h2>
+         <img src="${img11}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
+    />
         <ul style="font-size: 18px;">
           <li style="margin-bottom: 8px;">Excessive waiting time for loan approvals leads to customer attrition</li>
           <li style="margin-bottom: 8px;">Manual, obsolete methods used by most financiers cause disbursal delays</li>
@@ -477,12 +481,13 @@ const blogPosts = [
           <li style="margin-bottom: 8px;"><strong>Dealer-Lender Matching:</strong> Access to multiple financiers reduces sole-lender dependence</li>
           <li><strong>Pre-Approval System:</strong> Instant loan eligibility checks help close sales faster</li>
         </ul>
-       <img src="${img11}"
+      
+
+        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Challenge 2: High Rejection Rates for Non-Traditional Borrowers</h2>
+         <img src="${img12}"
       alt="RupeeDot Logo"
       style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
-
-        <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Challenge 2: High Rejection Rates for Non-Traditional Borrowers</h2>
         <ul style="font-size: 18px;">
           <li style="margin-bottom: 8px;">Customers in smaller cities often lack strong credit history</li>
           <li style="margin-bottom: 8px;">Self-employed buyers, gig workers, and cash-income individuals struggle to get financing</li>
@@ -490,6 +495,7 @@ const blogPosts = [
         </ul>
 
         <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">RupeeDot's Solution:</h3>
+        
         <ul style="font-size: 18px;">
           <li style="margin-bottom: 8px;"><strong>Smart Credit Scoring:</strong> Proprietary scorecard evaluates alternative data points (bank transactions, income patterns)</li>
           <li style="margin-bottom: 8px;"><strong>Expanded Lender Network:</strong> Connection with diverse banks, NBFCs, and fintech lenders</li>
@@ -517,23 +523,21 @@ const blogPosts = [
         </ul>
 
         <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">RupeeDot's Solution:</h3>
+        <img src="${img13}"
+      alt="RupeeDot Logo"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
+    />
         <ul style="font-size: 18px;">
           <li style="margin-bottom: 8px;"><strong>Single Dashboard Platform:</strong> Manage all customer loans from one interface</li>
           <li style="margin-bottom: 8px;"><strong>End-to-End Support:</strong> Real-time updates on loan status and document approvals</li>
           <li><strong>AI-Powered Lender Matching:</strong> Automatically recommends optimal financiers based on eligibility</li>
         </ul>
-       <img src="${img12}"
-      alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
-    />
+      
 
         <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">RupeeDot's Dealership Mission</h2>
         <p style="margin-bottom: 20px; font-style: italic;">To empower auto dealers with fast, reliable, and seamless financing solutions that drive sales, improve cash flow, and maximize loan approvals for all customer segments.</p>
       </div>
-<img src="${img13}"
-      alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
-    />
+
     `,
     heroImage: "https://example.com/used-car-dealers-challenges.jpg",
     // sidebarImages: [
@@ -569,83 +573,82 @@ const blogPosts = [
     excerpt: "Key factors that determine your loan approval in India",
     content: `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px; overflow: hidden;">
-     <h2>A Borrower's Easy Guide</h2>
+     <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">A Borrower's Easy Guide</h2>
      
-     <h2>Introduction</h2>
-     <p class="intro-para">Before you go and apply for a loan, it makes sense to learn what lenders require to decide whether or not you qualify. Knowing these factors will enable you to prepare more effectively and maximize the chances of having your loan sanctioned promptly.</p>
+     <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Introduction</h2>
+     <p style="margin-bottom: 20px;">Before you go and apply for a loan, it makes sense to learn what lenders require to decide whether or not you qualify. Knowing these factors will enable you to prepare more effectively and maximize the chances of having your loan sanctioned promptly.</p>
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">1. Credit Score and Credit History</h2>
-     <p>Your credit history (such as your CIBIL record) reflects how well you've handled credit or loans in the past.</p>
+     <p style="margin-bottom: 20px;">Your credit history (such as your CIBIL record) reflects how well you've handled credit or loans in the past.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Key Points:</h3>
-     <ul>
-       <li>A good score (generally above 750) indicates you're a low-risk borrower</li>
-       <li>Late payments, defaults, or excessive applications for loans may decrease your score</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">A good score (generally above 750) indicates you're a low-risk borrower</li>
+       <li style="margin-bottom: 8px;">Late payments, defaults, or excessive applications for loans may decrease your score</li>
      </ul>
-     <p><strong>Advice:</strong> Pay bills and EMIs regularly to maintain a healthy score</p>
+     <p style="margin-bottom: 20px;"><strong>Advice:</strong> Pay bills and EMIs regularly to maintain a healthy score</p>
      <img src="${img14}"
       alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block, float: right; clear: right;"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">2. Income and Employment Stability</h2>
-     <p>Banks need to be confident that you have sufficient income to repay the loan.</p>
+     <p style="margin-bottom: 20px;">Banks need to be confident that you have sufficient income to repay the loan.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Documentation Requirements:</h3>
-     <ul>
-       <li>Salaried individuals must show salary slips and bank statements</li>
-       <li>Self-employed individuals must give tax returns and business documents</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">Salaried individuals must show salary slips and bank statements</li>
+       <li style="margin-bottom: 8px;">Self-employed individuals must give tax returns and business documents</li>
      </ul>
-     <p>A consistent job or business record assists with establishing trust with lenders.</p>
+     <p style="margin-bottom: 20px;">A consistent job or business record assists with establishing trust with lenders.</p>
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">3. Outstanding Loans and Debt</h2>
-     <p>If you have existing loans or credit card debt, banks will verify that you can manage additional debt.</p>
+     <p style="margin-bottom: 20px;">If you have existing loans or credit card debt, banks will verify that you can manage additional debt.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Debt-to-Income Ratio:</h3>
-     <ul>
-       <li>They compute a ratio of your monthly debts to your income</li>
-       <li>The lower this ratio, the better your chance to get a new loan</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">They compute a ratio of your monthly debts to your income</li>
+       <li style="margin-bottom: 8px;">The lower this ratio, the better your chance to get a new loan</li>
      </ul>
-     <p><strong>Tip:</strong> Try to clear or reduce existing loans before applying.</p>
+     <p style="margin-bottom: 20px;"><strong>Tip:</strong> Try to clear or reduce existing loans before applying.</p>
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">4. Your Age and Loan Duration</h2>
-     <p>Your age affects how long you can repay the loan.</p>
+     <p style="margin-bottom: 20px;">Your age affects how long you can repay the loan.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Age Considerations:</h3>
-     <ul>
-       <li>Most banks lend to people aged 21 to 60</li>
-       <li>Younger borrowers usually get longer repayment periods and lower monthly payments</li>
-       <li>Older applicants might get shorter loan terms</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">Most banks lend to people aged 21 to 60</li>
+       <li style="margin-bottom: 8px;">Younger borrowers usually get longer repayment periods and lower monthly payments</li>
+       <li style="margin-bottom: 8px;">Older applicants might get shorter loan terms</li>
      </ul>
      <img src="${img15}"
       alt="RupeeDot Logo"
-      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block, float: right; clear: right;"
-      classname="bg-[#f5f5ec]"
+      style="width: 100%; max-width: 400px; margin: 0 0 20px 20px; border-radius: 8px; display: block; float: right; clear: right;"
     />
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">5. Loan Amount and Purpose</h2>
-     <p>Banks think about why you require the loan and how much you are requesting.</p>
+     <p style="margin-bottom: 20px;">Banks think about why you require the loan and how much you are requesting.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Loan Types:</h3>
-     <ul>
-       <li>Home loans need collateral (property), so you can borrow more money</li>
-       <li>Personal loans do not need collateral but have lower limits</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">Home loans need collateral (property), so you can borrow more money</li>
+       <li style="margin-bottom: 8px;">Personal loans do not need collateral but have lower limits</li>
      </ul>
-     <p><strong>Important:</strong> Be sincere and specific about why you need the loan.</p>
+     <p style="margin-bottom: 20px;"><strong>Important:</strong> Be sincere and specific about why you need the loan.</p>
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">6. Collateral (Security for the Loan)</h2>
-     <p>For secured loans such as home or automobile loans, the bank will verify the property or asset you're providing.</p>
+     <p style="margin-bottom: 20px;">For secured loans such as home or automobile loans, the bank will verify the property or asset you're providing.</p>
      <h3 style="font-size: 24px; color: #34495e; margin-bottom: 10px;">Collateral Details:</h3>
-     <ul>
-       <li>The worth of your collateral determines the highest loan amount</li>
-       <li>Banks typically lend between 75-90% of the value of the asset</li>
-       <li>This makes the loan more secure for the bank and frequently results in improved interest rates for you</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">The worth of your collateral determines the highest loan amount</li>
+       <li style="margin-bottom: 8px;">Banks typically lend between 75-90% of the value of the asset</li>
+       <li style="margin-bottom: 8px;">This makes the loan more secure for the bank and frequently results in improved interest rates for you</li>
      </ul>
 
      <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">7. Other Key Points</h2>
-     <ul>
-       <li>Address and identity proof are required to confirm your identity</li>
-       <li>A positive record with your bank (such as savings on a regular basis) may assist your application</li>
-       <li>Occasionally, a co-applicant or guarantor can enhance your eligibility for a loan</li>
+     <ul style="font-size: 18px;">
+       <li style="margin-bottom: 8px;">Address and identity proof are required to confirm your identity</li>
+       <li style="margin-bottom: 8px;">A positive record with your bank (such as savings on a regular basis) may assist your application</li>
+       <li style="margin-bottom: 8px;">Occasionally, a co-applicant or guarantor can enhance your eligibility for a loan</li>
      </ul>
      
-     <h2>Conclusion</h2>
-     <p class="intro-para">Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.</p>
+     <h2 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; padding-bottom: 5px;">Conclusion</h2>
+     <p style="margin-bottom: 20px;">Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.</p>
     </div>
     `,
     heroImage: "https://via.placeholder.com/1200x600",
