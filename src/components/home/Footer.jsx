@@ -18,15 +18,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info - Matched to navbar styling */}
           <div className="lg:col-span-2 flex flex-col">
-            <Link to="/" className="flex items-center mb-4">
+            <Link to="/" className="flex items-center "> {/* Added -ml-2 here */}
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-12 w-auto rounded-xl shadow" // Exact match to navbar logo
+                className="h-20 w-auto " // Increased logo size here
               />
             </Link>
-            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed">
-              RupeeDot helps you borrow right today for a better tomorrow.
+            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed -mt-1">
+              We helps you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
             </p>
