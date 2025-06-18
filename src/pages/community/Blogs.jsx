@@ -12,7 +12,7 @@ const blogPosts = [
   {
     id: 1,
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
-    excerpt: "A Fintech Disruptor in Auto Finance",
+    excerpt: "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
     image: blog1,
     category: "Car Loans",
     views: 634,
@@ -25,7 +25,8 @@ const blogPosts = [
   {
     id: 2,
     title: "Market Overview: New vs. Used Car Sales",
-    excerpt: "Discover how the youngest generation is changing the way we think about credit and financial services.",
+    excerpt: "India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and rural India.",
+
     image: blog2,
     category: "Financial Trends",
     views: 404,
@@ -38,7 +39,7 @@ const blogPosts = [
   {
     id: 3,
     title: "What is a Personal Loan?",
-    excerpt: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
+    excerpt: "It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment tenure, making it suitable for working professionals.",
     image: blog3,
     category: "Credit Cards",
     views: 77,
