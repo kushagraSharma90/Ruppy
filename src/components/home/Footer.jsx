@@ -13,16 +13,16 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#10264b] text-white pt-6 pb-3 text-sm rounded-t-3xl">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 sm:px-4" style={{ maxWidth: 1200 }}>
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Company Info - Adjusted to match navbar */}
+          {/* Company Info - Matched to navbar styling */}
           <div className="lg:col-span-2 flex flex-col">
-            <Link to="/" className="inline-block mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-10 w-auto md:h-12" // Matches navbar sizing
+                className="h-12 w-auto rounded-xl shadow" // Exact match to navbar logo
               />
             </Link>
             <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed">
