@@ -46,7 +46,6 @@ const Navbar = () => {
     }
   }
 
-  // Handle mobile link click - opens dropdown if closed, navigates if open
   const handleMobileLinkClick = (path, dropdown, e) => {
     if (mobileDropdown !== dropdown) {
       e.preventDefault()
@@ -63,7 +62,7 @@ const Navbar = () => {
           filter: invert(56%) sepia(75%) saturate(1582%) hue-rotate(346deg) brightness(101%) contrast(96%);
         }
         @media (max-width: 350px) {
-          .logo-img { height: 2rem; }
+          .logo-img { height: 2.5rem; }
         }
         .nav-underline:after {
           content: "";
@@ -105,7 +104,7 @@ const Navbar = () => {
           <img
             src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
             alt="RupeeDot Logo"
-            className="h-8 sm:h-10 md:h-12 w-auto logo-img rounded-xl shadow"
+            className="h-12 sm:h-10 md:h-12 w-auto logo-img rounded-xl shadow"
           />
         </Link>
 
