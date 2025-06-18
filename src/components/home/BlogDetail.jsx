@@ -18,6 +18,11 @@ import img12 from "../../assets/12.png"
 import img13 from "../../assets/13.png"
 import img14 from "../../assets/14.png"
 import img15 from "../../assets/15.png"
+import blog1 from "../../assets/blog1 .jpg"
+import blog2 from "../../assets/blog2.jpg"
+import blog3 from "../../assets/blog3.jpg"
+import blog4 from "../../assets/blog4.jpg"
+import blog5 from "../../assets/blog5.jpg"
 
 // Sample blog data with additional images for all posts
 const blogPosts = [
@@ -73,32 +78,15 @@ const blogPosts = [
         <p style="margin-bottom: 20px;">This method assists in presenting a comprehensive picture of a borrower's financial behavior and stability. The system functions particularly well for individuals who may not have an official credit record. For instance, if you're a courier driver without an official credit track record, you may still be able to receive regular income using digital wallets.</p>
         <p style="margin-bottom: 30px;">Rupeedot's system detects that regular income and recommends lenders who are best suited. It also examines other indicators such as spending patterns and payment behavior in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more equitable, more comprehensive assessment process.</p>
       </div>
-    `,
+    `,  
     // Main hero image
-    heroImage: "https://via.placeholder.com/1200x600",
-    // Right sidebar images
-    // sidebarImages: [
-    //   {
-    //     url: img1,
-    //     caption: "Digital loan processing dashboard",
-    //   },
-    //   {
-    //     url: img2,
-    //     caption: "Customer application interface",
-    //   },
-    //   {
-    //     url: img3,
-    //     caption: "Lender network visualization",
-    //   },
-    // ],
-    // Bottom image
-
+    heroImage: blog1,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "https://via.placeholder.com/80x80",
+    authorImage: "/placeholder.svg?height=80&width=80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -249,31 +237,13 @@ const blogPosts = [
       </p>
     </div>
   </div>`,
-    heroImage: "https://via.placeholder.com/1200x600",
-    // sidebarImages: [
-    //   {
-    //     url: img4,
-    //     caption: "Used car market growth chart",
-    //   },
-    //   {
-    //     url: img5,
-    //     caption: "New vs used car sales comparison",
-    //   },
-    //   {
-    //     url: img6,
-    //     caption: "Market penetration statistics",
-    //   },
-    // ],
-    bottomImage: {
-      url: "https://via.placeholder.com/800x400",
-      caption: "India's automotive market landscape overview",
-    },
+    heroImage: blog2,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "https://via.placeholder.com/80x80",
+    authorImage: "/placeholder.svg?height=80&width=80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -424,31 +394,13 @@ const blogPosts = [
       </ul>
     </div>
     `,
-    heroImage: "https://via.placeholder.com/1200x600",
-    // sidebarImages: [
-    //   {
-    //     url: img8,
-    //     caption: "Personal loan application process",
-    //   },
-    //   {
-    //     url: img9,
-    //     caption: "Documentation requirements",
-    //   },
-    //   {
-    //     url: img10,
-    //     caption: "Loan approval timeline",
-    //   },
-    // ],
-    bottomImage: {
-      url: "https://via.placeholder.com/800x400",
-      caption: "Understanding personal loan terms and conditions",
-    },
+    heroImage: blog3 ,
     category: "Personal Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "https://via.placeholder.com/80x80",
+    authorImage: "/placeholder.svg?height=80&width=80",
     featured: true,
     tags: ["Personal Loan", "Unsecured Loan", "Finance", "Quick Loan"],
   },
@@ -539,31 +491,13 @@ const blogPosts = [
       </div>
 
     `,
-    heroImage: "https://example.com/used-car-dealers-challenges.jpg",
-    // sidebarImages: [
-    //   {
-    //     url: img11,
-    //     caption: "RupeeDot solution dashboard",
-    //   },
-    //   {
-    //     url: img12,
-    //     caption: "Streamlined process flow",
-    //   },
-    //   {
-    //     url: img13,
-    //     caption: "Dealer success stories",
-    //   },
-    // ],
-    bottomImage: {
-      url: "https://example.com/dealer-ecosystem-transformation.jpg",
-      caption: "Complete dealer ecosystem transformation",
-    },
+    heroImage: blog4,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "https://example.com/rupeedot-author.jpg",
+    authorImage: "/placeholder.svg?height=80&width=80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -651,24 +585,13 @@ const blogPosts = [
      <p style="margin-bottom: 20px;">Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.</p>
     </div>
     `,
-    heroImage: "https://via.placeholder.com/1200x600",
-    // sidebarImages: [
-    //   {
-    //     url: img14,
-    //     caption: "Credit score factors",
-    //   },
-    //   {
-    //     url: img15,
-    //     caption: "Income verification process",
-    //   },
-    // ],
-
+    heroImage: blog5,
     category: "Car Loans",
     views: 645,
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPEEDOT",
-    authorImage: "https://via.placeholder.com/80x80",
+    authorImage: "/placeholder.svg?height=80&width=80",
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
@@ -715,7 +638,7 @@ export default function BlogDetail() {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-gray-200">
         <div className="text-center p-8 bg-white rounded-xl shadow-lg max-w-md">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Clock className="h-8 w-8 text-blue-600" />
@@ -732,24 +655,17 @@ export default function BlogDetail() {
 
   return (
     <div className="bg-[#f5f5ec] min-h-screen pb-16">
-      {/* ────────── Hero Section ────────── */}
-      <div className="relative overflow-hidden bg-[#3870A6] text-white">
-        <div className="absolute inset-0 opacity-10" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">{post.title}</h1>
-            <p className="text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              {post.excerpt}
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white to-transparent" />
+      {/* Hero Section with Full-Width Image */}
+      <div className="relative w-full">
+        {/* Hero Image */}
+        <img src={post.heroImage} alt={post.title} className="w-full h-[500px] object-contain" />
+
+        {/* Dark overlay for better text visibility */}
+       
       </div>
 
       {/* ────────── Main Content Section ────────── */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 md:mt-10">
-        {" "}
-        {/* Changed from -mt-10 to positive mt values */}
         <div className="bg-[#f5f5ec] rounded-xl p-8 md:p-16 mb-8">
           {/* Stack on mobile, side‑by‑side on lg+  */}
           <div className="flex flex-col gap-8">
