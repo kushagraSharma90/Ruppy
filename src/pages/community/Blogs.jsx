@@ -50,10 +50,10 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "Understanding Home Loan Interest Rates",
+    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
     excerpt: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
     image: blog4,
-    category: "Home Loans",
+    // category: "Home Loans",
     views: 325,
     date: "MAY21, 2025",
     readTime: "6 Min",
@@ -63,10 +63,10 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "5 Ways to Improve Your Credit Score Fast",
+    title: "What Determines Your Loan Eligibility in India?",
     excerpt: "Practical tips to boost your credit score quickly and improve your financial standing.",
     image: blog5,
-    category: "Credit Score",
+    // category: "Credit Score",
     views: 892,
     date: "MAY 21, 2025",
     readTime: "7 Min",
@@ -352,7 +352,7 @@ const Blogs = () => {
                 className="flex-grow py-3 px-4 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
               <button className="bg-white text-black font-medium py-3 px-6 rounded-md transition-colors">
-                Subscribe
+                Submit
               </button>
             </div>
           </div>
