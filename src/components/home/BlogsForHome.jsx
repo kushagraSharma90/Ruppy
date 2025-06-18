@@ -23,7 +23,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Finance",
+    
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Market Analysis",
+  
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Personal Finance",
+   
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Business",
+   
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Finance",
+  
   },
 ]
 
@@ -90,9 +90,7 @@ function BlogCard({ blog }) {
     >
       <div className="relative h-56 overflow-hidden">
         <div className="absolute top-4 left-4 z-10">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full text-blue-600">
-            {blog.category}
-          </span>
+          
         </div>
         <img
           src={blog.image || "/placeholder.svg"}

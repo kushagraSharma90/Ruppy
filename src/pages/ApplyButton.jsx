@@ -218,7 +218,7 @@ const ApplyPage = () => {
               a: "Yes, your data is securely encrypted and handled according to our privacy policy.",
             },
           ].map((faq, i) => (
-            <div key={i} className="bg-white p-4 rounded-lg shadow">
+            <div key={i} className="bg-white p-8 m-5 rounded-lg shadow">
               <h4 className="font-semibold text-blue-700">{faq.q}</h4>
               <p className="text-gray-600 mt-1">{faq.a}</p>
             </div>

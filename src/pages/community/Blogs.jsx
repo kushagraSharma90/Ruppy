@@ -161,11 +161,7 @@ const Blogs = () => {
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
+                   
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -209,23 +205,7 @@ const Blogs = () => {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-[#f5f5ec]">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Blog Posts Grid */}
       <section className="py-12 bg-[#f5f5ec]">
@@ -236,16 +216,8 @@ const Blogs = () => {
 
           {currentPosts.length === 0 ? (
             <div className="text-center py-12">
-              <h3 className="text-xl text-gray-600">No articles found matching your criteria.</h3>
-              <button
-                onClick={() => {
-                  setSearchTerm("")
-                  setSelectedCategory("All")
-                }}
-                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Clear Filters
-              </button>
+             
+             
             </div>
           ) : (
             <>
@@ -261,11 +233,7 @@ const Blogs = () => {
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
+                     
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex items-center text-sm text-gray-500 mb-3">
