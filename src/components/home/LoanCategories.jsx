@@ -17,7 +17,7 @@ const LoanCategories = () => {
     {
       id: 2,
       title: "Used Car Loan",
-      image: UsedCar,
+      image: AgainstCar,
       description: "Affordable financing options for pre-owned vehicles",
       link: "/loans/used-car",
       bgColor: "bg-blue-100",
@@ -25,7 +25,7 @@ const LoanCategories = () => {
     {
       id: 3,
       title: "New Car Loan",
-      image: PersonalCar,
+      image: UsedCar,
       description: "Drive home your dream car with competitive interest rates",
       link: "/loans/new-car",
       bgColor: "bg-blue-100",
@@ -33,7 +33,7 @@ const LoanCategories = () => {
     {
       id: 4,
       title: "Loan Against Car",
-      image: AgainstCar,
+      image: PersonalCar,
       description: "Leverage your car's value for immediate financial needs",
       link: "/loans/against-car",
       bgColor: "bg-blue-100",
