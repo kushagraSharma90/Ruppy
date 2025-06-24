@@ -13,32 +13,31 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#10264b] text-white pt-6 pb-3 text-sm rounded-t-3xl">
-     <div className="container mx-auto px-2 sm:px-4 md:px-5 lg:px-6 xl:px-6 ml-34">
-
+      <div className="container mx-auto px-2 sm:px-4" style={{ maxWidth: 1200 }}>
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="inline-block">
+          {/* Company Info - Matched to navbar styling */}
+          <div className="lg:col-span-2 flex flex-col">
+            <Link to="/" className="flex items-center "> {/* Added -ml-2 here */}
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-21 w-40"
+                className="h-20 w-auto " // Increased logo size here
               />
             </Link>
-            <p className="text-gray-300 text-lg max-w-md leading-relaxed mt-2">
-              RupeeDot helps you borrow right today for a better tomorrow.
+            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed -mt-1">
+              We helps you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
+          <div className="sm:ml-4">
+            <h4 className="font-semibold text-white text-lg md:text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Quick Links
             </h4>
-            <ul className="space-y-1 text-lg sm:text-xl ml-1">
+            <ul className="space-y-1 ml-4 text-base md:text-lg">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/our-story" },
@@ -60,10 +59,10 @@ const Footer = () => {
 
           {/* Loan Products */}
           <div>
-            <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
+            <h4 className="font-semibold text-white text-lg md:text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Loan Products
             </h4>
-            <ul className="space-y-1 text-lg sm:text-xl ml-1">
+            <ul className="space-y-1 ml-5 text-base md:text-lg">
               {[
                 { name: "Personal Loan", path: "/loans/personal" },
                 { name: "Used Car Loan", path: "/loans/used-car" },
@@ -86,10 +85,10 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 pt-4 border-t border-gray-700">
           <div className="md:col-span-2">
-            <h4 className="font-semibold text-white text-xl mb-3 border-b border-orange-600 inline-block pb-1">
+            <h4 className="font-semibold text-white text-lg md:text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Contact
             </h4>
-            <div className="space-y-3 text-lg text-gray-300">
+            <div className="space-y-3 text-base md:text-lg text-gray-300">
               <div className="flex items-start gap-2">
                 <MapPin className="text-orange-600 mt-1" size={20} />
                 <span>
@@ -99,8 +98,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="text-orange-600" size={20} />
-                <a href="tel:+917028095292" className="hover:text-orange-400">
-                  +91 7028095292
+                <a href="tel:‪+917028095292‬" className="hover:text-orange-400">
+                  ‪+91 7028095292‬
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -118,12 +117,12 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <hr className="border-gray-700 my-4" />
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 text-xs gap-3 text-left">
-          <p className="text-lg">
+        <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 gap-2">
+          <p className="text-base md:text-lg">
             &copy; {new Date().getFullYear()} RupeeDot. All rights reserved by
             Indicorn Financial Services Pvt Ltd
           </p>
-          <div className="flex flex-wrap gap-3 text-lg">
+          <div className="flex flex-wrap gap-3 text-base md:text-lg justify-center">
             <Link to="/PrivacyPolicy" className="hover:text-orange-400">
               Privacy Policy
             </Link>
@@ -134,14 +133,14 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-start mt-6 gap-5">
+        <div className="flex justify-center mt-6 gap-5">
           <a
             href="https://www.facebook.com/profile.php?id=61576376017035&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Facebook
-              size={30}
+              size={24}
               className="text-gray-300 hover:text-blue-600 transition-colors"
             />
           </a>
@@ -151,7 +150,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Instagram
-              size={30}
+              size={24}
               className="text-gray-300 hover:text-pink-500 transition-colors"
             />
           </a>
@@ -161,7 +160,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <FaXTwitter
-              size={30}
+              size={24}
               className="text-gray-300 hover:text-white transition-colors"
             />
           </a>
@@ -171,7 +170,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Linkedin
-              size={30}
+              size={24}
               className="text-gray-300 hover:text-blue-500 transition-colors"
             />
           </a>
@@ -181,7 +180,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Youtube
-              size={30}
+              size={24}
               className="text-gray-300 hover:text-red-500 transition-colors"
             />
           </a>
@@ -191,4 +190,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer;
