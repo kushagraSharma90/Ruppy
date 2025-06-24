@@ -41,18 +41,20 @@ const LoanCategories = () => {
   ];
 
   return (
-    <section className="pt-0 pb-10 bg-[#f5f5ec] overflow-hidden">
+    <section className="pt-10 pb-16 bg-[#f5f5ec] overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        {/* Section Heading */}
+        <div className="text-center mb-12 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Our Loan Products
           </h2>
-          <p className="text-black max-w-2xl mx-auto">
+          <p className="text-black text-base sm:text-lg max-w-2xl mx-auto">
             Explore our range of loan products designed to meet your financial needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 xl:gap-12">
+        {/* Grid Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 xl:gap-12">
           {loanTypes.map((loan) => (
             <Link
               to={loan.link}
@@ -60,17 +62,19 @@ const LoanCategories = () => {
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
               <div className="p-6 flex flex-col items-center bg-white text-center h-full">
-                <div className="w-24 h-24 mb-6 overflow-hidden rounded-full border-4 border-blue-200 group-hover:border-blue-400 transition-colors">
+                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mb-6 overflow-hidden rounded-full border-4 border-blue-200 group-hover:border-blue-400 transition-all duration-300">
                   <img
                     src={loan.image || "/placeholder.svg"}
                     alt={loan.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-3 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3 transition-colors duration-300">
                   {loan.title}
                 </h3>
-                <p className="text-black mb-4">{loan.description}</p>
+                <p className="text-sm sm:text-base text-black mb-3 sm:mb-4 px-2">
+                  {loan.description}
+                </p>
                 <span className="text-black font-medium inline-flex items-center transition-colors duration-300">
                   Learn More
                   <svg
