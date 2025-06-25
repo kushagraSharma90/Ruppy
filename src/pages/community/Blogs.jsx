@@ -12,65 +12,67 @@ const blogPosts = [
   {
     id: 1,
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
-    excerpt: "A Fintech Disruptor in Auto Finance",
+    excerpt: "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
     image: blog1,
     category: "Car Loans",
     views: 634,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
     authorImage: blog1,
     featured: true,
   },
   {
     id: 2,
     title: "Market Overview: New vs. Used Car Sales",
-    excerpt: "Discover how the youngest generation is changing the way we think about credit and financial services.",
+    excerpt: "India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and rural India.",
+
     image: blog2,
     category: "Financial Trends",
     views: 404,
     date: "MAY 21, 2025",
     readTime: "5 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
     authorImage: blog2,
     featured: true,
   },
   {
     id: 3,
     title: "What is a Personal Loan?",
-    excerpt: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
+    excerpt: "It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment tenure, making it suitable for working professionals.",
     image: blog3,
     category: "Credit Cards",
     views: 77,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
     authorImage: blog3,
     featured: false,
   },
   {
     id: 4,
-    title: "Understanding Home Loan Interest Rates",
-    excerpt: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
+    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
+    excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan approvals, which not only delays the sales process but also dissolves customer confidence. Customers today anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business.",
     image: blog4,
-    category: "Home Loans",
+    // category: "Home Loans",
     views: 325,
     date: "MAY21, 2025",
     readTime: "6 Min",
-    author:  "RUPPEDOT",
+    author:  "RUPEEDOT",
     authorImage: blog4,
     featured: false,
   },
   {
     id: 5,
-    title: "5 Ways to Improve Your Credit Score Fast",
-    excerpt: "Practical tips to boost your credit score quickly and improve your financial standing.",
+    title: "What Determines Your Loan Eligibility in India?",
+    excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.",
+ 
     image: blog5,
-    category: "Credit Score",
+    // category: "Credit Score",
     views: 892,
     date: "MAY 21, 2025",
     readTime: "7 Min",
-    author:  "RUPPEDOT",
+    author:  "RUPEEDOT",
     authorImage: blog5,
     featured: false,
   },
@@ -161,11 +163,7 @@ const Blogs = () => {
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
+                   
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -209,23 +207,7 @@ const Blogs = () => {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-[#f5f5ec]">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Blog Posts Grid */}
       <section className="py-12 bg-[#f5f5ec]">
@@ -236,16 +218,8 @@ const Blogs = () => {
 
           {currentPosts.length === 0 ? (
             <div className="text-center py-12">
-              <h3 className="text-xl text-gray-600">No articles found matching your criteria.</h3>
-              <button
-                onClick={() => {
-                  setSearchTerm("")
-                  setSelectedCategory("All")
-                }}
-                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Clear Filters
-              </button>
+             
+             
             </div>
           ) : (
             <>
@@ -261,11 +235,7 @@ const Blogs = () => {
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
+                     
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -384,7 +354,7 @@ const Blogs = () => {
                 className="flex-grow py-3 px-4 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
               <button className="bg-white text-black font-medium py-3 px-6 rounded-md transition-colors">
-                Subscribe
+                Submit
               </button>
             </div>
           </div>
