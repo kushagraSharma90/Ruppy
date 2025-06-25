@@ -5,7 +5,7 @@ import Home1 from "../../assets/Home1.png";
 import Home2 from "../../assets/Home2.png";
 import Home3 from "../../assets/Home3.png";
 import Home4 from "../../assets/Home4.png";
-import lastImage from "../../assets/lastImage.jpeg"; // Assuming you have a last image
+import lastImage from "../../assets/lastImage.png"; // Assuming you have a last image
 
 /* ─── DATA ─────────────────────────────────────────── */
 const heroImages = [ lastImage,Home1, Home2, Home3, Home4 ];

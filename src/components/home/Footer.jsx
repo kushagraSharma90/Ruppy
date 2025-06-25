@@ -89,6 +89,7 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3 text-base md:text-lg text-gray-300">
+            
               <div className="flex items-start gap-2">
                 <MapPin className="text-orange-600 mt-1" size={20} />
                 <span>
