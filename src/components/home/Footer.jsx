@@ -13,9 +13,9 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#10264b] text-white pt-6 pb-3 text-sm rounded-t-3xl">
-      <div className="container mx-auto px-2 sm:px-4" style={{ maxWidth: 1200 }}>
+      <div className="container mx-auto px-1 sm:px-1" style={{ maxWidth: 1200 }}>
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-40" >
           {/* Company Info - Matched to navbar styling */}
           <div className="lg:col-span-2 flex flex-col">
             <Link to="/" className="flex items-center "> {/* Added -ml-3 here */}
