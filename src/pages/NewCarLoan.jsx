@@ -82,7 +82,7 @@ const NewCarLoan = () => {
 
             <Link
               to={loan.link}
-              className="inline-flex items-center bg-[#3870A6] hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -392,7 +392,7 @@ const BecomePartner = () => {
               <button
               onClick={handleSubmit}
                 type="submit"
-                className="w-full bg-[#3870A6] hover:bg-blue-700 text-white py-3 rounded-md font-medium transition-colors duration-300"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Submit Application
               </button>

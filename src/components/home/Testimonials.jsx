@@ -194,20 +194,25 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <button
-            onClick={prevTestimonial}
-            className="absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="h-6 w-6 text-blue-600" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="absolute -right-10 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-6 w-6 text-blue-600" />
-          </button>
+          {!isMobile && (
+            <button
+              onClick={prevTestimonial}
+              className="absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:-translate-x-6 z-10 border border-blue-100"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="h-6 w-6 text-blue-600" />
+            </button>
+          )}
+
+          {!isMobile && (
+            <button
+              onClick={nextTestimonial}
+              className="absolute -right-10 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white p-4 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-300 focus:outline-none md:translate-x-6 z-10 border border-blue-100"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="h-6 w-6 text-blue-600" />
+            </button>
+          )}
 
           <div className="flex justify-center mt-10 space-x-3">
             {Array.from({ length: totalPages }).map((_, index) => (

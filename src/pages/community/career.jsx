@@ -146,7 +146,7 @@ const Career = () => {
                   </div>
 
                   <div className="mt-4 md:mt-0 md:ml-6">
-                    <button className="inline-flex items-center px-6 py-3 bg-[#3870A6] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                    <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
                       Apply Now
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </button>

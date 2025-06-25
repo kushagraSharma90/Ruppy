@@ -45,8 +45,10 @@ export default function BenefitsSection() {
           </h2>
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">
             BENEFITS OF{" "}
-            <span className="text-[#3870A6] bg-white px-2 rounded">RUPEE</span>{" "}
-            <span className="text-[#D47734] bg-white px-2 rounded">DOT</span>
+            <span className="rounded">
+          <span className="text-[#3870A6]">RUPEE</span>
+         <span className="text-[#D47734]">DOT</span>
+        </span>
           </h1>
         </div>
 

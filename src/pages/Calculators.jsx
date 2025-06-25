@@ -579,19 +579,24 @@ const Calculators = () => {
               securing your loan
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+              to="/apply"
+              className=" text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
+              >
               <a
                 href="/apply"
-                className="bg-[#3870A6] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                className="bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Apply Now
               </a>
+              </Link>
               <Link
                 to="/ContactUs"
                 className=" text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 <a
                   href="/contact"
-                  className="bg-[#3870A6]  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                  className="bg-blue-600  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
                 >
                   Talk to an Expert
                 </a>
