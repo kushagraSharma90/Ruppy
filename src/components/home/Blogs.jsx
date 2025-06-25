@@ -52,8 +52,8 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "Understanding Home Loan Interest Rates",
-    excerpt: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
+    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
+    excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan approvals, which not only delays the sales process but also dissolves customer confidence. Customers today anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business.",
     image: blog4,
     category: "Home Loans",
     views: 325,
@@ -65,8 +65,9 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "5 Ways to Improve Your Credit Score Fast",
-    excerpt: "Practical tips to boost your credit score quickly and improve your financial standing.",
+    title: "What Determines Your Loan Eligibility in India?",
+    excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.",
+ 
     image: blog5,
     category: "Credit Score",
     views: 892,
