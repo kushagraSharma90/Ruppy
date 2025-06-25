@@ -23,7 +23,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Finance",
+    
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Market Analysis",
+  
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Personal Finance",
+   
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Business",
+   
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ const blogData = [
     date: "MAY 21, 2025",
     readTime: "4 Min",
     author: "RUPPEDOT",
-    category: "Finance",
+  
   },
 ]
 
