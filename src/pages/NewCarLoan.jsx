@@ -11,16 +11,18 @@ const NewCarLoan = () => {
     image:
       NewCarPage,
     benefits: [
-      "Loans up to ₹50 lakhs",
-      "Interest rates starting from 8.25%",
-      "Flexible tenure options from 12 to 120 months",
-      "Minimal documentation",
-      "Quick approval process",
+      "Loans up to 100% of vehicle value *",
+        "Interest rates starting from 8.25%",
+        "Flexible tenure options from 12 to 120 months",
+        "Quick approval process",
+        "No foreclosure charges after 12 months *",
+        "Minimal documentation",
     ],
     eligibility: [
       "Indian citizen aged 21-65 years",
-      "Minimum income of ₹20,000 per month",
-      "Credit score (600+)",
+        "Salaried individuals with minimum income of ₹25,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
     ],
     link: "/apply",
   };

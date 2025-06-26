@@ -61,7 +61,7 @@ const OurStory = () => {
                   {/* <p className="text-gray-700">Loans Disbursed</p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have a tie-up with multiple established lender Banks and NSFCs.</h3>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have a tie-up with multiple established lender Banks and NBFCs.</h3>
                   {/* <p className="text-gray-700">Banking Partners</p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">

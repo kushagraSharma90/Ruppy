@@ -5,8 +5,6 @@ import UsedCarPage from "../assets/UsedCarPage.png";
 import NewCarPage from "../assets/NewCarPage.png";
 import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
 
-
-
 const Loans = () => {
   const loanTypes = [
     {
@@ -36,7 +34,7 @@ const Loans = () => {
       description: "Affordable financing options for pre-owned vehicles",
       image: UsedCarPage,
       benefits: [
-        "Loans up to 90% of vehicle value",
+        "Loans up to 100% of vehicle value *",
         "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Quick approval process",
@@ -56,9 +54,9 @@ const Loans = () => {
       id: "new-car",
       title: "New Car Loan",
       description: "Drive home your dream car with competitive interest rates",
-      image:NewCarPage,
+      image: NewCarPage,
       benefits: [
-        "Loans up to 100% of vehicle value",
+        "Loans up to 100% of vehicle value *",
         "Interest rates starting from 8.25%",
         "Flexible tenure options from 12 to 120 months",
         "Quick approval process",
@@ -77,9 +75,9 @@ const Loans = () => {
       id: "against-car",
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
-      image:LoanAgainstCarPage,
+      image: LoanAgainstCarPage,
       benefits: [
-        "Loans up to 80% to 200% of vehicle value",
+        "Loans up to 200% of vehicle value *",
         "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Continue using your car during loan period",
@@ -98,9 +96,8 @@ const Loans = () => {
   ]
 
   return (
-    
-      <div>
-       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+    <div>
+      <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -121,8 +118,6 @@ const Loans = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
-      {/* Hero Section */}
-     
 
       {/* Loan Products */}
       <section className="py-16">
@@ -222,7 +217,11 @@ const Loans = () => {
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">Disbursement</h4>
-                          <p className="text-gray-600">Faster disbursal for your car delivery</p>
+                          <p className="text-gray-600">
+                            {loan.id === "new-car" 
+                              ? "Faster disbursal for your car delivery" 
+                              : "Receive funds directly in your bank account"}
+                          </p>
                         </div>
                       </li>
                     </ol>
@@ -285,7 +284,7 @@ const Loans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16   rounded-3xl text-black">
+      <section className="py-16 rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
           <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
