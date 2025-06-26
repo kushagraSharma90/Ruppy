@@ -149,7 +149,7 @@ const EmiCalculator = () => {
                 <input
                   type="range"
                   min={1}
-                  max={7}
+                  max={10}
                   step={1}
                   value={duration}
                   onChange={(e) => setDuration(Number(e.target.value))}

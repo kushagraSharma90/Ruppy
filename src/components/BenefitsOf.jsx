@@ -14,7 +14,7 @@ export default function BenefitsSection() {
       bgColor: "bg-[#D47734]",
     },
     {
-      title: "Higher Approval Chances with Lenders Customer Matching System",
+      title: "Better Loan Approvals with Smart Lender Matching",
       icon: Users,
       bgColor: "bg-[#3870A6]",
     },

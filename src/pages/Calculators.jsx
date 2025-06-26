@@ -212,7 +212,7 @@ const Calculators = () => {
                             type="range"
                             id="loan-term"
                             min="12"
-                            max="84"
+                            max="120"
                             step="1"
                             value={loanTerm}
                             onChange={(e) =>
@@ -223,7 +223,7 @@ const Calculators = () => {
                         </div>
                         <div className="flex justify-between mt-1 text-xs text-gray-500">
                           <span>12 months</span>
-                          <span>84 months</span>
+                          <span>120 months</span>
                         </div>
                       </div>
                     </div>

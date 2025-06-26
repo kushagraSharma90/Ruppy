@@ -56,7 +56,7 @@ export default function AboutUs() {
               </div>
               <h3 className="text-xl text-black font-bold text-center mb-4">Mission</h3>
               <p className="text-sm text-center text-black leading-relaxed">
-                To simplify financing for all. We strive to offer seamless, transparent, and quick loan solutions that empower both individuals and businesses by combining innovation with trust.
+                To simplify financing for all. We strive to offer seamless, transparent and quick loan solutions that empower both individuals and businesses by combining innovation with trust.
               </p>
             </div>
 
