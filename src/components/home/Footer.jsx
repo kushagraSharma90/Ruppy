@@ -26,7 +26,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed ">
-              We helps you borrow right today for a better tomorrow.
+              We help you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
             </p>

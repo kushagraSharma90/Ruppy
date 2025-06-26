@@ -33,7 +33,7 @@ export default function AboutUs() {
               We want to help our customers achieve sustainable financial success by offering fast, fair, and flexible finance solutions, powered by our innovative AI lending approach.
             </p>
             <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed">
-              As one of the fastest growing fintech aggregators, we specialize in providing both secured and unsecured loans. With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs. We provide a hassle-free process, quick disbursal with the lowest EMIs—all paperless and digital—across a wide range of products. Apply online!
+              As one of the fastest growing fintech aggregator, we specialize in providing both secured and unsecured loans. With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs. We provide a hassle-free process, quick disbursal with the lowest EMIs—all paperless and digital—across a wide range of products. Apply online!
             </p>
             <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed">
               Our diverse team is united in their mission of creating simple, fair, and honest financial products that have the customer’s needs at their heart.
