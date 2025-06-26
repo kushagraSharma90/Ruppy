@@ -177,20 +177,23 @@ export default function ContactUs() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                        placeholder="john@gmail.com"
-                      />
-                    </div>
+  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+    Email Address <span className="text-red-500">*</span>
+  </label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    value={formData.email}
+    onChange={handleChange}
+    required
+    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+    placeholder="john@gmail.com"
+  />
+  {formData.email && !formData.email.endsWith("@gmail.com") && (
+    <p className="text-red-500 text-sm mt-1">Please enter a valid Gmail address</p>
+  )}
+</div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

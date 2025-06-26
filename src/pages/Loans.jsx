@@ -65,7 +65,7 @@ const Loans = () => {
       ],
       eligibility: [
         "Indian citizen aged 21-65 years",
-        "Salaried individuals with minimum income of ₹25,000 per month",
+        "Salaried individuals with minimum income of ₹20,000 per month",
         "Self-employed person, earning or non-earning",
         "Credit score (600+)",
       ],
@@ -234,6 +234,7 @@ const Loans = () => {
           </div>
         </div>
       </section>
+
 
       {/* Why Choose Us */}
       <section className="py-16 ">
