@@ -178,7 +178,7 @@ const Calculators = () => {
                             type="range"
                             id="interest-rate"
                             min="5"
-                            max="25"
+                            max="35"
                             step="0.1"
                             value={interestRate}
                             onChange={(e) =>
