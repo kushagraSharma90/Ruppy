@@ -24,9 +24,9 @@ const Loans = () => {
       ],
       eligibility: [
         "Indian citizen aged 21-60 years",
-        "Salaried individuals with minimum income of ₹25,000 per month",
-        "Self-employed professionals with minimum income of ₹50,000 per month",
-        "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
       ],
       link: "/loans/personal",
     },
@@ -40,15 +40,15 @@ const Loans = () => {
         "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Quick approval process",
-        "No foreclosure charges after 12 months",
+        "No foreclosure charges after 12 months *",
         "Minimal documentation",
       ],
       eligibility: [
         "Indian citizen aged 21-65 years",
-        "Salaried individuals with minimum income of ₹30,000 per month",
-        "Self-employed professionals with minimum income of ₹50,000 per month",
-        "Vehicle not older than 10 years at end of loan tenure",
-        "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Vehicle not older than 12 years at end of loan tenure",
+        "Credit score (600+)",
       ],
       link: "/loans/used-car",
     },
@@ -58,18 +58,18 @@ const Loans = () => {
       description: "Drive home your dream car with competitive interest rates",
       image:NewCarPage,
       benefits: [
-        "Loans up to 90% of vehicle value",
-        "Interest rates starting from 9.99%",
-        "Flexible tenure options from 12 to 84 months",
+        "Loans up to 100% of vehicle value",
+        "Interest rates starting from 8.25%",
+        "Flexible tenure options from 12 to 120 months",
         "Quick approval process",
-        "No foreclosure charges after 12 months",
+        "No foreclosure charges after 12 months *",
         "Minimal documentation",
       ],
       eligibility: [
         "Indian citizen aged 21-65 years",
         "Salaried individuals with minimum income of ₹25,000 per month",
-        "Self-employed professionals with minimum income of ₹45,000 per month",
-        "Good credit score (700+)",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
       ],
       link: "/loans/new-car",
     },
@@ -79,8 +79,8 @@ const Loans = () => {
       description: "Leverage your car's value for immediate financial needs",
       image:LoanAgainstCarPage,
       benefits: [
-        "Loans up to 80% of vehicle value",
-        "Interest rates starting from 12.99%",
+        "Loans up to 80% to 200% of vehicle value",
+        "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Continue using your car during loan period",
         "Quick approval process",
@@ -91,7 +91,7 @@ const Loans = () => {
         "Car should not be older than 10 years",
         "Clear title and ownership of the vehicle",
         "Vehicle should be fully insured",
-        "Good credit score (650+)",
+        "Credit score (600+)",
       ],
       link: "/loans/against-car",
     },
@@ -213,7 +213,7 @@ const Loans = () => {
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">Loan Approval</h4>
-                          <p className="text-gray-600">Get your loan approved within 24-48 hours</p>
+                          <p className="text-gray-600">Get your loan approved within 24 hours</p>
                         </div>
                       </li>
                       <li className="flex items-start">
@@ -222,7 +222,7 @@ const Loans = () => {
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">Disbursement</h4>
-                          <p className="text-gray-600">Receive funds directly in your bank account</p>
+                          <p className="text-gray-600">Faster disbursal for your car delivery</p>
                         </div>
                       </li>
                     </ol>
@@ -254,7 +254,7 @@ const Loans = () => {
                 <Clock className="h-7 w-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Processing</h3>
-              <p className="text-gray-600">Get your loan approved within 24-48 hours with our streamlined process</p>
+              <p className="text-gray-600">Get your loan approved within 24 hours with our streamlined process</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">

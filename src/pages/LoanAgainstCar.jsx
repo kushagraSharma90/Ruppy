@@ -13,15 +13,15 @@ const LoanAgainstCar = () => {
       LoanAgainstCarPage,
     benefits: [
       "Loans up to ₹50 lakhs",
-      "Interest rates starting from 9.75%",
-      "Flexible tenure options from 12 to 84 months",
+      "Interest rates starting from 11.99%",
+      "Flexible tenure options from 12 to 120 months",
       "Minimal documentation",
       "Quick approval process",
     ],
     eligibility: [
       "Indian citizen aged 21-65 years",
-      "Minimum income of ₹25,000 per month",
-      "Good credit score (700+)",
+      "Minimum income of ₹20,000 per month",
+      "Credit score (600+)",
     ],
     link: "/apply",
   };
@@ -138,8 +138,8 @@ const LoanAgainstCar = () => {
                       {[
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
-                        "Get your loan approved within 24-48 hours",
-                        "Receive funds directly in your bank account",
+                        "Get your loan approved within 24 hours",
+                        "Faster disbursal for your car delivery",
                       ][i]}
                     </p>
                   </div>

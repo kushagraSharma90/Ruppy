@@ -19,9 +19,9 @@ const PersonalLoan = () => {
     ],
     eligibility: [
       "Indian citizen aged 21-60 years",
-      "Salaried individuals with minimum income of ₹25,000 per month",
-      "Self-employed professionals with minimum income of ₹50,000 per month",
-      "Good credit score (700+)",
+      "Salaried individuals with minimum income of ₹20,000 per month",
+      "Self-employed person, earning or non-earning",
+      "Credit score (600+)",
     ],
     link: "/apply",
   };
@@ -130,8 +130,8 @@ const PersonalLoan = () => {
                       {[
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
-                        "Get your loan approved within 24-48 hours",
-                        "Receive funds directly in your bank account",
+                        "Get your loan approved within 24 hours",
+                        "Faster disbursal for your car delivery",
                       ][i]}
                     </p>
                   </div>
