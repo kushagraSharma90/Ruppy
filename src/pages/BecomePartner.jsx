@@ -1,5 +1,7 @@
 import { ArrowRight, Building, CheckCircle, Users, Briefcase, Award } from "lucide-react"
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+
 
 
 const BecomePartner = () => {
