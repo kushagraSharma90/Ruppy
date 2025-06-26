@@ -22,10 +22,10 @@ const Footer = () => {
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-20 w-auto " // Increased logo size here
+                className="h-20 w-auto mb-0" // Increased logo size here
               />
             </Link>
-            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed -mt-0">
+            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed ">
               We helps you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
@@ -33,11 +33,11 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="sm:ml-4">
+          <div className="ml-0 sm:ml-2 text-left">
             <h4 className="font-semibold text-white text-lg md:text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Quick Links
             </h4>
-            <ul className="space-y-1 ml-4 text-base md:text-lg">
+            <ul className="space-y-1 ml-5 text-base md:text-lg">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/our-story" },
