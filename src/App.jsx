@@ -28,6 +28,11 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import BlogsForHome from "./components/home/BlogsForHome";
 import TermsAndConditions from "./components/TermsAndCondition";
 
+
+// In your index.js or App.js
+
+
+
 function App() {
   return (
     <Router>
@@ -36,8 +41,11 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
+            
             <Route path="/" element={<Home />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+<Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/our-story/about" element={<AboutUs />} />

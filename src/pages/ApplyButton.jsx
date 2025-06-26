@@ -214,7 +214,7 @@ const ApplyPage = () => {
             {
               icon: <CheckCircle className="h-8 w-8 text-green-600 mx-auto" />,
               title: "Fast Approval",
-              desc: "Get your loan approved within 24-48 hours.",
+              desc: "Get your loan approved within 24 hours.",
             },
             {
               icon: <Info className="h-8 w-8 text-blue-600 mx-auto" />,

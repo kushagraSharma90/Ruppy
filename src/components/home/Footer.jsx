@@ -121,7 +121,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 gap-2">
           <p className="text-base md:text-lg">
             &copy; {new Date().getFullYear()} RupeeDot. All rights reserved by
-            Indicorn Financial Services Pvt Ltd
+            Indicorn Financial Services Pvt. Ltd.
           </p>
           <div className="flex flex-wrap gap-3 text-base md:text-lg justify-center">
             <Link to="/PrivacyPolicy" className="hover:text-orange-400">
