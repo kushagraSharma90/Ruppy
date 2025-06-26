@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="text-orange-600 mt-1" size={20} />
                 <span>
-                  G-1010, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra
+                  E-4020, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra
                   411014
                 </span>
               </div>
