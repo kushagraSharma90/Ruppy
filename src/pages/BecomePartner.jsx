@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 
-
 const BecomePartner = () => {
   const benefits = [
     {
@@ -378,26 +377,26 @@ const BecomePartner = () => {
             </div>
 
             <div className="flex items-start">
-              <input
-                type="checkbox"
-                id="terms"
-                className="mt-1 mr-2"
-                required
-                onChange={handleChange}
-                checked={formData.agreedToTerms}
-              />
-              <label htmlFor="terms" className="text-gray-600 text-sm">
-                I agree to the{" "}
-                <a href="/TermsAndCondition" className="text-blue-600 hover:underline">
-                  Terms and Conditions
-                </a>{" "}
-                and consent to the processing of my personal data as described in the{" "}
-                <a href="/PrivacyPolicy" className="text-blue-600 hover:underline">
-                  Privacy Policy
-                </a>
-                .
-              </label>
-            </div>
+  <input
+    type="checkbox"
+    id="terms"
+    className="mt-1 mr-2"
+    required
+    onChange={handleChange}
+    checked={formData.agreedToTerms}
+  />
+  <label htmlFor="terms" className="text-gray-600 text-sm">
+    I agree to the{" "}
+    <Link to="/TermsAndCondition" className="text-blue-600 hover:underline">
+      Terms and Conditions
+    </Link>{" "}
+    and consent to the processing of my personal data as described in the{" "}
+    <Link to="/PrivacyPolicy" className="text-blue-600 hover:underline">
+      Privacy Policy
+    </Link>
+    .
+  </label>
+</div>
 
               <button
               onClick={handleSubmit}
