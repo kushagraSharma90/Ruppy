@@ -142,7 +142,7 @@ const LoanAgainstCar = () => {
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
                         "Get your loan approved within 24 hours",
-                        "Receive funds directly in your bank account",
+                        "Faster disbursal in your bank account",
                       ][i]}
                     </p>
                   </div>

@@ -212,18 +212,20 @@ const Loans = () => {
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
-                          4
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-800">Disbursement</h4>
-                          <p className="text-gray-600">
-                            {loan.id === "new-car" 
-                              ? "Faster disbursal for your car delivery" 
-                              : "Receive funds directly in your bank account"}
-                          </p>
-                        </div>
-                      </li>
+  <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
+    4
+  </div>
+  <div>
+    <h4 className="font-medium text-gray-800">Disbursement</h4>
+    <p className="text-gray-600">
+      {loan.id === "against-car" 
+        ? "Faster disbursal in your bank account" 
+        : loan.id === "new-car" 
+          ? "Faster disbursal for your car delivery" 
+          : "Receive funds directly in your bank account"}
+    </p>
+  </div>
+</li>
                     </ol>
                   </div>
                 </div>
