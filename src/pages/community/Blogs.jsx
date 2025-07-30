@@ -11,6 +11,7 @@ import blog5 from "../../assets/blog5.jpg"
 const blogPosts = [
   {
     id: 1,
+     slug: "auto-finance-and-solving-dealer-challenges",
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
     excerpt: "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
     image: blog1,
@@ -24,6 +25,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "market-overview-new-vs-used-car-sales",
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and rural India.",
 
@@ -38,6 +40,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "what-is-a-personal-loan",
     title: "What is a Personal Loan?",
     excerpt: "It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment tenure, making it suitable for working professionals.",
     image: blog3,
@@ -51,6 +54,7 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "challenges-faced-by-used-car-dealers",
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
     excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan approvals, which not only delays the sales process but also dissolves customer confidence. Customers today anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business.",
     image: blog4,
@@ -64,6 +68,7 @@ const blogPosts = [
   },
   {
     id: 5,
+    slug: "loan-eligibility-in-india",
     title: "What Determines Your Loan Eligibility in India?",
     excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.",
  
@@ -206,7 +211,40 @@ const Blogs = () => {
         </section>
       )}
 
-      {/* Category Filter */}
+      {/* Search and Category Filter */}
+      <section className="bg-[#f5f5ec] py-6">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-4">
+          <div className="flex items-center w-full md:w-1/2">
+            <div className="relative w-full">
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                <Search className="h-5 w-5" />
+              </span>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search articles..."
+                className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2 w-full md:w-1/2 justify-end">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedCategory === category
+                    ? "bg-blue-600 text-white"
+                    : "bg-white text-gray-700 hover:bg-blue-50"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
      
 
       {/* Blog Posts Grid */}

@@ -7,13 +7,13 @@ import blog3 from "../../assets/blog3.jpg";
 import blog4 from "../../assets/blog4.jpg";
 import blog5 from "../../assets/blog5.jpg";
 
-
-// Sample blog data
+// Sample blog data with slugs
 const blogPosts = [
   {
     id: 1,
-    title: " Disrupting Auto Finance & Solving Dealer Challenges  ",
-    excerpt: " A Fintech Disruptor in Auto Finance",
+    slug: "auto-finance-and-solving-dealer-challenges",
+    title: "Disrupting Auto Finance & Solving Dealer Challenges",
+    excerpt: "A Fintech Disruptor in Auto Finance",
     image: blog1,
     category: "Car Loans",
     views: 634,
@@ -25,6 +25,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "market-overview-new-vs-used-car-sales",
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "Discover how the youngest generation is changing the way we think about credit and financial services.",
     image: blog2,
@@ -38,9 +39,9 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "what-is-a-personal-loan",
     title: "What is a Personal Loan?",
-    excerpt:
-      "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
+    excerpt: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
     image: blog3,
     category: "Credit Cards",
     views: 77,
@@ -52,28 +53,29 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "challenges-faced-by-used-car-dealers",
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
-    excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan approvals, which not only delays the sales process but also dissolves customer confidence. Customers today anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business.",
+    excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures.",
     image: blog4,
     category: "Home Loans",
     views: 325,
     date: "MAY21, 2025",
     readTime: "6 Min",
-    author:  "RUPPEDOT",
+    author: "RUPPEDOT",
     authorImage: blog4,
     featured: false,
   },
   {
     id: 5,
+    slug: "loan-eligibility-in-india",
     title: "What Determines Your Loan Eligibility in India?",
-    excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.",
- 
+    excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently.",
     image: blog5,
     category: "Credit Score",
     views: 892,
     date: "MAY 21, 2025",
     readTime: "7 Min",
-    author:  "RUPPEDOT",
+    author: "RUPPEDOT",
     authorImage: blog5,
     featured: false,
   },
@@ -83,9 +85,10 @@ const blogPosts = [
 const categories = [
   "All",
   "Car Loans",
-  "Personal Loans",
-  "Home Loans",
+  "Financial Trends",
   "Credit Cards",
+  "Home Loans",
+  "Credit Score"
 ]
 
 const Blogs = () => {
@@ -157,7 +160,7 @@ const Blogs = () => {
                 >
                   <div className="relative h-64">
                     <img
-                      src={post.image || "/placeholder.svg"}
+                      src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
@@ -183,18 +186,20 @@ const Blogs = () => {
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
-                      <Link to={`/blogs/${post.id}`}>{post.title}</Link>
+                      <Link to={`/blogs/${post.slug}`}>{post.title}</Link>
                     </h3>
                     <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center">
-                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 overflow-hidden">
-                          <span className="text-xs font-semibold">TL</span>
-                        </div>
+                        <img 
+                          src={post.authorImage} 
+                          alt={post.author}
+                          className="w-8 h-8 rounded-full object-cover mr-2"
+                        />
                         <span className="text-sm text-gray-600">{post.author}</span>
                       </div>
                       <Link
-                        to={`/blogs/${post.id}`}
+                        to={`/blogs/${post.slug}`}
                         className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
                       >
                         Read More <ArrowRight className="h-4 w-4 ml-1" />
@@ -217,7 +222,9 @@ const Blogs = () => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
+                  selectedCategory === category 
+                    ? "bg-blue-600 text-white" 
+                    : "bg-white text-gray-700 hover:bg-gray-100"
                 }`}
               >
                 {category}
@@ -257,7 +264,7 @@ const Blogs = () => {
                   >
                     <div className="relative h-48">
                       <img
-                        src={post.image || "/placeholder.svg"}
+                        src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
@@ -279,14 +286,16 @@ const Blogs = () => {
                         </span>
                       </div>
                       <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
-                        <Link to={`/blogs/${post.id}`}>{post.title}</Link>
+                        <Link to={`/blogs/${post.slug}`}>{post.title}</Link>
                       </h3>
                       <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
                       <div className="flex items-center justify-between mt-auto">
                         <div className="flex items-center">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 overflow-hidden">
-                            <span className="text-xs font-semibold">TL</span>
-                          </div>
+                          <img 
+                            src={post.authorImage} 
+                            alt={post.author}
+                            className="w-8 h-8 rounded-full object-cover mr-2"
+                          />
                           <span className="text-sm text-gray-600">{post.author}</span>
                         </div>
                         <span className="text-sm text-gray-500 flex items-center">
@@ -317,7 +326,6 @@ const Blogs = () => {
 
                     {Array.from({ length: totalPages }).map((_, index) => {
                       const pageNumber = index + 1
-                      // Show limited page numbers with ellipsis
                       if (
                         pageNumber === 1 ||
                         pageNumber === totalPages ||
@@ -369,11 +377,11 @@ const Blogs = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-blue-600 text-black ">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-            <p className="text-black mb-8">
+            <p className="text-blue-100 mb-8">
               Subscribe to our newsletter and receive the latest articles, tips, and financial advice directly in your
               inbox.
             </p>
@@ -381,9 +389,9 @@ const Blogs = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow py-3 px-4 rounded-md bg-blue-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-grow py-3 px-4 rounded-md bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-              <button className="bg-blue-600  font-medium py-3 px-6 rounded-md">
+              <button className="bg-white text-blue-600 font-medium py-3 px-6 rounded-md hover:bg-blue-50 transition-colors">
                 Subscribe
               </button>
             </div>

@@ -15,6 +15,7 @@ import blog5 from "../../assets/blog5.jpg"
 const blogData = [
   {
     id: 1,
+    slug: "auto-finance-and-solving-dealer-challenges",
     title: "Disrupting Auto Finance & Solving Dealer Challenges?",
     description:
       "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
@@ -27,6 +28,7 @@ const blogData = [
   },
   {
     id: 2,
+    slug: "market-overview-new-vs-used-car-sales",  
     title: "Market Overview: New vs. Used Car Sales",
     description: `India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next
  decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,
@@ -41,6 +43,7 @@ const blogData = [
   },
   {
     id: 3,
+    slug: "what-is-a-personal-loan",  
     title: "What is a Personal Loan??",
     description: `It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without
        having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment
@@ -54,6 +57,7 @@ const blogData = [
   },
   {
     id: 4,
+    slug: "challenges-faced-by-used-car-dealers", 
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
     description: `Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often
  hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan
@@ -68,6 +72,7 @@ const blogData = [
   },
   {
     id: 5,
+    slug: "loan-eligibility-in-india",
     title: "What Determines Your Loan Eligibility in India?",
     description: `Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
  over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.`,
@@ -120,7 +125,7 @@ function BlogCard({ blog }) {
             <span className="font-medium">{blog.author}</span>
           </div>
 
-          <Link to={`/blogs/${blog.id}`} className="group">
+          <Link to={`/blogs/${blog.slug}`} className="group">
             <button className="flex items-center text-blue-600 font-medium text-sm group-hover:underline transition-all duration-200">
               Read More
               <ArrowRight className="h-4 w-4 ml-1 transform transition-transform group-hover:translate-x-1" />

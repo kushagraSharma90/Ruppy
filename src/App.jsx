@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "./components/home/Navbar";
 import Footer from "./components/home/Footer";
 import Home from "./pages/Home";
@@ -15,7 +16,7 @@ import LoanAgainstCar from "./pages/LoanAgainstCar";
 import AboutUs from "./pages/AboutUs";
 import OurMission from "./pages/OurMission";
 import ApplyButton from "./pages/ApplyButton";
-import ScrollToTop from "./components/ScrollToTop"; // ✅ Add this import
+import ScrollToTop from "./components/ScrollToTop";
 import BlogDetail from "./components/home/BlogDetail";
 import ContactUs from "./pages/ContactUs";
 import Community from "./pages/Community";
@@ -28,8 +29,23 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import BlogsForHome from "./components/home/BlogsForHome";
 import TermsAndConditions from "./components/TermsAndCondition";
 
-
 function App() {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch('/api/blogs');
+        const data = await response.json();
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -37,39 +53,34 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
+            
             <Route path="/" element={<Home />} />
-            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-            <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/our-story/about" element={<AboutUs />} />
             <Route path="/our-story/mission" element={<OurMission />} />
-            <Route path="/apply" element={<ApplyButton />} />
-            <Route path="/ContactUS" element={<ContactUs />} />
             <Route path="/loans" element={<Loans />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/community/blog" element={<Blogs/>} />
-            <Route path="/TermsAndCondition" element={<TermsAndConditions/>}/>
-            <Route path="/BlogsForHome" element={<BlogsForHome/>}/>
-            <Route path="/community/career" element={<Career />} />
-            <Route
-              path="/community/our-core-values"
-              element={<OurCoreValues />}
-            />
-            <Route path="/community/work-culture" element={<WorkCulture />} />
-            <Route path="/community/faq" element={<FAQ />} />
             <Route path="/loans/personal" element={<PersonalLoan />} />
             <Route path="/loans/used-car" element={<UsedCarLoan />} />
             <Route path="/loans/new-car" element={<NewCarLoan />} />
             <Route path="/loans/against-car" element={<LoanAgainstCar />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/community/career" element={<Career />} />
+            <Route path="/community/our-core-values" element={<OurCoreValues />} />
+            <Route path="/community/work-culture" element={<WorkCulture />} />
+            <Route path="/community/faq" element={<FAQ />} />
+            <Route path="/blogs/:slug" element={<BlogDetail blogPosts={blogPosts} />} />
+            <Route path="/community/blogs" element={<Blogs blogPosts={blogPosts} />} />
+            <Route path="/apply" element={<ApplyButton />} />
             <Route path="/calculators" element={<Calculators />} />
             <Route path="/become-partner" element={<BecomePartner />} />
-            <Route path="/community/blogs" element={<Blogs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            {/* Removed 404 route temporarily */}
           </Routes>
         </main>
         <Footer />
         <ContactButtons />
-        <ScrollToTop />{" "}
-        {/* ✅ Add this at the bottom so it's on top of everything */}
       </div>
     </Router>
   );

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { useMemo } from "react"
 import { ArrowLeft, Clock } from "lucide-react"
 import img1 from "../../assets/1.png"
 import img2 from "../../assets/2.png"
@@ -28,6 +27,7 @@ import blog5 from "../../assets/blog5.jpg"
 const blogPosts = [
   {
     id: 1,
+    slug: "auto-finance-and-solving-dealer-Challenges",
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
@@ -92,6 +92,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "New vs. Used Car",
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px; overflow: hidden;">
@@ -249,6 +250,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "Personal Loans",
     title: "What is a Personal Loan?",
     excerpt: "An unsecured loan for various personal financial needs",
     content: `
@@ -406,6 +408,7 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "Used Car Dealers",
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
@@ -503,6 +506,7 @@ const blogPosts = [
   },
   {
     id: 5,
+    slug: "Loan Eligibility",
     title: "What Determines Your Loan Eligibility in India?",
     excerpt: "Key factors that determine your loan approval in India",
     content: `
@@ -598,15 +602,13 @@ const blogPosts = [
 ]
 
 // Related posts function
-const getRelatedPosts = (currentPostId, category) => {
-  return blogPosts.filter((post) => post.id !== currentPostId && post.category === category).slice(0, 3)
-}
+// (Removed unused getRelatedPosts to fix unused variable error)
 
 export default function BlogDetail() {
   const { id } = useParams()
   const [post, setPost] = useState(null)
-  const [relatedPosts, setRelatedPosts] = useState([])
-  const [copied, setCopied] = useState(false)
+  // const [relatedPosts, setRelatedPosts] = useState([])
+  // const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     const postId = Number.parseInt(id)
@@ -614,27 +616,22 @@ export default function BlogDetail() {
 
     if (foundPost) {
       setPost(foundPost)
-      setRelatedPosts(getRelatedPosts(postId, foundPost.category))
+      // setRelatedPosts(getRelatedPosts(postId, foundPost.category))
       window.scrollTo(0, 0)
     }
   }, [id])
 
-  const splitHTMLAfterFirstParagraph = (html) => {
-    const idx = html.indexOf("</p>")
-    if (idx === -1) return [html, ""]
-    return [html.slice(0, idx + 4), html.slice(idx + 4)]
-  }
 
   // ⬇ Break the content only once – memoised for perf
-  const [firstPart, remainingPart] = useMemo(() => splitHTMLAfterFirstParagraph(post?.content || ""), [post?.content])
+  // const [firstPart, remainingPart] = useMemo(() => splitHTMLAfterFirstParagraph(post?.content || ""), [post?.content])
 
-  const copyToClipboard = () => {
-    const url = window.location.href
-    navigator.clipboard.writeText(url).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
+  // const copyToClipboard = () => {
+  //   const url = window.location.href
+  //   navigator.clipboard.writeText(url).then(() => {
+  //     setCopied(true)
+  //     setTimeout(() => setCopied(false), 2000)
+  //   })
+  // }
 
   if (!post) {
     return (
@@ -670,7 +667,7 @@ export default function BlogDetail() {
           {/* Stack on mobile, side‑by‑side on lg+  */}
           <div className="flex flex-col gap-8">
             {/* Article */}
-            <article className="w-full max-w-6xl mx-auto prose prose-xl max-w-none">
+            <article className="w-full max-w-6xl mx-auto prose prose-xl">
               {/* Your HTML content from CMS */}
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </article>
