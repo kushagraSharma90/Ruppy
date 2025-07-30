@@ -1,33 +1,33 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
-import { useMemo } from "react"
-import { ArrowLeft, Clock } from "lucide-react"
-import img1 from "../../assets/1.png"
-import img2 from "../../assets/2.png"
-import img3 from "../../assets/3.png"
-import img4 from "../../assets/4.png"
-import img5 from "../../assets/5.png"
-import img6 from "../../assets/6.png"
-import img8 from "../../assets/8.png"
-import img9 from "../../assets/9.png"
-import img10 from "../../assets/10.png"
-import img11 from "../../assets/11.png"
-import img12 from "../../assets/12.png"
-import img13 from "../../assets/13.png"
-import img14 from "../../assets/14.png"
-import img15 from "../../assets/15.png"
-import blog1 from "../../assets/blog1 .jpg"
-import blog2 from "../../assets/blog2.jpg"
-import blog3 from "../../assets/blog3.jpg"
-import blog4 from "../../assets/blog4.jpg"
-import blog5 from "../../assets/blog5.jpg"
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { useMemo } from "react";
+import { ArrowLeft, Clock } from "lucide-react";
+import img1 from "../../assets/1.png";
+import img2 from "../../assets/2.png";
+import img3 from "../../assets/3.png";
+import img4 from "../../assets/4.png";
+import img5 from "../../assets/5.png";
+import img6 from "../../assets/6.png";
+import img8 from "../../assets/8.png";
+import img9 from "../../assets/9.png";
+import img10 from "../../assets/10.png";
+import img11 from "../../assets/11.png";
+import img12 from "../../assets/12.png";
+import img13 from "../../assets/13.png";
+import img14 from "../../assets/14.png";
+import img15 from "../../assets/15.png";
+import blog1 from "../../assets/blog1 .jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import blog4 from "../../assets/blog4.jpg";
+import blog5 from "../../assets/blog5.jpg";
 
 // Sample blog data with additional images for all posts
 const blogPosts = [
   {
-    id: 1,
+    id: "auto-finance-and-solving-dealer-Challenges",
     title: "Disrupting Auto Finance & Solving Dealer Challenges",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
@@ -78,7 +78,7 @@ const blogPosts = [
         <p style="margin-bottom: 20px;">This method assists in presenting a comprehensive picture of a borrower's financial behavior and stability. The system functions particularly well for individuals who may not have an official credit record. For instance, if you're a courier driver without an official credit track record, you may still be able to receive regular income using digital wallets.</p>
         <p style="margin-bottom: 30px;">Rupeedot's system detects that regular income and recommends lenders who are best suited. It also examines other indicators such as spending patterns and payment behavior in order to judge risk better. This clever utilization of data is good for both lenders and borrowers as it provides a more equitable, more comprehensive assessment process.</p>
       </div>
-    `,  
+    `,
     // Main hero image
     heroImage: blog1,
     category: "Car Loans",
@@ -91,7 +91,7 @@ const blogPosts = [
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
   {
-    id: 2,
+    id: "new-vs-used-car",
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px; overflow: hidden;">
@@ -248,7 +248,7 @@ const blogPosts = [
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
   {
-    id: 3,
+    id: "personal-loan",
     title: "What is a Personal Loan?",
     excerpt: "An unsecured loan for various personal financial needs",
     content: `
@@ -394,7 +394,7 @@ const blogPosts = [
       </ul>
     </div>
     `,
-    heroImage: blog3 ,
+    heroImage: blog3,
     category: "Personal Loans",
     views: 645,
     date: "MAY 21, 2025",
@@ -405,8 +405,9 @@ const blogPosts = [
     tags: ["Personal Loan", "Unsecured Loan", "Finance", "Quick Loan"],
   },
   {
-    id: 4,
-    title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them",
+    id: "used-car-dealers",
+    title:
+      "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them",
     excerpt: "A Fintech Disruptor in Auto Finance",
     content: `
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; font-size: 18px; overflow: hidden;">
@@ -502,7 +503,7 @@ const blogPosts = [
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
   {
-    id: 5,
+    id: "loan-eligibility",
     title: "What Determines Your Loan Eligibility in India?",
     excerpt: "Key factors that determine your loan approval in India",
     content: `
@@ -595,25 +596,24 @@ const blogPosts = [
     featured: true,
     tags: ["Car Loan", "Loan Transfer", "Used Car", "Finance"],
   },
-]
+];
 
 // Related posts function
 // (Removed unused getRelatedPosts function)
 
 export default function BlogDetail() {
-  const { id } = useParams()
-  const [post, setPost] = useState(null)
+  const { id } = useParams();
+  const [post, setPost] = useState(null);
   // Removed unused 'copied' state
 
   useEffect(() => {
-    const postId = Number.parseInt(id)
-    const foundPost = blogPosts.find((post) => post.id === postId)
+    const foundPost = blogPosts.find((post) => post.id === id);
 
     if (foundPost) {
-      setPost(foundPost)
-      window.scrollTo(0, 0)
+      setPost(foundPost);
+      window.scrollTo(0, 0);
     }
-  }, [id])
+  }, [id]);
 
   // Removed unused splitHTMLAfterFirstParagraph function
 
@@ -628,23 +628,31 @@ export default function BlogDetail() {
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Clock className="h-8 w-8 text-blue-600" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Blog post not found</h2>
-          <p className="text-gray-600 mb-6">The blog post you're looking for might have been moved or doesn't exist.</p>
-          <Link to="/" className="text-blue-600 hover:underline flex items-center justify-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Blog post not found
+          </h2>
+          <p className="text-gray-600 mb-6">
+            The blog post you're looking for might have been moved or doesn't
+            exist.
+          </p>
+          <Link
+            to="/"
+            className="text-blue-600 hover:underline flex items-center justify-center"
+          >
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to all blogs
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className="bg-[#f5f5ec] min-h-screen pb-16">
       {/* Hero Section - Full width and height without gaps */}
       <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
-        <img 
-          src={post.heroImage} 
-          alt={post.title} 
+        <img
+          src={post.heroImage}
+          alt={post.title}
           className="w-full h-full object-cover"
         />
       </div>
@@ -660,5 +668,5 @@ export default function BlogDetail() {
         </div>
       </div>
     </div>
-  )
+  );
 }

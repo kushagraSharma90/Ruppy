@@ -7,10 +7,9 @@ import blog3 from "../../assets/blog3.jpg";
 import blog4 from "../../assets/blog4.jpg";
 import blog5 from "../../assets/blog5.jpg";
 
-
 const blogPosts = [
   {
-    id: 1,
+    id: "auto-finance-and-solving-dealer-Challenges",
     title: "How to transfer a used car loan to another person?",
     image: blog1,
     description: "Learn the step-by-step process to transfer your car loan to another person legally and efficiently.",
@@ -19,9 +18,10 @@ const blogPosts = [
     readTime: "4 Min",
     author: "Team LOANS24",
     authorImage: blog1,
+    slug: "how-to-transfer-used-car-loan-to-another-person",
   },
   {
-    id: 2,
+    id: "new-vs-used-car",
     title: "How Gen Z is revolutionising credit and shaping financial trends?",
     image: blog2,
     description: "Discover how the youngest generation is changing the way we think about credit and financial services.",
@@ -30,9 +30,10 @@ const blogPosts = [
     readTime: "5 Min",
     author: "Team LOANS24",
     authorImage: blog2,
+    slug: "how-gen-z-revolutionising-credit-shaping-financial-trends",
   },
   {
-    id: 3,
+    id: "personal-loan",
     title: "Pros and Cons of a Credit Card",
     image: blog3,
     description: "Understand the advantages and disadvantages of using credit cards before making your next financial decision.",
@@ -41,9 +42,10 @@ const blogPosts = [
     readTime: "4 Min",
     author: "Team LOANS24",
     authorImage: blog3,
+    slug: "pros-and-cons-of-credit-card",
   },
   {
-    id: 4,
+    id: "used-car-dealers",
     title: "Understanding Home Loan Interest Rates",
     image: blog4,
     description: "A comprehensive guide to understanding how home loan interest rates work and how to get the best deal.",
@@ -52,9 +54,10 @@ const blogPosts = [
     readTime: "6 Min",
     author: "Team LOANS24",
     authorImage: blog4,
+    slug: "understanding-home-loan-interest-rates",
   },
   {
-    id: 5,
+    id: "loan-eligibility",
     title: "5 Ways to Improve Your Credit Score Fast",
     image: blog5,
     description: "Practical tips to boost your credit score quickly and improve your financial standing.",
@@ -63,6 +66,7 @@ const blogPosts = [
     readTime: "7 Min",
     author: "Team LOANS24",
     authorImage: blog5,
+    slug: "5-ways-to-improve-credit-score-fast",
   },
   {
     id: 6,
@@ -74,6 +78,7 @@ const blogPosts = [
     readTime: "8 Min",
     author: "Team LOANS24",
     authorImage: "/placeholder.svg",
+    slug: "complete-guide-to-personal-loans",
   },
   {
     id: 7,
@@ -85,6 +90,7 @@ const blogPosts = [
     readTime: "5 Min",
     author: "Team LOANS24",
     authorImage: "/placeholder.svg",
+    slug: "how-to-choose-right-car-loan",
   },
 ];
 
@@ -132,7 +138,7 @@ const BlogsSection = () => {
             <p className="text-gray-600 max-w-md">Insights and tips to help you navigate the world of finance</p>
           </div>
           <Link
-            to="/blogs"
+            to="/community/blogs"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-md mt-4 md:mt-0 font-medium transition-all duration-200 text-sm"
           >
             Know More
@@ -146,7 +152,7 @@ const BlogsSection = () => {
                 key={post.id}
                 className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300"
               >
-                <Link to={`/blogs/${post.id}`} className="block">
+                <Link to={`/blogs/${post.slug}`} className="block">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={post.image}
@@ -161,7 +167,7 @@ const BlogsSection = () => {
                     <span className="flex items-center">📅 {post.date}</span>
                     <span className="flex items-center">⏱️ {post.readTime}</span>
                   </div>
-                  <Link to={`/blogs/${post.id}`} className="block group">
+                  <Link to={`/blogs/${post.slug}`} className="block group">
                     <h3 className="font-semibold text-gray-800 mb-3 text-lg line-clamp-2 group-hover:text-blue-600 transition-colors">
                       {post.title}
                     </h3>

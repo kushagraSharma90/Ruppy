@@ -14,7 +14,7 @@ import blog5 from "../../assets/blog5.jpg"
 
 const blogData = [
   {
-    id: 1,
+    id: "auto-finance-and-solving-dealer-Challenges",
     title: "Disrupting Auto Finance & Solving Dealer Challenges?",
     description:
       "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
@@ -26,7 +26,7 @@ const blogData = [
     
   },
   {
-    id: 2,
+    id: "new-vs-used-car",
     title: "Market Overview: New vs. Used Car Sales",
     description: `India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next
  decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,
@@ -40,7 +40,7 @@ const blogData = [
   
   },
   {
-    id: 3,
+    id: "personal-loan",
     title: "What is a Personal Loan??",
     description: `It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without
        having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment
@@ -53,7 +53,7 @@ const blogData = [
    
   },
   {
-    id: 4,
+    id: "used-car-dealers",
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
     description: `Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often
  hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan
@@ -67,7 +67,7 @@ const blogData = [
    
   },
   {
-    id: 5,
+    id: "loan-eligibility",
     title: "What Determines Your Loan Eligibility in India?",
     description: `Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control
  over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.`,
