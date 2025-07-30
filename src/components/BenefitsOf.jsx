@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function BenefitsSection() {
   const benefits = [
     {
-      title: "Get the Best Offer with Multi Render Tie up",
+      title: "Get the Best Offer with Multi Lender Tie up",
       icon: Shield,
       bgColor: "bg-[#3870A6]",
     },
@@ -14,7 +14,7 @@ export default function BenefitsSection() {
       bgColor: "bg-[#D47734]",
     },
     {
-      title: "Higher Approval Chances with Lenders Customer Matching",
+      title: "Better Loan Approvals with Smart Lender Matching",
       icon: Users,
       bgColor: "bg-[#3870A6]",
     },
@@ -29,7 +29,7 @@ export default function BenefitsSection() {
       bgColor: "bg-[#3870A6]",
     },
     {
-      title: "End to End Loan & Assistance & Transparency",
+      title: "End to End Loan  Assistance & Transparency",
       icon: FileText,
       bgColor: "bg-[#D47734]",
     },

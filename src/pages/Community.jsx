@@ -184,7 +184,7 @@ const Community = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <p className="font-medium">
-              We are one of the fastest growing fintech aggregators
+              We are one of the fastest growing fintech aggregator
               specializing in providing both Personal and Car loans.
             
 
@@ -220,7 +220,7 @@ const Community = () => {
           >
             {[
               { icon: TrendingUp, label: "Growth Rate", value: "300%" },
-              { icon: Users, label: "Happy Customers", value: "50+" },
+              { icon: Users, label: "Lending Partners", value: "20+" },
               { icon: Shield, label: "Secure Process", value: "100%" },
               { icon: Clock, label: "Quick Approval", value: "24hrs" },
             ].map((stat, index) => (

@@ -11,17 +11,17 @@ const PersonalLoan = () => {
     image: PersonalCarLoanPage,
     benefits: [
       "Loans up to ₹25 lakhs",
-      "Interest rates starting from 10.99%",
-      "Flexible tenure options from 12 to 60 months",
-      "No collateral required",
-      "Minimal documentation",
-      "Quick approval process",
+        "Interest rates starting from 10.99%",
+        "Flexible tenure options from 12 to 60 months",
+        "No collateral required",
+        "Minimal documentation",
+        "Quick approval process",
     ],
     eligibility: [
       "Indian citizen aged 21-60 years",
-      "Salaried individuals with minimum income of ₹25,000 per month",
-      "Self-employed professionals with minimum income of ₹50,000 per month",
-      "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
     ],
     link: "/apply",
   };
@@ -130,7 +130,7 @@ const PersonalLoan = () => {
                       {[
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
-                        "Get your loan approved within 24-48 hours",
+                        "Get your loan approved within 24 hours",
                         "Receive funds directly in your bank account",
                       ][i]}
                     </p>

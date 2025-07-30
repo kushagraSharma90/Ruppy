@@ -89,7 +89,7 @@ const EmiCalculator = () => {
 
         {/* Loan Type Tabs */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {["Used-Car-Loan", "Loan-Against-Car", "Personal-Loan", "Top-Up-Loan"].map((type) => (
+          {["Used-Car-Loan", "Loan-Against-Car", "Personal-Loan", "New-Car-Loan"].map((type) => (
             <button
               key={type}
               className={`px-4 py-2 text-sm rounded-md border ${
@@ -149,7 +149,7 @@ const EmiCalculator = () => {
                 <input
                   type="range"
                   min={1}
-                  max={7}
+                  max={10}
                   step={1}
                   value={duration}
                   onChange={(e) => setDuration(Number(e.target.value))}
@@ -157,7 +157,7 @@ const EmiCalculator = () => {
                 />
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>1 Year</span>
-                  <span>7 Years</span>
+                  <span>10 Years</span>
                 </div>
               </div>
 

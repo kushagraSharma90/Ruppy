@@ -10,16 +10,19 @@ const UsedCarLoan = () => {
     description: "Affordable financing for your pre-owned vehicle.",
     image:UsedCarPage,
     benefits: [
-      "Loans up to ₹20 lakhs",
-      "Interest rates starting from 10.75%",
-      "Flexible tenure options from 12 to 84 months",
-      "Minimal documentation",
-      "Quick approval process",
+      "Loans up to 100% of vehicle value *",
+        "Interest rates starting from 11.99%",
+        "Flexible tenure options from 12 to 60 months",
+        "Quick approval process",
+        "No foreclosure charges after 12 months *",
+        "Minimal documentation",
     ],
     eligibility: [
       "Indian citizen aged 21-65 years",
-      "Minimum income of ₹20,000 per month",
-      "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Vehicle not older than 12 years at end of loan tenure",
+        "Credit score (600+)",
     ],
     link: "/apply",
   };
@@ -134,7 +137,7 @@ const UsedCarLoan = () => {
                       {[
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
-                        "Get your loan approved within 24-48 hours",
+                        "Get your loan approved within 24 hours",
                         "Receive funds directly in your bank account",
                       ][i]}
                     </p>

@@ -95,7 +95,7 @@ export default function ContactUs() {
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Office Address</p>
                     <p className="text-base text-gray-700">
-                      G-1010, Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra
+                      E-4020, Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra
                       411014
                     </p>
                   </div>
@@ -119,7 +119,7 @@ export default function ContactUs() {
             </div>
 
             {/* Contact Map Component */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-90 transition-all duration-300 hover:shadow-xl">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-115 transition-all duration-300 hover:shadow-xl">
               <div className="h-full w-full bg-gray-200 relative">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.91543841489441!3d18.562551387384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin"
@@ -131,7 +131,7 @@ export default function ContactUs() {
                   title="Office Location"
                 ></iframe>
                 <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <p className="text-sm font-medium">G-1010, Solitaire Business Hub</p>
+                  <p className="text-sm font-medium">E-4020, Solitaire Business Hub</p>
                 </div>
               </div>
             </div>
@@ -177,37 +177,46 @@ export default function ContactUs() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                        placeholder="john@example.com"
-                      />
-                    </div>
+  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+    Email Address <span className="text-red-500">*</span>
+  </label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    value={formData.email}
+    onChange={handleChange}
+    required
+    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+    placeholder="john@gmail.com"
+  />
+  {formData.email && !formData.email.endsWith("@gmail.com") && (
+    <p className="text-red-500 text-sm mt-1">Please enter a valid Gmail address</p>
+  )}
+</div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phoneNumber"
-                        name="phoneNumber"
-                        value={formData.phoneNumber}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                        placeholder="(+91) 456-7890"
-                      />
-                    </div>
+  <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">
+    Phone Number
+  </label>
+  <input
+    type="tel"
+    id="phoneNumber"
+    name="phoneNumber"
+    value={formData.phoneNumber}
+    onChange={handleChange}
+    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+    placeholder="(+91) Enter your 10-digit phone number"
+    maxLength="10" // Ensures only 10 digits can be entered
+    pattern="[0-9]{10}" // HTML5 validation for exactly 10 digits
+    title="Please enter a 10-digit phone number (numbers only)"
+  />
+  {formData.phoneNumber && formData.phoneNumber.length !== 10 && (
+    <p className="mt-1 text-sm text-red-600">Phone number must be 10 digits</p>
+  )}
+</div>
                     <div>
                       <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-1">
                         Type of Inquiry <span className="text-red-500">*</span>
@@ -227,6 +236,27 @@ export default function ContactUs() {
                         <option value="support">Customer Support</option>
                         <option value="partnership">Partnership</option>
                         <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
+                        Location <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        id="locationType"
+                        name="locationType"
+                        value={formData.locationType}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none bg-white"
+                      >
+                        <option value="">
+                          Select an option
+                        </option>
+                        <option value="loan">Mumbai</option>
+                        <option value="support">Pune</option>
+                        <option value="partnership">Nashik</option>
+                        <option value="other">Other cities coming soon</option>
                       </select>
                     </div>
                   </div>
@@ -368,7 +398,7 @@ export default function ContactUs() {
                     ></div>
                   ))}
                 </div>
-                <span>Join 1000+ satisfied customers</span>
+                {/* <span>Join 1000+ satisfied customers</span> */}
               </div>
             </div>
           </div>

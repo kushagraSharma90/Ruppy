@@ -5,11 +5,16 @@ import Home1 from "../../assets/Home1.png";
 import Home2 from "../../assets/Home2.png";
 import Home3 from "../../assets/Home3.png";
 import Home4 from "../../assets/Home4.png";
+import lastImage from "../../assets/lastImage.png"; // Assuming you have a last image
 
 /* ─── DATA ─────────────────────────────────────────── */
-const heroImages = [Home1, Home2, Home3, Home4];
+const heroImages = [ lastImage,Home1, Home2, Home3, Home4 ];
 
 const loanProducts = [
+   {
+    title: "Our Loan Products",
+    subtitle: "Loan Against Car - Used Car Loan - Personal Loan - New Car Loan",
+  },
   {
     title: "Loan Against Car",
     subtitle: "Turn your car into cash – without giving up the keys!",
@@ -26,6 +31,7 @@ const loanProducts = [
     title: "New Car Loan",
     subtitle: "Drive into your future – own the car you’ve always dreamed of!",
   },
+ 
 ];
 
 const slides = [

@@ -89,16 +89,24 @@ const CtaSection = () => {
               </div>
 
               <div>
-                <label htmlFor="mobile" className="block text-gray-700 mb-2 font-medium">
-                  Mobile Number
-                </label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  placeholder="Enter your mobile number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
-                />
-              </div>
+  <label htmlFor="mobile" className="block text-gray-700 mb-2 font-medium">
+    Mobile Number
+  </label>
+  <input
+    type="tel"
+    id="mobile"
+    placeholder="+91 | Enter your 10-digit number"
+    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+    maxLength={10}
+    pattern="[0-9]{10}"
+    inputMode="numeric"
+    onInput={(e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+    }}
+    required
+  />
+</div>
+
 
               <button
                 type="submit"

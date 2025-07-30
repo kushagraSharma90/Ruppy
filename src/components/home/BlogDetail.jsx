@@ -602,13 +602,12 @@ const blogPosts = [
 ]
 
 // Related posts function
-// (Removed unused getRelatedPosts to fix unused variable error)
+// (Removed unused getRelatedPosts function)
 
 export default function BlogDetail() {
   const { id } = useParams()
   const [post, setPost] = useState(null)
-  // const [relatedPosts, setRelatedPosts] = useState([])
-  // const [copied, setCopied] = useState(false)
+  // Removed unused 'copied' state
 
   useEffect(() => {
     const postId = Number.parseInt(id)
@@ -616,22 +615,15 @@ export default function BlogDetail() {
 
     if (foundPost) {
       setPost(foundPost)
-      // setRelatedPosts(getRelatedPosts(postId, foundPost.category))
       window.scrollTo(0, 0)
     }
   }, [id])
 
+  // Removed unused splitHTMLAfterFirstParagraph function
 
-  // ⬇ Break the content only once – memoised for perf
-  // const [firstPart, remainingPart] = useMemo(() => splitHTMLAfterFirstParagraph(post?.content || ""), [post?.content])
+  // Removed unused firstPart and remainingPart variables
 
-  // const copyToClipboard = () => {
-  //   const url = window.location.href
-  //   navigator.clipboard.writeText(url).then(() => {
-  //     setCopied(true)
-  //     setTimeout(() => setCopied(false), 2000)
-  //   })
-  // }
+  // Removed unused copyToClipboard function
 
   if (!post) {
     return (
@@ -652,23 +644,20 @@ export default function BlogDetail() {
 
   return (
     <div className="bg-[#f5f5ec] min-h-screen pb-16">
-      {/* Hero Section with Full-Width Image */}
-      <div className="relative w-full">
-        {/* Hero Image */}
-        <img src={post.heroImage} alt={post.title} className="w-full h-[500px] object-contain" />
-
-        {/* Dark overlay for better text visibility */}
-       
+      {/* Hero Section - Full width and height without gaps */}
+      <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
+        <img 
+          src={post.heroImage} 
+          alt={post.title} 
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      {/* ────────── Main Content Section ────────── */}
+      {/* Main Content Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 md:mt-10">
         <div className="bg-[#f5f5ec] rounded-xl p-8 md:p-16 mb-8">
-          {/* Stack on mobile, side‑by‑side on lg+  */}
           <div className="flex flex-col gap-8">
-            {/* Article */}
-            <article className="w-full max-w-6xl mx-auto prose prose-xl">
-              {/* Your HTML content from CMS */}
+            <article className="w-full max-w-6xl mx-auto prose prose-xl max-w-none">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </article>
           </div>

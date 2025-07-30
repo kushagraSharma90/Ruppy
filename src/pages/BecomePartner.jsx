@@ -1,5 +1,6 @@
 import { ArrowRight, Building, CheckCircle, Users, Briefcase, Award } from "lucide-react"
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 const BecomePartner = () => {
@@ -245,7 +246,7 @@ const BecomePartner = () => {
           </h2>
           <p className="text-gray-600 mb-8 text-center">
             Fill out the form below to express your interest in partnering with RupeeDot. Our team will contact you
-            within 48 hours.
+            within 24 hours.
           </p>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -326,18 +327,26 @@ const BecomePartner = () => {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                  Phone Number*
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  required
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+    Phone Number*
+  </label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    required
+    value={formData.phone}
+    onChange={handleChange}
+    maxLength="10"
+    pattern="[0-9]{10}"
+    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    onKeyPress={(e) => {
+      if (!/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    }}
+  />
+</div>
             </div>
 
             <div>
@@ -368,26 +377,26 @@ const BecomePartner = () => {
             </div>
 
             <div className="flex items-start">
-              <input
-                type="checkbox"
-                id="terms"
-                className="mt-1 mr-2"
-                required
-                onChange={handleChange}
-                checked={formData.agreedToTerms}
-              />
-              <label htmlFor="terms" className="text-gray-600 text-sm">
-                I agree to the{" "}
-                <a href="/terms" className="text-blue-600 hover:underline">
-                  Terms and Conditions
-                </a>{" "}
-                and consent to the processing of my personal data as described in the{" "}
-                <a href="/privacy" className="text-blue-600 hover:underline">
-                  Privacy Policy
-                </a>
-                .
-              </label>
-            </div>
+  <input
+    type="checkbox"
+    id="terms"
+    className="mt-1 mr-2"
+    required
+    onChange={handleChange}
+    checked={formData.agreedToTerms}
+  />
+  <label htmlFor="terms" className="text-gray-600 text-sm">
+    I agree to the{" "}
+    <Link to="/TermsAndCondition" className="text-blue-600 hover:underline">
+      Terms and Conditions
+    </Link>{" "}
+    and consent to the processing of my personal data as described in the{" "}
+    <Link to="/PrivacyPolicy" className="text-blue-600 hover:underline">
+      Privacy Policy
+    </Link>
+    .
+  </label>
+</div>
 
               <button
               onClick={handleSubmit}

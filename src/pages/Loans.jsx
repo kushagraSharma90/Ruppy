@@ -5,8 +5,6 @@ import UsedCarPage from "../assets/UsedCarPage.png";
 import NewCarPage from "../assets/NewCarPage.png";
 import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
 
-
-
 const Loans = () => {
   const loanTypes = [
     {
@@ -24,9 +22,9 @@ const Loans = () => {
       ],
       eligibility: [
         "Indian citizen aged 21-60 years",
-        "Salaried individuals with minimum income of ₹25,000 per month",
-        "Self-employed professionals with minimum income of ₹50,000 per month",
-        "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
       ],
       link: "/loans/personal",
     },
@@ -36,19 +34,19 @@ const Loans = () => {
       description: "Affordable financing options for pre-owned vehicles",
       image: UsedCarPage,
       benefits: [
-        "Loans up to 90% of vehicle value",
+        "Loans up to 100% of vehicle value *",
         "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Quick approval process",
-        "No foreclosure charges after 12 months",
+        "No foreclosure charges after 12 months *",
         "Minimal documentation",
       ],
       eligibility: [
         "Indian citizen aged 21-65 years",
-        "Salaried individuals with minimum income of ₹30,000 per month",
-        "Self-employed professionals with minimum income of ₹50,000 per month",
-        "Vehicle not older than 10 years at end of loan tenure",
-        "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Vehicle not older than 12 years at end of loan tenure",
+        "Credit score (600+)",
       ],
       link: "/loans/used-car",
     },
@@ -56,20 +54,20 @@ const Loans = () => {
       id: "new-car",
       title: "New Car Loan",
       description: "Drive home your dream car with competitive interest rates",
-      image:NewCarPage,
+      image: NewCarPage,
       benefits: [
-        "Loans up to 90% of vehicle value",
-        "Interest rates starting from 9.99%",
-        "Flexible tenure options from 12 to 84 months",
+        "Loans up to 100% of vehicle value *",
+        "Interest rates starting from 8.25%",
+        "Flexible tenure options from 12 to 120 months",
         "Quick approval process",
-        "No foreclosure charges after 12 months",
+        "No foreclosure charges after 12 months *",
         "Minimal documentation",
       ],
       eligibility: [
         "Indian citizen aged 21-65 years",
-        "Salaried individuals with minimum income of ₹25,000 per month",
-        "Self-employed professionals with minimum income of ₹45,000 per month",
-        "Good credit score (700+)",
+        "Salaried individuals with minimum income of ₹20,000 per month",
+        "Self-employed person, earning or non-earning",
+        "Credit score (600+)",
       ],
       link: "/loans/new-car",
     },
@@ -77,10 +75,10 @@ const Loans = () => {
       id: "against-car",
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
-      image:LoanAgainstCarPage,
+      image: LoanAgainstCarPage,
       benefits: [
-        "Loans up to 80% of vehicle value",
-        "Interest rates starting from 12.99%",
+        "Loans up to 200% of vehicle value *",
+        "Interest rates starting from 11.99%",
         "Flexible tenure options from 12 to 60 months",
         "Continue using your car during loan period",
         "Quick approval process",
@@ -91,16 +89,15 @@ const Loans = () => {
         "Car should not be older than 10 years",
         "Clear title and ownership of the vehicle",
         "Vehicle should be fully insured",
-        "Good credit score (650+)",
+        "Credit score (600+)",
       ],
       link: "/loans/against-car",
     },
   ]
 
   return (
-    
-      <div>
-       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+    <div>
+      <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -121,8 +118,6 @@ const Loans = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
-      {/* Hero Section */}
-     
 
       {/* Loan Products */}
       <section className="py-16">
@@ -213,18 +208,24 @@ const Loans = () => {
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">Loan Approval</h4>
-                          <p className="text-gray-600">Get your loan approved within 24-48 hours</p>
+                          <p className="text-gray-600">Get your loan approved within 24 hours</p>
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
-                          4
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-800">Disbursement</h4>
-                          <p className="text-gray-600">Receive funds directly in your bank account</p>
-                        </div>
-                      </li>
+  <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
+    4
+  </div>
+  <div>
+    <h4 className="font-medium text-gray-800">Disbursement</h4>
+    <p className="text-gray-600">
+      {loan.id === "against-car" 
+        ? "Faster disbursal in your bank account" 
+        : loan.id === "new-car" 
+          ? "Faster disbursal for your car delivery" 
+          : "Receive funds directly in your bank account"}
+    </p>
+  </div>
+</li>
                     </ol>
                   </div>
                 </div>
@@ -235,6 +236,7 @@ const Loans = () => {
           </div>
         </div>
       </section>
+
 
       {/* Why Choose Us */}
       <section className="py-16 ">
@@ -254,7 +256,7 @@ const Loans = () => {
                 <Clock className="h-7 w-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Processing</h3>
-              <p className="text-gray-600">Get your loan approved within 24-48 hours with our streamlined process</p>
+              <p className="text-gray-600">Get your loan approved within 24 hours with our streamlined process</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -285,7 +287,7 @@ const Loans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16   rounded-3xl text-black">
+      <section className="py-16 rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
           <p className="text-xl text-black mb-8 max-w-2xl mx-auto">

@@ -15,29 +15,29 @@ const Footer = () => {
     <footer className="bg-[#10264b] text-white pt-6 pb-3 text-sm rounded-t-3xl">
       <div className="container mx-auto px-1 sm:px-1" style={{ maxWidth: 1200 }}>
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-39">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-40" >
           {/* Company Info - Matched to navbar styling */}
           <div className="lg:col-span-2 flex flex-col">
             <Link to="/" className="flex items-center "> {/* Added -ml-3 here */}
               <img
                 src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
                 alt="RupeeDot Logo"
-                className="h-20 w-auto " // Increased logo size here
+                className="h-20 w-auto mb-0" // Increased logo size here
               />
             </Link>
-            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed -mt-0">
-              We helps you borrow right today for a better tomorrow.
+            <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed ">
+              We help you borrow right today for a better tomorrow.
               Simple, fair and honest financial products with customer needs at
               heart.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="sm:ml-4">
+          <div className="ml-0 sm:ml-2 text-left">
             <h4 className="font-semibold text-white text-lg md:text-xl mb-3 border-b border-orange-600 inline-block pb-1">
               Quick Links
             </h4>
-            <ul className="space-y-1 ml-4 text-base md:text-lg">
+            <ul className="space-y-1 ml-5 text-base md:text-lg">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/our-story" },
@@ -89,17 +89,18 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3 text-base md:text-lg text-gray-300">
+            
               <div className="flex items-start gap-2">
                 <MapPin className="text-orange-600 mt-1" size={20} />
                 <span>
-                  G-1010, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra
+                  E-4020, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra
                   411014
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="text-orange-600" size={20} />
-                <a href="tel:+917028095292" className="hover:text-orange-400">
-                  +91 7028095292
+                <a href="tel:‪+917028095292‬" className="hover:text-orange-400">
+                  ‪+91 7028095292‬
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -120,7 +121,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 gap-2">
           <p className="text-base md:text-lg">
             &copy; {new Date().getFullYear()} RupeeDot. All rights reserved by
-            Indicorn Financial Services Pvt Ltd
+            Indicorn Financial Services Pvt. Ltd.
           </p>
           <div className="flex flex-wrap gap-3 text-base md:text-lg justify-center">
             <Link to="/PrivacyPolicy" className="hover:text-orange-400">

@@ -23,7 +23,7 @@ const blogData = [
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
     
   },
   {
@@ -38,7 +38,7 @@ const blogData = [
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
   
   },
   {
@@ -52,7 +52,7 @@ const blogData = [
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
    
   },
   {
@@ -67,7 +67,7 @@ const blogData = [
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
    
   },
   {
@@ -80,7 +80,7 @@ const blogData = [
     views: 666,
     date: "MAY 21, 2025",
     readTime: "4 Min",
-    author: "RUPPEDOT",
+    author: "RUPEEDOT",
   
   },
 ]

@@ -53,20 +53,20 @@ const OurStory = () => {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">500+</h3>
-                  <p className="text-gray-700">Happy Customers</p>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have major happy and satisfied customers and counting more.</h3>
+                  {/* <p className="text-gray-700">Happy Customers</p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">₹5 Cr+</h3>
-                  <p className="text-gray-700">Loans Disbursed</p>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We offer loans at a faster speed.</h3>
+                  {/* <p className="text-gray-700">Loans Disbursed</p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">10+</h3>
-                  <p className="text-gray-700">Banking Partners</p>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have a tie-up with multiple established lender Banks and NBFCs.</h3>
+                  {/* <p className="text-gray-700">Banking Partners</p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">20+</h3>
-                  <p className="text-gray-700">Cities Covered</p>
+                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We are present in Tier 1, Tier 2 and Tier 3 cities.</h3>
+                  {/* <p className="text-gray-700">Cities Covered</p> */}
                 </div>
               </div>
             </div>

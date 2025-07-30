@@ -59,7 +59,7 @@ const Testimonials = () => {
     {
       id: 6,
       name: "Rishabh Jain",
-      position: "Bussiness Owner - Jabalpur",
+      position: "Business Owner - Jabalpur",
       image: customer6,
       content:
         "I took a personal loan from RupeeDot for our family vacation abroad, and the experience was fantastic! The process was fast, simple, and completely stressfree. Thanks to their support, we enjoyed our dream trip without worrying about finances. I’d highly recommend RupeeDot for anyone planning a vacation!",
@@ -77,7 +77,7 @@ const Testimonials = () => {
     {
       id: 8,
       name: "Kanhaiya Tiwari",
-      position: "Bussiness Owner - Pune",
+      position: "Business Owner - Pune",
       image: customer9,
       content:
         "I recently financed a car for my son through RupeeDot, and I can’t express how grateful I am for their support. As a father, seeing my son’s happiness when he got the keys to his first car was priceless. The loan process was smooth, quick, and completely stress-free, allowing me to make this special moment happen without financial worries. RupeeDot made what felt like a distant dream a beautiful reality, and for that, I’ll always be thankful.",

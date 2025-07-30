@@ -393,7 +393,8 @@ const TermsAndConditions = () => {
         {/* Footer */}
         <div className="mt-12 text-center text-gray-500 text-sm">
           <p>Last updated: {new Date().toLocaleDateString()}</p>
-          <p className="mt-2">© {new Date().getFullYear()} RupeeDot.Com. All rights reserved.</p>
+          <p className="mt-2">© {new Date().getFullYear()} RupeeDot. All rights reserved by
+            Indicorn Financial Services Pvt. Ltd.</p>
         </div>
       </div>
     </div>

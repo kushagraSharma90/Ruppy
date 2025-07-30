@@ -12,16 +12,19 @@ const LoanAgainstCar = () => {
     image:
       LoanAgainstCarPage,
     benefits: [
-      "Loans up to ₹50 lakhs",
-      "Interest rates starting from 9.75%",
-      "Flexible tenure options from 12 to 84 months",
-      "Minimal documentation",
-      "Quick approval process",
+      "Loans up to 200% of vehicle value *",
+        "Interest rates starting from 11.99%",
+        "Flexible tenure options from 12 to 60 months",
+        "Continue using your car during loan period",
+        "Quick approval process",
+        "Minimal documentation",
     ],
     eligibility: [
       "Indian citizen aged 21-65 years",
-      "Minimum income of ₹25,000 per month",
-      "Good credit score (700+)",
+        "Car should not be older than 10 years",
+        "Clear title and ownership of the vehicle",
+        "Vehicle should be fully insured",
+        "Credit score (600+)",
     ],
     link: "/apply",
   };
@@ -138,8 +141,8 @@ const LoanAgainstCar = () => {
                       {[
                         "Fill out our simple online application form",
                         "Submit required documents for verification",
-                        "Get your loan approved within 24-48 hours",
-                        "Receive funds directly in your bank account",
+                        "Get your loan approved within 24 hours",
+                        "Faster disbursal in your bank account",
                       ][i]}
                     </p>
                   </div>
