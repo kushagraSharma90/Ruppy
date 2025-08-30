@@ -2,13 +2,13 @@ import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 // import UsedCarPage from "../assets/UsedCarPage.png"; // Assuming you have a UsedCarPage component
-import usedcarloan from "../assets/usedcarloan.jpg"
+
 const UsedCarLoan = () => {
   const loan = {
     id: "used-car",
     title: "Used Car Loan",
     description: "Affordable financing for your pre-owned vehicle.",
-    image: usedcarloan,
+    image: "/images/usedcarloan.jpg",
     benefits: [
       "Loans up to 100% of vehicle value *",
       "Interest rates starting from 11.99%",

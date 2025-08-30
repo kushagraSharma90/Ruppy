@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png";
+
 
 const PersonalLoan = () => {
   const loan = {
@@ -9,7 +9,7 @@ const PersonalLoan = () => {
     title: "Personal Loan",
     description:
       "Quick funds for your personal needs with minimal documentation",
-    image: PersonalCarLoanPage,
+    image: "/images/personalloan.jpg",
     benefits: [
       "Loans up to ₹25 lakhs",
       "Interest rates starting from 10.99%",

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
+
 
 const LoanAgainstCar = () => {
   const loan = {
@@ -9,7 +9,7 @@ const LoanAgainstCar = () => {
     title: "Loan Against Car",
     description:
       "Unlock the value of your car with our flexible financing options.",
-    image: LoanAgainstCarPage,
+    image: "/images/loanagainstcar.jpg",
     benefits: [
       "Loans up to 200% of vehicle value *",
       "Interest rates starting from 11.99%",
