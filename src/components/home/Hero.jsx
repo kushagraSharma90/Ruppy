@@ -1,12 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
-import Main from "../../assets/Main.png"
-import loanagainstcar from "../../assets/loanagainstcar.jpg"
-import newcarloan from "../../assets/newcarloan.jpg"
-import personalloan from "../../assets/personalloan.jpg"
-import usedcarloan from "../../assets/usedcarloan.jpg"
-import BenefitsSection from "../BenefitsOf"
+import BenefitsSectionComponent from "../BenefitsSection" // Import the BenefitsSection component
 
 const SLIDE_MS = 1500 // autoplay interval (1.5s)
 
@@ -23,31 +18,31 @@ const SLIDES = [
     type: "intro",
     title: "Unlock Your Financial Dreams",
     desc: "Fastest-growing Fintech recognized by startup India initiative with AI driven technology into Personal and Car loans.",
-    image: Main,
+    image: "/images/Main.png", // ✅ correct path
   },
   {
     slug: "personal-loan",
     title: "Personal Loan",
     desc: "Quick funds for your personal needs with minimal documentation.",
-    image: personalloan,
+    image: "/images/personalloan.jpg",
   },
   {
     slug: "new-car-loan",
     title: "New Car Loan",
     desc: "Drive home your dream car with competitive interest rates.",
-    image: newcarloan,
+    image: "/images/newcarloan.jpg",
   },
   {
     slug: "used-car-loan",
     title: "Used Car Loan",
     desc: "Affordable financing options for pre-owned vehicles.",
-    image: usedcarloan,
+    image: "/images/usedcarloan.jpg",
   },
   {
     slug: "loan-against-car",
     title: "Loan Against Car",
     desc: "Leverage your car's value for immediate financial needs.",
-    image: loanagainstcar,
+    image: "/images/loanagainstcar.jpg",
   },
 ]
 
@@ -102,6 +97,7 @@ export default function Hero() {
 
   return (
     <>
+      {/* HERO SLIDES */}
       <section
         ref={containerRef}
         className="relative w-full bg-[#f5f5ec]"
@@ -120,12 +116,8 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ✅ Benefits Section in smaller container with less spacing */}
-      <div className="relative -mt-20 flex justify-center">
-        <div className="w-full max-w-5xl px-4">
-          <BenefitsSection />
-        </div>
-      </div>
+      {/* ✅ Benefits section directly below, no gap */}
+      <BenefitsSectionComponent />
     </>
   )
 }
@@ -134,8 +126,8 @@ function Slide({ slide, activeIndex, onSelect }) {
   if (slide.type === "intro") {
     return (
       <article role="group" aria-label="Intro" className="min-w-full">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
-          <div className="grid items-center gap-10 md:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-0">
+          <div className="grid items-center gap-6 md:grid-cols-2">
             {/* Text section */}
             <div className="order-2 md:order-1 text-center md:text-left">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-pretty">
@@ -143,13 +135,13 @@ function Slide({ slide, activeIndex, onSelect }) {
                 <span className="text-[#3870A6]">Financial </span>
                 <span className="text-[#D47734]">Dreams</span>
               </h1>
-              <p className="mt-6 text-base sm:text-lg md:text-xl leading-relaxed text-black/80">{slide.desc}</p>
+              <p className="mt-4 text-base sm:text-lg md:text-xl leading-relaxed text-black/80">{slide.desc}</p>
 
-              <div className="mt-8 md:mt-10 flex justify-center md:justify-start">
+              <div className="mt-6 md:mt-8 flex justify-center md:justify-start">
                 <Pills activeSlug={SLIDES[activeIndex]?.slug} onSelect={onSelect} />
               </div>
 
-              <div className="mt-6 flex justify-center md:justify-start">
+              <div className="mt-4 flex justify-center md:justify-start">
                 <a
                   href="/apply"
                   className="inline-flex select-none items-center justify-center rounded-full bg-[#3870A6] px-6 py-3 text-white font-semibold shadow-sm hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6]"
@@ -176,8 +168,8 @@ function Slide({ slide, activeIndex, onSelect }) {
   const [first, second = ""] = splitTitle(slide.title)
   return (
     <article role="group" aria-label={slide.title} className="min-w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-0">
+        <div className="grid items-center gap-6 md:grid-cols-2">
           {/* Text */}
           <div className="text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-pretty">
@@ -186,11 +178,11 @@ function Slide({ slide, activeIndex, onSelect }) {
             </h1>
             <p className="mt-4 text-base sm:text-lg md:text-xl leading-relaxed text-black/80">{slide.desc}</p>
 
-            <div className="mt-8 flex justify-center md:justify-start">
+            <div className="mt-6 flex justify-center md:justify-start">
               <Pills activeSlug={SLIDES[activeIndex]?.slug} onSelect={onSelect} />
             </div>
 
-            <div className="mt-6 flex justify-center md:justify-start">
+            <div className="mt-4 flex justify-center md:justify-start">
               <a
                 href="/apply"
                 className="inline-flex select-none items-center justify-center rounded-full bg-[#3870A6] px-6 py-3 text-white font-semibold shadow-sm hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6]"
