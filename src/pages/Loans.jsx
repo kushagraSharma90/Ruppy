@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom"
-import { ArrowRight, CheckCircle, Clock, FileText, IndianRupee, Shield } from "lucide-react"
-import PersonalCarLoanPage from "../assets/PersonalCarLoanPage.png"; 
-import UsedCarPage from "../../public/usedcarloan.jpg"; 
-import newcarloan from "../../public/newcarloan.jpg";
-import LoanAgainstCarPage from "../assets/LoanAgainstCarPage.png"; 
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  FileText,
+  IndianRupee,
+  Shield,
+} from "lucide-react"
 
 const Loans = () => {
   const loanTypes = [
     {
       id: "personal",
       title: "Personal Loan",
-      description: "Quick funds for your personal needs with minimal documentation",
-      image: PersonalCarLoanPage,
+      description:
+        "Quick funds for your personal needs with minimal documentation",
+      image: "/images/personalloan.jpg", // ✅ from public/images
       benefits: [
         "Loans up to ₹25 lakhs",
         "Interest rates starting from 10.99%",
@@ -32,7 +36,7 @@ const Loans = () => {
       id: "used-car",
       title: "Used Car Loan",
       description: "Affordable financing options for pre-owned vehicles",
-      image: UsedCarPage,
+      image: "/images/usedcarloan.jpg",
       benefits: [
         "Loans up to 100% of vehicle value *",
         "Interest rates starting from 11.99%",
@@ -53,8 +57,9 @@ const Loans = () => {
     {
       id: "new-car",
       title: "New Car Loan",
-      description: "Drive home your dream car with competitive interest rates",
-      image: newcarloan,
+      description:
+        "Drive home your dream car with competitive interest rates",
+      image: "/images/newcarloan.jpg",
       benefits: [
         "Loans up to 100% of vehicle value *",
         "Interest rates starting from 8.25%",
@@ -75,7 +80,7 @@ const Loans = () => {
       id: "against-car",
       title: "Loan Against Car",
       description: "Leverage your car's value for immediate financial needs",
-      image: LoanAgainstCarPage,
+      image: "/images/loanagainstcar.jpg",
       benefits: [
         "Loans up to 200% of vehicle value *",
         "Interest rates starting from 11.99%",
@@ -110,9 +115,12 @@ const Loans = () => {
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Our Loan Products </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              Our Loan Products
+            </h1>
             <p className="text-xl md:text-2xl text-[#cde0ef] leading-relaxed max-w-2xl mx-auto">
-              <h1>Explore our range of loan products designed to meet your financial needs</h1>
+              Explore our range of loan products designed to meet your financial
+              needs
             </p>
           </div>
         </div>
@@ -126,21 +134,37 @@ const Loans = () => {
             {loanTypes.map((loan, index) => (
               <div key={loan.id} id={loan.id} className="scroll-mt-20">
                 <div
-                  className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+                  className={`grid md:grid-cols-2 gap-12 items-center ${
+                    index % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
                 >
-                  <div className={`${index % 2 === 1 ? "order-1 md:order-2" : "order-1"}`}>
+                  <div
+                    className={`${
+                      index % 2 === 1 ? "order-1 md:order-2" : "order-1"
+                    }`}
+                  >
                     <img
-                      src={loan.image || "/placeholder.svg"}
+                      src={loan.image}
                       alt={loan.title}
                       className="rounded-lg shadow-xl w-full h-auto"
                     />
                   </div>
-                  <div className={`${index % 2 === 1 ? "order-2 md:order-1" : "order-2"}`}>
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">{loan.title}</h2>
-                    <p className="text-lg text-gray-600 mb-6">{loan.description}</p>
+                  <div
+                    className={`${
+                      index % 2 === 1 ? "order-2 md:order-1" : "order-2"
+                    }`}
+                  >
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                      {loan.title}
+                    </h2>
+                    <p className="text-lg text-gray-600 mb-6">
+                      {loan.description}
+                    </p>
 
                     <div className="mb-8">
-                      <h3 className="text-xl font-semibold text-[#3870A6] mb-4">Key Benefits</h3>
+                      <h3 className="text-xl font-semibold text-[#3870A6] mb-4">
+                        Key Benefits
+                      </h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {loan.benefits.map((benefit, i) => (
                           <div key={i} className="flex items-start">
@@ -166,7 +190,9 @@ const Loans = () => {
                   <div className="bg-gray-50 p-8 rounded-lg">
                     <div className="flex items-center mb-4">
                       <FileText className="h-6 w-6 text-[#3870A6] mr-3" />
-                      <h3 className="text-xl font-semibold text-gray-800">Eligibility Criteria</h3>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        Eligibility Criteria
+                      </h3>
                     </div>
                     <ul className="space-y-3">
                       {loan.eligibility.map((item, i) => (
@@ -181,7 +207,9 @@ const Loans = () => {
                   <div className="bg-gray-50 p-8 rounded-lg">
                     <div className="flex items-center mb-4">
                       <Clock className="h-6 w-6 text-[#3870A6] mr-3" />
-                      <h3 className="text-xl font-semibold text-gray-800">Application Process</h3>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        Application Process
+                      </h3>
                     </div>
                     <ol className="space-y-4">
                       <li className="flex items-start">
@@ -189,8 +217,12 @@ const Loans = () => {
                           1
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-800">Apply Online</h4>
-                          <p className="text-gray-600">Fill out our simple online application form</p>
+                          <h4 className="font-medium text-gray-800">
+                            Apply Online
+                          </h4>
+                          <p className="text-gray-600">
+                            Fill out our simple online application form
+                          </p>
                         </div>
                       </li>
                       <li className="flex items-start">
@@ -198,8 +230,12 @@ const Loans = () => {
                           2
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-800">Document Verification</h4>
-                          <p className="text-gray-600">Submit required documents for verification</p>
+                          <h4 className="font-medium text-gray-800">
+                            Document Verification
+                          </h4>
+                          <p className="text-gray-600">
+                            Submit required documents for verification
+                          </p>
                         </div>
                       </li>
                       <li className="flex items-start">
@@ -207,8 +243,12 @@ const Loans = () => {
                           3
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-800">Loan Approval</h4>
-                          <p className="text-gray-600">Get your loan approved within 24 hours</p>
+                          <h4 className="font-medium text-gray-800">
+                            Loan Approval
+                          </h4>
+                          <p className="text-gray-600">
+                            Get your loan approved within 24 hours
+                          </p>
                         </div>
                       </li>
                       <li className="flex items-start">
@@ -216,13 +256,15 @@ const Loans = () => {
                           4
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-800">Disbursement</h4>
+                          <h4 className="font-medium text-gray-800">
+                            Disbursement
+                          </h4>
                           <p className="text-gray-600">
-                            {loan.id === "against-car" 
-                              ? "Faster disbursal in your bank account" 
-                              : loan.id === "new-car" 
-                                ? "Faster disbursal for your car delivery" 
-                                : "Receive funds directly in your bank account"}
+                            {loan.id === "against-car"
+                              ? "Faster disbursal in your bank account"
+                              : loan.id === "new-car"
+                              ? "Faster disbursal for your car delivery"
+                              : "Receive funds directly in your bank account"}
                           </p>
                         </div>
                       </li>
@@ -230,7 +272,9 @@ const Loans = () => {
                   </div>
                 </div>
 
-                {index < loanTypes.length - 1 && <hr className="my-16 border-gray-200" />}
+                {index < loanTypes.length - 1 && (
+                  <hr className="my-16 border-gray-200" />
+                )}
               </div>
             ))}
           </div>
@@ -245,7 +289,8 @@ const Loans = () => {
               Why Choose RupeeDot for Your Loan Needs?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We strive to provide the best loan experience with transparent terms and excellent service
+              We strive to provide the best loan experience with transparent
+              terms and excellent service
             </p>
           </div>
 
@@ -254,32 +299,50 @@ const Loans = () => {
               <div className="bg-[#cde0ef] p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <Clock className="h-7 w-7 text-[#3870A6]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Quick Processing</h3>
-              <p className="text-gray-600">Get your loan approved within 24 hours with our streamlined process</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Quick Processing
+              </h3>
+              <p className="text-gray-600">
+                Get your loan approved within 24 hours with our streamlined
+                process
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-[#cde0ef] p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <FileText className="h-7 w-7 text-[#3870A6]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Minimal Documentation</h3>
-              <p className="text-gray-600">We keep paperwork to a minimum so you can get your loan faster</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Minimal Documentation
+              </h3>
+              <p className="text-gray-600">
+                We keep paperwork to a minimum so you can get your loan faster
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-[#cde0ef] p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <IndianRupee className="h-7 w-7 text-[#3870A6]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Competitive Rates</h3>
-              <p className="text-gray-600">Enjoy some of the most competitive interest rates in the market</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Competitive Rates
+              </h3>
+              <p className="text-gray-600">
+                Enjoy some of the most competitive interest rates in the market
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-[#cde0ef] p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <Shield className="h-7 w-7 text-[#3870A6]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Transparent Terms</h3>
-              <p className="text-gray-600">No hidden charges or surprises - we believe in complete transparency</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Transparent Terms
+              </h3>
+              <p className="text-gray-600">
+                No hidden charges or surprises - we believe in complete
+                transparency
+              </p>
             </div>
           </div>
         </div>
@@ -288,9 +351,12 @@ const Loans = () => {
       {/* CTA Section */}
       <section className="py-16 rounded-3xl text-black">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Apply for a Loan?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Apply for a Loan?
+          </h2>
           <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
-            Get started with your loan application today and receive funds as quickly as tomorrow
+            Get started with your loan application today and receive funds as
+            quickly as tomorrow
           </p>
           <Link
             to="/apply"
