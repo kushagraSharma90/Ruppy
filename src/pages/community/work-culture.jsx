@@ -44,7 +44,7 @@ const WorkCulture = () => {
     },
     {
       icon: Palette,
-      title: "Diversity & Inclusion",
+      title: "Unity in diversity",
       description: "We celebrate diversity and create an inclusive environment for everyone.",
       image: DiversityInlusion,
     },
@@ -101,7 +101,7 @@ const WorkCulture = () => {
                 />
                 <div className="absolute top-4 left-4">
                   <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
-                    <item.icon className="w-6 h-6 text-purple-600" />
+                    <item.icon className="w-6 h-6 text-[#3870a6]" />
                   </div>
                 </div>
               </div>

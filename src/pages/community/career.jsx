@@ -1,10 +1,23 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { ArrowLeft, MapPin, Clock, Users, ArrowRight, Briefcase, GraduationCap, Heart } from "lucide-react"
+import {
+  ArrowLeft,
+  MapPin,
+  Clock,
+  Users,
+  ArrowRight,
+  Briefcase,
+  GraduationCap,
+  Heart,
+} from "lucide-react"
 
 const Career = () => {
+  const [file, setFile] = useState(null)
+  const [message, setMessage] = useState("")
+
   const jobOpenings = [
     {
       title: "Manager – Finance & Strategic Partnerships",
@@ -12,7 +25,8 @@ const Career = () => {
       location: "Mumbai, India",
       type: "Full-time",
       experience: "1-3 years",
-      description: "Strategic individual to lead both financial operations and corporate lender partnerships. ",
+      description:
+        "Strategic individual to lead both financial operations and corporate lender partnerships. ",
     },
     {
       title: "Product Manager",
@@ -20,7 +34,8 @@ const Career = () => {
       location: "Bangalore, India",
       type: "Full-time",
       experience: "4-6 years",
-      description: "Lead product strategy and development for our lending platform.",
+      description:
+        "Lead product strategy and development for our lending platform.",
     },
     {
       title: "Data Scientist",
@@ -28,7 +43,8 @@ const Career = () => {
       location: "Remote",
       type: "Full-time",
       experience: "2-4 years",
-      description: "Analyze data to improve our risk assessment and lending decisions.",
+      description:
+        "Analyze data to improve our risk assessment and lending decisions.",
     },
   ]
 
@@ -55,8 +71,41 @@ const Career = () => {
     },
   ]
 
+  // handle file selection
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0])
+  }
+
+  // handle upload (frontend only)
+  const handleUpload = async () => {
+    if (!file) {
+      setMessage("⚠️ Please select a resume first.")
+      return
+    }
+
+    try {
+      const formData = new FormData()
+      formData.append("resume", file)
+
+      // Example: replace with your API endpoint
+      const res = await fetch("http://localhost:5000/upload", {
+        method: "POST",
+        body: formData,
+      })
+
+      if (res.ok) {
+        setMessage("✅ Resume uploaded successfully!")
+      } else {
+        setMessage("❌ Upload failed. Try again.")
+      }
+    } catch (error) {
+      console.error(error)
+      setMessage("❌ Something went wrong.")
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#d47734]/10 to-white">
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <motion.div
@@ -77,8 +126,9 @@ const Career = () => {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            Build your career in the fintech industry with us. We're looking for passionate individuals who want to make
-            a difference in the financial services sector.
+            Build your career in the fintech industry with us. We're looking for
+            passionate individuals who want to make a difference in the
+            financial services sector.
           </p>
         </motion.div>
 
@@ -89,7 +139,9 @@ const Career = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Why Work With Us?</h2>
+          <h2 className="text-3xl font-bold text-[#3870a6] mb-8 text-center">
+            Why Work With Us?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -100,7 +152,9 @@ const Career = () => {
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center"
               >
                 <benefit.icon className="w-12 h-12 text-[#D47734] mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
@@ -108,8 +162,14 @@ const Career = () => {
         </motion.div>
 
         {/* Job Openings */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.6 }}>
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Current Openings</h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Current Openings
+          </h2>
           <div className="space-y-6">
             {jobOpenings.map((job, index) => (
               <motion.div
@@ -122,7 +182,9 @@ const Career = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{job.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {job.title}
+                    </h3>
                     <p className="text-gray-600 mb-4">{job.description}</p>
 
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">
@@ -146,7 +208,7 @@ const Career = () => {
                   </div>
 
                   <div className="mt-4 md:mt-0 md:ml-6">
-                    <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                    <button className="inline-flex items-center px-6 py-3 bg-[#3870a6] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
                       Apply Now
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </button>
@@ -157,22 +219,40 @@ const Career = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* Resume Upload CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
           className="mt-16 bg-gradient-to-r from-[#3870A6] to-[#D47734] rounded-3xl p-12 text-white text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Don't See Your Role?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Don't See Your Role?
+          </h2>
           <p className="text-xl mb-8 opacity-90">
-            We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future
+            Upload your resume and we’ll keep you in mind for future
             opportunities.
           </p>
-          <button className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+
+          {/* File input */}
+          <input
+            type="file"
+            accept=".pdf,.doc,.docx"
+            onChange={handleFileChange}
+            className="mb-4 block mx-auto text-black bg-white rounded-lg px-4 py-2"
+          />
+
+          {/* Upload button */}
+          <button
+            onClick={handleUpload}
+            className="inline-flex items-center px-8 py-4 bg-white text-[#3870a6] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          >
             Send Your Resume
             <ArrowRight className="w-6 h-6 ml-2" />
           </button>
+
+          {/* Status message */}
+          {message && <p className="mt-4 text-lg">{message}</p>}
         </motion.div>
       </div>
     </div>

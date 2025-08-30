@@ -1,35 +1,35 @@
 import React from "react";
 import { ArrowRight, CheckCircle, Clock, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import NewCarPage from "../assets/NewCarPage.png"; // Assuming you have a NewCarPage component
-
+// import NewCarPage from "../assets/NewCarPage.png"; // Assuming you have a NewCarPage component
+import newcarloan from "../assets/newcarloan.jpg"
 const NewCarLoan = () => {
   const loan = {
     id: "new-car",
     title: "New Car Loan",
     description: "Drive your dream car with our affordable financing options.",
-    image:
-      NewCarPage,
+    image: newcarloan,
     benefits: [
       "Loans up to 100% of vehicle value *",
-        "Interest rates starting from 8.25%",
-        "Flexible tenure options from 12 to 120 months",
-        "Quick approval process",
-        "No foreclosure charges after 12 months *",
-        "Minimal documentation",
+      "Interest rates starting from 8.25%",
+      "Flexible tenure options from 12 to 120 months",
+      "Quick approval process",
+      "No foreclosure charges after 12 months *",
+      "Minimal documentation",
     ],
     eligibility: [
       "Indian citizen aged 21-65 years",
-        "Salaried individuals with minimum income of ₹20,000 per month",
-        "Self-employed person, earning or non-earning",
-        "Credit score (600+)",
+      "Salaried individuals with minimum income of ₹20,000 per month",
+      "Self-employed person, earning or non-earning",
+      "Credit score (600+)",
     ],
     link: "/apply",
   };
 
   return (
     <div>
-       <div className="relative overflow-hidden bg-[#3870A6] text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -42,18 +42,17 @@ const NewCarLoan = () => {
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">{loan.title}</h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              <h1>  {loan.description}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              {loan.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-[#dbeafe] leading-relaxed max-w-2xl mx-auto">
+              {loan.description}
             </p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
-    <div>
-      </div>
-      {/* Hero Section */}
-     
+
       {/* Loan Details */}
       <section className="py-16">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -65,17 +64,19 @@ const NewCarLoan = () => {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">{loan.title}</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {loan.title}
+            </h2>
             <p className="text-lg text-gray-600 mb-6">{loan.description}</p>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-blue-600 mb-4">
+              <h3 className="text-xl font-semibold text-[#3870A6] mb-4">
                 Key Benefits
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {loan.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-2 mt-1" />
+                    <CheckCircle className="h-5 w-5 text-[#d47734] flex-shrink-0 mr-2 mt-1" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -84,7 +85,7 @@ const NewCarLoan = () => {
 
             <Link
               to={loan.link}
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-[#3870A6] hover:bg-[#2f5b86] text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -96,9 +97,10 @@ const NewCarLoan = () => {
       {/* Eligibility & Application Process */}
       <section className="py-16 ">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
+          {/* Eligibility */}
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">
-              <FileText className="h-6 w-6 text-blue-600 mr-3" />
+              <FileText className="h-6 w-6 text-[#3870A6] mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">
                 Eligibility Criteria
               </h3>
@@ -106,16 +108,17 @@ const NewCarLoan = () => {
             <ul className="space-y-3">
               {loan.eligibility.map((item, i) => (
                 <li key={i} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-2 mt-1" />
+                  <CheckCircle className="h-5 w-5 text-[#d47734] flex-shrink-0 mr-2 mt-1" />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Application Process */}
           <div className="bg-white p-8 rounded-lg shadow">
             <div className="flex items-center mb-4">
-              <Clock className="h-6 w-6 text-blue-600 mr-3" />
+              <Clock className="h-6 w-6 text-[#3870A6] mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">
                 Application Process
               </h3>
@@ -128,7 +131,7 @@ const NewCarLoan = () => {
                 "Disbursement",
               ].map((step, i) => (
                 <li key={i} className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
+                  <div className="bg-[#3870A6] text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-1">
                     {i + 1}
                   </div>
                   <div>

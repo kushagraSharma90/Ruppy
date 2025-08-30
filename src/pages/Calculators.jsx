@@ -82,8 +82,8 @@ const Calculators = () => {
                 <button
                   className={`py-3 px-6 font-medium text-lg ${
                     activeTab === "emi"
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-600 hover:text-blue-600"
+                      ? "text-[#3870A6] border-b-2 border-[#3870A6]"
+                      : "text-gray-600 hover:text-[#3870A6]"
                   }`}
                   onClick={() => setActiveTab("emi")}
                 >
@@ -92,8 +92,8 @@ const Calculators = () => {
                 {/* <button
                   className={`py-3 px-6 font-medium text-lg ${
                     activeTab === "eligibility"
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-600 hover:text-blue-600"
+                      ? "text-[#3870A6] border-b-2 border-[#3870A6]"
+                      : "text-gray-600 hover:text-[#3870A6]"
                   }`}
                   onClick={() => setActiveTab("eligibility")}
                 >
@@ -102,8 +102,8 @@ const Calculators = () => {
                 <button
                   className={`py-3 px-6 font-medium text-lg ${
                     activeTab === "prepayment"
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-600 hover:text-blue-600"
+                      ? "text-[#3870A6] border-b-2 border-[#3870A6]"
+                      : "text-gray-600 hover:text-[#3870A6]"
                   }`}
                   onClick={() => setActiveTab("prepayment")}
                 >
@@ -115,7 +115,7 @@ const Calculators = () => {
               {activeTab === "emi" && (
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                    <Calculator className="h-6 w-6 mr-2 text-blue-600" />
+                    <Calculator className="h-6 w-6 mr-2 text-[#3870A6]" />
                     EMI Calculator
                   </h2>
                   <p className="text-gray-600 mb-8">
@@ -134,7 +134,7 @@ const Calculators = () => {
                           >
                             Loan Amount
                           </label>
-                          <span className="text-blue-600 font-medium">
+                          <span className="text-[#3870A6] font-medium">
                             {formatCurrency(loanAmount)}
                           </span>
                         </div>
@@ -168,7 +168,7 @@ const Calculators = () => {
                           >
                             Interest Rate (% per annum)
                           </label>
-                          <span className="text-blue-600 font-medium">
+                          <span className="text-[#3870A6] font-medium">
                             {interestRate}%
                           </span>
                         </div>
@@ -202,7 +202,7 @@ const Calculators = () => {
                           >
                             Loan Term (months)
                           </label>
-                          <span className="text-blue-600 font-medium">
+                          <span className="text-[#3870A6] font-medium">
                             {loanTerm} months
                           </span>
                         </div>
@@ -233,7 +233,7 @@ const Calculators = () => {
                         <h3 className="text-gray-700 font-medium mb-2">
                           Your Monthly EMI
                         </h3>
-                        <p className="text-3xl font-bold text-blue-600">
+                        <p className="text-3xl font-bold text-[#FF8C00]">
                           {formatCurrency(emi)}
                         </p>
                       </div>
@@ -271,7 +271,7 @@ const Calculators = () => {
               {activeTab === "eligibility" && (
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                    <Calculator className="h-6 w-6 mr-2 text-blue-600" />
+                    <Calculator className="h-6 w-6 mr-2 text-[#3870A6]" />
                     Eligibility Calculator
                   </h2>
                   <p className="text-gray-600 mb-8">
@@ -292,7 +292,7 @@ const Calculators = () => {
                           type="number"
                           id="monthly-income"
                           placeholder="Enter your monthly income"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -307,7 +307,7 @@ const Calculators = () => {
                           type="number"
                           id="existing-emi"
                           placeholder="Enter your existing EMI amount"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -320,7 +320,7 @@ const Calculators = () => {
                         </label>
                         <select
                           id="loan-type"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         >
                           <option value="">Select Loan Type</option>
                           <option value="personal">Personal Loan</option>
@@ -339,7 +339,7 @@ const Calculators = () => {
                         </label>
                         <select
                           id="loan-tenure"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         >
                           <option value="">Select Tenure</option>
                           <option value="12">12 months</option>
@@ -352,7 +352,7 @@ const Calculators = () => {
 
                       <button
                         type="submit"
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+                        className="bg-[#3870A6] hover:bg-[#2c5a85] text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
                       >
                         Calculate Eligibility
                       </button>
@@ -363,7 +363,7 @@ const Calculators = () => {
                         <p className="text-gray-600 mb-2">
                           Your Estimated Loan Eligibility
                         </p>
-                        <h3 className="text-3xl font-bold text-blue-600 mb-4"></h3>
+                        <h3 className="text-3xl font-bold text-[#3870A6] mb-4"></h3>
                         <p className="text-sm text-gray-500">
                           Fill in your details and click "Calculate Eligibility"
                           to see your estimated loan amount.
@@ -378,7 +378,7 @@ const Calculators = () => {
               {activeTab === "prepayment" && (
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                    <Calculator className="h-6 w-6 mr-2 text-blue-600" />
+                    <Calculator className="h-6 w-6 mr-2 text-[#3870A6]" />
                     Prepayment Calculator
                   </h2>
                   <p className="text-gray-600 mb-8">
@@ -399,7 +399,7 @@ const Calculators = () => {
                           type="number"
                           id="loan-amount-prepay"
                           placeholder="Enter your loan amount"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -414,7 +414,7 @@ const Calculators = () => {
                           type="number"
                           id="interest-rate-prepay"
                           placeholder="Enter interest rate"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -429,7 +429,7 @@ const Calculators = () => {
                           type="number"
                           id="loan-tenure-prepay"
                           placeholder="Enter loan tenure"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -444,7 +444,7 @@ const Calculators = () => {
                           type="number"
                           id="prepayment-amount"
                           placeholder="Enter prepayment amount"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
@@ -459,13 +459,13 @@ const Calculators = () => {
                           type="number"
                           id="prepayment-month"
                           placeholder="Enter month number"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                         />
                       </div>
 
                       <button
                         type="submit"
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+                        className="bg-[#3870A6] hover:bg-[#2c5a85] text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
                       >
                         Calculate Savings
                       </button>
@@ -476,7 +476,7 @@ const Calculators = () => {
                         <p className="text-gray-600 mb-2">
                           Your Estimated Savings
                         </p>
-                        <h3 className="text-3xl font-bold text-blue-600 mb-4">
+                        <h3 className="text-3xl font-bold text-[#3870A6] mb-4">
                           ₹0
                         </h3>
                         <p className="text-sm text-gray-500">
@@ -492,84 +492,10 @@ const Calculators = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-16 ">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Find answers to common questions about loan calculations and
-                eligibility criteria
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto">
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    What is EMI?
-                  </h3>
-                  <p className="text-gray-600">
-                    EMI stands for Equated Monthly Installment. It's the fixed
-                    amount you pay each month towards your loan, which includes
-                    both principal and interest components.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    How is EMI calculated?
-                  </h3>
-                  <p className="text-gray-600">
-                    EMI is calculated using the formula: EMI = [P x R x
-                    (1+R)^N]/[(1+R)^N-1], where P is the principal loan amount,
-                    R is the monthly interest rate, and N is the loan tenure in
-                    months.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    How does prepayment affect my loan?
-                  </h3>
-                  <p className="text-gray-600">
-                    Prepayment reduces your outstanding principal amount, which
-                    in turn reduces the interest component of future EMIs. This
-                    can either reduce your loan tenure or lower your EMI amount,
-                    depending on your preference.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    What factors affect my loan eligibility?
-                  </h3>
-                  <p className="text-gray-600">
-                    Your loan eligibility depends on several factors including
-                    your income, existing loan obligations, credit score, age,
-                    employment type, and the type of loan you're applying for.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Are there any charges for using these calculators?
-                  </h3>
-                  <p className="text-gray-600">
-                    No, all our calculators are completely free to use. They are
-                    provided as a service to help you make informed financial
-                    decisions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* CTA Section */}
-        <section className="py-16  rounded-3xl text-black">
+        <section className="py-16 bg-gray-100 rounded-3xl text-black">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Apply for a Loan?
@@ -580,26 +506,16 @@ const Calculators = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-              to="/apply"
-              className=" text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
-              >
-              <a
-                href="/apply"
-                className="bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                to="/apply"
+                className="bg-[#3870A6] hover:bg-[#2c5a85] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Apply Now
-              </a>
               </Link>
               <Link
                 to="/ContactUs"
-                className=" text-black hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-colors duration-300"
+                className="bg-[#3870A6] hover:bg-[#2c5a85] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
-                <a
-                  href="/contact"
-                  className="bg-blue-600  text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
-                >
-                  Talk to an Expert
-                </a>
+                Talk to an Expert
               </Link>
             </div>
           </div>

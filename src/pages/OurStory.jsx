@@ -18,7 +18,7 @@ const OurStory = () => {
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Our Story</h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#cfe0ed] leading-relaxed max-w-2xl mx-auto">
               Learn about RupeeDot's journey to becoming India's trusted financial services provider
             </p>
           </div>
@@ -53,20 +53,24 @@ const OurStory = () => {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have major happy and satisfied customers and counting more.</h3>
-                  {/* <p className="text-gray-700">Happy Customers</p> */}
+                  <h3 className="text-[#3870a6] text-xl font-semibold mb-2">
+                    We have major happy and satisfied customers and counting more.
+                  </h3>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We offer loans at a faster speed.</h3>
-                  {/* <p className="text-gray-700">Loans Disbursed</p> */}
+                  <h3 className="text-[#3870a6] text-xl font-semibold mb-2">
+                    We offer loans at a faster speed.
+                  </h3>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We have a tie-up with multiple established lender Banks and NBFCs.</h3>
-                  {/* <p className="text-gray-700">Banking Partners</p> */}
+                  <h3 className="text-[#3870a6] text-xl font-semibold mb-2">
+                    We have a tie-up with multiple established lender Banks and NBFCs.
+                  </h3>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-blue-600 text-xl font-semibold mb-2">We are present in Tier 1, Tier 2 and Tier 3 cities.</h3>
-                  {/* <p className="text-gray-700">Cities Covered</p> */}
+                  <h3 className="text-[#3870a6] text-xl font-semibold mb-2">
+                    We are present in Tier 1, Tier 2 and Tier 3 cities.
+                  </h3>
                 </div>
               </div>
             </div>
@@ -92,21 +96,21 @@ const OurStory = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-semibold text-blue-600 mb-4">Mission</h3>
+                <h3 className="text-2xl font-semibold text-[#3870a6] mb-4">Mission</h3>
                 <p className="text-black text-xl mb-4">
                   To empower individuals and businesses with accessible, transparent, and affordable financial solutions that enable them to achieve their goals and improve their quality of life.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-semibold text-blue-600 mb-4">Vision</h3>
+                <h3 className="text-2xl font-semibold text-[#3870a6] mb-4">Vision</h3>
                 <p className="text-black text-xl mb-4">
                   To be India's most trusted financial services provider, known for our customer-centric approach, innovative solutions, and commitment to financial inclusion.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-blue-600 mb-4">Our Values</h3>
+                <h3 className="text-2xl font-semibold text-[#3870a6] mb-4">Our Values</h3>
                 <div className="space-y-3">
                   {[
                     {
@@ -127,7 +131,7 @@ const OurStory = () => {
                     },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-3 mt-1" />
+                      <CheckCircle className="h-5 w-5 text-[#d47734] flex-shrink-0 mr-3 mt-1" />
                       <div>
                         <h4 className="font-medium text-xl text-black">{item.title}</h4>
                         <p className="text-black text-xl">{item.desc}</p>

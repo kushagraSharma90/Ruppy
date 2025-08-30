@@ -10,7 +10,7 @@ const LoanCategories = () => {
       id: 1,
       title: "Personal Loan",
       image: NewCar,
-      description: "Quick funds for your personal needs with minimal documentation",
+      description: "Quick funds for your personal needs through digital platform",
       link: "/loans/personal",
       bgColor: "bg-blue-100",
     },
@@ -26,7 +26,7 @@ const LoanCategories = () => {
       id: 3,
       title: "New Car Loan",
       image: UsedCar,
-      description: "Drive home your dream car with competitive interest rates",
+      description: "Drive home your dream car with low interests",
       link: "/loans/new-car",
       bgColor: "bg-blue-100",
     },
@@ -45,11 +45,11 @@ const LoanCategories = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Heading */}
         <div className="text-center mb-12 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3870a6] mb-4">
             Our Loan Products
           </h2>
           <p className="text-black text-base sm:text-lg max-w-2xl mx-auto">
-            Explore our range of loan products designed to meet your financial needs
+            Explore our range of loan products designed <br /> to meet your financial needs
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const LoanCategories = () => {
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
               <div className="p-6 flex flex-col items-center bg-white text-center h-full">
-                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mb-6 overflow-hidden rounded-full border-4 border-blue-200 group-hover:border-blue-400 transition-all duration-300">
+                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mb-6 overflow-hidden rounded-full border-4 border-[#3870a6] duration-300">
                   <img
                     src={loan.image || "/placeholder.svg"}
                     alt={loan.title}
@@ -72,19 +72,25 @@ const LoanCategories = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3 transition-colors duration-300">
                   {loan.title}
                 </h3>
-                <p className="text-sm sm:text-base text-black mb-3 sm:mb-4 px-2">
+                {/* Description limited to 2 lines */}
+                <p className="text-sm sm:text-base text-black mb-3 sm:mb-4 px-2 line-clamp-2">
                   {loan.description}
                 </p>
-                <span className="text-black font-medium inline-flex items-center transition-colors duration-300">
+                {/* Learn More aligned + bold */}
+                <span className="text-black font-semibold inline-flex items-center justify-center gap-1 transition-colors duration-300">
                   Learn More
                   <svg
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </span>
               </div>

@@ -9,67 +9,206 @@ const FAQ = () => {
   const [openItems, setOpenItems] = useState([])
 
   const toggleItem = (index) => {
-    setOpenItems((prev) => (prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]))
+    setOpenItems((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    )
   }
 
   const faqData = [
     {
-      category: "Loan Application",
+      category: "Personal Loan – FAQs (Rupeedot Lending Solutions)",
       questions: [
         {
-          question: "What documents do I need to apply for a personal loan?",
+          question: "How my personal loan eligibility amount is calculated?",
           answer:
-            "You'll need identity proof (Aadhaar, PAN), address proof, income proof (salary slips, bank statements), and employment verification documents.",
+            "Eligibility is calculated in basis of income level, credit score, current obligation, job stability, category of company and residence stability same can vary from lenders to lenders.",
         },
         {
-          question: "How long does the loan approval process take?",
+          question: "Will pre-closure or timely EMI payment improve my credit score?",
           answer:
-            "Our digital process typically takes 24-48 hours for approval. Once approved, funds are disbursed within 24 hours to your bank account.",
+            "Yes. Timely prepayment can boost your credit score if the lender reports it accurately to credit bureaus.",
         },
         {
-          question: "What is the minimum and maximum loan amount?",
+          question: "Can I change my EMI due date after disbursement?",
           answer:
-            "Personal loans range from ₹50,000 to ₹40 lakhs, while car loans can go up to ₹1 crore, depending on your eligibility and income.",
+            "Some partner banks/NBFCs allow a one-time EMI date change for a small fee.",
+        },
+        {
+          question: "What if my salary account is different from my EMI debit account?",
+          answer:
+            "EMI is deducted from salary account only however if there is change in job and salary account then ensure funds are transferred to your EMI account before the due date to avoid penalties.",
+        },
+        {
+          question: "Can I increase my loan amount after disbursement?",
+          answer:
+            "Yes, via a personal loan top-up, subject to eligibility and repayment track record with minimum seasoning level.",
+        },
+        {
+          question: "Can I transfer my personal loan to another lender for a lower rate?",
+          answer: "Yes, through a Personal Loan Balance Transfer.",
+        },
+        {
+          question: "What if I lose my job during the loan tenure?",
+          answer:
+            "Certain lenders offer Loan Protection Insurance for such cases for very short period.",
+        },
+        {
+          question: "Will a personal loan affect my home loan eligibility?",
+          answer:
+            "Yes, as it increases your Debt-to-Income (DTI) ratio, which may reduce home loan sanction amounts.",
+        },
+        {
+          question: "Can I apply jointly with my spouse?",
+          answer:
+            "Yes, having both income level can improve your eligibility and may increase the amount of the sanctioned loan.",
+        },
+        {
+          question: "Is personal loan insurance mandatory?",
+          answer: "No. It’s optional but highly recommended.",
         },
       ],
     },
     {
-      category: "Interest Rates & Fees",
+      category: "New Car Loan – FAQs (Rupeedot Auto Finance)",
       questions: [
         {
-          question: "What are your current interest rates?",
+          question: "Can I get 100% new car finance?",
           answer:
-            "Interest rates start from 10.99% per annum for personal loans and 8.5% per annum for car loans, depending on your credit profile and loan amount.",
+            "Some banks/NBFCs offer 100% on-road price funding, though most require a down payment.",
         },
         {
-          question: "Are there any hidden charges?",
-          answer:
-            "No, we believe in complete transparency. All charges including processing fees, prepayment charges, and late payment fees are clearly mentioned upfront with no surprises.",
+          question: "Will the loan amount cover the on-road price or the ex-showroom price?",
+          answer: "Many lenders finance the on-road cost if declared during application.",
         },
         {
-          question: "Can I prepay my loan without penalties?",
+          question: "Can I change my EMI date?",
+          answer: "Yes, in some cases for a nominal fee.",
+        },
+        {
+          question: "Is hypothecation mandatory?",
+          answer: "Yes, until loan closure and RC de-hypothecation.",
+        },
+        {
+          question: "Can I transfer my car loan to another lender?",
+          answer: "Yes, via a Car Loan Balance Transfer.",
+        },
+        {
+          question: "What is the maximum tenure for new car loan?",
+          answer: "Vary from lenders to lenders, however maximum tenure is up-to 10 years.",
+        },
+        {
+          question: "Can I apply new car loan with co-applicant as wife?",
           answer:
-            "Yes, you can prepay your loan after 6 months with minimal prepayment charges. We encourage early repayment to save on interest costs.",
+            "Yes. It can enhance loan eligibility if spouse have some income source.",
+        },
+        {
+          question:
+            "On RC copy while one takes new car loan, who is the actual owner?",
+          answer:
+            "If customer is taking a loan, RC copy is hypothecated in the name of respective financer, once the loan is closed, same is removed.",
         },
       ],
     },
     {
-      category: "Eligibility & Credit",
+      category: "Used Car Loan – FAQs (Rupeedot Pre-Owned Auto Finance)",
       questions: [
         {
-          question: "What is the minimum credit score required?",
+          question: "What is the maximum age of a car eligible for finance?",
           answer:
-            "While we consider applications from credit scores of 650+, having a score of 750+ significantly improves your chances of approval and better interest rates.",
+            "Most of the Financiers do up to 10-12 years but on case basis under exceptional it can go up to 15 years at loan maturity.",
         },
         {
-          question: "Can I apply if I'm self-employed?",
+          question: "Can I buy from a private seller?",
           answer:
-            "We have specific loan products for self-employed individuals. You'll need to provide ITR, bank statements, and business proof documents.",
+            "Yes, but documentation and RC transfer responsibility is required.",
         },
         {
-          question: "What if I have a low credit score?",
+          question: "Will the lender inspect the vehicle?",
           answer:
-            "We have specialized products for individuals with lower credit scores. Our team will work with you to find the best possible solution.",
+            "Yes, a physical inspection is conducted to determine the car’s value and condition.",
+        },
+        {
+          question: "Are interest rates higher for used car loans?",
+          answer:
+            "Generally yes, due to higher risk but ROI depends upon the profile, income level and credit score.",
+        },
+        {
+          question: "Can I buy from another state?",
+          answer: "Yes, with an RTO NOC.",
+        },
+        {
+          question: "What if valuation is lower than the price?",
+          answer:
+            "Lenders usually finance on basis of valuation report or internal grid of car.",
+        },
+        {
+          question: "Can I finance a luxury used car?",
+          answer: "Yes, if it meets lender criteria.",
+        },
+        {
+          question: "Is tenure shorter for used car loans?",
+          answer: "Yes, usually 1–5 years.",
+        },
+        {
+          question: "What documents should I check?",
+          answer:
+            "RC, valid insurance, service records, and accident history.",
+        },
+        {
+          question: "Can I pre-close without penalty?",
+          answer: "There is a Foreclosure charges depending upon lenders.",
+        },
+        {
+          question: "Will accident history be verified?",
+          answer: "Yes, to confirm no major damage.",
+        },
+        {
+          question: "Can I refinance my existing loan?",
+          answer: "Yes, via a loan takeover.",
+        },
+      ],
+    },
+    {
+      category: "Top-Up Car Loan – FAQs (Rupeedot Loan Enhancements)",
+      questions: [
+        {
+          question: "Can I get a top-up loan without closing my existing one?",
+          answer:
+            "Yes, if your repayment record is strong and this should be from existing financiers only.",
+        },
+        {
+          question: "When can I apply?",
+          answer: "Typically after 6–12 months of clean repayment.",
+        },
+        {
+          question: "Are fresh documents needed?",
+          answer: "Minimal paperwork is required.",
+        },
+        {
+          question: "Will the interest rate match my existing loan?",
+          answer:
+            "Not always—depends on current market rates and lenders.",
+        },
+        {
+          question: "Can I use the funds for any purpose?",
+          answer: "Yes. Top-up loans are multi-purpose like Personal loan usage.",
+        },
+        {
+          question: "How much can I borrow?",
+          answer:
+            "This can vary lenders to lenders up to 200% LTV of existing car value.",
+        },
+        {
+          question: "Is approval faster?",
+          answer: "Yes, as your profile is already with Rupeedot.",
+        },
+        {
+          question: "Is repayment history important?",
+          answer: "Yes—it's a primary eligibility factor.",
+        },
+        {
+          question: "Available for salaried and self-employed?",
+          answer: "Yes, if criteria are met.",
         },
       ],
     },
@@ -87,17 +226,17 @@ const FAQ = () => {
         >
           <Link
             to="/community"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-6 transition-colors"
+            className="inline-flex items-center text-[#D47734] hover:text-[#a85a28] mb-6 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Community
           </Link>
 
           <h1 className="text-4xl md:text-6xl font-bold bg-[#D47734] bg-clip-text text-transparent mb-4">
-            Frequently Asked Questions
+            Questions Frequently Asked by Our Customers.
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            Find answers to commonly asked questions about our services and processes. Can't find what you're looking
+            Find answers to commonly asked questions about our loan products. Can't find what you're looking
             for? Contact our support team.
           </p>
         </motion.div>
@@ -123,7 +262,7 @@ const FAQ = () => {
 
               <div className="divide-y divide-gray-100">
                 {category.questions.map((item, questionIndex) => {
-                  const globalIndex = categoryIndex * 10 + questionIndex
+                  const globalIndex = categoryIndex * 100 + questionIndex
                   const isOpen = openItems.includes(globalIndex)
 
                   return (
@@ -174,17 +313,15 @@ const FAQ = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contactus">
-            <button className="inline-flex items-center justify-center py-4 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-[213px]">
-              Contact Support
-            </button>
-            </Link >
+              <button className="inline-flex items-center justify-center py-4 bg-white text-[#D47734] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-[213px]">
+                Contact Support
+              </button>
+            </Link>
             <Link to="">
-            <button
-  className="inline-flex items-center justify-center py-4 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center w-[213px]"
->
-              Live Chat
-</button>
-</Link>
+              <button className="inline-flex items-center justify-center py-4 bg-white text-[#D47734] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center w-[213px]">
+                Live Chat
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>

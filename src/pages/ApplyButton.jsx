@@ -39,10 +39,9 @@ const ApplyPage = () => {
   };
 
   const handleChange = (e) => {
-    // Special handling for PhoneNumber to only allow numbers
     if (e.target.name === "PhoneNumber") {
-      const numericValue = e.target.value.replace(/\D/g, ''); // Remove non-digits
-      setForm({ ...form, [e.target.name]: numericValue.slice(0, 10) }); // Limit to 10 digits
+      const numericValue = e.target.value.replace(/\D/g, "");
+      setForm({ ...form, [e.target.name]: numericValue.slice(0, 10) });
     } else {
       setForm({ ...form, [e.target.name]: e.target.value });
     }
@@ -87,6 +86,7 @@ const ApplyPage = () => {
 
   return (
     <div>
+      {/* Hero Section */}
       <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
           <div
@@ -100,7 +100,9 @@ const ApplyPage = () => {
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Fast, Easy Loan Application</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              Fast, Easy Loan Application
+            </h1>
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
               Fill in the form below to apply for a loan. Our team will get in touch within 24 hours.
             </p>
@@ -116,20 +118,20 @@ const ApplyPage = () => {
         transition={{ duration: 0.6 }}
         className="bg-white p-8 rounded-xl shadow-2xl max-w-xl mx-auto w-full my-8"
       >
-        <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-[#3870A6] mb-6 text-center">
           Apply for a Loan
         </h2>
         <form onSubmit={handleSubmit} className="space-y-5 text-gray-700">
           {[
             { name: "FullName", type: "text", label: "Full Name" },
             { name: "Email", type: "email", label: "Email" },
-            { 
-              name: "PhoneNumber", 
-              type: "tel", 
+            {
+              name: "PhoneNumber",
+              type: "tel",
               label: "Phone Number",
               maxLength: 10,
               pattern: "[0-9]{10}",
-              inputMode: "numeric"
+              inputMode: "numeric",
             },
             {
               name: "Location",
@@ -141,7 +143,7 @@ const ApplyPage = () => {
                 { value: "Pune", label: "Pune" },
                 { value: "Nashik", label: "Nashik" },
                 { value: "Other", label: "Other cities coming soon" },
-              ]
+              ],
             },
             { name: "LoanAmount", type: "number", label: "Loan Amount (₹)" },
           ].map((field) => (
@@ -154,7 +156,7 @@ const ApplyPage = () => {
                   name={field.name}
                   value={form[field.name]}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                 >
                   {field.options.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -171,7 +173,7 @@ const ApplyPage = () => {
                   maxLength={field.maxLength}
                   pattern={field.pattern}
                   inputMode={field.inputMode}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
                 />
               )}
               {errors[field.name] && (
@@ -189,7 +191,7 @@ const ApplyPage = () => {
               value={form.LoanPurpose}
               onChange={handleChange}
               rows="3"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3870A6]"
             ></textarea>
             {errors.LoanPurpose && (
               <p className="text-sm text-red-500 mt-1">{errors.LoanPurpose}</p>
@@ -199,7 +201,7 @@ const ApplyPage = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 disabled:opacity-70"
+            className="w-full bg-[#3870A6] hover:bg-[#2c5684] text-white font-semibold py-3 px-4 rounded-lg transition duration-300 disabled:opacity-70"
           >
             {submitting ? "Submitting..." : "Submit Application"}
           </button>
@@ -212,17 +214,17 @@ const ApplyPage = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: <CheckCircle className="h-8 w-8 text-green-600 mx-auto" />,
+              icon: <CheckCircle className="h-8 w-8 text-[#D47734] mx-auto" />,
               title: "Fast Approval",
               desc: "Get your loan approved within 24 hours.",
             },
             {
-              icon: <Info className="h-8 w-8 text-blue-600 mx-auto" />,
+              icon: <Info className="h-8 w-8 text-[#3870A6] mx-auto" />,
               title: "Transparent Process",
               desc: "No hidden fees. Complete transparency in all steps.",
             },
             {
-              icon: <HelpCircle className="h-8 w-8 text-yellow-600 mx-auto" />,
+              icon: <HelpCircle className="h-8 w-8 text-[#D47734] mx-auto" />,
               title: "Support Team",
               desc: "Our support team is available 7 days a week to help you.",
             },
@@ -236,32 +238,6 @@ const ApplyPage = () => {
                 {item.title}
               </h3>
               <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-4">
-          {[
-            {
-              q: "How long does it take to process my application?",
-              a: "Typically, applications are processed within 24 hours after submission.",
-            },
-            {
-              q: "Do I need to provide collateral?",
-              a: "Personal loan is a non-collateral loan, while a car loan happens to be collateral-based lending.",
-            },
-            {
-              q: "Is my personal information safe?",
-              a: "Yes, your data is securely encrypted and handled according to our privacy policy.",
-            },
-          ].map((faq, i) => (
-            <div key={i} className="bg-white p-5 rounded-lg shadow">
-              <h4 className="font-semibold text-blue-700">{faq.q}</h4>
-              <p className="text-gray-600 mt-2">{faq.a}</p>
             </div>
           ))}
         </div>

@@ -3,11 +3,12 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-#f5f5ec text-black">
+    <section className="py-16 bg-[#f5f5ec] text-black">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#3870a6]">
               Ready to Get Started with Your Loan Application?
             </h2>
             <p className="text-black mb-8 text-lg">
@@ -17,34 +18,35 @@ const CtaSection = () => {
 
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#d47734] flex-shrink-0 mr-3 mt-0.5" />
                 <p className="text-black">Quick online application process</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#d47734] flex-shrink-0 mr-3 mt-0.5" />
                 <p className="text-black">Minimal documentation required</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#d47734] flex-shrink-0 mr-3 mt-0.5" />
                 <p className="text-black">Fast approval and disbursement</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#d47734] flex-shrink-0 mr-3 mt-0.5" />
                 <p className="text-black">Competitive interest rates</p>
               </div>
             </div>
 
             <Link
               to="/apply"
-              className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-flex items-center bg-[#3870a6] text-white hover:bg-[#2f5c88] px-6 py-3 rounded-md font-medium transition-colors duration-300"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
 
+          {/* Right Form */}
           <div className="bg-white p-8 rounded-lg shadow-xl">
-            <h3 className="text-blue-600 text-2xl font-bold mb-6">Quick Loan Eligibility Check</h3>
+            <h3 className="text-[#3870a6] text-2xl font-bold mb-6">Quick Loan Eligibility Check</h3>
             <form className="space-y-4">
               <div>
                 <label htmlFor="loan-type" className="block text-gray-700 mb-2 font-medium">
@@ -52,7 +54,7 @@ const CtaSection = () => {
                 </label>
                 <select
                   id="loan-type"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870a6] text-gray-700"
                 >
                   <option value="">Select Loan Type</option>
                   <option value="personal">Personal Loan</option>
@@ -70,7 +72,7 @@ const CtaSection = () => {
                   type="number"
                   id="loan-amount"
                   placeholder="Enter loan amount"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870a6] text-gray-700"
                 />
               </div>
 
@@ -80,7 +82,7 @@ const CtaSection = () => {
                 </label>
                 <select
                   id="employment-type"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870a6] text-gray-700"
                 >
                   <option value="">Select Employment Type</option>
                   <option value="salaried">Salaried</option>
@@ -89,28 +91,27 @@ const CtaSection = () => {
               </div>
 
               <div>
-  <label htmlFor="mobile" className="block text-gray-700 mb-2 font-medium">
-    Mobile Number
-  </label>
-  <input
-    type="tel"
-    id="mobile"
-    placeholder="+91 | Enter your 10-digit number"
-    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
-    maxLength={10}
-    pattern="[0-9]{10}"
-    inputMode="numeric"
-    onInput={(e) => {
-      e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
-    }}
-    required
-  />
-</div>
-
+                <label htmlFor="mobile" className="block text-gray-700 mb-2 font-medium">
+                  Mobile Number
+                </label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  placeholder="+91 | Enter your 10-digit number"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3870a6] text-gray-700"
+                  maxLength={10}
+                  pattern="[0-9]{10}"
+                  inputMode="numeric"
+                  onInput={(e) => {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, "").slice(0, 10)
+                  }}
+                  required
+                />
+              </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition-colors duration-300"
+                className="w-full bg-[#3870a6] hover:bg-[#2f5c88] text-white py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Check Eligibility
               </button>

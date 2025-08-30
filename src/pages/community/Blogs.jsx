@@ -7,7 +7,7 @@ import blog3 from "../../assets/blog3.jpg"
 import blog4 from "../../assets/blog4.jpg"
 import blog5 from "../../assets/blog5.jpg"
 
-// Sample blog data
+// Sample blog data with unique dates & views
 const blogPosts = [
   {
     id: 1,
@@ -15,25 +15,24 @@ const blogPosts = [
     excerpt: "Learn the step-by-step process of transferring your car loan to someone else, including the paperwork and requirements needed.",
     image: blog1,
     category: "Car Loans",
-    views: 634,
-    date: "MAY 21, 2025",
+    views: 325,
+    date: "10 March, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
-    authorImage: blog1,
+    author: "Team RupeeDot",
+    authorInitials: "TR",
     featured: true,
   },
   {
     id: 2,
     title: "Market Overview: New vs. Used Car Sales",
     excerpt: "India's used vehicle market is on the path to becoming a ₹100 billion+ opportunity by the end of the next decade. By addressing financing shortfalls, increasing organized infrastructure, and leveraging digital enablers,stakeholders can re-take control—propelling financial inclusion, affordability, and growth in both urban and rural India.",
-
     image: blog2,
     category: "Financial Trends",
-    views: 404,
-    date: "MAY 21, 2025",
+    views: 472,
+    date: "5 April, 2025",
     readTime: "5 Min",
-    author: "RUPEEDOT",
-    authorImage: blog2,
+    author: "Team RupeeDot",
+    authorInitials: "TR",
     featured: true,
   },
   {
@@ -42,11 +41,11 @@ const blogPosts = [
     excerpt: "It is a loan that is not backed by any collateral, intended to fulfill a variety of individual financial requirements without having to put up any collateral. It provides easy access to money, fixed monthly payments, and flexible repayment tenure, making it suitable for working professionals.",
     image: blog3,
     category: "Credit Cards",
-    views: 77,
-    date: "MAY 21, 2025",
+    views: 288,
+    date: "7 May, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
-    authorImage: blog3,
+    author: "Team RupeeDot",
+    authorInitials: "TR",
     featured: false,
   },
   {
@@ -54,26 +53,23 @@ const blogPosts = [
     title: "Key Challenges Faced by Used Car Dealers and How RupeeDot Is Solving Them?",
     excerpt: "Indian used car dealers particularly small and medium-sized dealerships work in a highspeed market but are often hindered by slow, inefficient financing procedures. One of the largest challenges they encounter is slow loan approvals, which not only delays the sales process but also dissolves customer confidence. Customers today anticipate near-instant approval, and extended waiting times frequently result in drop-offs or lost business.",
     image: blog4,
-    // category: "Home Loans",
-    views: 325,
-    date: "MAY21, 2025",
+    views: 410,
+    date: "2 June, 2025",
     readTime: "6 Min",
-    author:  "RUPEEDOT",
-    authorImage: blog4,
+    author: "Team RupeeDot",
+    authorInitials: "TR",
     featured: false,
   },
   {
     id: 5,
     title: "What Determines Your Loan Eligibility in India?",
     excerpt: "Understanding what impacts your loan qualification enables you to prepare and apply confidently. Keep your credit rating high, have a stable income, have control over your current debts, and be open about your loan requirements. This makes it easier and quicker for you.",
- 
     image: blog5,
-    // category: "Credit Score",
-    views: 892,
-    date: "MAY 21, 2025",
+    views: 368,
+    date: "8 July, 2025",
     readTime: "7 Min",
-    author:  "RUPEEDOT",
-    authorImage: blog5,
+    author: "Team RupeeDot",
+    authorInitials: "TR",
     featured: false,
   },
 ]
@@ -143,9 +139,6 @@ const Blogs = () => {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </div>
 
-    
-    
-
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-12 bg-[#f5f5ec]">
@@ -163,37 +156,36 @@ const Blogs = () => {
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
-                   
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
                       <span className="flex items-center mr-4">
-                        <Calendar className="h-4 w-4 mr-1" />
+                        <Calendar className="h-4 w-4 mr-1 text-[#FF8C00]" />
                         {post.date}
                       </span>
                       <span className="flex items-center mr-4">
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="h-4 w-4 mr-1 text-[#FF8C00]" />
                         {post.readTime}
                       </span>
                       <span className="flex items-center">
-                        <Eye className="h-4 w-4 mr-1" />
+                        <Eye className="h-4 w-4 mr-1 text-[#FF8C00]" />
                         {post.views} views
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 hover:text-[#3870A6] transition-colors">
                       <Link to={`/blogs/${post.id}`}>{post.title}</Link>
                     </h3>
                     <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center">
                         <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 overflow-hidden">
-                          <span className="text-xs font-semibold">TL</span>
+                          <span className="text-xs font-semibold">{post.authorInitials}</span>
                         </div>
                         <span className="text-sm text-gray-600">{post.author}</span>
                       </div>
                       <Link
                         to={`/blogs/${post.id}`}
-                        className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                        className="text-[#FF8C00] hover:text-[#d47734] flex items-center text-sm font-medium"
                       >
                         Read More <ArrowRight className="h-4 w-4 ml-1" />
                       </Link>
@@ -206,9 +198,6 @@ const Blogs = () => {
         </section>
       )}
 
-      {/* Category Filter */}
-     
-
       {/* Blog Posts Grid */}
       <section className="py-12 bg-[#f5f5ec]">
         <div className="container mx-auto px-4">
@@ -217,10 +206,7 @@ const Blogs = () => {
           </h2>
 
           {currentPosts.length === 0 ? (
-            <div className="text-center py-12">
-             
-             
-            </div>
+            <div className="text-center py-12"></div>
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -235,32 +221,31 @@ const Blogs = () => {
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
-                     
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex items-center text-sm text-gray-500 mb-3">
                         <span className="flex items-center mr-4">
-                          <Calendar className="h-4 w-4 mr-1" />
+                          <Calendar className="h-4 w-4 mr-1 text-[#FF8C00]" />
                           {post.date}
                         </span>
                         <span className="flex items-center">
-                          <Clock className="h-4 w-4 mr-1" />
+                          <Clock className="h-4 w-4 mr-1 text-[#FF8C00]" />
                           {post.readTime}
                         </span>
                       </div>
-                      <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3 line-clamp-2 hover:text-[#3870A6] transition-colors">
                         <Link to={`/blogs/${post.id}`}>{post.title}</Link>
                       </h3>
                       <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
                       <div className="flex items-center justify-between mt-auto">
                         <div className="flex items-center">
                           <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 overflow-hidden">
-                            <span className="text-xs font-semibold">TL</span>
+                            <span className="text-xs font-semibold">{post.authorInitials}</span>
                           </div>
                           <span className="text-sm text-gray-600">{post.author}</span>
                         </div>
                         <span className="text-sm text-gray-500 flex items-center">
-                          <Eye className="h-4 w-4 mr-1" />
+                          <Eye className="h-4 w-4 mr-1 text-[#FF8C00]" />
                           {post.views}
                         </span>
                       </div>
@@ -279,7 +264,7 @@ const Blogs = () => {
                       className={`w-10 h-10 rounded-full flex items-center justify-center ${
                         currentPage === 1
                           ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                          : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                          : "bg-white text-gray-700 hover:bg-[#3870A6] hover:text-white"
                       }`}
                     >
                       <ChevronLeft className="h-5 w-5" />
@@ -287,7 +272,6 @@ const Blogs = () => {
 
                     {Array.from({ length: totalPages }).map((_, index) => {
                       const pageNumber = index + 1
-                      // Show limited page numbers with ellipsis
                       if (
                         pageNumber === 1 ||
                         pageNumber === totalPages ||
@@ -299,8 +283,8 @@ const Blogs = () => {
                             onClick={() => paginate(pageNumber)}
                             className={`w-10 h-10 rounded-full flex items-center justify-center ${
                               currentPage === pageNumber
-                                ? "bg-blue-600 text-white"
-                                : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                ? "bg-[#FF8C00] text-white"
+                                : "bg-white text-gray-700 hover:bg-[#FF8C00] hover:text-white"
                             }`}
                           >
                             {pageNumber}
@@ -325,7 +309,7 @@ const Blogs = () => {
                       className={`w-10 h-10 rounded-full flex items-center justify-center ${
                         currentPage === totalPages
                           ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                          : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                          : "bg-white text-gray-700 hover:bg-[#3870A6] hover:text-white"
                       }`}
                     >
                       <ChevronRight className="h-5 w-5" />
@@ -351,9 +335,9 @@ const Blogs = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-grow py-3 px-4 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-grow py-3 px-4 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#FF8C00]"
               />
-              <button className="bg-white text-black font-medium py-3 px-6 rounded-md transition-colors">
+              <button className="bg-[#FF8C00] text-white hover:bg-[#d47734] font-medium py-3 px-6 rounded-md transition-colors">
                 Submit
               </button>
             </div>

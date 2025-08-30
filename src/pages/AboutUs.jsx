@@ -1,6 +1,6 @@
 import React from "react"
 import { Rocket, Lightbulb, Target } from "lucide-react"
-import BenefitsSection from "../components/BenefitsOf"
+import certificate from "../assets/certificate.jpg"
 
 export default function AboutUs() {
   return (
@@ -42,8 +42,19 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <BenefitsSection />
+      {/* Certificate Image Section */}
+      <section className="w-full py-12 md:py-16 bg-[#f5f5ec]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-6">Our Recognition</h2>
+          <div className="max-w-4xl mx-auto">
+            <img
+              src={certificate}
+              alt="Startup Recognition Certificate"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Mission, Vision, Goal */}
       <section className="w-full py-16 bg-[#f5f5ec] text-white">

@@ -20,8 +20,9 @@ const Community = () => {
       description: "Stay updated with the latest insights, tips, and trends in the fintech world.",
       icon: BookOpen,
       route: "/community/blogs",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-50 to-cyan-50",
+      gradient: "from-[#3870A6] to-cyan-500",
+      bgGradient: "from-[#3870A6]/10 to-cyan-50",
+      iconColor: "#d47734", // orange
     },
     {
       title: "Our Core Values",
@@ -30,14 +31,16 @@ const Community = () => {
       route: "/community/our-core-values",
       gradient: "from-red-500 to-pink-500",
       bgGradient: "from-red-50 to-pink-50",
+      iconColor: "#3870A6", // blue
     },
     {
       title: "Career",
       description: "Join our growing team and build your career in the fintech industry.",
       icon: Briefcase,
       route: "/community/career",
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-50 to-emerald-50",
+      gradient: "from-[#d47734] to-emerald-500",
+      bgGradient: "from-[#d47734]/10 to-emerald-50",
+      iconColor: "#d47734", // orange
     },
     {
       title: "Work Culture",
@@ -46,14 +49,16 @@ const Community = () => {
       route: "/community/work-culture",
       gradient: "from-purple-500 to-violet-500",
       bgGradient: "from-purple-50 to-violet-50",
+      iconColor: "#3870A6", // blue
     },
     {
       title: "FAQ",
       description: "Find answers to commonly asked questions about our services and processes.",
       icon: HelpCircle,
       route: "/community/faq",
-      gradient: "from-orange-500 to-amber-500",
-      bgGradient: "from-orange-50 to-amber-50",
+      gradient: "from-[#d47734] to-amber-500",
+      bgGradient: "from-[#d47734]/10 to-amber-50",
+      iconColor: "#d47734", // orange
     },
   ]
 
@@ -110,7 +115,7 @@ const Community = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#3870A6]/10 via-white to-[#d47734]/10">
       {/* Hero Section */}
       <motion.section
         className="relative py-20 px-4 overflow-hidden"
@@ -121,7 +126,7 @@ const Community = () => {
         {/* Background Animation */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
+            className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#3870A6]/20 to-cyan-400/20 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
@@ -133,7 +138,7 @@ const Community = () => {
             }}
           />
           <motion.div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full blur-3xl"
+            className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-[#d47734]/20 to-pink-400/20 rounded-full blur-3xl"
             animate={{
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
@@ -148,12 +153,12 @@ const Community = () => {
 
         <div className="relative max-w-6xl mx-auto text-center">
           <motion.div
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-orange-100 rounded-full text-sm font-medium text-gray-700 mb-8"
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#3870A6]/10 to-[#d47734]/10 rounded-full text-sm font-medium text-gray-700 mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Sparkles className="w-4 h-4 mr-2 text-orange-500" />
+            <Sparkles className="w-4 h-4 mr-2 text-[#d47734]" />
             Welcome to Our Community
           </motion.div>
 
@@ -164,12 +169,11 @@ const Community = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             Powering India’s Car & Personal Loans – Fast, Easy, Trusted.
-
             <br />
             <span className="relative">
               Financial Journey
               <motion.div
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full"
+                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#3870A6] to-[#d47734] rounded-full"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
@@ -184,29 +188,10 @@ const Community = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <p className="font-medium">
-              We are one of the fastest growing fintech aggregator
-              specializing in providing both Personal and Car loans.
-            
-
-            
-              With our extensive network of partnerships with banks and NBFCs, we bring you the
-               best loan offers tailored to your needs.
-            
-
-            
-              We provide{" "}
-              
-                hassle-free process, quick disbursal with lowest EMI
-              {" "}
-              which is paperless & digital with wide range of products.
-            
-
-              Our diverse team is united in their mission of creating
-               simple, fair and honest financial products that have
-              the customer's needs at their heart.
-           
-
-           
+              We are one of the fastest growing fintech aggregator specializing in providing both Personal and Car loans.
+              With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs.
+              We provide hassle-free process, quick disbursal with lowest EMI which is paperless & digital with wide range of products.
+              Our diverse team is united in their mission of creating simple, fair and honest financial products that have the customer's needs at their heart.
               More choice, more power to you.
             </p>
           </motion.div>
@@ -219,10 +204,10 @@ const Community = () => {
             animate="visible"
           >
             {[
-              { icon: TrendingUp, label: "Growth Rate", value: "300%" },
-              { icon: Users, label: "Lending Partners", value: "20+" },
-              { icon: Shield, label: "Secure Process", value: "100%" },
-              { icon: Clock, label: "Quick Approval", value: "24hrs" },
+              { icon: TrendingUp, label: "Growth Rate", value: "300%", color: "#d47734" },
+              { icon: Users, label: "Lending Partners", value: "20+", color: "#3870A6" },
+              { icon: Shield, label: "Secure Process", value: "100%", color: "#d47734" },
+              { icon: Clock, label: "Quick Approval", value: "24hrs", color: "#3870A6" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -230,7 +215,7 @@ const Community = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <stat.icon className="w-8 h-8 mx-auto mb-3" style={{ color: stat.color }} />
                 <div className="text-2xl font-bold text-gray-800">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
@@ -261,11 +246,7 @@ const Community = () => {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                whileHover={{
-                  scale: 1.05,
-                  y: -10,
-                  transition: { duration: 0.3 },
-                }}
+                whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
                 whileTap={{ scale: 0.98 }}
                 className="group"
               >
@@ -283,11 +264,12 @@ const Community = () => {
                     <div className="relative z-10">
                       {/* Icon */}
                       <motion.div
-                        className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${card.gradient} rounded-2xl mb-6 shadow-lg`}
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-lg`}
+                        style={{ backgroundColor: "#fff" }}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <card.icon className="w-8 h-8 text-white" />
+                        <card.icon className="w-8 h-8" style={{ color: card.iconColor }} />
                       </motion.div>
 
                       {/* Content */}
@@ -301,19 +283,13 @@ const Community = () => {
 
                       {/* CTA Button */}
                       <motion.div
-                        className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${card.gradient} text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                        className="inline-flex items-center px-6 py-3 bg-[#3870A6] text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all duration-300"
                         whileHover={{ x: 5 }}
                       >
                         Explore
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </motion.div>
                     </div>
-
-                    {/* Hover Overlay */}
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`}
-                      initial={false}
-                    />
                   </div>
                 </Link>
               </motion.div>
@@ -324,7 +300,7 @@ const Community = () => {
 
       {/* Call to Action Section */}
       <motion.section
-        className="py-20 px-4 "
+        className="py-20 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
@@ -355,7 +331,7 @@ const Community = () => {
           >
             <Link
               to="/apply"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-white text-[#3870A6] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Apply for Loan Now
               <ArrowRight className="w-6 h-6 ml-2" />

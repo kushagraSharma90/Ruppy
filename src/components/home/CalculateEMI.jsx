@@ -1,95 +1,122 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
-  const radius = 90;
-  const strokeWidth = 20;
-  const normalizedRadius = radius - strokeWidth / 2;
-  const circumference = Math.PI * normalizedRadius;
+  const radius = 90
+  const strokeWidth = 20
+  const normalizedRadius = radius - strokeWidth / 2
+  const circumference = Math.PI * normalizedRadius
 
-  const interestRatio = interestAmount / totalAmount;
-  const principalRatio = 1 - interestRatio;
+  const interestRatio = interestAmount / totalAmount
+  const principalRatio = 1 - interestRatio
 
-  const interestStroke = circumference * interestRatio;
-  const principalStroke = circumference * principalRatio;
+  const interestStroke = circumference * interestRatio
+  const principalStroke = circumference * principalRatio
 
   return (
-    <svg width={radius * 2} height={radius + strokeWidth} className="mx-auto">
-      <g transform={`rotate(-90 ${radius} ${radius})`}>
-        <circle
-          cx={radius}
-          cy={radius}
-          r={normalizedRadius}
-          fill="transparent"
-          stroke="#0057ff"
-          strokeWidth={strokeWidth}
-          strokeDasharray={`${principalStroke} ${circumference}`}
-          strokeLinecap="round"
-        />
-        <circle
-          cx={radius}
-          cy={radius}
-          r={normalizedRadius}
-          fill="transparent"
-          stroke="#00d1d1"
-          strokeWidth={strokeWidth}
-          strokeDasharray={`${interestStroke} ${circumference}`}
-          strokeDashoffset={-principalStroke}
-          strokeLinecap="round"
-        />
-      </g>
-      <text x="50%" y="60%" textAnchor="middle" className="text-sm fill-gray-500">
-        Per Month EMI
-      </text>
-      <text x="50%" y="80%" textAnchor="middle" className="text-lg font-bold fill-black">
-        ₹{emi.toLocaleString("en-IN")}
-      </text>
-    </svg>
-  );
-};
+    <div className="p-4">
+      <svg
+        width={radius * 2 + 20}
+        height={radius + strokeWidth + 20}
+        className="mx-auto"
+      >
+        <g transform={`rotate(-90 ${radius + 10} ${radius + 10})`}>
+          <circle
+            cx={radius + 10}
+            cy={radius + 10}
+            r={normalizedRadius}
+            fill="transparent"
+            stroke="#3870a6"
+            strokeWidth={strokeWidth}
+            strokeDasharray={`${principalStroke} ${circumference}`}
+            strokeLinecap="round"
+          />
+          <circle
+            cx={radius + 10}
+            cy={radius + 10}
+            r={normalizedRadius}
+            fill="transparent"
+            stroke="#d47734"
+            strokeWidth={strokeWidth}
+            strokeDasharray={`${interestStroke} ${circumference}`}
+            strokeDashoffset={-principalStroke}
+            strokeLinecap="round"
+          />
+        </g>
+        <text
+          x="50%"
+          y="60%"
+          textAnchor="middle"
+          className="text-sm fill-gray-500"
+        >
+          Per Month EMI
+        </text>
+        <text
+          x="50%"
+          y="80%"
+          textAnchor="middle"
+          className="text-lg font-bold fill-black"
+        >
+          ₹{emi.toLocaleString("en-IN")}
+        </text>
+      </svg>
+    </div>
+  )
+}
 
 const EmiCalculator = () => {
-  const [loanType, setLoanType] = useState("used-car-loan");
-  const [loanAmount, setLoanAmount] = useState(1000000);
-  const [duration, setDuration] = useState(2);
-  const [interestRate, setInterestRate] = useState(5);
-  const [emi, setEmi] = useState(0);
-  const [totalInterest, setTotalInterest] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [loanType, setLoanType] = useState("used-car-loan")
+  const [loanAmount, setLoanAmount] = useState(1000000)
+  const [duration, setDuration] = useState(2)
+  const [interestRate, setInterestRate] = useState(5)
+  const [emi, setEmi] = useState(0)
+  const [totalInterest, setTotalInterest] = useState(0)
+  const [totalAmount, setTotalAmount] = useState(0)
 
   useEffect(() => {
-    const principal = loanAmount;
-    const ratePerMonth = interestRate / (12 * 100);
-    const timeInMonths = duration * 12;
+    const principal = loanAmount
+    const ratePerMonth = interestRate / (12 * 100)
+    const timeInMonths = duration * 12
 
     const emiValue =
-      (principal * ratePerMonth * Math.pow(1 + ratePerMonth, timeInMonths)) /
-      (Math.pow(1 + ratePerMonth, timeInMonths) - 1);
-    const totalPayment = emiValue * timeInMonths;
-    const interestPayment = totalPayment - principal;
+      (principal *
+        ratePerMonth *
+        Math.pow(1 + ratePerMonth, timeInMonths)) /
+      (Math.pow(1 + ratePerMonth, timeInMonths) - 1)
 
-    setEmi(Math.round(emiValue));
-    setTotalInterest(Math.round(interestPayment));
-    setTotalAmount(Math.round(totalPayment));
-  }, [loanAmount, duration, interestRate]);
+    const totalPayment = emiValue * timeInMonths
+    const interestPayment = totalPayment - principal
+
+    setEmi(Math.round(emiValue))
+    setTotalInterest(Math.round(interestPayment))
+    setTotalAmount(Math.round(totalPayment))
+  }, [loanAmount, duration, interestRate])
 
   const formatCurrency = (amount) =>
     new Intl.NumberFormat("en-IN", {
       style: "currency",
       currency: "INR",
       maximumFractionDigits: 0,
-    }).format(amount);
+    }).format(amount)
 
   return (
     <section className="w-full py-12 bg-[#f5f5ec]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-6">
+        <h2
+          className="text-2xl md:text-3xl font-bold mb-6"
+          style={{ color: "#3870a6" }}
+        >
           Calculate your EMIs instantly
         </h2>
 
         {/* Loan Type Tabs */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {["Used-Car-Loan", "Loan-Against-Car", "Personal-Loan", "New-Car-Loan"].map((type) => (
+          {[
+            "Used-Car-Loan",
+            "Loan-Against-Car",
+            "Personal-Loan",
+            "New-Car-Loan",
+          ].map((type) => (
             <button
               key={type}
               className={`px-4 py-2 text-sm rounded-md border ${
@@ -164,7 +191,9 @@ const EmiCalculator = () => {
               {/* Interest Rate */}
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="font-medium text-gray-700">Interest Rate (P.A)</label>
+                  <label className="font-medium text-gray-700">
+                    Interest Rate (P.A)
+                  </label>
                   <input
                     type="number"
                     value={interestRate}
@@ -203,18 +232,28 @@ const EmiCalculator = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
-                    <div className="w-4 h-4 bg-blue-600 mr-2"></div>
+                    <div
+                      className="w-4 h-4 mr-2"
+                      style={{ backgroundColor: "#3870a6" }}
+                    ></div>
                     <span className="text-gray-700">Principal amount</span>
                   </div>
-                  <span className="font-medium">{formatCurrency(loanAmount)}</span>
+                  <span className="font-medium">
+                    {formatCurrency(loanAmount)}
+                  </span>
                 </div>
 
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
-                    <div className="w-4 h-4 bg-cyan-400 mr-2"></div>
+                    <div
+                      className="w-4 h-4 mr-2"
+                      style={{ backgroundColor: "#d47734" }}
+                    ></div>
                     <span className="text-gray-700">Interest</span>
                   </div>
-                  <span className="font-medium">{formatCurrency(totalInterest)}</span>
+                  <span className="font-medium">
+                    {formatCurrency(totalInterest)}
+                  </span>
                 </div>
 
                 <div className="flex justify-between items-center pt-2 border-t">
@@ -223,20 +262,20 @@ const EmiCalculator = () => {
                 </div>
 
                 <div className="flex justify-center mt-6">
-                    <Link 
-                      to="/calculators" 
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
-                    >
-                      Know more
-                    </Link>
-                  </div>
+                  <Link
+                    to="/calculators"
+                    className="bg-[#3870a6] text-white px-4 py-2 rounded-md transition-colors"
+                  >
+                    Know more
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default EmiCalculator;
+export default EmiCalculator

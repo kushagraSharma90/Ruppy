@@ -36,24 +36,17 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <div className="w-full bg-[#f5f5ec] py-16 px-4">
+    <div className="w-full bg-[#f5f5ec] py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-lg text-black mb-2 font-medium">
-            Revolutionizing Leading With Innovative AI Technology
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">
-            BENEFITS OF{" "}
-            <span className="rounded">
-          <span className="text-[#3870A6]">RUPEE</span>
-         <span className="text-[#D47734]">DOT</span>
-        </span>
+        {/* Header Section - Reduced size */}
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-black">
+            AI-driven lending for your needs
           </h1>
         </div>
 
-        {/* Animated Benefit Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+        {/* Animated Benefit Cards - Reduced size */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
@@ -63,12 +56,12 @@ export default function BenefitsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`${benefit.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center justify-center min-h-[200px] text-center`}
+                className={`${benefit.bgColor} rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col items-center justify-center min-h-[160px] text-center`}
               >
-                <div className="mb-4 p-3 bg-white/20 rounded-full">
-                  <Icon className="w-8 h-8 text-white" />
+                <div className="mb-3 p-2 bg-white/20 rounded-full">
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm leading-tight">
+                <h3 className="text-white font-semibold text-xs leading-tight">
                   {benefit.title}
                 </h3>
               </motion.div>
