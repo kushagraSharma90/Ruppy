@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import BenefitsSectionComponent from "../BenefitsSection"
 
-const SLIDE_MS = 1500
+const SLIDE_MS = 3000
 
 const PRODUCT_SLIDES = [
   { slug: "personal-loan", title: "Personal Loan" },
