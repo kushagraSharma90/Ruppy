@@ -62,13 +62,14 @@ const LoanCategories = () => {
               className={`${loan.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group`}
             >
               <div className="p-6 flex flex-col items-center bg-white text-center h-full">
-                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mb-6 overflow-hidden rounded-full border-4 border-[#3870a6] duration-300">
-                  <img
-                    src={loan.image || "/placeholder.svg"}
-                    alt={loan.title}
-                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+                <div className="w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 mb-6 overflow-hidden rounded-full border-4 border-[#3870a6] duration-300">
+  <img
+    src={loan.image || "/placeholder.svg"}
+    alt={loan.title}
+    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
+  />
+</div>
+
                 <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3 transition-colors duration-300">
                   {loan.title}
                 </h3>

@@ -5,57 +5,77 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
   const radius = 90
   const strokeWidth = 20
   const normalizedRadius = radius - strokeWidth / 2
-  const circumference = Math.PI * normalizedRadius
+  const circumference = 2 * Math.PI * normalizedRadius
+  const halfCircumference = circumference / 2
 
   const interestRatio = interestAmount / totalAmount
   const principalRatio = 1 - interestRatio
 
-  const interestStroke = circumference * interestRatio
-  const principalStroke = circumference * principalRatio
+  const interestStroke = halfCircumference * interestRatio
+  const principalStroke = halfCircumference * principalRatio
 
   return (
     <div className="p-4">
       <svg
-        width={radius * 2 + 20}
-        height={radius + strokeWidth + 20}
+        width={radius * 2}
+        height={radius + strokeWidth}
+        viewBox={`0 0 ${radius * 2} ${radius + strokeWidth}`}
         className="mx-auto"
       >
-        <g transform={`rotate(-90 ${radius + 10} ${radius + 10})`}>
-          <circle
-            cx={radius + 10}
-            cy={radius + 10}
-            r={normalizedRadius}
-            fill="transparent"
-            stroke="#3870a6"
-            strokeWidth={strokeWidth}
-            strokeDasharray={`${principalStroke} ${circumference}`}
-            strokeLinecap="round"
-          />
-          <circle
-            cx={radius + 10}
-            cy={radius + 10}
-            r={normalizedRadius}
-            fill="transparent"
-            stroke="#d47734"
-            strokeWidth={strokeWidth}
-            strokeDasharray={`${interestStroke} ${circumference}`}
-            strokeDashoffset={-principalStroke}
-            strokeLinecap="round"
-          />
-        </g>
+        {/* Background half arc (light gray) */}
+        <circle
+          cx={radius}
+          cy={radius}
+          r={normalizedRadius}
+          fill="transparent"
+          stroke="#e5e7eb"
+          strokeWidth={strokeWidth}
+          strokeDasharray={`${halfCircumference} ${circumference}`}
+          strokeLinecap="round"
+          transform={`rotate(180 ${radius} ${radius})`}
+        />
+
+        {/* Principal arc (blue) */}
+        <circle
+          cx={radius}
+          cy={radius}
+          r={normalizedRadius}
+          fill="transparent"
+          stroke="#3870a6"
+          strokeWidth={strokeWidth}
+          strokeDasharray={`${principalStroke} ${circumference}`}
+          strokeLinecap="round"
+          transform={`rotate(180 ${radius} ${radius})`}
+        />
+
+        {/* Interest arc (orange), placed after principal */}
+        <circle
+          cx={radius}
+          cy={radius}
+          r={normalizedRadius}
+          fill="transparent"
+          stroke="#d47734"
+          strokeWidth={strokeWidth}
+          strokeDasharray={`${interestStroke} ${circumference}`}
+          strokeDashoffset={-principalStroke}
+          strokeLinecap="round"
+          transform={`rotate(180 ${radius} ${radius})`}
+        />
+
+        {/* Labels */}
         <text
-          x="50%"
-          y="60%"
+          x={radius}
+          y={radius - 5}
           textAnchor="middle"
-          className="text-sm fill-gray-500"
+          className="text-sm fill-gray-500 font-medium"
         >
           Per Month EMI
         </text>
         <text
-          x="50%"
-          y="80%"
+          x={radius}
+          y={radius + 20}
           textAnchor="middle"
-          className="text-lg font-bold fill-black"
+          className="text-xl font-bold fill-black"
         >
           ₹{emi.toLocaleString("en-IN")}
         </text>
@@ -65,7 +85,7 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
 }
 
 const EmiCalculator = () => {
-  const [loanType, setLoanType] = useState("used-car-loan")
+  const [loanType, setLoanType] = useState("Used-Car-Loan")
   const [loanAmount, setLoanAmount] = useState(1000000)
   const [duration, setDuration] = useState(2)
   const [interestRate, setInterestRate] = useState(5)
@@ -126,7 +146,7 @@ const EmiCalculator = () => {
               }`}
               onClick={() => setLoanType(type)}
             >
-              <span className="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+              <span className="inline-block w-4 h-4 bg-[#d47734] rounded-full mr-2"></span>
               {type.replace(/-/g, " ")}
             </button>
           ))}
@@ -211,7 +231,7 @@ const EmiCalculator = () => {
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>%</span>
+                  <span>5%</span>
                   <span>35%</span>
                 </div>
               </div>
@@ -233,7 +253,7 @@ const EmiCalculator = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <div
-                      className="w-4 h-4 mr-2"
+                      className="w-4 h-4 mr-2 rounded-full"
                       style={{ backgroundColor: "#3870a6" }}
                     ></div>
                     <span className="text-gray-700">Principal amount</span>
@@ -246,7 +266,7 @@ const EmiCalculator = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <div
-                      className="w-4 h-4 mr-2"
+                      className="w-4 h-4 mr-2 rounded-full"
                       style={{ backgroundColor: "#d47734" }}
                     ></div>
                     <span className="text-gray-700">Interest</span>
@@ -264,7 +284,7 @@ const EmiCalculator = () => {
                 <div className="flex justify-center mt-6">
                   <Link
                     to="/calculators"
-                    className="bg-[#3870a6] text-white px-4 py-2 rounded-md transition-colors"
+                    className="bg-[#3870a6] text-white px-4 py-2 rounded-md transition-colors hover:bg-[#2c5a85]"
                   >
                     Know more
                   </Link>

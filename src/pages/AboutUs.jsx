@@ -43,9 +43,9 @@ export default function AboutUs() {
       </section>
 
       {/* Certificate Image Section */}
-      <section className="w-full py-12 md:py-16 bg-[#f5f5ec]">
+      <section className="w-full py-12 md:py-16 ">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-6">Our Recognition</h2>
+          <h2 className="text-2xl font-bold text-center mb-6">Recognized by Startup India</h2>
           <div className="max-w-4xl mx-auto">
             <img
               src={certificate}

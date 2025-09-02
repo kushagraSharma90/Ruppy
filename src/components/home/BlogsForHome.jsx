@@ -159,8 +159,8 @@ export default function BlogsForHome() {
           </span>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             <span style={{ color: "#3870a6" }}>Insights</span>{" "}
-            <span className="text-black">&</span>{" "}
-            <span style={{ color: "#d47734" }}>Knowledge</span>
+            <span style={{ color: "#d47734"}}>&</span>{" "}
+            <span style={{ color: "#3870a6" }}>Knowledge</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto mt-2">
             Discover expert tips and insights to help you navigate the world of finance and make informed decisions

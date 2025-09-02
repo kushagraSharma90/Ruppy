@@ -410,72 +410,7 @@ const BecomePartner = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#3870A6] mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our partnership program
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  How long does the partnership application process take?
-                </h3>
-                <p className="text-gray-600">
-                  The initial review of your application typically takes 2-3 business days. If your application is
-                  shortlisted, we'll schedule a meeting to discuss the partnership in more detail. The entire process
-                  usually takes 2-3 weeks.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Is there any fee to become a partner?</h3>
-                <p className="text-gray-600">
-                  There is no application fee to become a partner. However, depending on the partnership type, there
-                  might be certain integration costs or minimum business commitments.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  How are referral commissions calculated and paid?
-                </h3>
-                <p className="text-gray-600">
-                  Referral commissions are calculated based on the loan amount and type. Payments are made monthly for
-                  all successful loan disbursements from your referrals. Detailed commission structures will be shared
-                  during the onboarding process.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  What support does RupeeDot provide to partners?
-                </h3>
-                <p className="text-gray-600">
-                  We provide comprehensive support including marketing materials, technical documentation, a dedicated
-                  relationship manager, regular performance reports, and training sessions to help you maximize the
-                  partnership benefits.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Can I partner with RupeeDot if I'm an individual and not a company?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, individuals can join our referral partner program. You'll need to provide your PAN details and
-                  bank account information for commission payments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </div>
   )
 }

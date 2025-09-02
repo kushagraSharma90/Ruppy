@@ -160,9 +160,10 @@ const Testimonials = () => {
                             <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-yellow-400 shadow-md bg-white">
                               <img
                                 src={testimonial.image || "/placeholder.svg"}
-                                onError={(e) =>
-                                  (e.currentTarget.src = "/placeholder.svg")
-                                }
+                                onError={(e) => {
+                                  e.currentTarget.src = "/placeholder.svg";
+                                  e.currentTarget.className = "w-full h-full object-cover object-center";
+                                }}
                                 alt={testimonial.name}
                                 className="w-full h-full object-cover object-center"
                               />

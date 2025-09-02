@@ -233,7 +233,7 @@ const Calculators = () => {
                         <h3 className="text-gray-700 font-medium mb-2">
                           Your Monthly EMI
                         </h3>
-                        <p className="text-3xl font-bold text-[#FF8C00]">
+                        <p className="text-3xl font-bold text-[#d47734]">
                           {formatCurrency(emi)}
                         </p>
                       </div>

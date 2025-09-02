@@ -151,10 +151,42 @@ const Navbar = () => {
               </div>
             )
           })()}
-
-   {/* Loans Dropdown */}
+{/* Loans Dropdown */}
 {(() => {
   const { linkClass, iconClass } = getLinkStyles("/loans")
+
+  // Loan categories array
+  const loanTypes = [
+    {
+      id: 1,
+      title: "Personal Loan",
+      image: NewCar,
+      description: "Quick funds for your personal needs through digital platform",
+      link: "/loans/personal",
+    },
+    {
+      id: 2,
+      title: "Used Car Loan",
+      image: AgainstCar,
+      description: "Affordable financing options for pre-owned vehicles",
+      link: "/loans/used-car",
+    },
+    {
+      id: 3,
+      title: "New Car Loan",
+      image: UsedCar,
+      description: "Drive home your dream car with low interests",
+      link: "/loans/new-car",
+    },
+    {
+      id: 4,
+      title: "Loan Against Car",
+      image: PersonalCar,
+      description: "Leverage your car's value for immediate financial needs",
+      link: "/loans/against-car",
+    },
+  ]
+
   return (
     <div className="relative group">
       {/* Parent Loans Link (Indian Rupee icon) */}
@@ -165,56 +197,34 @@ const Navbar = () => {
       </Link>
 
       {/* Dropdown Menu */}
-      <div className="dropdown-anim absolute left-0 w-56 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
-        <div className="py-2 px-4">
-          <Link
-            to="/loans/personal"
-            className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-            onClick={closeMenu}
-          >
-            <span className="w-14 h-14 mr-3 inline-block">
-              <img src={PersonalCar} alt="Personal Loan" className="w-full h-full object-contain" />
-            </span>
-            Personal Loan
-          </Link>
-
-          <Link
-            to="/loans/used-car"
-            className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-            onClick={closeMenu}
-          >
-            <span className="w-14 h-14 mr-3 inline-block">
-              <img src={UsedCar} alt="Used Car Loan" className="w-full h-full object-contain" />
-            </span>
-            Used Car Loan
-          </Link>
-
-          <Link
-            to="/loans/new-car"
-            className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-            onClick={closeMenu}
-          >
-            <span className="w-14 h-14 mr-3 inline-block">
-              <img src={NewCar} alt="New Car Loan" className="w-full h-full object-contain" />
-            </span>
-            New Car Loan
-          </Link>
-
-          <Link
-            to="/loans/against-car"
-            className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-            onClick={closeMenu}
-          >
-            <span className="w-14 h-14 mr-3 inline-block">
-              <img src={AgainstCar} alt="Loan Against Car" className="w-full h-full object-contain" />
-            </span>
-            Loan Against Car
-          </Link>
+      <div className="dropdown-anim absolute left-0 w-64 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+        <div className="py-3 px-4 space-y-1">
+          {loanTypes.map((loan) => (
+            <Link
+              key={loan.id}
+              to={loan.link}
+              className="flex items-center py-2 px-2 rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+              onClick={closeMenu}
+            >
+              <span className="w-18 h-18 mr-3 flex-shrink-0">
+                <img
+                  src={loan.image}
+                  alt={loan.title}
+                  className="w-full h-full object-contain"
+                />
+              </span>
+              <div>
+                <p className="font-medium text-sm">{loan.title}</p>
+                <p className="text-xs text-gray-500">{loan.description}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
   )
 })()}
+
           {/* Calculators Link */}
           {(() => {
             const { linkClass, iconClass } = getLinkStyles("/calculators")
