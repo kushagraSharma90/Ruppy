@@ -20,9 +20,9 @@ const Footer = () => {
           <div className="lg:col-span-2 flex flex-col">
             <Link to="/" className="flex items-center "> {/* Added -ml-3 here */}
               <img
-                src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
+                src="/images/LOGO.png"
                 alt="RupeeDot Logo"
-                className="h-20 w-auto mb-0" // Increased logo size here
+                className="h-15 w-auto mb-0" // Increased logo size here
               />
             </Link>
             <p className="text-gray-300 text-base md:text-lg max-w-md leading-relaxed ">

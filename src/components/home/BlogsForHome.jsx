@@ -22,7 +22,7 @@ const blogData = [
     views: 320,
     date: "10 March, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
+    author: "Team RupeeDot",
   },
   {
     id: "new-vs-used-car",
@@ -35,7 +35,7 @@ const blogData = [
     views: 455,
     date: "5 April, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
+    author: "Team RupeeDot",
   },
   {
     id: "personal-loan",
@@ -47,7 +47,7 @@ const blogData = [
     views: 278,
     date: "7 May, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
+    author: "Team RupeeDot",
   },
   {
     id: "used-car-dealers",
@@ -60,7 +60,7 @@ const blogData = [
     views: 390,
     date: "2 June, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
+    author: "Team RupeeDot",
   },
   {
     id: "loan-eligibility",
@@ -71,7 +71,7 @@ const blogData = [
     views: 415,
     date: "8 July, 2025",
     readTime: "4 Min",
-    author: "RUPEEDOT",
+    author: "Team RupeeDot",
   },
 ]
 
@@ -93,12 +93,12 @@ function BlogCard({ blog }) {
       <div className="p-6 space-y-4">
         <div className="flex flex-wrap gap-3 text-xs text-gray-500">
           <div className="flex items-center">
-            <Eye className="h-3 w-3 mr-1" />
+            <Eye className="h-3 w-3 mr-1 text-[#d47734]" />
             <span>{blog.views} Views</span>
           </div>
           <div>{blog.date}</div>
           <div className="flex items-center">
-            <Clock className="h-3 w-3 mr-1" />
+            <Clock className="h-3 w-3 mr-1 text-[#d47734]" />
             <span>{blog.readTime}</span>
           </div>
         </div>
@@ -107,15 +107,15 @@ function BlogCard({ blog }) {
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
           <div className="flex items-center text-sm text-gray-600">
             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold mr-2">
-              {blog.author.charAt(0)}
+              TR
             </div>
             <span className="font-medium">{blog.author}</span>
           </div>
 
           <Link to={`/blogs/${blog.id}`} className="group">
-            <button className="flex items-center text-[#3870a6] font-medium text-sm group-hover:underline transition-all duration-200">
+            <button className="flex items-center text-[#d47734] font-medium text-sm group-hover:underline transition-all duration-200">
               Read More
-              <ArrowRight className="h-4 w-4 ml-1 transform transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 ml-1 text-[#d47734] transform transition-transform group-hover:translate-x-1" />
             </button>
           </Link>
         </div>
@@ -209,7 +209,7 @@ export default function BlogsForHome() {
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg z-10 hidden lg:flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="h-6 w-6 text-[#3870a6]" />
+            <ChevronLeft className="h-6 w-6 text-[#d47734]" />
           </button>
 
           <button
@@ -217,7 +217,7 @@ export default function BlogsForHome() {
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg z-10 hidden lg:flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
             aria-label="Next slide"
           >
-            <ChevronRight className="h-6 w-6 text-[#3870a6]" />
+            <ChevronRight className="h-6 w-6 text-[#d47734]" />
           </button>
         </div>
       </div>

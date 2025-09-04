@@ -98,13 +98,13 @@ const Navbar = () => {
           rounded-2xl transition-all duration-300
           ${scrolled ? "py-2" : "py-4"}
           `}
-        style={{ maxWidth: 1200 }}
+        style={{ maxWidth: 1250 }}
       >
         <Link to="/" className="flex items-center">
           <img
-            src="https://rupeedot.com/wp-content/uploads/2025/02/11.png"
+            src="/images/LOGO.png"
             alt="RupeeDot Logo"
-            className="h-8 sm:h-10 md:h-12 w-auto logo-img rounded-xl shadow"
+            className="h-8 sm:h-10 md:h-12 w-auto logo-img "
           />
         </Link>
 

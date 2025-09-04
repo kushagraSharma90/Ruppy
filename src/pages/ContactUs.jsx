@@ -1,16 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import {
-  MapPin,
-  Phone,
-  Mail,
-  MessageSquare,
-  Star,
-  Briefcase,
-  Heart,
-  Clock,
-} from "lucide-react"
+import { MapPin, Phone, Mail, MessageSquare, Star, Briefcase, Heart, Clock } from "lucide-react"
 import customerServices from "../assets/customerServices.jpeg"
 
 export default function ContactUs() {
@@ -19,11 +10,8 @@ export default function ContactUs() {
     email: "",
     phoneNumber: "",
     inquiryType: "",
-    locationType: "",
     message: "",
   })
-
-  const brandBlue = "#3870A6"
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -39,13 +27,12 @@ export default function ContactUs() {
       email: "",
       phoneNumber: "",
       inquiryType: "",
-      locationType: "",
       message: "",
     })
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-[#f5f5ec]">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-[#3870A6] text-white">
         <div className="absolute inset-0 opacity-10">
@@ -61,12 +48,12 @@ export default function ContactUs() {
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Get in Touch</h1>
-            <p className="text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto" style={{ color: brandBlue }}>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
               Have questions about your loan or need assistance? Our team is ready to provide the support you need.
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#f5f5ec] to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 py-12 max-w-7xl -mt-10 relative z-10">
@@ -79,37 +66,33 @@ export default function ContactUs() {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-[#dbe7f3] rounded-full group-hover:bg-[#c5d8eb] transition-colors duration-300">
-                    <Phone className="h-5 w-5" style={{ color: brandBlue }} />
+                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
+                    <Phone className="h-5 w-5 text-blue-600" />
                   </div>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Phone</p>
-                    <p className="text-lg font-medium" style={{ color: brandBlue }}>
-                      +91 7028095292
-                    </p>
+                    <p className="text-lg text-blue-600 font-medium">+91 7028095292</p>
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-[#dbe7f3] rounded-full group-hover:bg-[#c5d8eb] transition-colors duration-300">
-                    <Mail className="h-5 w-5" style={{ color: brandBlue }} />
+                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
+                    <Mail className="h-5 w-5 text-blue-600" />
                   </div>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Email</p>
-                    <p className="text-lg font-medium" style={{ color: brandBlue }}>
-                      wecare@rupeedot.com
-                    </p>
+                    <p className="text-lg text-blue-600 font-medium">wecare@rupeedot.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-[#dbe7f3] rounded-full group-hover:bg-[#c5d8eb] transition-colors duration-300">
-                    <MapPin className="h-5 w-5" style={{ color: brandBlue }} />
+                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
+                    <MapPin className="h-5 w-5 text-blue-600" />
                   </div>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-gray-900">Office Address</p>
                     <p className="text-base text-gray-700">
-                      E-4020, Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra
+                      G-1010, Solitaire Business Hub, opp. Neco Garden Road, Society Viman Nagar, Pune, Maharashtra
                       411014
                     </p>
                   </div>
@@ -119,24 +102,21 @@ export default function ContactUs() {
 
             {/* Live Chat Button */}
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: "#dbe7f3" }}>
-                <MessageSquare className="h-8 w-8" style={{ color: brandBlue }} />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <MessageSquare className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Need immediate help?</h3>
-              <p className="mb-6" style={{ color: brandBlue }}>
+              <p className="text-gray-600 mb-6">
                 Our support team is available for live assistance during business hours.
               </p>
-              <button
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all"
-                style={{ backgroundColor: brandBlue, color: "white" }}
-              >
+              <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                 <MessageSquare className="h-5 w-5" />
                 Start Live Chat
               </button>
             </div>
 
             {/* Contact Map */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-115 transition-all duration-300 hover:shadow-xl">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-90 transition-all duration-300 hover:shadow-xl">
               <div className="h-full w-full bg-gray-200 relative">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.91543841489441!3d18.562551387384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin"
@@ -148,13 +128,13 @@ export default function ContactUs() {
                   title="Office Location"
                 ></iframe>
                 <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <p className="text-sm font-medium">E-4020, Solitaire Business Hub</p>
+                  <p className="text-sm font-medium">G-1010, Solitaire Business Hub</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Image + Contact Form */}
+          {/* Customer Service Image + Form */}
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img
@@ -167,14 +147,13 @@ export default function ContactUs() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
               <div className="p-8 md:p-10">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="p-2 rounded-lg mr-3" style={{ backgroundColor: "#dbe7f3" }}>
-                    <MessageSquare className="h-5 w-5" style={{ color: brandBlue }} />
+                  <span className="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">
+                    <MessageSquare className="h-5 w-5" />
                   </span>
                   Send Us a Message
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Form fields */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -187,11 +166,10 @@ export default function ContactUs() {
                         value={formData.fullName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                         placeholder="John Doe"
                       />
                     </div>
-
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address <span className="text-red-500">*</span>
@@ -203,12 +181,9 @@ export default function ContactUs() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all"
-                        placeholder="john@gmail.com"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                        placeholder="john@example.com"
                       />
-                      {formData.email && !formData.email.endsWith("@gmail.com") && (
-                        <p className="text-red-500 text-sm mt-1">Please enter a valid Gmail address</p>
-                      )}
                     </div>
                   </div>
 
@@ -223,17 +198,10 @@ export default function ContactUs() {
                         name="phoneNumber"
                         value={formData.phoneNumber}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all"
-                        placeholder="(+91) Enter your 10-digit phone number"
-                        maxLength="10"
-                        pattern="[0-9]{10}"
-                        title="Please enter a 10-digit phone number (numbers only)"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                        placeholder="(+91) 456-7890"
                       />
-                      {formData.phoneNumber && formData.phoneNumber.length !== 10 && (
-                        <p className="mt-1 text-sm text-red-600">Phone number must be 10 digits</p>
-                      )}
                     </div>
-
                     <div>
                       <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-1">
                         Type of Inquiry <span className="text-red-500">*</span>
@@ -244,7 +212,7 @@ export default function ContactUs() {
                         value={formData.inquiryType}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all appearance-none bg-white"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none bg-white"
                       >
                         <option value="" disabled>
                           Select an option
@@ -253,26 +221,6 @@ export default function ContactUs() {
                         <option value="support">Customer Support</option>
                         <option value="partnership">Partnership</option>
                         <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label htmlFor="locationType" className="block text-sm font-medium text-gray-700 mb-1">
-                        Location <span className="text-red-500">*</span>
-                      </label>
-                      <select
-                        id="locationType"
-                        name="locationType"
-                        value={formData.locationType}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all appearance-none bg-white"
-                      >
-                        <option value="">Select an option</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Pune">Pune</option>
-                        <option value="Nashik">Nashik</option>
-                        <option value="Other">Other cities coming soon</option>
                       </select>
                     </div>
                   </div>
@@ -288,7 +236,7 @@ export default function ContactUs() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#3870A6] focus:border-[#3870A6] outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"
                       placeholder="How can we help you?"
                     ></textarea>
                   </div>
@@ -299,12 +247,103 @@ export default function ContactUs() {
                     </p>
                     <button
                       type="submit"
-                      className="inline-flex items-center px-6 py-3 bg-[#3870A6] text-white font-medium rounded-lg shadow-md hover:bg-[#2e5c8a] focus:outline-none focus:ring-2 focus:ring-[#3870A6] focus:ring-offset-2 transition-all"
+                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
                     >
                       Send Message
                     </button>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="relative mt-20 mb-16 px-4">
+          <div className="relative max-w-6xl mx-auto py-16">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full px-4 py-2 mb-6">
+                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-600">Trusted by thousands</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent leading-tight mb-4">
+                Join the growing community that counts on{" "}
+                <span className="bg-[#3870a6] bg-clip-text text-transparent">
+                  RupeeDot
+                </span>{" "}
+                for their financial success.
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Experience the difference with our commitment to excellence and innovation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {[
+                {
+                  icon: Star,
+                  text: "Empowering Dreams Every Day",
+                  description: "Turn your financial aspirations into achievable goals",
+                },
+                {
+                  icon: Briefcase,
+                  text: "Transforming Financial Journeys",
+                  description: "Navigate your path to financial freedom with confidence",
+                },
+                {
+                  icon: Heart,
+                  text: "Driven by Unmatched Customer Delight",
+                  description: "Your satisfaction is at the heart of everything we do",
+                },
+                {
+                  icon: Clock,
+                  text: "Always Here for You, Every Moment",
+                  description: "Round-the-clock support whenever you need us",
+                },
+              ].map((item, index) => {
+                const IconComponent = item.icon
+                const isBlue = index % 2 === 0
+                return (
+                  <div
+                    key={index}
+                    className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                  >
+                    <div className="relative mb-6">
+                      <div
+                        className="inline-flex items-center justify-center w-16 h-16 rounded-2xl shadow-md group-hover:scale-110 transition-transform duration-300"
+                        style={{
+                          backgroundColor: isBlue ? "#3870a6" : "#d47734",
+                        }}
+                      >
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+
+                    <div className="relative">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-300">
+                        {item.text}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center mt-16 bg-[#f5f5ec]">
+              <div className="inline-flex items-center gap-2 text-sm text-gray-500">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="w-8 h-8 rounded-full bg-[#3870a6] border-2 border-white"
+                    ></div>
+                  ))}
+                </div>
+                <span>Join 1000+ satisfied customers</span>
               </div>
             </div>
           </div>

@@ -63,7 +63,7 @@ export default function AboutUs() {
             {/* Mission */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300">
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <Rocket className="text-blue-600 w-8 h-8" />
+                <Rocket className="text-[#3870a6] w-8 h-8" />
               </div>
               <h3 className="text-xl text-black font-bold text-center mb-4">Mission</h3>
               <p className="text-sm text-center text-black leading-relaxed">
@@ -74,7 +74,7 @@ export default function AboutUs() {
             {/* Vision */}
             <div className="bg-white text-black rounded-lg p-6 transition-all duration-300">
               <div className="bg-white text-black rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <Lightbulb className="text-blue-600 w-8 h-8" />
+                <Lightbulb className="text-[#3870a6] w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Vision</h3>
               <p className="text-sm text-center text-black leading-relaxed">
@@ -85,7 +85,7 @@ export default function AboutUs() {
             {/* Goal */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300">
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <Target className="text-blue-600 w-8 h-8" />
+                <Target className="text-[#3870a6] w-8 h-8" />
               </div>
               <h3 className="text-xl text-black font-bold text-center mb-4">Goal</h3>
               <p className="text-sm text-center text-black leading-relaxed">

@@ -52,6 +52,8 @@ const OurCoreValues = () => {
     },
   ]
 
+  const iconColors = ["#3870A6", "#d47734"] // alternating colors
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -70,7 +72,6 @@ const OurCoreValues = () => {
             Back to Community
           </Link>
 
-          {/* Title in brand blue */}
           <h1 className="text-4xl md:text-6xl font-bold text-[#3870A6] mb-4">
             Our Core Values
           </h1>
@@ -97,9 +98,10 @@ const OurCoreValues = () => {
               whileHover={{ scale: 1.05, y: -10 }}
               className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
             >
-              {/* Brand identity colors for icons */}
+              {/* Alternate icon colors */}
               <motion.div
-                className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#3870A6] to-[#D47734] rounded-2xl mb-6 shadow-lg"
+                className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-lg"
+                style={{ backgroundColor: iconColors[index % 2] }}
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >

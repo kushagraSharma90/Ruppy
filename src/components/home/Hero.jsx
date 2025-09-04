@@ -7,8 +7,8 @@ const SLIDE_MS = 3000
 
 const PRODUCT_SLIDES = [
   { slug: "personal-loan", title: "Personal Loan" },
-  { slug: "new-car-loan", title: "New Car Loan" },
   { slug: "used-car-loan", title: "Used Car Loan" },
+  { slug: "new-car-loan", title: "New Car Loan" },
   { slug: "loan-against-car", title: "Loan Against Car" },
 ]
 
@@ -18,7 +18,7 @@ const SLIDES = [
     type: "intro",
     title: "Unlock Your Financial Dreams",
     desc: "Fastest-growing Fintech recognized by startup India initiative with AI driven technology into Personal and Car loans.",
-    image: "/images/Main.png",
+    image: "/images/Main.jpg",
   },
   {
     slug: "personal-loan",
@@ -131,12 +131,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ✅ Static Pills */}
-        <div className="flex justify-center mt-6">
+        {/* ✅ Pills moved LEFT instead of center */}
+        <div className="flex justify-start px-4 sm:px-6 lg:px-8 mt-6">
           <Pills activeSlug={SLIDES[index]?.slug} onSelect={handleSelect} />
         </div>
 
-        {/* Mobile indicators */}
+        {/* Mobile indicators stay centered */}
         <div className="md:hidden flex justify-center space-x-2 mt-4 pb-4">
           {SLIDES.map((_, i) => (
             <button
@@ -149,7 +149,10 @@ export default function Hero() {
         </div>
       </section>
 
-      <BenefitsSectionComponent />
+      {/* ✅ Benefits moved slightly UP */}
+      <div className="-mt-4 md:-mt-8">
+        <BenefitsSectionComponent />
+      </div>
     </>
   )
 }
@@ -212,7 +215,7 @@ function Pills({ activeSlug, onSelect }) {
   const toIndex = (slug) => SLIDES.findIndex((s) => s.slug === slug)
 
   return (
-    <div className="flex flex-wrap gap-2 md:gap-3 lg:gap-4 justify-center">
+    <div className="flex flex-wrap gap-2 md:gap-3 lg:gap-4">
       {PRODUCT_SLIDES.map((p) => {
         const targetIndex = toIndex(p.slug)
         const isActive = activeSlug === p.slug

@@ -20,8 +20,6 @@ const Community = () => {
       description: "Stay updated with the latest insights, tips, and trends in the fintech world.",
       icon: BookOpen,
       route: "/community/blogs",
-      gradient: "from-[#3870A6] to-cyan-500",
-      bgGradient: "from-[#3870A6]/10 to-cyan-50",
       iconColor: "#d47734", // orange
     },
     {
@@ -29,8 +27,6 @@ const Community = () => {
       description: "Discover the principles that guide our mission and shape our culture.",
       icon: Heart,
       route: "/community/our-core-values",
-      gradient: "from-red-500 to-pink-500",
-      bgGradient: "from-red-50 to-pink-50",
       iconColor: "#3870A6", // blue
     },
     {
@@ -38,8 +34,6 @@ const Community = () => {
       description: "Join our growing team and build your career in the fintech industry.",
       icon: Briefcase,
       route: "/community/career",
-      gradient: "from-[#d47734] to-emerald-500",
-      bgGradient: "from-[#d47734]/10 to-emerald-50",
       iconColor: "#d47734", // orange
     },
     {
@@ -47,8 +41,6 @@ const Community = () => {
       description: "Experience our collaborative environment and innovative work culture.",
       icon: Users,
       route: "/community/work-culture",
-      gradient: "from-purple-500 to-violet-500",
-      bgGradient: "from-purple-50 to-violet-50",
       iconColor: "#3870A6", // blue
     },
     {
@@ -56,104 +48,45 @@ const Community = () => {
       description: "Find answers to commonly asked questions about our services and processes.",
       icon: HelpCircle,
       route: "/community/faq",
-      gradient: "from-[#d47734] to-amber-500",
-      bgGradient: "from-[#d47734]/10 to-amber-50",
       iconColor: "#d47734", // orange
     },
   ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
   }
 
   const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
   }
 
-  const heroVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  }
+  const heroVariants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }
 
-  const statsVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        delay: 0.8,
-      },
-    },
-  }
+  const statsVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.8 } } }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#3870A6]/10 via-white to-[#d47734]/10">
+    <div className="min-h-screen bg-[#f5f5ec]">
       {/* Hero Section */}
-      <motion.section
-        className="relative py-20 px-4 overflow-hidden"
-        initial="hidden"
-        animate="visible"
-        variants={heroVariants}
-      >
+      <motion.section className="relative py-20 px-4" initial="hidden" animate="visible" variants={heroVariants}>
         {/* Background Animation */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#3870A6]/20 to-cyan-400/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
+            className="absolute -top-40 -right-40 w-80 h-80 bg-[#f5f5ec] rounded-full blur-3xl"
+            animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+            transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
           />
           <motion.div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-[#d47734]/20 to-pink-400/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
+            className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#f5f5ec] rounded-full blur-3xl"
+            animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+            transition={{ duration: 25, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
           />
         </div>
 
         <div className="relative max-w-6xl mx-auto text-center">
           <motion.div
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#3870A6]/10 to-[#d47734]/10 rounded-full text-sm font-medium text-gray-700 mb-8"
+            className="inline-flex items-center px-4 py-2 bg-[#f5f5ec] rounded-full text-sm font-medium text-gray-700 mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -163,7 +96,7 @@ const Community = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-[#3870A6] bg-clip-text text-transparent leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#3870A6] to-[#d47734] leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -211,7 +144,7 @@ const Community = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -233,7 +166,7 @@ const Community = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#3870A6] to-black bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#3870A6] to-black">
               Explore Our Community
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -249,23 +182,13 @@ const Community = () => {
                 whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
                 whileTap={{ scale: 0.98 }}
                 className="group"
-              >
+              >x
                 <Link to={card.route}>
-                  <div
-                    className={`relative bg-gradient-to-br ${card.bgGradient} rounded-3xl p-8 shadow-xl border border-white/20 backdrop-blur-sm overflow-hidden h-full transition-all duration-500 group-hover:shadow-2xl`}
-                  >
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-5">
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-transparent" />
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -translate-y-16 translate-x-16" />
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/20 rounded-full translate-y-12 -translate-x-12" />
-                    </div>
-
+                  <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full transition-all duration-500 group-hover:shadow-2xl">
                     <div className="relative z-10">
                       {/* Icon */}
                       <motion.div
-                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-lg`}
-                        style={{ backgroundColor: "#fff" }}
+                        className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-md bg-[#f5f5ec]"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
@@ -273,13 +196,8 @@ const Community = () => {
                       </motion.div>
 
                       {/* Content */}
-                      <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors">
-                        {card.title}
-                      </h3>
-
-                      <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors">
-                        {card.description}
-                      </p>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-4">{card.title}</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">{card.description}</p>
 
                       {/* CTA Button */}
                       <motion.div
@@ -287,7 +205,7 @@ const Community = () => {
                         whileHover={{ x: 5 }}
                       >
                         Explore
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-5 h-5 ml-2" />
                       </motion.div>
                     </div>
                   </div>
@@ -299,36 +217,17 @@ const Community = () => {
       </motion.section>
 
       {/* Call to Action Section */}
-      <motion.section
-        className="py-20 px-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-      >
+      <motion.section className="py-20 px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 0.8 }}>
         <div className="max-w-4xl mx-auto text-center text-black">
-          <motion.h2
-            className="text-3xl md:text-5xl font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.7 }}
-          >
+          <motion.h2 className="text-3xl md:text-5xl font-bold mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.7 }}>
             Ready to Start Your Journey?
           </motion.h2>
 
-          <motion.p
-            className="text-xl mb-8 opacity-90"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.9 }}
-          >
+          <motion.p className="text-xl mb-8 opacity-90" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.9 }}>
             Join thousands of satisfied customers who trust us with their financial needs
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 2.1 }}
-          >
+          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 2.1 }}>
             <Link
               to="/apply"
               className="inline-flex items-center px-8 py-4 bg-white text-[#3870A6] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

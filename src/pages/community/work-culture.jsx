@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ArrowLeft, Coffee, Gamepad2, Music, Palette, Users, Zap } from "lucide-react"
 import CollaborativeEnvironment from "../../assets/CollaborativeEnvironment.png"
-import FunAtWork from "../../assets/FunAtWork.png"
+
 import DiversityInlusion from "../../assets/DiversityInclusion.png"
 import InovationFirst from "../../assets/InnovationFirst.png"
 import WorkLifeBalance from "../../assets/WorkLifeBalance.png"
@@ -34,7 +34,7 @@ const WorkCulture = () => {
       icon: Gamepad2,
       title: "Fun at Work",
       description: "Regular team events, game nights, and celebrations to keep spirits high.",
-      image: FunAtWork,
+      image: "/images/funAtwork.jpg",
     },
     {
       icon: Music,
@@ -46,7 +46,7 @@ const WorkCulture = () => {
       icon: Palette,
       title: "Unity in diversity",
       description: "We celebrate diversity and create an inclusive environment for everyone.",
-      image: DiversityInlusion,
+      image: "/images/unity.jpg",
     },
   ]
 
