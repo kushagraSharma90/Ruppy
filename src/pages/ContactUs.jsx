@@ -58,32 +58,33 @@ export default function ContactUs() {
 
       <div className="container mx-auto px-4 py-12 max-w-7xl -mt-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Information Sidebar */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl shadow-lg p-8 backdrop-blur-sm border border-gray-100 transition-all duration-300 hover:shadow-xl">
-              <h2 className="text-2xl font-bold text-gray-800 mb-8 pb-4 border-b border-gray-100">
-                Contact Information
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
-                    <Phone className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-base font-semibold text-gray-900">Phone</p>
-                    <p className="text-lg text-blue-600 font-medium">+91 7028095292</p>
-                  </div>
-                </div>
+        {/* Contact Information Sidebar */}
+<div className="space-y-6">
+  <div className="bg-white rounded-2xl shadow-lg p-8 backdrop-blur-sm border border-gray-100 transition-all duration-300 hover:shadow-xl">
+    <h2 className="text-2xl font-bold text-gray-800 mb-8 pb-4 border-b border-gray-100">
+      Contact Information
+    </h2>
+    <div className="space-y-6">
+      <div className="flex items-start group">
+        <div className="flex-shrink-0 mt-1 p-3 bg-[#3870a6]/10 rounded-full group-hover:bg-[#3870a6]/20 transition-colors duration-300">
+          <Phone className="h-5 w-5 text-[#3870a6]" />
+        </div>
+        <div className="ml-4">
+          <p className="text-base font-semibold text-gray-900">Phone</p>
+          <p className="text-lg text-[#3870a6] font-medium">+91 7028095292</p>
+        </div>
+      </div>
 
-                <div className="flex items-start group">
-                  <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
-                    <Mail className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-base font-semibold text-gray-900">Email</p>
-                    <p className="text-lg text-blue-600 font-medium">wecare@rupeedot.com</p>
-                  </div>
-                </div>
+      <div className="flex items-start group">
+        <div className="flex-shrink-0 mt-1 p-3 bg-[#3870a6]/10 rounded-full group-hover:bg-[#3870a6]/20 transition-colors duration-300">
+          <Mail className="h-5 w-5 text-[#3870a6]" />
+        </div>
+        <div className="ml-4">
+          <p className="text-base font-semibold text-gray-900">Email</p>
+          <p className="text-lg text-[#3870a6] font-medium">wecare@rupeedot.com</p>
+        </div>
+      </div>
+   
 
                 <div className="flex items-start group">
                   <div className="flex-shrink-0 mt-1 p-3 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors duration-300">
@@ -109,7 +110,7 @@ export default function ContactUs() {
               <p className="text-gray-600 mb-6">
                 Our support team is available for live assistance during business hours.
               </p>
-              <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+              <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#3870a6] text-white font-medium rounded-lg shadow-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                 <MessageSquare className="h-5 w-5" />
                 Start Live Chat
               </button>
@@ -128,7 +129,8 @@ export default function ContactUs() {
                   title="Office Location"
                 ></iframe>
                 <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <p className="text-sm font-medium">G-1010, Solitaire Business Hub</p>
+                  <p className="text-sm font-medium">  E-4020, Solitaire Business Hub, Viman Nagar, Pune, Maharashtra
+                  411014</p>
                 </div>
               </div>
             </div>

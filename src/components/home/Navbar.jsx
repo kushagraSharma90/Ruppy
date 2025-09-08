@@ -160,30 +160,30 @@ const Navbar = () => {
     {
       id: 1,
       title: "Personal Loan",
-      image: NewCar,
-      description: "Quick funds for your personal needs through digital platform",
-      link: "/loans/personal",
+      image: "/images/PersonalIcon.png",
+      
+      link: "/loans/personal-car-loan",
     },
     {
       id: 2,
       title: "Used Car Loan",
-      image: AgainstCar,
-      description: "Affordable financing options for pre-owned vehicles",
-      link: "/loans/used-car",
+      image: "/images/UsedIcon.png",
+   
+      link: "/loans/used-car-loan",
     },
     {
       id: 3,
       title: "New Car Loan",
-      image: UsedCar,
-      description: "Drive home your dream car with low interests",
-      link: "/loans/new-car",
+      image: "/images/NewIcon.png",
+    
+      link: "/loans/new-car-loan",
     },
     {
       id: 4,
       title: "Loan Against Car",
-      image: PersonalCar,
-      description: "Leverage your car's value for immediate financial needs",
-      link: "/loans/against-car",
+      image: "/images/LoanLoan.png",
+     
+      link: "/loans/against-car-loan",
     },
   ]
 
@@ -206,7 +206,7 @@ const Navbar = () => {
               className="flex items-center py-2 px-2 rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
               onClick={closeMenu}
             >
-              <span className="w-18 h-18 mr-3 flex-shrink-0">
+              <span className="w-14 h-14 mr-3 flex-shrink-0">
                 <img
                   src={loan.image}
                   alt={loan.title}

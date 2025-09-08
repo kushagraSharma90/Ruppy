@@ -62,14 +62,25 @@ const Community = () => {
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
   }
 
-  const heroVariants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }
+  const heroVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  }
 
-  const statsVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.8 } } }
+  const statsVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.8 } },
+  }
 
   return (
     <div className="min-h-screen bg-[#f5f5ec]">
       {/* Hero Section */}
-      <motion.section className="relative py-20 px-4" initial="hidden" animate="visible" variants={heroVariants}>
+      <motion.section
+        className="relative py-20 px-4"
+        initial="hidden"
+        animate="visible"
+        variants={heroVariants}
+      >
         {/* Background Animation */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -121,11 +132,13 @@ const Community = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <p className="font-medium">
-              We are one of the fastest growing fintech aggregator specializing in providing both Personal and Car loans.
-              With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs.
-              We provide hassle-free process, quick disbursal with lowest EMI which is paperless & digital with wide range of products.
-              Our diverse team is united in their mission of creating simple, fair and honest financial products that have the customer's needs at their heart.
-              More choice, more power to you.
+              We are one of the fastest growing fintech aggregator specializing in providing both
+              Personal and Car loans. With our extensive network of partnerships with banks and
+              NBFCs, we bring you the best loan offers tailored to your needs. We provide
+              hassle-free process, quick disbursal with lowest EMI which is paperless & digital with
+              wide range of products. Our diverse team is united in their mission of creating
+              simple, fair and honest financial products that have the customer's needs at their
+              heart. More choice, more power to you.
             </p>
           </motion.div>
 
@@ -158,7 +171,12 @@ const Community = () => {
       </motion.section>
 
       {/* Community Cards Section */}
-      <motion.section className="py-20 px-4" initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.section
+        className="py-20 px-4"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -174,7 +192,10 @@ const Community = () => {
             </p>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants}>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+          >
             {communityCards.map((card, index) => (
               <motion.div
                 key={index}
@@ -182,17 +203,19 @@ const Community = () => {
                 whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
                 whileTap={{ scale: 0.98 }}
                 className="group"
-              >x
+              >
                 <Link to={card.route}>
                   <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full transition-all duration-500 group-hover:shadow-2xl">
                     <div className="relative z-10">
-                      {/* Icon */}
+                      {/* Icon with alternating background */}
                       <motion.div
-                        className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-md bg-[#f5f5ec]"
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-md ${
+                          index % 2 === 0 ? "bg-[#3870A6]" : "bg-[#d47734]"
+                        }`}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <card.icon className="w-8 h-8" style={{ color: card.iconColor }} />
+                        <card.icon className="w-8 h-8 text-white" />
                       </motion.div>
 
                       {/* Content */}
@@ -217,17 +240,36 @@ const Community = () => {
       </motion.section>
 
       {/* Call to Action Section */}
-      <motion.section className="py-20 px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 0.8 }}>
+      <motion.section
+        className="py-20 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+      >
         <div className="max-w-4xl mx-auto text-center text-black">
-          <motion.h2 className="text-3xl md:text-5xl font-bold mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.7 }}>
+          <motion.h2
+            className="text-3xl md:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.7 }}
+          >
             Ready to Start Your Journey?
           </motion.h2>
 
-          <motion.p className="text-xl mb-8 opacity-90" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.9 }}>
+          <motion.p
+            className="text-xl mb-8 opacity-90"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.9 }}
+          >
             Join thousands of satisfied customers who trust us with their financial needs
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 2.1 }}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2.1 }}
+          >
             <Link
               to="/apply"
               className="inline-flex items-center px-8 py-4 bg-white text-[#3870A6] rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

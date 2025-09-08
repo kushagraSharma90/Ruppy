@@ -132,10 +132,10 @@ const EmiCalculator = () => {
         {/* Loan Type Tabs */}
         <div className="flex flex-wrap gap-2 mb-6">
           {[
-            "Used-Car-Loan",
-            "Loan-Against-Car",
             "Personal-Loan",
+            "Used-Car-Loan",
             "New-Car-Loan",
+            "Loan-Against-Car",
           ].map((type) => (
             <button
               key={type}

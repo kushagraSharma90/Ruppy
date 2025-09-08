@@ -26,17 +26,18 @@ const SLIDES = [
     desc: "Get instant funds for your personal needs with minimal documentation and quick approvals. Flexible repayment options designed to make your financial journey stress-free.",
     image: "/images/personalloan.jpg",
   },
-  {
-    slug: "new-car-loan",
-    title: "New Car Loan",
-    desc: "Drive home your dream car faster with competitive interest rates and extended tenure with low EMI through a digital process. Enjoy seamless financing for a smooth and joyful car-buying experience.",
-    image: "/images/newcarloan.jpg",
-  },
+
   {
     slug: "used-car-loan",
     title: "Used Car Loan",
     desc: "Affordable financing options for pre-owned vehicles, with quick approvals and transparent processing for a hassle-free purchase.",
     image: "/images/usedcarloan.jpg",
+  },
+    {
+    slug: "new-car-loan",
+    title: "New Car Loan",
+    desc: "Drive home your dream car faster with competitive interest rates and extended tenure with low EMI through a digital process. Enjoy seamless financing for a smooth and joyful car-buying experience.",
+    image: "/images/newcarloan.jpg",
   },
   {
     slug: "loan-against-car",

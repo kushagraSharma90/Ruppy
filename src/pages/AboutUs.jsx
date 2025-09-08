@@ -28,14 +28,14 @@ export default function AboutUs() {
       {/* About Description */}
       <section className="w-full py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed text-justify">
               We want to help our customers achieve sustainable financial success by offering fast, fair, and flexible finance solutions, powered by our innovative AI lending approach.
             </p>
-            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed">
+            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed text-justify">
               As one of the fastest growing fintech aggregator, we specialize in providing both secured and unsecured loans. With our extensive network of partnerships with banks and NBFCs, we bring you the best loan offers tailored to your needs. We provide a hassle-free process, quick disbursal with the lowest EMIs—all paperless and digital—across a wide range of products. Apply online!
             </p>
-            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed">
+            <p className="text-black text-xl md:text-2xl mb-6 leading-relaxed text-justify">
               Our diverse team is united in their mission of creating simple, fair, and honest financial products that have the customer’s needs at their heart.
             </p>
           </div>
@@ -45,7 +45,9 @@ export default function AboutUs() {
       {/* Certificate Image Section */}
       <section className="w-full py-12 md:py-16 ">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-6">Recognized by Startup India</h2>
+          <h2 className="text-2xl font-bold text-center mb-6">
+            Recognized by Startup India
+          </h2>
           <div className="max-w-4xl mx-auto">
             <img
               src={certificate}
@@ -65,9 +67,13 @@ export default function AboutUs() {
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <Rocket className="text-[#3870a6] w-8 h-8" />
               </div>
-              <h3 className="text-xl text-black font-bold text-center mb-4">Mission</h3>
+              <h3 className="text-xl text-black font-bold text-center mb-4">
+                Mission
+              </h3>
               <p className="text-sm text-center text-black leading-relaxed">
-                To simplify financing for all. We strive to offer seamless, transparent and quick loan solutions that empower both individuals and businesses by combining innovation with trust.
+                To simplify financing for all. We strive to offer seamless,
+                transparent and quick loan solutions that empower both
+                individuals and businesses by combining innovation with trust.
               </p>
             </div>
 
@@ -78,7 +84,9 @@ export default function AboutUs() {
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Vision</h3>
               <p className="text-sm text-center text-black leading-relaxed">
-                We envision a world where financing is not a barrier but a bridge to dreams—accessible to everyone, powered by technology, and enhanced by human care and transparency.
+                We envision a world where financing is not a barrier but a
+                bridge to dreams—accessible to everyone, powered by technology,
+                and enhanced by human care and transparency.
               </p>
             </div>
 
@@ -87,9 +95,13 @@ export default function AboutUs() {
               <div className="bg-white rounded-lg w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <Target className="text-[#3870a6] w-8 h-8" />
               </div>
-              <h3 className="text-xl text-black font-bold text-center mb-4">Goal</h3>
+              <h3 className="text-xl text-black font-bold text-center mb-4">
+                Goal
+              </h3>
               <p className="text-sm text-center text-black leading-relaxed">
-                Our goal is to become India's most trusted and customer-first lending platform, delivering unmatched ease and confidence in every financial decision.
+                Our goal is to become India's most trusted and customer-first
+                lending platform, delivering unmatched ease and confidence in
+                every financial decision.
               </p>
             </div>
           </div>

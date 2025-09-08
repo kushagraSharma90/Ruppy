@@ -13,11 +13,11 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Saurabh Patel",
-      position: "Salaried - Delhi",
-      image: customer1,
+      name: "Ketan Kamble ",
+      position: "Salaried - Pune",
+      image: "/images/KetanKamble.png",
       content:
-        "Celebrated our 2nd marriage anniversary with a new car thanks to Rupee Dot's swift service, we secured a high loan amount at a low rate, turning an unplanned surprise into reality. My wife was overjoyed!",
+        "Financing my car with RupeeDt as the easiest decision ever. Their team was helpful, the process is transparent, an the loan got approved in no time. If you want quick and reliable finance, go with RupeeDot!",
       rating: 5,
     },
     {
@@ -33,7 +33,7 @@ const Testimonials = () => {
       id: 3,
       name: "Ravin P",
       position: "Business Owner - Bangalore",
-      image: customer3,
+      image: "/images/RavinP.png",
       content:
         "Got a used car loan considering my daughter's 18th Birthday – fast service, immediate loan process! Even the relationship manager was here with cakes and ribbons during car delivery. What a personal touch!",
       rating: 5,
@@ -42,7 +42,7 @@ const Testimonials = () => {
       id: 4,
       name: "Sunil Rana",
       position: "Working Professional - Mumbai",
-      image: customer2,
+      image: "/images/SunilRana.png",
       content:
         "I financed my new car through RupeeDot, and the experience was amazing! The process was smooth, quick, and hassle-free, with complete transparency and no hidden charges. Highly recommended!",
       rating: 5,

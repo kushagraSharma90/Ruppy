@@ -64,10 +64,10 @@ function App() {
             />
             <Route path="/community/work-culture" element={<WorkCulture />} />
             <Route path="/community/faq" element={<FAQ />} />
-            <Route path="/loans/personal" element={<PersonalLoan />} />
-            <Route path="/loans/used-car" element={<UsedCarLoan />} />
-            <Route path="/loans/new-car" element={<NewCarLoan />} />
-            <Route path="/loans/against-car" element={<LoanAgainstCar />} />
+            <Route path="/loans/personal-car-loan" element={<PersonalLoan />} />
+            <Route path="/loans/used-car-loan" element={<UsedCarLoan />} />
+            <Route path="/loans/new-car-loan" element={<NewCarLoan />} />
+            <Route path="/loans/against-car-loan" element={<LoanAgainstCar />} />
             <Route path="/calculators" element={<Calculators />} />
             <Route path="/become-partner" element={<BecomePartner />} />
             <Route path="/community/blogs" element={<Blogs />} />

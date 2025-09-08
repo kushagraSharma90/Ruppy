@@ -1,54 +1,28 @@
-import { Shield, CheckCircle, Users, Zap, Eye, FileText } from "lucide-react";
-import { motion } from "framer-motion";
+import { Shield, CheckCircle, Users, Zap, Eye, FileText } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function BenefitsSection() {
   const benefits = [
-    {
-      title: "Best Offers, Many Lenders",
-      icon: Shield,
-      bgColor: "bg-[#3870A6]",
-    },
-    {
-      title: "Instant Eligibility & Pre-Approval",
-      icon: CheckCircle,
-      bgColor: "bg-[#D47734]",
-    },
-    {
-      title: "Smart Lender Matching",
-      icon: Users,
-      bgColor: "bg-[#3870A6]",
-    },
-    {
-      title: "Fast & Paperless",
-      icon: Zap,
-      bgColor: "bg-[#D47734]",
-    },
-    {
-      title: "No Hidden Charges",
-      icon: Eye,
-      bgColor: "bg-[#3870A6]",
-    },
-    {
-      title: "Complete Loan Support",
-      icon: FileText,
-      bgColor: "bg-[#D47734]",
-    },
-  ];
+    { title: "Best Offers, Many Lenders", icon: Shield, bgColor: "bg-[#3870A6]" },
+    { title: "Instant Eligibility & Pre-Approval", icon: CheckCircle, bgColor: "bg-[#D47734]" },
+    { title: "Smart Lender Matching", icon: Users, bgColor: "bg-[#3870A6]" },
+    { title: "Fast & Paperless", icon: Zap, bgColor: "bg-[#D47734]" },
+    { title: "No Hidden Charges", icon: Eye, bgColor: "bg-[#3870A6]" },
+    { title: "Complete Loan Support", icon: FileText, bgColor: "bg-[#D47734]" },
+  ]
 
   return (
     <div className="w-full bg-[#f5f5ec] py-6 md:py-8">
-      {/* ✅ New Header Section */}
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
           AI-driven lending for your needs
         </h2>
       </div>
 
-      {/* Benefit Cards */}
       <div className="max-w-7xl mx-auto px-2 md:px-4">
-        <div className="flex justify-center gap-2 md:gap-3 lg:gap-4 overflow-x-auto">
+        <div className="flex justify-start md:justify-center gap-2 md:gap-3 lg:gap-4 overflow-x-auto scrollbar-hide">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
+            const Icon = benefit.icon
             return (
               <motion.div
                 key={index}
@@ -65,10 +39,10 @@ export default function BenefitsSection() {
                   {benefit.title}
                 </h3>
               </motion.div>
-            );
+            )
           })}
         </div>
       </div>
     </div>
-  );
+  )
 }
