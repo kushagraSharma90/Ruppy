@@ -106,9 +106,10 @@ function BlogCard({ blog }) {
         <p className="text-gray-600 line-clamp-3 text-sm">{blog.description}</p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
           <div className="flex items-center text-sm text-gray-600">
-            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold mr-2">
-              TR
-            </div>
+           <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-semibold mr-2">
+  TR
+</div>
+
             <span className="font-medium">{blog.author}</span>
           </div>
 

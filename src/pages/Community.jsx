@@ -170,74 +170,79 @@ const Community = () => {
         </div>
       </motion.section>
 
-      {/* Community Cards Section */}
-      <motion.section
-        className="py-20 px-4"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#3870A6] to-black">
-              Explore Our Community
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover everything you need to know about our company, culture, and opportunities
-            </p>
-          </motion.div>
+    <motion.section
+  className="py-20 px-4 sm:px-6 md:px-8"
+  initial="hidden"
+  animate="visible"
+  variants={containerVariants}
+>
+  <div className="max-w-7xl mx-auto">
+  <motion.div
+  className="text-center mb-16"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+>
+  <h2 className="text-3xl md:text-5xl font-bold mb-6 pb-2 leading-snug md:leading-tight lg:leading-[1.2] bg-clip-text text-transparent bg-black">
+    Explore Our Community
+  </h2>
+  <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    Discover everything you need to know about our company, culture, and opportunities
+  </p>
+</motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-          >
-            {communityCards.map((card, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
-                whileTap={{ scale: 0.98 }}
-                className="group"
-              >
-                <Link to={card.route}>
-                  <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full transition-all duration-500 group-hover:shadow-2xl">
-                    <div className="relative z-10">
-                      {/* Icon with alternating background */}
-                      <motion.div
-                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-md ${
-                          index % 2 === 0 ? "bg-[#3870A6]" : "bg-[#d47734]"
-                        }`}
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <card.icon className="w-8 h-8 text-white" />
-                      </motion.div>
 
-                      {/* Content */}
-                      <h3 className="text-2xl font-bold text-gray-800 mb-4">{card.title}</h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">{card.description}</p>
+    <motion.div
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      variants={containerVariants}
+    >
+      {communityCards.map((card, index) => (
+        <motion.div
+          key={index}
+          variants={cardVariants}
+          whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.3 } }}
+          whileTap={{ scale: 0.98 }}
+          className="group"
+        >
+          <Link to={card.route}>
+            <div className="relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 h-full transition-all duration-500 group-hover:shadow-2xl">
+              <div className="relative z-10">
+                {/* Icon */}
+                <motion.div
+                  className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl mb-6 shadow-md ${
+                    index % 2 === 0 ? "bg-[#3870A6]" : "bg-[#d47734]"
+                  }`}
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <card.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                </motion.div>
 
-                      {/* CTA Button */}
-                      <motion.div
-                        className="inline-flex items-center px-6 py-3 bg-[#3870A6] text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all duration-300"
-                        whileHover={{ x: 5 }}
-                      >
-                        Explore
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </motion.div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
+                {/* Content */}
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
+                  {card.title}
+                </h3>
+                <p className="text-gray-600 mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                  {card.description}
+                </p>
+
+                {/* CTA Button */}
+                <motion.div
+                  className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 bg-[#3870A6] text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+                  whileHover={{ x: 5 }}
+                >
+                  Explore
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                </motion.div>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</motion.section>
+
 
       {/* Call to Action Section */}
       <motion.section

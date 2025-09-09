@@ -69,7 +69,7 @@ const Testimonials = () => {
       id: 7,
       name: "Siddharth Sharma",
       position: "Working Professional - Mumbai",
-      image: customer5,
+      image: "/images/Siddharth.png",
       content:
         "I sincerely appreciate RupeeDot’s prompt assistance in providing me a top-up car loan for my son's engineering admission. Thanks to your support, my son can now pursue his education without financial hurdles.",
       rating: 5,
@@ -78,7 +78,7 @@ const Testimonials = () => {
       id: 8,
       name: "Kanhaiya Tiwari",
       position: "Business Owner - Pune",
-      image: customer9,
+      image: "/images/Kanhaiya.png",
       content:
         "I recently financed a car for my son through RupeeDot, and I can’t express how grateful I am. The loan process was smooth and stress-free, making this special moment a beautiful reality for our family.",
       rating: 5,

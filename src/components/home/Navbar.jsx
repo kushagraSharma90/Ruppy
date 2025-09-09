@@ -7,7 +7,7 @@ import PersonalCar from "../../assets/PersonalCar.png"
 import {
   ChevronDown, Menu, X, Home as HomeIcon, Users, BookOpen, 
   Heart, Briefcase, HelpCircle, Calculator, Handshake, FileText,
-  History, IndianRupee 
+  IndianRupee, Sparkles
 } from "lucide-react"
 
 const Navbar = () => {
@@ -127,7 +127,7 @@ const Navbar = () => {
             return (
               <div className="relative group">
                 <Link to="/our-story" className={`${linkClass} text-sm lg:text-base`}>
-                  <History className={iconClass} />
+                  <Sparkles className={iconClass} />
                   <span className="nav-underline">Our Story</span> <ChevronDown className="w-4 h-4 ml-1" />
                 </Link>
                 <div className="dropdown-anim absolute left-0 w-48 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
@@ -140,7 +140,7 @@ const Navbar = () => {
                       About Us
                     </Link>
                     <Link
-                      to="/ContactUs"
+                      to="/our-story/contact-us"
                       className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                       onClick={closeMenu}
                     >
@@ -151,79 +151,76 @@ const Navbar = () => {
               </div>
             )
           })()}
-{/* Loans Dropdown */}
-{(() => {
-  const { linkClass, iconClass } = getLinkStyles("/loans")
 
-  // Loan categories array
-  const loanTypes = [
-    {
-      id: 1,
-      title: "Personal Loan",
-      image: "/images/PersonalIcon.png",
-      
-      link: "/loans/personal-car-loan",
-    },
-    {
-      id: 2,
-      title: "Used Car Loan",
-      image: "/images/UsedIcon.png",
-   
-      link: "/loans/used-car-loan",
-    },
-    {
-      id: 3,
-      title: "New Car Loan",
-      image: "/images/NewIcon.png",
-    
-      link: "/loans/new-car-loan",
-    },
-    {
-      id: 4,
-      title: "Loan Against Car",
-      image: "/images/LoanLoan.png",
-     
-      link: "/loans/against-car-loan",
-    },
-  ]
+          {/* Loans Dropdown */}
+          {(() => {
+            const { linkClass, iconClass } = getLinkStyles("/loans")
 
-  return (
-    <div className="relative group">
-      {/* Parent Loans Link (Indian Rupee icon) */}
-      <Link to="/loans" className={`${linkClass} text-sm lg:text-base`}>
-        <IndianRupee className={`${iconClass} mr-2`} />
-        <span className="nav-underline">Loans</span>
-        <ChevronDown className="w-4 h-4 ml-1" />
-      </Link>
+            // Loan categories array
+            const loanTypes = [
+              {
+                id: 1,
+                title: "Personal Loan",
+                image: "/images/PersonalIcon.png",
+                link: "/loans/personal-car-loan",
+              },
+              {
+                id: 2,
+                title: "Used Car Loan",
+                image: "/images/UsedIcon.png",
+                link: "/loans/used-car-loan",
+              },
+              {
+                id: 3,
+                title: "New Car Loan",
+                image: "/images/NewIcon.png",
+                link: "/loans/new-car-loan",
+              },
+              {
+                id: 4,
+                title: "Loan Against Car",
+                image: "/images/LoanLoan.png",
+                link: "/loans/against-car-loan",
+              },
+            ]
 
-      {/* Dropdown Menu */}
-      <div className="dropdown-anim absolute left-0 w-64 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
-        <div className="py-3 px-4 space-y-1">
-          {loanTypes.map((loan) => (
-            <Link
-              key={loan.id}
-              to={loan.link}
-              className="flex items-center py-2 px-2 rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-              onClick={closeMenu}
-            >
-              <span className="w-14 h-14 mr-3 flex-shrink-0">
-                <img
-                  src={loan.image}
-                  alt={loan.title}
-                  className="w-full h-full object-contain"
-                />
-              </span>
-              <div>
-                <p className="font-medium text-sm">{loan.title}</p>
-                <p className="text-xs text-gray-500">{loan.description}</p>
+            return (
+              <div className="relative group">
+                {/* Parent Loans Link (Indian Rupee icon) */}
+                <Link to="/loans" className={`${linkClass} text-sm lg:text-base`}>
+                  <IndianRupee className={`${iconClass} mr-2`} />
+                  <span className="nav-underline">Loans</span>
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </Link>
+
+                {/* Dropdown Menu */}
+                <div className="dropdown-anim absolute left-0 w-64 bg-white shadow-xl rounded-xl border border-blue-100 z-50">
+                  <div className="py-3 px-4 space-y-1">
+                    {loanTypes.map((loan) => (
+                      <Link
+                        key={loan.id}
+                        to={loan.link}
+                        className="flex items-center py-2 px-2 rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+                        onClick={closeMenu}
+                      >
+                        <span className="w-14 h-14 mr-3 flex-shrink-0">
+                          <img
+                            src={loan.image}
+                            alt={loan.title}
+                            className="w-full h-full object-contain"
+                          />
+                        </span>
+                        <div>
+                          <p className="font-medium text-sm">{loan.title}</p>
+                          <p className="text-xs text-gray-500">{loan.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-})()}
+            )
+          })()}
 
           {/* Calculators Link */}
           {(() => {
@@ -306,18 +303,15 @@ const Navbar = () => {
         </nav>
 
         {/* Apply Now Button */}
-       <Link
-  to="/apply"
-  className="hidden md:flex items-center bg-[#3870a6] hover:bg-[#2d5a87] text-white px-4 py-2 rounded-xl text-sm lg:text-base whitespace-nowrap shadow-lg transition-all duration-200 transform hover:scale-105"
->
-  Apply Now
-
-    <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-    </svg>
-
-</Link>
-
+        <Link
+          to="/apply"
+          className="hidden md:flex items-center bg-[#3870a6] hover:bg-[#2d5a87] text-white px-4 py-2 rounded-xl text-sm lg:text-base whitespace-nowrap shadow-lg transition-all duration-200 transform hover:scale-105"
+        >
+          Apply Now
+          <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -331,8 +325,8 @@ const Navbar = () => {
 
       {/* Mobile Sidebar - Overlay */}
       <div
-        className={`fixed inset-0 bg-blue-900 bg-opacity-30 z-40 md:hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100 backdrop-blur-sm" : "opacity-0 pointer-events-none"
         }`}
         onClick={closeMenu}
         aria-hidden="true"
@@ -371,7 +365,7 @@ const Navbar = () => {
                 className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${isActive("/our-story") ? "text-[#d47734] bg-blue-50" : "text-gray-700"} hover:bg-blue-50 hover:text-[#d47734]`}
                 onClick={(e) => handleMobileLinkClick("/our-story", "our-story", e)}
               >
-                <History className={`h-5 w-5 mr-2 ${isActive("/our-story") ? "text-[#d47734]" : "text-gray-400"}`} />
+                <Sparkles className={`h-5 w-5 mr-2 ${isActive("/our-story") ? "text-[#d47734]" : "text-gray-400"}`} />
                 Our Story
                 <ChevronDown className={`ml-auto transition-transform ${mobileDropdown === "our-story" ? "rotate-180" : ""}`} />
               </Link>
@@ -385,7 +379,7 @@ const Navbar = () => {
                     About Us
                   </Link>
                   <Link
-                    to="/ContactUs"
+                    to="/our-story/contact-us"
                     className="block py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
@@ -395,71 +389,71 @@ const Navbar = () => {
               )}
             </div>
 
-           {/* Loans - Now a clickable link that also toggles dropdown */}
-<div>
-  <Link
-    to="/loans"
-    className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${
-      isActive("/loans") ? "text-[#d47734] bg-blue-50" : "text-gray-700"
-    } hover:bg-blue-50 hover:text-[#d47734]`}
-    onClick={(e) => handleMobileLinkClick("/loans", "loans", e)}
-  >
-    <span className="mr-2 w-5 h-5">
-      <img src={NewCar} alt="Loans" className="w-full h-full object-contain" />
-    </span>
-    Loans
-    <ChevronDown
-      className={`ml-auto transition-transform ${
-        mobileDropdown === "loans" ? "rotate-180" : ""
-      }`}
-    />
-  </Link>
+            {/* Loans - Now a clickable link that also toggles dropdown */}
+            <div>
+              <Link
+                to="/loans"
+                className={`flex items-center w-full py-2 px-3 rounded-lg transition-colors duration-200 ${
+                  isActive("/loans") ? "text-[#d47734] bg-blue-50" : "text-gray-700"
+                } hover:bg-blue-50 hover:text-[#d47734]`}
+                onClick={(e) => handleMobileLinkClick("/loans", "loans", e)}
+              >
+                <span className="mr-2 w-5 h-5">
+                  <img src={NewCar} alt="Loans" className="w-full h-full object-contain" />
+                </span>
+                Loans
+                <ChevronDown
+                  className={`ml-auto transition-transform ${
+                    mobileDropdown === "loans" ? "rotate-180" : ""
+                  }`}
+                />
+              </Link>
 
-  {mobileDropdown === "loans" && (
-    <div className="pl-8 pb-2">
-      <Link
-        to="/loans/personal"
-        className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-        onClick={closeMenu}
-      >
-        <span className="mr-2 w-7 h-7">
-          <img src={PersonalCar} alt="Personal Loan" className="w-full h-full object-contain" />
-        </span>
-        Personal Loan
-      </Link>
-      <Link
-        to="/loans/used-car"
-        className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-        onClick={closeMenu}
-      >
-        <span className="mr-2 w-7 h-7">
-          <img src={UsedCar} alt="Used Car Loan" className="w-full h-full object-contain" />
-        </span>
-        Used Car Loan
-      </Link>
-      <Link
-        to="/loans/new-car"
-        className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-        onClick={closeMenu}
-      >
-        <span className="mr-2 w-7 h-7">
-          <img src={NewCar} alt="New Car Loan" className="w-full h-full object-contain" />
-        </span>
-        New Car Loan
-      </Link>
-      <Link
-        to="/loans/against-car"
-        className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
-        onClick={closeMenu}
-      >
-        <span className="mr-2 w-7 h-7">
-          <img src={AgainstCar} alt="Loan Against Car" className="w-full h-full object-contain" />
-        </span>
-        Loan Against Car
-      </Link>
-    </div>
-  )}
-</div>
+              {mobileDropdown === "loans" && (
+                <div className="pl-8 pb-2">
+                  <Link
+                    to="/loans/personal"
+                    className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+                    onClick={closeMenu}
+                  >
+                    <span className="mr-2 w-7 h-7">
+                      <img src={PersonalCar} alt="Personal Loan" className="w-full h-full object-contain" />
+                    </span>
+                    Personal Loan
+                  </Link>
+                  <Link
+                    to="/loans/used-car"
+                    className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+                    onClick={closeMenu}
+                  >
+                    <span className="mr-2 w-7 h-7">
+                      <img src={UsedCar} alt="Used Car Loan" className="w-full h-full object-contain" />
+                    </span>
+                    Used Car Loan
+                  </Link>
+                  <Link
+                    to="/loans/new-car"
+                    className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+                    onClick={closeMenu}
+                  >
+                    <span className="mr-2 w-7 h-7">
+                      <img src={NewCar} alt="New Car Loan" className="w-full h-full object-contain" />
+                    </span>
+                    New Car Loan
+                  </Link>
+                  <Link
+                    to="/loans/against-car"
+                    className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
+                    onClick={closeMenu}
+                  >
+                    <span className="mr-2 w-7 h-7">
+                      <img src={AgainstCar} alt="Loan Against Car" className="w-full h-full object-contain" />
+                    </span>
+                    Loan Against Car
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {/* Calculators */}
             <Link
@@ -539,18 +533,18 @@ const Navbar = () => {
             </Link>
 
             {/* Apply Now Button (Mobile) */}
-          <Link
-  to="/apply"
-  className="hidden md:flex items-center bg-[#3870a6] hover:bg-[#2d5a87] text-white px-4 py-2 rounded-xl text-sm lg:text-base whitespace-nowrap shadow-lg transition-all duration-200 transform hover:scale-105"
->
-  Apply Now
-  <span className="ml-1 bg-white bg-opacity-20 rounded-full p-1">
-    <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-    </svg>
-  </span>
-</Link>
-
+            <Link
+              to="/apply"
+              className="flex items-center justify-center bg-[#3870a6] hover:bg-[#2d5a87] text-white px-4 py-3 rounded-xl text-sm mt-4 shadow-lg transition-all duration-200"
+              onClick={closeMenu}
+            >
+              Apply Now
+              <span className="ml-1  bg-opacity-20 rounded-full p-1">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
           </div>
         </div>
       </div>

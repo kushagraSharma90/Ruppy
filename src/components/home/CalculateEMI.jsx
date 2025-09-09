@@ -85,7 +85,7 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
 }
 
 const EmiCalculator = () => {
-  const [loanType, setLoanType] = useState("Used-Car-Loan")
+  const [loanType, setLoanType] = useState("Personal-Loan")
   const [loanAmount, setLoanAmount] = useState(1000000)
   const [duration, setDuration] = useState(2)
   const [interestRate, setInterestRate] = useState(5)

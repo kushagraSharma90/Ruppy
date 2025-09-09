@@ -30,7 +30,7 @@ const Loans = () => {
         "Self-employed person, earning or non-earning",
         "Credit score (600+)",
       ],
-      link: "/loans/personal",
+      link: "/apply",
     },
     {
       id: "used-car",
@@ -52,7 +52,7 @@ const Loans = () => {
         "Vehicle not older than 12 years at end of loan tenure",
         "Credit score (600+)",
       ],
-      link: "/loans/used-car",
+      link: "/apply",
     },
     {
       id: "new-car",
@@ -74,7 +74,7 @@ const Loans = () => {
         "Self-employed person, earning or non-earning",
         "Credit score (600+)",
       ],
-      link: "/loans/new-car",
+      link: "/apply",
     },
     {
       id: "against-car",
@@ -96,7 +96,7 @@ const Loans = () => {
         "Vehicle should be fully insured",
         "Credit score (600+)",
       ],
-      link: "/loans/against-car",
+      link: "/apply",
     },
   ]
 

@@ -26,14 +26,13 @@ const SLIDES = [
     desc: "Get instant funds for your personal needs with minimal documentation and quick approvals. Flexible repayment options designed to make your financial journey stress-free.",
     image: "/images/personalloan.jpg",
   },
-
   {
     slug: "used-car-loan",
     title: "Used Car Loan",
     desc: "Affordable financing options for pre-owned vehicles, with quick approvals and transparent processing for a hassle-free purchase.",
     image: "/images/usedcarloan.jpg",
   },
-    {
+  {
     slug: "new-car-loan",
     title: "New Car Loan",
     desc: "Drive home your dream car faster with competitive interest rates and extended tenure with low EMI through a digital process. Enjoy seamless financing for a smooth and joyful car-buying experience.",
@@ -49,7 +48,7 @@ const SLIDES = [
 
 export default function Hero() {
   const containerRef = useRef(null)
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(1) // ✅ start from Personal Loan
   const [paused, setPaused] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
@@ -126,18 +125,18 @@ export default function Hero() {
             className="flex transition-transform duration-500 ease-out will-change-transform"
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
-            {SLIDES.map((slide, i) => (
+            {SLIDES.map((slide) => (
               <Slide key={slide.slug} slide={slide} />
             ))}
           </div>
         </div>
 
-        {/* ✅ Pills moved LEFT instead of center */}
-        <div className="flex justify-start px-4 sm:px-6 lg:px-8 mt-6">
+        {/* ✅ Pills responsive (grid 2x2 on small, row on larger) */}
+        <div className="flex justify-center px-4 sm:px-6 lg:px-8 mt-6">
           <Pills activeSlug={SLIDES[index]?.slug} onSelect={handleSelect} />
         </div>
 
-        {/* Mobile indicators stay centered */}
+        {/* Mobile indicators */}
         <div className="md:hidden flex justify-center space-x-2 mt-4 pb-4">
           {SLIDES.map((_, i) => (
             <button
@@ -150,8 +149,8 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ✅ Benefits moved slightly UP */}
-      <div className="-mt-4 md:-mt-8">
+      {/* ✅ Benefits below hero */}
+      <div className="mt-8 md:mt-12 lg:mt-16">
         <BenefitsSectionComponent />
       </div>
     </>
@@ -167,30 +166,27 @@ function Slide({ slide }) {
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 lg:gap-8">
           {/* Text */}
           <div className="text-center md:text-left w-full md:w-1/2">
-            {/* Heading */}
             {slide.type === "intro" ? (
-              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-pretty">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 <span className="text-[#3870A6]">Unlock Your </span>
                 <span className="text-[#3870A6]">Financial </span>
                 <span className="text-[#D47734]">Dreams</span>
               </h1>
             ) : (
-              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl font-bold leading-tight text-pretty">
+              <h1 className="text-2xl sm:text-4xl font-bold leading-tight">
                 <span className="text-[#3870A6]">{first} </span>
                 <span className="text-[#D47734]">{second}</span>
               </h1>
             )}
 
-            {/* Description */}
-            <p className="mt-2 md:mt-3 lg:mt-4 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-black/80">
+            <p className="mt-2 sm:mt-4 text-sm sm:text-lg lg:text-xl text-black/80">
               {slide.desc}
             </p>
 
-            {/* Apply button */}
-            <div className="mt-3 md:mt-4 flex justify-center md:justify-start">
+            <div className="mt-3 sm:mt-4 flex justify-center md:justify-start">
               <a
                 href="/apply"
-                className="inline-flex select-none items-center justify-center rounded-full bg-[#3870A6] px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base text-white font-semibold shadow-sm hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6]"
+                className="inline-flex items-center justify-center rounded-full bg-[#3870A6] px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base text-white font-semibold shadow-sm hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6]"
               >
                 APPLY NOW
               </a>
@@ -216,7 +212,7 @@ function Pills({ activeSlug, onSelect }) {
   const toIndex = (slug) => SLIDES.findIndex((s) => s.slug === slug)
 
   return (
-    <div className="flex flex-wrap gap-2 md:gap-3 lg:gap-4">
+    <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3 lg:gap-4 w-full max-w-md md:max-w-none">
       {PRODUCT_SLIDES.map((p) => {
         const targetIndex = toIndex(p.slug)
         const isActive = activeSlug === p.slug
@@ -228,8 +224,8 @@ function Pills({ activeSlug, onSelect }) {
             aria-current={isActive ? "true" : "false"}
             className={
               isActive
-                ? "rounded-full bg-[#D47734] text-white px-3 py-1 md:px-4 md:py-1.5 text-xs md:text-sm font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#D47734] whitespace-nowrap"
-                : "rounded-full border border-black/70 px-3 py-1 md:px-4 md:py-1.5 text-xs md:text-sm bg-white text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6] whitespace-nowrap"
+                ? "rounded-full bg-[#D47734] text-white px-3 py-2 text-xs sm:text-sm font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#D47734] whitespace-nowrap"
+                : "rounded-full border border-black/70 px-3 py-2 text-xs sm:text-sm bg-white text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3870A6] whitespace-nowrap"
             }
           >
             {p.title}
