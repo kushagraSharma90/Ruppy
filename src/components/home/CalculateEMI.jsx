@@ -22,7 +22,7 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
         viewBox={`0 0 ${radius * 2} ${radius + strokeWidth}`}
         className="mx-auto"
       >
-        {/* Background half arc (light gray) */}
+        {/* Background half arc */}
         <circle
           cx={radius}
           cy={radius}
@@ -35,7 +35,7 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
           transform={`rotate(180 ${radius} ${radius})`}
         />
 
-        {/* Principal arc (blue) */}
+        {/* Principal arc */}
         <circle
           cx={radius}
           cy={radius}
@@ -48,7 +48,7 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
           transform={`rotate(180 ${radius} ${radius})`}
         />
 
-        {/* Interest arc (orange), placed after principal */}
+        {/* Interest arc */}
         <circle
           cx={radius}
           cy={radius}
@@ -86,30 +86,36 @@ const SemiDonutChart = ({ totalAmount, interestAmount, emi }) => {
 
 const EmiCalculator = () => {
   const [loanType, setLoanType] = useState("Personal-Loan")
-  const [loanAmount, setLoanAmount] = useState(1000000)
-  const [duration, setDuration] = useState(2)
-  const [interestRate, setInterestRate] = useState(5)
+  const [loanAmount, setLoanAmount] = useState("1000000")
+  const [duration, setDuration] = useState("2")
+  const [interestRate, setInterestRate] = useState("5")
   const [emi, setEmi] = useState(0)
   const [totalInterest, setTotalInterest] = useState(0)
   const [totalAmount, setTotalAmount] = useState(0)
 
   useEffect(() => {
-    const principal = loanAmount
-    const ratePerMonth = interestRate / (12 * 100)
-    const timeInMonths = duration * 12
+    const principal = Number(loanAmount) || 0
+    const ratePerMonth = (Number(interestRate) || 0) / (12 * 100)
+    const timeInMonths = (Number(duration) || 0) * 12
 
-    const emiValue =
-      (principal *
-        ratePerMonth *
-        Math.pow(1 + ratePerMonth, timeInMonths)) /
-      (Math.pow(1 + ratePerMonth, timeInMonths) - 1)
+    if (principal > 0 && ratePerMonth > 0 && timeInMonths > 0) {
+      const emiValue =
+        (principal *
+          ratePerMonth *
+          Math.pow(1 + ratePerMonth, timeInMonths)) /
+        (Math.pow(1 + ratePerMonth, timeInMonths) - 1)
 
-    const totalPayment = emiValue * timeInMonths
-    const interestPayment = totalPayment - principal
+      const totalPayment = emiValue * timeInMonths
+      const interestPayment = totalPayment - principal
 
-    setEmi(Math.round(emiValue))
-    setTotalInterest(Math.round(interestPayment))
-    setTotalAmount(Math.round(totalPayment))
+      setEmi(Math.round(emiValue))
+      setTotalInterest(Math.round(interestPayment))
+      setTotalAmount(Math.round(totalPayment))
+    } else {
+      setEmi(0)
+      setTotalInterest(0)
+      setTotalAmount(0)
+    }
   }, [loanAmount, duration, interestRate])
 
   const formatCurrency = (amount) =>
@@ -118,6 +124,17 @@ const EmiCalculator = () => {
       currency: "INR",
       maximumFractionDigits: 0,
     }).format(amount)
+
+  // helper to handle increments safely
+  const handleIncrement = (setter, value, step, max) => {
+    const num = Number(value) || 0
+    setter(String(Math.min(num + step, max)))
+  }
+
+  const handleDecrement = (setter, value, step, min) => {
+    const num = Number(value) || 0
+    setter(String(Math.max(num - step, min)))
+  }
 
   return (
     <section className="w-full py-12 bg-[#f5f5ec]">
@@ -158,22 +175,44 @@ const EmiCalculator = () => {
             <div className="space-y-8">
               {/* Loan Amount */}
               <div>
-                <div className="flex justify-between mb-2">
-                  <label className="font-medium text-gray-700">Loan amount</label>
-                  <input
-                    type="number"
-                    value={loanAmount}
-                    onChange={(e) => setLoanAmount(Number(e.target.value))}
-                    className="w-32 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                <div className="flex justify-between mb-2 items-center">
+                  <label className="font-medium text-gray-700">
+                    Loan amount
+                  </label>
+                  <div className="flex items-center space-x-1">
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleDecrement(setLoanAmount, loanAmount, 10000, 100000)
+                      }
+                    >
+                      –
+                    </button>
+                    <input
+                      type="text"
+                      value={loanAmount}
+                      onChange={(e) =>
+                        setLoanAmount(e.target.value.replace(/\D/g, ""))
+                      }
+                      className="w-32 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleIncrement(setLoanAmount, loanAmount, 10000, 10000000)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
                 <input
                   type="range"
                   min={100000}
                   max={10000000}
                   step={10000}
-                  value={loanAmount}
-                  onChange={(e) => setLoanAmount(Number(e.target.value))}
+                  value={Number(loanAmount) || 0}
+                  onChange={(e) => setLoanAmount(e.target.value)}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
@@ -184,22 +223,42 @@ const EmiCalculator = () => {
 
               {/* Duration */}
               <div>
-                <div className="flex justify-between mb-2">
+                <div className="flex justify-between mb-2 items-center">
                   <label className="font-medium text-gray-700">Duration</label>
-                  <input
-                    type="number"
-                    value={duration}
-                    onChange={(e) => setDuration(Number(e.target.value))}
-                    className="w-32 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                  <div className="flex items-center space-x-1">
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleDecrement(setDuration, duration, 1, 1)
+                      }
+                    >
+                      –
+                    </button>
+                    <input
+                      type="text"
+                      value={duration}
+                      onChange={(e) =>
+                        setDuration(e.target.value.replace(/\D/g, ""))
+                      }
+                      className="w-20 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleIncrement(setDuration, duration, 1, 10)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
                 <input
                   type="range"
                   min={1}
                   max={10}
                   step={1}
-                  value={duration}
-                  onChange={(e) => setDuration(Number(e.target.value))}
+                  value={Number(duration) || 0}
+                  onChange={(e) => setDuration(e.target.value)}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
@@ -210,24 +269,46 @@ const EmiCalculator = () => {
 
               {/* Interest Rate */}
               <div>
-                <div className="flex justify-between mb-2">
+                <div className="flex justify-between mb-2 items-center">
                   <label className="font-medium text-gray-700">
                     Interest Rate (P.A)
                   </label>
-                  <input
-                    type="number"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="w-32 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                  <div className="flex items-center space-x-1">
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleDecrement(setInterestRate, interestRate, 0.5, 5)
+                      }
+                    >
+                      –
+                    </button>
+                    <input
+                      type="text"
+                      value={interestRate}
+                      onChange={(e) =>
+                        setInterestRate(
+                          e.target.value.replace(/[^0-9.]/g, "")
+                        )
+                      }
+                      className="w-20 px-2 py-1 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                      className="px-2 py-1 border rounded"
+                      onClick={() =>
+                        handleIncrement(setInterestRate, interestRate, 0.5, 35)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
                 <input
                   type="range"
                   min={5}
                   max={35}
                   step={0.1}
-                  value={interestRate}
-                  onChange={(e) => setInterestRate(Number(e.target.value))}
+                  value={Number(interestRate) || 0}
+                  onChange={(e) => setInterestRate(e.target.value)}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
@@ -239,7 +320,6 @@ const EmiCalculator = () => {
 
             {/* Right Column */}
             <div className="flex flex-col justify-between">
-              {/* SVG Half-Donut Chart */}
               <div className="flex justify-center mb-6">
                 <SemiDonutChart
                   totalAmount={totalAmount}
@@ -248,7 +328,7 @@ const EmiCalculator = () => {
                 />
               </div>
 
-              {/* Summary Details */}
+              {/* Summary */}
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
@@ -259,7 +339,7 @@ const EmiCalculator = () => {
                     <span className="text-gray-700">Principal amount</span>
                   </div>
                   <span className="font-medium">
-                    {formatCurrency(loanAmount)}
+                    {formatCurrency(Number(loanAmount) || 0)}
                   </span>
                 </div>
 
@@ -278,7 +358,9 @@ const EmiCalculator = () => {
 
                 <div className="flex justify-between items-center pt-2 border-t">
                   <span className="font-medium text-gray-700">Total</span>
-                  <span className="font-bold">{formatCurrency(totalAmount)}</span>
+                  <span className="font-bold">
+                    {formatCurrency(totalAmount)}
+                  </span>
                 </div>
 
                 <div className="flex justify-center mt-6">

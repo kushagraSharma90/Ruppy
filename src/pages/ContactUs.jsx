@@ -269,7 +269,9 @@ export default function ContactUs() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent leading-tight mb-4">
                 Join the growing community that counts on{" "}
-                <span className="bg-[#3870a6] bg-clip-text text-transparent">RupeeDot</span>{" "}
+                <span className="bg-[#3870a6] bg-clip-text text-transparent">Rupee</span>
+<span className="bg-[#d47734] bg-clip-text text-transparent">Dot</span>
+
                 for their financial success.
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -277,53 +279,58 @@ export default function ContactUs() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-              {[
-                {
-                  icon: Star,
-                  text: "Empowering Dreams Every Day",
-                  description: "Turn your financial aspirations into achievable goals",
-                },
-                {
-                  icon: Briefcase,
-                  text: "Transforming Financial Journeys",
-                  description: "Navigate your path to financial freedom with confidence",
-                },
-                {
-                  icon: Heart,
-                  text: "Driven by Unmatched Customer Delight",
-                  description: "Your satisfaction is at the heart of everything we do",
-                },
-                {
-                  icon: Clock,
-                  text: "Always Here for You, Every Moment",
-                  description: "Round-the-clock support whenever you need us",
-                },
-              ].map((item, index) => {
-                const IconComponent = item.icon
-                return (
-                  <div
-                    key={index}
-                    className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-                  >
-                    <div className="relative mb-6">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl shadow-md group-hover:scale-110 transition-transform duration-300 bg-[#3870a6]">
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+  {[
+    {
+      icon: Star,
+      text: "Empowering Dreams Every Day",
+      description: "Turn your financial aspirations into achievable goals",
+    },
+    {
+      icon: Briefcase,
+      text: "Transforming Financial Journeys",
+      description: "Navigate your path to financial freedom with confidence",
+    },
+    {
+      icon: Heart,
+      text: "Driven by Unmatched Customer Delight",
+      description: "Your satisfaction is at the heart of everything we do",
+    },
+    {
+      icon: Clock,
+      text: "Always Here for You, Every Moment",
+      description: "Round-the-clock support whenever you need us",
+    },
+  ].map((item, index) => {
+    const IconComponent = item.icon
+    const bgColor = index % 2 === 0 ? "#3870a6" : "#d47734" // alternate colors
+    return (
+      <div
+        key={index}
+        className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+      >
+        <div className="relative mb-6">
+          <div
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl shadow-md group-hover:scale-110 transition-transform duration-300"
+            style={{ backgroundColor: bgColor }}
+          >
+            <IconComponent className="w-8 h-8 text-white" />
+          </div>
+        </div>
 
-                    <div className="relative">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-300">
-                        {item.text}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
+        <div className="relative">
+          <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-300">
+            {item.text}
+          </h3>
+          <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+            {item.description}
+          </p>
+        </div>
+      </div>
+    )
+  })}
+</div>
+
 
             {/* Bottom CTA */}
             <div className="text-center mt-16 bg-[#f5f5ec]">

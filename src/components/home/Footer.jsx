@@ -64,10 +64,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1 ml-5 text-base md:text-lg">
               {[
-                { name: "Personal Loan", path: "/loans/personal" },
-                { name: "Used Car Loan", path: "/loans/used-car" },
-                { name: "New Car Loan", path: "/loans/new-car" },
-                { name: "Loan Against Car", path: "/loans/against-car" },
+                { name: "Personal Loan", path: "/loans/personal-car-loan" },
+                { name: "Used Car Loan", path: "/loans/used-car-loan" },
+                { name: "New Car Loan", path: "/loans/new-car-loan" },
+                { name: "Loan Against Car", path: "/loans/against-car-loan" },
               ].map(({ name, path }) => (
                 <li key={path}>
                   <Link
