@@ -398,9 +398,7 @@ const Navbar = () => {
                 } hover:bg-blue-50 hover:text-[#d47734]`}
                 onClick={(e) => handleMobileLinkClick("/loans", "loans", e)}
               >
-                <span className="mr-2 w-5 h-5">
-                  <img src={NewCar} alt="Loans" className="w-full h-full object-contain" />
-                </span>
+                <IndianRupee className={`h-5 w-5 mr-2 ${isActive("/loans") ? "text-[#d47734]" : "text-gray-400"}`} />
                 Loans
                 <ChevronDown
                   className={`ml-auto transition-transform ${
@@ -412,7 +410,7 @@ const Navbar = () => {
               {mobileDropdown === "loans" && (
                 <div className="pl-8 pb-2">
                   <Link
-                    to="/loans/personal"
+                    to="/loans/personal-car-loan"
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
@@ -422,7 +420,7 @@ const Navbar = () => {
                     Personal Loan
                   </Link>
                   <Link
-                    to="/loans/used-car"
+                    to="/loans/used-car-loan"
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
@@ -432,7 +430,7 @@ const Navbar = () => {
                     Used Car Loan
                   </Link>
                   <Link
-                    to="/loans/new-car"
+                    to="/loans/new-car-loan"
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
@@ -442,7 +440,7 @@ const Navbar = () => {
                     New Car Loan
                   </Link>
                   <Link
-                    to="/loans/against-car"
+                    to="/loans/against-car-loan"
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >

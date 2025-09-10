@@ -512,7 +512,7 @@ const Calculators = () => {
                 Apply Now
               </Link>
               <Link
-                to="/ContactUs"
+                to="/our-story/contact-us"
                 className="bg-[#3870A6] hover:bg-[#2c5a85] text-white px-8 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Talk to an Expert
