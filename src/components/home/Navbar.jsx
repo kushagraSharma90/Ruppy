@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import NewCar from "../../assets/NewCar.png"
-import UsedCar from "../../assets/UsedCar.png"
-import AgainstCar from "../../assets/AgainstCar.png"
-import PersonalCar from "../../assets/PersonalCar.png"
 import {
   ChevronDown, Menu, X, Home as HomeIcon, Users, BookOpen, 
   Heart, Briefcase, HelpCircle, Calculator, Handshake, FileText,
@@ -414,8 +410,8 @@ const Navbar = () => {
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
-                    <span className="mr-2 w-7 h-7">
-                      <img src={PersonalCar} alt="Personal Loan" className="w-full h-full object-contain" />
+                    <span className="mr-2 w-5 h-5">
+                      <img src="/images/PersonalIcon.png" alt="Personal Loan" className="w-full h-full object-contain" />
                     </span>
                     Personal Loan
                   </Link>
@@ -424,8 +420,8 @@ const Navbar = () => {
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
-                    <span className="mr-2 w-7 h-7">
-                      <img src={UsedCar} alt="Used Car Loan" className="w-full h-full object-contain" />
+                    <span className="mr-2 w-5 h-5">
+                      <img src="/images/UsedIcon.png" alt="Used Car Loan" className="w-full h-full object-contain" />
                     </span>
                     Used Car Loan
                   </Link>
@@ -434,8 +430,8 @@ const Navbar = () => {
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
-                    <span className="mr-2 w-7 h-7">
-                      <img src={NewCar} alt="New Car Loan" className="w-full h-full object-contain" />
+                    <span className="mr-2 w-5 h-5">
+                      <img src="/images/NewIcon.png" alt="New Car Loan" className="w-full h-full object-contain" />
                     </span>
                     New Car Loan
                   </Link>
@@ -444,8 +440,8 @@ const Navbar = () => {
                     className="flex items-center py-2 text-sm rounded-lg hover:bg-blue-50 hover:text-[#d47734] transition-colors"
                     onClick={closeMenu}
                   >
-                    <span className="mr-2 w-7 h-7">
-                      <img src={AgainstCar} alt="Loan Against Car" className="w-full h-full object-contain" />
+                    <span className="mr-2 w-5 h-5">
+                      <img src="/images/LoanLoan.png" alt="Loan Against Car" className="w-full h-full object-contain" />
                     </span>
                     Loan Against Car
                   </Link>
